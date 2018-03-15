@@ -37,3 +37,5 @@ $mod_strings['LBL_MORTGAGE_7PM'] = '7PM Available Mortgage';
 $mod_strings['LBL_MORTGAGE_8PM'] = '8PM Available Mortgage';
 $mod_strings['LBL_MORTGAGE_9PM'] = '9PM Available Mortgage';
 $mod_strings['LBL_MORTGAGE_10PM'] = '10PM Available Mortgage';
+$mod_strings['LBL_START_TIME'] = 'Start Time';
+$mod_strings['LBL_END_TIME'] = 'End Time';

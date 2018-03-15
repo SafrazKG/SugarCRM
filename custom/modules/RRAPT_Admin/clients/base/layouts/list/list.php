@@ -12,6 +12,7 @@
  */
 
 $viewdefs['RRAPT_Admin']['base']['layout']['list'] = array(
+    'css_class' => 'full_day_list',
     'components' => array(
         array(
             'view' => 'calendarlist',

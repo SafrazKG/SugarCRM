@@ -188,155 +188,165 @@ array (
               ),
               4 => 
               array (
+                'name' => 'start_time_c',
+                'label' => 'LBL_START_TIME',
+              ),
+              5 => 
+              array (
+                'name' => 'end_time_c',
+                'label' => 'LBL_END_TIME',
+              ),
+              6 => 
+              array (
                 'name' => 'transfer_8am_c',
                 'label' => 'LBL_TRANSFER_8AM',
               ),
-              5 => 
+              7 => 
               array (
                 'name' => 'mortgage_8am_c',
                 'label' => 'LBL_MORTGAGE_8AM',
               ),
-              6 => 
+              8 => 
               array (
                 'name' => 'transfer_9am_c',
                 'label' => 'LBL_TRANSFER_9AM',
               ),
-              7 => 
+              9 => 
               array (
                 'name' => 'mortgage_9am_c',
                 'label' => 'LBL_MORTGAGE_9AM',
               ),
-              8 => 
+              10 => 
               array (
                 'name' => 'transfer_10am_c',
                 'label' => 'LBL_TRANSFER_10AM',
               ),
-              9 => 
+              11 => 
               array (
                 'name' => 'mortgage_10am_c',
                 'label' => 'LBL_MORTGAGE_10AM',
               ),
-              10 => 
+              12 => 
               array (
                 'name' => 'transfer_11am_c',
                 'label' => 'LBL_TRANSFER_11AM',
               ),
-              11 => 
+              13 => 
               array (
                 'name' => 'mortgage_11am_c',
                 'label' => 'LBL_MORTGAGE_11AM',
               ),
-              12 => 
+              14 => 
               array (
                 'name' => 'transfer_12pm_c',
                 'label' => 'LBL_TRANSFER_12PM',
               ),
-              13 => 
+              15 => 
               array (
                 'name' => 'mortgage_12pm_c',
                 'label' => 'LBL_MORTGAGE_12PM',
               ),
-              14 => 
+              16 => 
               array (
                 'name' => 'transfer_1pm_c',
                 'label' => 'LBL_TRANSFER_1PM',
               ),
-              15 => 
+              17 => 
               array (
                 'name' => 'mortgage_1pm_c',
                 'label' => 'LBL_MORTGAGE_1PM',
               ),
-              16 => 
+              18 => 
               array (
                 'name' => 'transfer_2pm_c',
                 'label' => 'LBL_TRANSFER_2PM',
               ),
-              17 => 
+              19 => 
               array (
                 'name' => 'mortgage_2pm_c',
                 'label' => 'LBL_MORTGAGE_2PM',
               ),
-              18 => 
+              20 => 
               array (
                 'name' => 'transfer_3pm_c',
                 'label' => 'LBL_TRANSFER_3PM',
               ),
-              19 => 
+              21 => 
               array (
                 'name' => 'mortgage_3pm_c',
                 'label' => 'LBL_MORTGAGE_3PM',
               ),
-              20 => 
+              22 => 
               array (
                 'name' => 'transfer_4pm_c',
                 'label' => 'LBL_TRANSFER_4PM',
               ),
-              21 => 
+              23 => 
               array (
                 'name' => 'mortgage_4pm_c',
                 'label' => 'LBL_MORTGAGE_4PM',
               ),
-              22 => 
+              24 => 
               array (
                 'name' => 'transfer_5pm_c',
                 'label' => 'LBL_TRANSFER_5PM',
               ),
-              23 => 
+              25 => 
               array (
                 'name' => 'mortgage_5pm_c',
                 'label' => 'LBL_MORTGAGE_5PM',
               ),
-              24 => 
+              26 => 
               array (
                 'name' => 'transfer_6pm_c',
                 'label' => 'LBL_TRANSFER_6PM',
               ),
-              25 => 
+              27 => 
               array (
                 'name' => 'mortgage_6pm_c',
                 'label' => 'LBL_MORTGAGE_6PM',
               ),
-              26 => 
+              28 => 
               array (
                 'name' => 'transfer_7pm_c',
                 'label' => 'LBL_TRANSFER_7PM',
               ),
-              27 => 
+              29 => 
               array (
                 'name' => 'mortgage_7pm_c',
                 'label' => 'LBL_MORTGAGE_7PM',
               ),
-              28 => 
+              30 => 
               array (
                 'name' => 'transfer_8pm_c',
                 'label' => 'LBL_TRANSFER_8PM',
               ),
-              29 => 
+              31 => 
               array (
                 'name' => 'mortgage_8pm_c',
                 'label' => 'LBL_MORTGAGE_8PM',
               ),
-              30 => 
+              32 => 
               array (
                 'name' => 'transfer_9pm_c',
                 'label' => 'LBL_TRANSFER_9PM',
               ),
-              31 => 
+              33 => 
               array (
                 'name' => 'mortgage_9pm_c',
                 'label' => 'LBL_MORTGAGE_9PM',
               ),
-              32 => 
+              34 => 
               array (
                 'name' => 'transfer_10pm_c',
                 'label' => 'LBL_TRANSFER_10PM',
               ),
-              33 => 
+              35 => 
               array (
                 'name' => 'mortgage_10pm_c',
                 'label' => 'LBL_MORTGAGE_10PM',
               ),
-              34 => 
+              36 => 
               array (
                 'name' => 'tag',
                 'span' => 12,
