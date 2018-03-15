@@ -20,9 +20,14 @@
                 this.getDefaults();
                 this.once('render', _.bind(function() {
                     this._rendered = true;
+                    if (this.createMode) this.dayChanged();
                 }, this));
                 this.on('init', _.bind(function() {
-                    this.model.on('change:day_field_c', _.bind(this.dayChanged, this));
+                    for (var i in this.meta.panels) {
+                        for (var j in this.meta.panels[i].fields) {
+                            if (this.meta.panels[i].fields[j].name && this.meta.panels[i].fields[j].name=='date_field_c') this.meta.panels[i].fields[j].readonly = true;
+                        }
+                    }
                     this.model.on('change:start_time_c', _.bind(this.startEndChanged, this));
                     this.model.on('change:end_time_c', _.bind(this.startEndChanged, this));
                 }, this));
