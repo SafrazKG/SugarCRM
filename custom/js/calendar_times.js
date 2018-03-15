@@ -23,17 +23,25 @@
                 }, this));
                 this.on('init', _.bind(function() {
                     this.model.on('change:day_field_c', _.bind(this.dayChanged, this));
-                    this.model.on('change:start_time_c', _.bind(this.dayChanged, this));
-                    this.model.on('change:end_time_c', _.bind(this.dayChanged, this));
+                    this.model.on('change:start_time_c', _.bind(this.startEndChanged, this));
+                    this.model.on('change:end_time_c', _.bind(this.startEndChanged, this));
                 }, this));
             },
             
             dayChanged: function() {
                 if (!this._defaultsForDays) {
-                    setTimeout(_.bind(this.initPlugin, this), 200);
+                    setTimeout(_.bind(this.dayChanged, this), 200);
                     return;
                 }
+                this.startEndChanged();
                 var day = this.model.get('day_field_c');
+                for (var i in this._times) {
+                    this.model.set('transfer_'+this._times[i].toLowerCase()+'_c', this._defaultsForDays[day].transfer);
+                    this.model.set('mortgage_'+this._times[i].toLowerCase()+'_c', this._defaultsForDays[day].mortgage);
+                }
+            },
+            
+            startEndChanged: function() {
                 this._startTime = this.model.get('start_time_c').toUpperCase();
                 this._endTime = this.model.get('end_time_c').toUpperCase();
                 this.updateCalendarTimes();
@@ -91,8 +99,8 @@
                     'Monday': { transfer: 5, mortgage: 5 },
                     'Tuesday': { transfer: 5, mortgage: 5 },
                     'Wednesday': { transfer: 5, mortgage: 5 },
-                    'Thursday': { transfer: 5, mortgage: 5 },
-                    'Friday': { transfer: 5, mortgage: 5 },
+                    'Thursday': { transfer: 1, mortgage: 4 },
+                    'Friday': { transfer: 3, mortgage: 2 },
                     'Saturday': { transfer: 5, mortgage: 5 },
                     'Sunday': { transfer: 5, mortgage: 5 },
                 };
