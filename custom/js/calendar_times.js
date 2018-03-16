@@ -20,6 +20,7 @@
                 this.getDefaults();
                 this.once('render', _.bind(function() {
                     this._rendered = true;
+                    $(this.getField('date_field_c').el.offsetParent).hide();
                     if (this.createMode) this.dayChanged();
                 }, this));
                 this.on('init', _.bind(function() {
