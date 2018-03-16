@@ -12,7 +12,5 @@
 
 $app_list_strings['moduleList']['RRAPT_Admin'] = 'Appointment Administration';
 $app_list_strings['moduleList']['RRAPT_Calendar'] = 'Appointments';
-$app_list_strings['moduleList']['RRAPT_CloserAvailAdmin'] = 'Closer Availability Administration';
 $app_list_strings['moduleListSingular']['RRAPT_Admin'] = 'Appointment Administration';
 $app_list_strings['moduleListSingular']['RRAPT_Calendar'] = 'Appointment';
-$app_list_strings['moduleListSingular']['RRAPT_CloserAvailAdmin'] = 'Closer Availability Administration';

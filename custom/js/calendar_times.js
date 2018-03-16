@@ -39,12 +39,13 @@
                     setTimeout(_.bind(this.dayChanged, this), 200);
                     return;
                 }
-                this.startEndChanged();
                 var day = this.model.get('day_field_c');
                 for (var i in this._times) {
                     this.model.set('transfer_'+this._times[i].toLowerCase()+'_c', this._defaultsForDays[day].transfer);
                     this.model.set('mortgage_'+this._times[i].toLowerCase()+'_c', this._defaultsForDays[day].mortgage);
                 }
+                this.model.set('start_time_c', this._defaultsForDays[day].start_time);
+                this.model.set('end_time_c', this._defaultsForDays[day].end_time);
             },
             
             startEndChanged: function() {
@@ -99,17 +100,18 @@
                 return this._fieldParents['mortgage_'+t+'_c'];
             },
             
-            // dummy until we do config part
             getDefaults: function() {
-                this._defaultsForDays = {
-                    'Monday': { transfer: 5, mortgage: 5 },
-                    'Tuesday': { transfer: 5, mortgage: 5 },
-                    'Wednesday': { transfer: 5, mortgage: 5 },
-                    'Thursday': { transfer: 1, mortgage: 4 },
-                    'Friday': { transfer: 3, mortgage: 2 },
-                    'Saturday': { transfer: 5, mortgage: 5 },
-                    'Sunday': { transfer: 5, mortgage: 5 },
-                };
+                app.api.call('read', app.api.buildURL('RRAPT_Closeradmin'), {}, {
+                    success: _.bind(function(data) {
+                        if (data && data.records) {
+                            var defaults = {};
+                            for (var i in data.records) {
+                                defaults[data.records[i].day_field] = data.records[i];
+                            }
+                            this._defaultsForDays = defaults;
+                        }
+                    }, this)
+                });
             },
         });
     });
