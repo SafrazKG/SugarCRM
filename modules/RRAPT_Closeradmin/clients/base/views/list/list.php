@@ -50,12 +50,7 @@ array (
                     'vname' => 'Start Time',
                     'label' => 'Start Time',
                     'type' => 'enum',
-                    'options' => array(
-                                       '8AM' => '8AM',
-                                       '9AM' => '9AM',
-                                       '9PM' => '9PM',
-                                       '10PM' => '10PM',
-                                       ),
+                    'options' => 'start_time_list',
                     'sortable' => false,
                 ),
                 array(
@@ -65,12 +60,7 @@ array (
                     'vname' => 'End Time',
                     'label' => 'End Time',
                     'type' => 'enum',
-                    'options' => array(
-                                       '8AM' => '8AM',
-                                       '9AM' => '9AM',
-                                       '9PM' => '9PM',
-                                       '10PM' => '10PM',
-                                       ),
+                    'options' => 'end_time_list',
                     'sortable' => false,
                 ),
             ),
