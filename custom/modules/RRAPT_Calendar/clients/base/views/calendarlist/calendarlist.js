@@ -1,16 +1,25 @@
 ({
     extendsFrom: 'CustomCalendarlist',
     
+    calendarOptions: {
+        header: {
+            right: 'today prev,next',
+            left: 'title',
+            center: 'month,agendaWeek,agendaDay'
+        },
+        defaultView: 'agendaDay',
+    },
+    
     initialize: function() {
         this._super('initialize', arguments);
     },
 
     setBeanDataOnCreate: function(calEvent) {
         var bean = this._super('setBeanDataOnCreate', arguments);
-        bean.set('date_field_c', calEvent.start.formatServer());
+        //bean.set('date_field_c', calEvent.start.formatServer());
         return bean;
     },
-    
+
     /*
      * @override
      */

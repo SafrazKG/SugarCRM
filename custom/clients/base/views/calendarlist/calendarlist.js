@@ -97,12 +97,39 @@
     },
     
     /*
-     * eventClick - called on calendar event click - should override
+     * eventClick - called on calendar event click
      *
      * @param Object calEvent - calendar event object
      *
      */
-    eventClick: function(calEvent, jsEvent, view) {
+    eventClick: function(calEvent) {
+        if (calEvent.id) {
+            app.router.navigate("#" + this.module + "/" + calEvent.id, {trigger: true});
+        } else {
+            if (this._gettingDayRecord[calEvent._id]) return;
+            this._gettingDayRecord[calEvent._id] = true;
+            app.api.call('read', app.api.buildURL(this.module, '?filter[0][date_field_c]='+calEvent.start.formatServer()), {}, {
+                success: _.bind(function(data) {
+                    delete this._gettingDayRecord[calEvent._id];
+                    if (data && data.records && data.records.length) {
+                        app.router.navigate("#" + this.module + "/" + data.records[0].id, {trigger: true});
+                    } else {
+                        app.drawer.open({
+                                layout: 'create',
+                                context: {
+                                    create: true,
+                                    module: this.module,
+                                    model: this.setBeanDataOnCreate(calEvent),
+                                }
+                            },
+                            _.bind(function() {
+                                this.collection.fetch({});
+                            }, this)
+                        );
+                    }
+                }, this)
+            });
+        }
     },
     
     /*
