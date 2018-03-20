@@ -10,9 +10,29 @@
     calEvents: null,
     _lastFilterDefs: [],
     _gettingDayRecord: {},
+    startField: 'date_field_c',
+    endField: 'date_field_c',
+    _rendered: false,
     
     initialize: function() {
         this._super('initialize', arguments);
+        if ($('#calendar_css').length==0) {
+            var headDomNode = document.getElementsByTagName("head")[0];
+            var cssNode = document.createElement('link');
+            cssNode.type = 'text/css';
+            cssNode.rel = 'stylesheet';
+            cssNode.href = 'custom/css/fullcalendar.min.css';
+            cssNode.media = 'screen';
+            cssNode.id = 'calendar_css';
+            var cssNode2 = document.createElement('link');
+            cssNode2.type = 'text/css';
+            cssNode2.rel = 'stylesheet';
+            cssNode2.href = 'custom/css/scheduler.min.css';
+            cssNode2.media = 'screen';
+            cssNode2.id = 'calendar_css2';
+            headDomNode.appendChild(cssNode);
+        }
+        this.once('render', _.bind(function() { this._rendered = true }, this));
         this.collection.oldFetch = this.collection.fetch;
         this.collection.fetch = _.bind(function(params) {
             var filterDefs = [];
@@ -29,20 +49,17 @@
     },
     
     initCalendar: function() {
-        if ($('#calendar_css').length==0) {
-            var headDomNode = document.getElementsByTagName("head")[0];
-            var cssNode = document.createElement('link');
-            cssNode.type = 'text/css';
-            cssNode.rel = 'stylesheet';
-            cssNode.href = 'custom/css/fullcalendar.min.css';
-            cssNode.media = 'screen';
-            cssNode.id = 'calendar_css';
-            headDomNode.appendChild(cssNode);
+        if (!this._rendered) {
+            setTimeout(_.bind(function() {
+                this.initCalendar();
+            }, this), 200);
+            return;
         }
         this.collection.on('data:sync:complete', _.bind(this.updateCalendarData, this));
         this.calendar = $('#calendar').fullCalendar(_.extend({
             events: _.bind(this.getEvents, this),
             eventClick: _.bind(this.eventClick, this),
+            schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
         }, this.calendarOptions));
     },
     
@@ -52,12 +69,18 @@
             this.calEvents = null;
             return callback(events);
         }
+        if (!this.calendar) {
+            setTimeout(_.bind(function() {
+                this.getEvents(start, end, timezone, callback);
+            }, this), 200);
+            return;
+        }
         this.start = start;
         this.end = end;
         var params = this.collection.getOption('params')||{};
-        params.order_by = 'date_field_c:asc';
+        params.order_by = this.startField+":asc";
         this.collection.setOption('params', params);
-        this.collection.setOption('limit', Math.abs(end.diff(start, 'days')));
+        this.collection.setOption('limit', this.getLimit());
         this.collection.fetch({});
     },
     
@@ -65,19 +88,19 @@
         filterDefs = filterDefs || [];
         var newFilterDefs = [];
         for (var i in filterDefs) {
-            if (filterDefs[i].date_field_c) continue;
+            if (filterDefs[i][this.startField] || filterDefs[i][this.endField]) continue;
             newFilterDefs.push(filterDefs[i]);
         }
         filterDefs = newFilterDefs;
         if (this.start && this.end) {
             var startS = this.start.formatServer();
             var endS = this.end.formatServer();
-            filterDefs.push({
-                                date_field_c: { '$gte': startS },
-                            });
-            filterDefs.push({
-                                date_field_c: { '$lte': endS },
-                            });
+            var startObj = {};
+            startObj[this.startField] = { '$gte': startS };
+            var endObj = {};
+            endObj[this.endField] = { '$lte': endS };
+            filterDefs.push(startObj);
+            filterDefs.push(endObj);
         }
         this.collection.setOption('filter', filterDefs);
     },
@@ -85,6 +108,27 @@
     updateCalendarData: function() {
         this.calEvents = this.getEventsFromCollection();
         this.calendar.fullCalendar('refetchEvents');
+    },
+    
+    getLimit: function() {
+        if (!this.calendar) return 20;
+        var view = this.calendar.fullCalendar('getView');
+        var limit = 100;
+        switch (view.name) {
+            case 'month':
+                limit = Math.abs(this.end.diff(this.start, 'days'));
+                break;
+            case 'agendaDay':
+                var minTime = app.date('01-01-1970T'+(view.options.minTime||'00:00')+":00");
+                var maxTime = app.date('01-01-1970T'+(view.options.maxTime||'23:59')+":00");
+                limit = Math.abs(maxTime.diff(minTime, 'days'));
+            case 'agendaDay':
+                var minTime = app.date('01-01-1970T'+(view.options.minTime||'00:00')+":00");
+                var maxTime = app.date('01-01-1970T'+(view.options.maxTime||'23:59')+":00");
+                limit = Math.abs(maxTime.diff(minTime, 'days'))*7;
+        }
+        if (view.resources && view.resources.length) limit *= view.resources.length;
+        return limit;
     },
     
     /*
