@@ -1,7 +1,7 @@
 ({
     extendsFrom: 'CustomCalendarlist',
     startField: 'start_date_c',
-    endField: 'end_date_c',
+    endField: 'start_date_c',
     minTimeForCalendar: "08:00",
     maxTimeForCalendar: "23:00",
     dispositionBackgroundColors: {
@@ -63,6 +63,7 @@
      * @override
      */
     getEventsFromCollection: function() {
+        if (this.disposed) return;
         var events = [];
         _.each(this.collection.models, function(model) {
             var title = model.get('name');
@@ -83,6 +84,7 @@
     },
     
     viewRender: function() {
+        if (this.disposed) return;
         if (this._configured) return;
         this._configured = true;
         $('.fc-button').on('mousedown', _.bind(function() {
@@ -98,6 +100,7 @@
     },
     
     eventRender: function(ev, el) {
+        if (this.disposed) return;
         if (this._waitForClick) {
             setTimeout(_.bind(function() {
                 this.eventRender(ev, el);
@@ -113,6 +116,7 @@
     },
     
     eventAfterAllRender: function() {
+        if (this.disposed) return;
         if (this._waitForClick) {
             setTimeout(_.bind(function() {
                 this.eventAfterAllRender();
@@ -153,7 +157,7 @@
                 if (!_.isUndefined(totalads))
                 var timeonly = this._getTimeForSlot(moment.formatServer());
                 row = $('tr[data-time="'+timeonly+'"]');
-                if (timeonly==minTime || this._disposed) break;
+                if (timeonly==minTime || this.disposed) break;
             }
             if (row) {
                 row.find('td').css('height', h + 'px');

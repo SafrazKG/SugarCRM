@@ -175,8 +175,6 @@ array (
               ),
               1 => 
               array (
-                'name' => 'end_date_c',
-                'label' => 'LBL_END_DATE',
               ),
               2 => 
               array (
