@@ -891,8 +891,8 @@ $fieldsMetaData[] = array (
   ),
   38 => 
   array (
-    'id' => 'RRAPT_Calendarstart_date_c',
-    'name' => 'start_date_c',
+    'id' => 'RRAPT_Calendardate_field_c',
+    'name' => 'date_field_c',
     'vname' => 'LBL_START_DATE',
     'comments' => NULL,
     'help' => NULL,

@@ -170,7 +170,7 @@ array (
             array (
               0 => 
               array (
-                'name' => 'start_date_c',
+                'name' => 'date_field_c',
                 'label' => 'LBL_START_DATE',
               ),
               1 => 

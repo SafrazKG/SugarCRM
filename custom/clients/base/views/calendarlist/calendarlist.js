@@ -13,6 +13,7 @@
     startField: 'date_field_c',
     endField: 'date_field_c',
     _rendered: false,
+    _settingMinMax: false,
     
     initialize: function() {
         this._super('initialize', arguments);
@@ -65,6 +66,12 @@
     
     getEvents: function(start, end, timezone, callback) {
         if (this.calEvents) {
+            if (this._settingMinMax) {
+                setTimeout(_.bind(function() {
+                    this.getEvents(start, end, timezone, callback);
+                }, this), 200);
+                return;
+            }
             var events = _.clone(this.calEvents);
             this.calEvents = null;
             return callback(events);
@@ -187,6 +194,19 @@
         var bean = app.data.createBean(this.module);
         return bean;
     },
+  
+    slotTimeLT: function(original, comapareWith) {
+        var momentOriginal = app.date('1970-01-01T'+original);
+        var momentCompare = app.date('1970-01-01T'+comapareWith);
+        if (momentOriginal.isAfter(momentCompare)) return comapareWith;
+        return original;
+    },
     
+    slotTimeGT: function(original, comapareWith) {
+        var momentOriginal = app.date('1970-01-01T'+original);
+        var momentCompare = app.date('1970-01-01T'+comapareWith);
+        if (momentOriginal.isBefore(momentCompare)) return comapareWith;
+        return original;
+    },
 
 })

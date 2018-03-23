@@ -22,7 +22,7 @@ if (isset($db) && $db) {
             array(
                 'name' => 'idx_rrapt_available_slots',
                 'type' => 'index',
-                'fields' => array('start_date_c', 'product_c'),
+                'fields' => array('date_field_c', 'product_c'),
             ),
         ),
     );

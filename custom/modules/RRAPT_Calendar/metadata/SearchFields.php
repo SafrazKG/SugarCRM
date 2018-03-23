@@ -69,19 +69,19 @@ $searchFields['RRAPT_Calendar'] = array (
     'enable_range_search' => true,
     'is_date_field' => true,
   ),
-  'range_start_date_c' => 
+  'range_date_field_c' => 
   array (
     'query_type' => 'default',
     'enable_range_search' => true,
     'is_date_field' => true,
   ),
-  'start_range_start_date_c' => 
+  'start_range_date_field_c' => 
   array (
     'query_type' => 'default',
     'enable_range_search' => true,
     'is_date_field' => true,
   ),
-  'end_range_start_date_c' => 
+  'end_range_date_field_c' => 
   array (
     'query_type' => 'default',
     'enable_range_search' => true,
