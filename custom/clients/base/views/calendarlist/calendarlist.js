@@ -60,7 +60,7 @@
         this.calendar = $('#calendar').fullCalendar(_.extend({
             events: _.bind(this.getEvents, this),
             eventClick: _.bind(this.eventClick, this),
-            schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
+            schedulerLicenseKey: '0930770738-fcs-1522167218',
         }, this.calendarOptions));
     },
     
