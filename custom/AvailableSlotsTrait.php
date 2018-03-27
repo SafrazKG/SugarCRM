@@ -17,7 +17,7 @@ trait AvailableSlotsTrait {
                     if ($time==$startTime) $started = true;
                     if ($started && !$nomore) {
                         $slots['transfer_'.strtolower($time)] = $this->isSlotAvailable($res['date_field_c'], $time, $res['transfer_'.strtolower($time).'_c'], 'Transfer', $fullresultset);
-                        $slots['mortgage_'.strtolower($time)] = $this->isSlotAvailable($res['date_field_c'], $time, $res['transfer_'.strtolower($time).'_c'], 'Mortgage', $fullresultset);
+                        $slots['mortgage_'.strtolower($time)] = $this->isSlotAvailable($res['date_field_c'], $time, $res['mortgage_'.strtolower($time).'_c'], 'Mortgage', $fullresultset);
                     }
                     if ($time==$endTime) $nomore = true;
                 }
@@ -54,7 +54,16 @@ trait AvailableSlotsTrait {
         }
         if ($fullresultset) {
             while (count($res)<$maxSlots) {
-                $res[] = array();
+                $dt = SugarDateTime::createFromFormat('Y-m-d gA', $date." ".$time, new DateTimeZone($GLOBALS['current_user']->getPreference('timezone')));
+                $res[] = array(
+                    'id' => 'free_'.md5(rand()),
+                    'name' => '',
+                    'product_c' => $product,
+                    'date_field_c' => $dt->asDb(),
+                    'disposition_c' => 'free',
+                    'users_rrapt_calendar_1_name' => '',
+                    'users_rrapt_calendar_3_name' => '',
+                );
             }
         }
         return $res;
@@ -83,6 +92,16 @@ trait AvailableSlotsTrait {
         $db = $dt->asDb();
         $db = explode(' ', $db);
         return $db[1];
+    }
+    
+    private function nextTime($time) {
+        $time = strtoupper($time);
+        $found = false;
+        foreach ($this->times as $t) {
+            if ($found) return $t;
+            if ($t==$time) $found = true;
+        }
+        return $time;
     }
     
     private function toUserTimeInDBFormat($date) {

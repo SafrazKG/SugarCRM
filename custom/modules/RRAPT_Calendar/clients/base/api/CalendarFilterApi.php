@@ -48,6 +48,7 @@ class CalendarFilterApi extends FilterApi {
     
     public function extendedFilterList($api, $args) {
         // we need to add available slots if user is fronter
+        if (!$GLOBALS['current_user']->isAdmin() && !$this->hasRole('calendar_admin')) throw new SugarApiExceptionNotAuthorized();
         if (!isset($args['filter'])) return array('next_offset' => -1, 'records' => []);
         if (true || $this->hasRole('fronter')) {
             $args['module'] = 'RRAPT_Admin';
@@ -68,35 +69,23 @@ class CalendarFilterApi extends FilterApi {
                         $slotNameData = explode('_', $slotName);
                         $minTime = $this->slotTimeLT($minTime, $slotNameData[1]);
                         $maxTime = $this->slotTimeGT($maxTime, $slotNameData[1]);
-                        if (!isset($slotData['id'])) {
-                            $product = ucwords($slotNameData[0]);
-                            $dt = SugarDateTime::createFromFormat('Y-m-d ga', $entry['date_field_c']." ".$slotNameData[1], new DateTimeZone("UTC"));
-                            $record = array(
-                                'id' => 'free_'.md5(rand()),
-                                'name' => '',
-                                'product_c' => $product,
-                                'date_field_c' => $dt->formatDateTime('datetimecombo', 'iso'),
-                                'disposition_c' => 'free',
-                                'users_rrapt_calendar_1_name' => '',
-                                'users_rrapt_calendar_3_name' => '',
-                            );
-                        } else {
-                            $record = array(
-                                'id' => $slotData['id'],
-                                'name' => $slotData['name'],
-                                'product_c' => $slotData['product_c'],
-                                'date_field_c' => $this->toUserTimeInDBFormat($slotData['date_field_c']),
-                                'disposition_c' => $slotData['disposition_c'],
-                                'users_rrapt_calendar_1_name' => $slotData['users_rrapt_calendar_1_name']?$slotData['users_rrapt_calendar_1_name']:'',
-                                'users_rrapt_calendar_3_name' => $slotData['users_rrapt_calendar_3_name']?$slotData['users_rrapt_calendar_3_name']:'',
-                            );
-                        }
+                        $record = array(
+                            'id' => $slotData['id'],
+                            'name' => $slotData['name'],
+                            'product_c' => $slotData['product_c'],
+                            'date_field_c' => $this->toUserTimeInDBFormat($slotData['date_field_c']),
+                            'disposition_c' => $slotData['disposition_c'],
+                            'users_rrapt_calendar_1_name' => $slotData['users_rrapt_calendar_1_name']?$slotData['users_rrapt_calendar_1_name']:'',
+                            'users_rrapt_calendar_3_name' => $slotData['users_rrapt_calendar_3_name']?$slotData['users_rrapt_calendar_3_name']:'',
+                        );
                         $ret['records'][] = $record;
                     }
                 }
             }
-            $ret['records'][0]['minTime'] = $this->timeToDbTime($minTime);
-            $ret['records'][0]['maxTime'] = $this->timeToDbTime($maxTime);
+            if (!empty($ret['records'])) {
+                $ret['records'][0]['minTime'] = $this->timeToDbTime($minTime);
+                $ret['records'][0]['maxTime'] = $this->timeToDbTime($this->nextTime($maxTime));
+            }
         } else {
             $ret = $this->filterList($api, $args);
         }

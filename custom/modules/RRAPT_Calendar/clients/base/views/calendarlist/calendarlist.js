@@ -2,8 +2,8 @@
     extendsFrom: 'CustomCalendarlist',
     startField: 'date_field_c',
     endField: 'date_field_c',
-    minTimeForCalendar: "08:00:00",
-    maxTimeForCalendar: "23:00:00",
+    minTimeForCalendar: false,
+    maxTimeForCalendar: false,
     dispositionBackgroundColors: {
         'Set': '#13A0ED',
         'Confirmed': '#59BA74',
@@ -19,7 +19,7 @@
         'Reschedules': '#000000',
         'Closer not available': '#000000',
         'Customer not available': '#000000',
-        'free': '#D6D6D6',
+        'free': 'transparent',
     },
     
     calendarOptions: {
@@ -35,8 +35,8 @@
             { id: 'Mortgage', title: 'Mortgage' },
         ],
         allDaySlot: false,
-        minTime: this.minTimeForCalendar,
-        maxTime: this.maxTimeForCalendar,
+        minTime: "08:00:00",
+        maxTime: "23:00:00",
         slotLabelFormat: '',
     },
     
@@ -57,7 +57,7 @@
 
     setBeanDataOnCreate: function(calEvent) {
         var bean = this._super('setBeanDataOnCreate', arguments);
-        //bean.set('date_field_c', calEvent.start.formatServer());
+        bean.set('date_field_c', calEvent.start.formatServer());
         return bean;
     },
 
@@ -66,6 +66,8 @@
      */
     getEventsFromCollection: function() {
         if (this.disposed) return;
+        this._elements = {};
+        this._heights = {};
         var events = [];
         var minOrig = this.minTimeForCalendar;
         var maxOrig = this.maxTimeForCalendar;
@@ -78,7 +80,7 @@
                 title += " - ";
                 title += "C: " + model.get('users_rrapt_calendar_3_name');
             } else {
-                title += "\n&nbsp;";
+                title += "\n -";
             }
             events.push({
                         resourceId: model.get('product_c'),
@@ -202,7 +204,7 @@
                         for (var k in this._elements[timeForSlot][resourceId][j]) {
                             var top = parseInt(this._elements[timeForSlot][resourceId][j][k].css('top').replace('px',''));
                             this._elements[timeForSlot][resourceId][j][k].css('top', (top+totalads[date+resourceId])+'px');
-                            totalads[date+resourceId] += this._elements[timeForSlot][resourceId][j][k].height();
+                            totalads[date+resourceId] += this._elements[timeForSlot][resourceId][j][k].height()-.4;
                             this._elements[timeForSlot][resourceId][j][k].css('height', this._elements[timeForSlot][resourceId][j][k].height()+'px');
                             this._elements[timeForSlot][resourceId][j][k].css('position', 'absolute');
                         }
@@ -226,6 +228,28 @@
         var cal = this.calendar.fullCalendar('getView');
         if (cal.name.indexOf('agenda')==-1) return false;
         return true;
+    },
+    
+    /*
+     * @override
+     */
+    eventClick: function(calEvent) {
+        if (calEvent.id && calEvent.id.indexOf('free_')==-1) {
+            app.router.navigate("#" + this.module + "/" + calEvent.id, {trigger: true});
+        } else {
+            app.drawer.open({
+                    layout: 'create',
+                    context: {
+                        create: true,
+                        module: this.module,
+                        model: this.setBeanDataOnCreate(calEvent),
+                    }
+                },
+                _.bind(function() {
+                    this.collection.fetch({});
+                }, this)
+            );
+        }
     },
     
 })

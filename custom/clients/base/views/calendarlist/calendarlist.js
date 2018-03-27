@@ -196,6 +196,8 @@
     },
   
     slotTimeLT: function(original, comapareWith) {
+        if (!original) return comapareWith;
+        if (!comapareWith) return original;
         var momentOriginal = app.date('1970-01-01T'+original);
         var momentCompare = app.date('1970-01-01T'+comapareWith);
         if (momentOriginal.isAfter(momentCompare)) return comapareWith;
@@ -203,6 +205,8 @@
     },
     
     slotTimeGT: function(original, comapareWith) {
+        if (!original) return comapareWith;
+        if (!comapareWith) return original;
         var momentOriginal = app.date('1970-01-01T'+original);
         var momentCompare = app.date('1970-01-01T'+comapareWith);
         if (momentOriginal.isBefore(momentCompare)) return comapareWith;

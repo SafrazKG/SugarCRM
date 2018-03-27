@@ -55,7 +55,7 @@
         },
         resetSlot: function(moment) {
             if (!moment._isAMomentObject) throw('moment must be moment object');
-            var string = datetime.format('YYYY-MM-DD');
+            var string = moment.format('YYYY-MM-DD');
             delete app.SlotAvailability.availability[string];
         },
     }
