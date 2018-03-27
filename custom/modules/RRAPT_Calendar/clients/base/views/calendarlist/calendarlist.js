@@ -66,14 +66,16 @@
      */
     getEventsFromCollection: function() {
         if (this.disposed) return;
+        var events = [];
         this._elements = {};
         this._heights = {};
-        var events = [];
         var minOrig = this.minTimeForCalendar;
         var maxOrig = this.maxTimeForCalendar;
         _.each(this.collection.models, function(model) {
-            if (model.get('minTime')) this.minTimeForCalendar = this.slotTimeLT(this.minTimeForCalendar, model.get('minTime'));
-            if (model.get('maxTime')) this.maxTimeForCalendar = this.slotTimeGT(this.model.maxTimeForCalendar, model.get('maxTime'));
+            if (this._isAgendaView()) {
+                if (model.get('minTime')) this.minTimeForCalendar = this.slotTimeLT(this.minTimeForCalendar, model.get('minTime'));
+                if (model.get('maxTime')) this.maxTimeForCalendar = this.slotTimeGT(this.model.maxTimeForCalendar, model.get('maxTime'));
+            }
             var title = model.get('name');
             if (title) {
                 title += "\nF: " + model.get('users_rrapt_calendar_1_name');
@@ -93,8 +95,7 @@
                     });
         }, this);
         if (minOrig!=this.minTimeForCalendar || maxOrig!=this.maxTimeForCalendar) {
-            var calView = this.calendar.fullCalendar('getView');
-            if (calView.name.indexOf('agenda')!=-1) {
+            if (this._isAgendaView()) {
                 this._settingMinMax = true;
                 this.calendar.fullCalendar('option', { minTime: this.minTimeForCalendar, maxTime: this.maxTimeForCalendar });
             }
@@ -127,6 +128,7 @@
             }, this), 100);
             return;
         }
+        if (!this._isAgendaView()) return;
         var start = ev.start.formatServer();
         var timeonly = this._getTimeForSlot(start);
         this._heights[timeonly] = 0;
@@ -144,14 +146,14 @@
             }, this), 200);
             return;
         }
-        if (!this._isAgendaView()) return;
+        if (!this._isAgendaView() || !$('tr.fc-minor').length) return;
         // find minRowHeight
-        var originalHeight = $('tr[data-time="'+this.minTimeForCalendar+'"]').attr('data-height');
+        var originalHeight = $('tr.fc-minor').attr('data-height');
         if (originalHeight) {
             this._minRowHeight = originalHeight;
         } else {
-            this._minRowHeight = $('tr[data-time="'+this.minTimeForCalendar+'"]')[0].offsetHeight-2; // -borders
-            $('tr[data-time="'+this.minTimeForCalendar+'"]').attr('data-height', this._minRowHeight);
+            this._minRowHeight = $('tr.fc-minor')[0].offsetHeight-2; // -borders
+            $('tr.fc-minor').attr('data-height', this._minRowHeight);
         }
         // find max height for each time slot
         for (var timeForSlot in this._heights) {
@@ -204,11 +206,29 @@
                         for (var k in this._elements[timeForSlot][resourceId][j]) {
                             var top = parseInt(this._elements[timeForSlot][resourceId][j][k].css('top').replace('px',''));
                             this._elements[timeForSlot][resourceId][j][k].css('top', (top+totalads[date+resourceId])+'px');
-                            totalads[date+resourceId] += this._elements[timeForSlot][resourceId][j][k].height()-.4;
+                            totalads[date+resourceId] += this._elements[timeForSlot][resourceId][j][k].height();
                             this._elements[timeForSlot][resourceId][j][k].css('height', this._elements[timeForSlot][resourceId][j][k].height()+'px');
                             this._elements[timeForSlot][resourceId][j][k].css('position', 'absolute');
                         }
                     }
+                }
+                // check if one resource is higher and fix other one for following events
+                var transfer = mortgage = 0;
+                for (var resourceId in this._elements[timeForSlot]) {
+                    for (var j in this._elements[timeForSlot][resourceId]) {
+                        for (var k in this._elements[timeForSlot][resourceId][j]) {
+                            if (resourceId=='Transfer') {
+                                transfer += this._elements[timeForSlot][resourceId][j][k].height();
+                            } else {
+                                mortgage += this._elements[timeForSlot][resourceId][j][k].height();
+                            }
+                        }
+                    }
+                }
+                if (transfer>mortgage) {
+                    totalads[date+'Mortgage'] += transfer - mortgage;
+                } else {
+                    totalads[date+'Transfer'] += mortgage - transfer;
                 }
             }
         }
