@@ -33,7 +33,7 @@
                                     if (this.meta.panels[i] && this.meta.panels[i].fields[j] && this.meta.panels[i].fields[j].name && _.contains(this._readOnlyFields, this.meta.panels[i].fields[j].name)) this.meta.panels[i].fields[j].readonly = true;
                                 }
                             }
-                        }, this);
+                        }, this));
                     }
                 }
             },
