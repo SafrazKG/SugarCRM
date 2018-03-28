@@ -32,7 +32,10 @@
      * @override
      */
     openSelectDrawer: function() {
-        this.context.parent.set('filter_by_role_id', this._userRole);
+        if (this.context) {
+            if (this.context.parent) this.context.parent.set('filter_by_role_id', this._userRole);
+            else this.context.set('filter_by_role_id', this._userRole);
+        }
         return this._super('openSelectDrawer', arguments);
     },
         
