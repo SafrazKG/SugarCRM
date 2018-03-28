@@ -50,7 +50,7 @@ class CalendarFilterApi extends FilterApi {
         // we need to add available slots if user is fronter
         if (!$GLOBALS['current_user']->isAdmin() && !$this->hasRole('calendar_admin')) throw new SugarApiExceptionNotAuthorized();
         if (!isset($args['filter'])) return array('next_offset' => -1, 'records' => []);
-        if (true || $this->hasRole('fronter')) {
+        if ($this->hasRole('fronter')) {
             $args['module'] = 'RRAPT_Admin';
             $args['fields'] = 'start_time_c,end_time_c,active_c';
             foreach (['transfer', 'mortgage'] as $product) {

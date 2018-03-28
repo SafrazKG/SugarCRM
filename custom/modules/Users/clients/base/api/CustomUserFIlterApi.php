@@ -56,7 +56,6 @@ class CustomUserFIlterApi extends FilterApi {
             }
             $args['filter'] = $newFilters;
         }
-        $args['max_num'] = 2;
         return $args;
     }
     
