@@ -45,6 +45,8 @@
     _configured: false,
     _waitForClick: false,
     _minRowHeight: 0,
+    _settingMinMax: false,
+    _resizeTO: false,
     
     initialize: function() {
         this.calendarOptions.viewRender = _.bind(this.viewRender, this);
@@ -53,6 +55,7 @@
             setTimeout(_.bind(this.eventAfterAllRender, this), 200);
         }, this);
         this._super('initialize', arguments);
+        $(window).on('resize', _.bind(this.onWindowResize, this));
     },
 
     setBeanDataOnCreate: function(calEvent) {
@@ -136,6 +139,7 @@
         if (_.isUndefined(this._elements[timeonly][ev.resourceId])) this._elements[timeonly][ev.resourceId] = {};
         if (_.isUndefined(this._elements[timeonly][ev.resourceId][start])) this._elements[timeonly][ev.resourceId][start] = [];
         this._elements[timeonly][ev.resourceId][start].push(el);
+        el.css('position', '');
     },
     
     eventAfterAllRender: function() {
@@ -266,10 +270,45 @@
                     }
                 },
                 _.bind(function() {
-                    this.collection.fetch({});
+                    this.reloadCalendar();
                 }, this)
             );
         }
+    },
+    
+    reloadCalendar: function() {
+        if (app.drawer.isClosing()) {
+            setTimeout(_.bind(function() {
+                this.reloadCalendar();
+            }, this), 200);
+            return;
+        }
+        if (!this.calendar || this.disposed) return;
+        $(window).trigger('resize', { manualResize: true });
+        window.calView = this.calendar.fullCalendar('getView');
+        setTimeout(_.bind(function() {
+            this.collection.fetch({});
+        }, this), 500);
+    },
+    
+    onWindowResize: function(ev, args) {
+        if (!this._rendered) return;
+        $('.fc-slats tr td').css('height', '');
+        $('.fc-slats tr td').removeAttr('data-height', '');
+        $('.fc-event').css('position', 'relative');
+        $('.fc-event').css('bottom', '');
+        this._elements = {};
+        this._heights = {};
+        if (!args || !args.manualResize) {
+              if (this._isAgendaView()) {
+                if (this._resizeTO) clearTimeout(this._resizeTO);
+                this._resizeTO = setTimeout(_.bind(function() {
+                    this._settingMinMax = true;
+                    this.calendar.fullCalendar('option', { minTime: this.minTimeForCalendar, maxTime: this.maxTimeForCalendar });
+                    this._resizeTO = false;
+                }, this), 200);
+            }
+      }
     },
     
 })
