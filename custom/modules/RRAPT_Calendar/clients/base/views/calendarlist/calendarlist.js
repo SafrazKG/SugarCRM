@@ -249,7 +249,9 @@
     },
     
     _isAgendaView: function() {
+        if (!this.calendar) return false;
         var cal = this.calendar.fullCalendar('getView');
+        if (!cal || !cal.name) return false;
         if (cal.name.indexOf('agenda')==-1) return false;
         return true;
     },
@@ -292,7 +294,7 @@
     },
     
     onWindowResize: function(ev, args) {
-        if (!this._rendered) return;
+        if (!this._rendered || !this.calendar) return;
         $('.fc-slats tr td').css('height', '');
         $('.fc-slats tr td').removeAttr('data-height', '');
         $('.fc-event').css('position', 'relative');
