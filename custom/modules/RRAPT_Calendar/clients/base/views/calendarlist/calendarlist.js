@@ -22,6 +22,9 @@
         'free': 'transparent',
     },
     
+    defaultMinTime: '08:00:00',
+    defaultMaxTime: '23:00:00',
+    
     calendarOptions: {
         defaultView: 'agendaDay',
         groupByDateAndResource: true,
@@ -35,8 +38,8 @@
             { id: 'Mortgage', title: 'Mortgage' },
         ],
         allDaySlot: false,
-        minTime: "08:00:00",
-        maxTime: "23:00:00",
+        minTime: this.defaultMinTime,
+        maxTime: this.defaultMaxTime,
         slotLabelFormat: '',
     },
     
@@ -299,17 +302,18 @@
         $('.fc-slats tr td').removeAttr('data-height', '');
         $('.fc-event').css('position', 'relative');
         $('.fc-event').css('bottom', '');
+        var hasElements = (this._elements!={});
         this._elements = {};
         this._heights = {};
         if (!args || !args.manualResize) {
-              if (this._isAgendaView()) {
-                if (this._resizeTO) clearTimeout(this._resizeTO);
-                this._resizeTO = setTimeout(_.bind(function() {
+            if (this._resizeTO) clearTimeout(this._resizeTO);
+            this._resizeTO = setTimeout(_.bind(function() {
+                if (this._isAgendaView()) {
                     this._settingMinMax = true;
-                    this.calendar.fullCalendar('option', { minTime: this.minTimeForCalendar, maxTime: this.maxTimeForCalendar });
+                    this.calendar.fullCalendar('option', { minTime: this.minTimeForCalendar?this.minTimeForCalendar:this.defaultMinTime, maxTime: this.maxTimeForCalendar?this.maxTimeForCalendar:this.defaultMaxTime });
                     this._resizeTO = false;
-                }, this), 200);
-            }
+                }
+            }, this), 200);
       }
     },
     
