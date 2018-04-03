@@ -48,9 +48,9 @@ class CalendarFilterApi extends FilterApi {
     
     public function extendedFilterList($api, $args) {
         // we need to add available slots if user is fronter
-        if (!$GLOBALS['current_user']->isAdmin() && !$this->hasRole('calendar_admin')) throw new SugarApiExceptionNotAuthorized();
         if (!isset($args['filter'])) return array('next_offset' => -1, 'records' => []);
-        if ($this->hasRole('fronter')) {
+        $admin = BeanFactory::newBean('RRAPT_Admin');
+        if ($admin->hasRole('fronter')) {
             $args['module'] = 'RRAPT_Admin';
             $args['fields'] = 'start_time_c,end_time_c,active_c';
             foreach (['transfer', 'mortgage'] as $product) {
@@ -94,38 +94,6 @@ class CalendarFilterApi extends FilterApi {
     
     public function extendedGetFilterListCount($api, $args) {
         return $this->getFilterListCount($ap, $args);
-    }
-
-    /*
-     * Helper function to get user's role ids
-     *
-     * @return array
-     * 
-     */    
-    private function getUserRoleIds() {
-        if (!isset($GLOBALS['AMPgetUserRolesIds'])) {
-            $ids = [];
-            $roles = ACLRole::getUserRoles($GLOBALS['current_user']->id, false);
-            foreach ($roles as $r) {
-                $ids[] = $r->id;
-            }
-            $GLOBALS['AMPgetUserRolesIds'] = $ids;
-        }
-        return $GLOBALS['AMPgetUserRolesIds'];
-    }
-    
-    /*
-     * Helper function to check does user belongs to specific role
-     *
-     * @return boolean
-     * 
-     */    
-    private function hasRole($role, $roles = null) {
-        if (!$roles) $roles = $this->getUserRoleIds();
-        foreach ($roles as $r) {
-            if ($r==$role) return true;
-        }
-        return false;
     }
     
     private function slotTimeLT($original, $compaareWith) {

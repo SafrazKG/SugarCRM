@@ -33,7 +33,7 @@
                 app.SlotAvailability.getAvailablity(moment, function(data) {
                         var dataName = (product=='Mortgage')?'mortgage':'transfer';
                         var slotName = dataName.toLowerCase() + '_' + moment.format('ha');
-                        if (!_.isUndefined(data.slots[slotName]) && data.slots[slotName].length && !_.contains(data.slots[slotName], modelid)) {
+                        if (!_.isUndefined(data.slots[slotName]) && data.slots[slotName].length && !app.SlotAvailability.hasId(data.slots[slotName], modelid)) {
                             callback(false, data);
                         } else {
                             callback(true, data);
@@ -46,7 +46,7 @@
             } else {
                 var dataName = (product=='Mortgage')?'mortgage':'transfer';
                 var slotName = dataName.toLowerCase() + '_' + moment.format('ha');
-                if (!_.isUndefined(callback.slots[slotName]) && callback.slots[slotName].length && !_.contains(callback.slots[slotName], modelid)) {
+                if (!_.isUndefined(callback.slots[slotName]) && callback.slots[slotName].length && !app.SlotAvailability.hasId(callback.slots[slotName], modelid)) {
                     return false;
                 } else {
                     return true;
@@ -57,6 +57,12 @@
             if (!moment._isAMomentObject) throw('moment must be moment object');
             var string = moment.format('YYYY-MM-DD');
             delete app.SlotAvailability.availability[string];
+        },
+        hasId: function(slot, id) {
+            for (var i in slot) {
+                if (id==slot[i].id) return true;
+            }
+            return false;
         },
     }
 })(SUGAR.App);
