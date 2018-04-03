@@ -11,7 +11,6 @@ $dictionary["RRAPT_Calendar"]["fields"]["users_rrapt_calendar_1"] = array (
   'vname' => 'LBL_USERS_RRAPT_CALENDAR_1_FROM_RRAPT_CALENDAR_TITLE',
   'id_name' => 'users_rrapt_calendar_1users_ida',
   'link-type' => 'one',
-  'required' => true,
 );
 $dictionary["RRAPT_Calendar"]["fields"]["users_rrapt_calendar_1_name"] = array (
   'name' => 'users_rrapt_calendar_1_name',
@@ -29,7 +28,6 @@ $dictionary["RRAPT_Calendar"]["fields"]["users_rrapt_calendar_1_name"] = array (
     0 => 'first_name',
     1 => 'last_name',
   ),
-  'required' => true,
 );
 $dictionary["RRAPT_Calendar"]["fields"]["users_rrapt_calendar_1users_ida"] = array (
   'name' => 'users_rrapt_calendar_1users_ida',
@@ -46,5 +44,4 @@ $dictionary["RRAPT_Calendar"]["fields"]["users_rrapt_calendar_1users_ida"] = arr
   'massupdate' => false,
   'duplicate_merge' => 'disabled',
   'hideacl' => true,
-  'required' => true,
 );

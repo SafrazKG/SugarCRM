@@ -15,25 +15,16 @@
 // Merged from custom/Extension/modules/Users/Ext/Language/ar_SA.customusers_rrapt_calendar_1.php
 
 //THIS FILE IS AUTO GENERATED, DO NOT MODIFY
-$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_RRAPT_CALENDAR_TITLE'] = 'Assigned to Fronter';
-$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_USERS_TITLE'] = 'Assigned to Fronter';
+$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_RRAPT_CALENDAR_TITLE'] = 'Secondary Fronter';
+$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_USERS_TITLE'] = 'Secondary Fronter';
 
 ?>
 <?php
 // Merged from custom/Extension/modules/Users/Ext/Language/temp.php
 
 //THIS FILE IS AUTO GENERATED, DO NOT MODIFY
-$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_RRAPT_CALENDAR_TITLE'] = 'Assigned to Fronter';
-$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_USERS_TITLE'] = 'Assigned to Fronter';
-
-
-?>
-<?php
-// Merged from custom/Extension/modules/Users/Ext/Language/temp.php
-
-//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
-$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_RRAPT_CALENDAR_TITLE'] = 'Assigned to Fronter';
-$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_USERS_TITLE'] = 'Assigned to Fronter';
+$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_RRAPT_CALENDAR_TITLE'] = 'Secondary Fronter';
+$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_USERS_TITLE'] = 'Secondary Fronter';
 
 
 ?>
@@ -41,7 +32,16 @@ $mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_USERS_TITLE'] = 'Assigned to Front
 // Merged from custom/Extension/modules/Users/Ext/Language/temp.php
 
 //THIS FILE IS AUTO GENERATED, DO NOT MODIFY
-$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_RRAPT_CALENDAR_TITLE'] = 'Assigned to Fronter';
-$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_USERS_TITLE'] = 'Assigned to Fronter';
+$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_RRAPT_CALENDAR_TITLE'] = 'Secondary Fronter';
+$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_USERS_TITLE'] = 'Secondary Fronter';
+
+
+?>
+<?php
+// Merged from custom/Extension/modules/Users/Ext/Language/temp.php
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_RRAPT_CALENDAR_TITLE'] = 'Secondary Fronter';
+$mod_strings['LBL_USERS_RRAPT_CALENDAR_1_FROM_USERS_TITLE'] = 'Secondary Fronter';
 
 ?>

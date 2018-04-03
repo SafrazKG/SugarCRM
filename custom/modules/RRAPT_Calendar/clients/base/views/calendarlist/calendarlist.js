@@ -64,6 +64,7 @@
     setBeanDataOnCreate: function(calEvent) {
         var bean = this._super('setBeanDataOnCreate', arguments);
         bean.set('date_field_c', calEvent.start.formatServer());
+        bean.set('product_c', calEvent.resourceId);
         return bean;
     },
 
@@ -84,7 +85,7 @@
             }
             var title = model.get('name');
             if (title) {
-                title += "\nF: " + model.get('users_rrapt_calendar_1_name');
+                title += "\nF: " + model.get('assigned_user_name');
                 title += " - ";
                 title += "C: " + model.get('users_rrapt_calendar_3_name');
             } else {
@@ -135,6 +136,7 @@
             return;
         }
         if (!this._isAgendaView()) return;
+        this.calendar.css('visibility', 'hidden');
         var start = ev.start.formatServer();
         var timeonly = this._getTimeForSlot(start);
         this._heights[timeonly] = 0;
@@ -153,7 +155,10 @@
             }, this), 200);
             return;
         }
-        if (!this._isAgendaView() || !$('tr.fc-minor').length) return;
+        if (!this._isAgendaView() || !$('tr.fc-minor').length) {
+            this.calendar.css('visibility', 'visible');
+            return;
+        }
         // find minRowHeight
         var originalHeight = $('tr.fc-minor').attr('data-height');
         if (originalHeight) {
@@ -239,6 +244,7 @@
                 }
             }
         }
+        this.calendar.css('visibility', 'visible');
     },
     
     _getTimeForEvent: function(time) {

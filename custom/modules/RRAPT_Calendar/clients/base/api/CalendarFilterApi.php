@@ -75,7 +75,7 @@ class CalendarFilterApi extends FilterApi {
                             'product_c' => $slotData['product_c'],
                             'date_field_c' => $this->toUserTimeInDBFormat($slotData['date_field_c']),
                             'disposition_c' => $slotData['disposition_c'],
-                            'users_rrapt_calendar_1_name' => $slotData['users_rrapt_calendar_1_name']?$slotData['users_rrapt_calendar_1_name']:'',
+                            'assigned_user_name' => $slotData['assigned_user_name']?$slotData['assigned_user_name']:'',
                             'users_rrapt_calendar_3_name' => $slotData['users_rrapt_calendar_3_name']?$slotData['users_rrapt_calendar_3_name']:'',
                         );
                         $ret['records'][] = $record;
