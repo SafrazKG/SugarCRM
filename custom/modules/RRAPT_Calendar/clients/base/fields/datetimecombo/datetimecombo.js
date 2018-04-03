@@ -14,6 +14,7 @@
             this.def.time = this.def.time||{};
             this.def.time.step = 60;
             this.model.on('change:'+this.name, _.bind(this.changeTimes, this));
+            this.model.on('change:product_c', _.bind(this.changeTimes, this));
             this.on('render', _.bind(function() {
                 if (this.action=='edit' && !this._editRendered) {
                     this._editRendered = true;

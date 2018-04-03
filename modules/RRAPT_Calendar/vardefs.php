@@ -16,6 +16,9 @@ $dictionary['RRAPT_Calendar'] = array(
     'audited' => true,
     'activity_enabled' => false,
     'duplicate_merge' => true,
+    'duplicate_check' => array(
+                                'enabled' => false,
+                              ),
     'fields' => array (
 ),
     'relationships' => array (

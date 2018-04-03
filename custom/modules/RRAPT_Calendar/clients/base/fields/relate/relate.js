@@ -3,8 +3,8 @@
     
     _userRole: false,
     _fieldsToCustomize: {
+                            assigned_user_name: 'fronter',
                             users_rrapt_calendar_1_name: 'fronter',
-                            users_rrapt_calendar_2_name: 'fronter',
                             users_rrapt_calendar_3_name: 'closer',
                         },
                         

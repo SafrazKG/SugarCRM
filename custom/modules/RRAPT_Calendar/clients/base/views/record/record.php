@@ -195,11 +195,11 @@ array (
               ),
               6 => 
               array (
-                'name' => 'users_rrapt_calendar_1_name',
+                'name' => 'assigned_user_name',
               ),
               7 => 
               array (
-                'name' => 'users_rrapt_calendar_2_name',
+                'name' => 'users_rrapt_calendar_1_name',
               ),
               8 => 
               array (
@@ -232,9 +232,8 @@ array (
                 'name' => 'tag',
                 'span' => 12,
               ),
-              1 => 'assigned_user_name',
-              2 => 'team_name',
-              3 => 
+              1 => 'team_name',
+              2 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,
@@ -258,7 +257,7 @@ array (
                   ),
                 ),
               ),
-              4 => 
+              3 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
