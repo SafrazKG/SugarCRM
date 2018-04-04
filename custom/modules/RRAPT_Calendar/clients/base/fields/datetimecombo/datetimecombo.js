@@ -7,9 +7,8 @@
     _editRendered: false,
 
     initialize: function(options) {
-        window.test = this;
         this._super('initialize', [options]);
-        if (this.name=='date_field_c') {
+        if (this.model && this.name=='date_field_c') {
             this._changedField = true;
             this.def.time = this.def.time||{};
             this.def.time.step = 60;
