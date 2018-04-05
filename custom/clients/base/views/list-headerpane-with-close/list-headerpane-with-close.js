@@ -15,14 +15,19 @@
  */
 ({
     extendsFrom: 'ListHeaderpaneView',
+
+    extendedEvents: {
+        'click [name="close_drawer"]': 'closeDrawer',
+    },
     
     initialize: function() {
+        this.events = this.events || {};
+        _.extend(this.events, this.extendedEvents);
         this._super('initialize', arguments);
-        this.on('render', function() {
-            $('[name=close_drawer]').on('click', function() {
-                app.drawer.close();
-            });
-        });
+    },
+    
+    closeDrawer: function() {
+        app.drawer.close();
     },
     
 })

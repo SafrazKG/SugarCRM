@@ -8,7 +8,7 @@
 
     initialize: function(options) {
         this._super('initialize', [options]);
-        if (this.model && this.name=='date_field_c') {
+        if (this.model && this.name=='date_field_c' && (!this.context.parent || !this.context.parent.get('_dontInit'))) {
             this._changedField = true;
             this.def.time = this.def.time||{};
             this.def.time.step = 60;

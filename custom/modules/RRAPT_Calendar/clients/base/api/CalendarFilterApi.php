@@ -64,21 +64,23 @@ class CalendarFilterApi extends FilterApi {
             $ret = array('next_offset' => -1, 'records' => array());
             $minTime = $maxTime = false;
             foreach ($list as $entry) {
-                foreach ($entry['slots'] as $slotName => $slot) {
-                    foreach ($slot as $slotData) {
-                        $slotNameData = explode('_', $slotName);
-                        $minTime = $this->slotTimeLT($minTime, $slotNameData[1]);
-                        $maxTime = $this->slotTimeGT($maxTime, $slotNameData[1]);
-                        $record = array(
-                            'id' => $slotData['id'],
-                            'name' => $slotData['name'],
-                            'product_c' => $slotData['product_c'],
-                            'date_field_c' => $this->toUserTimeInDBFormat($slotData['date_field_c']),
-                            'disposition_c' => $slotData['disposition_c'],
-                            'assigned_user_name' => $slotData['assigned_user_name']?$slotData['assigned_user_name']:'',
-                            'users_rrapt_calendar_3_name' => $slotData['users_rrapt_calendar_3_name']?$slotData['users_rrapt_calendar_3_name']:'',
-                        );
-                        $ret['records'][] = $record;
+                if (isset($entry['slots']) && is_array($entry['slots'])) {
+                    foreach ($entry['slots'] as $slotName => $slot) {
+                        foreach ($slot as $slotData) {
+                            $slotNameData = explode('_', $slotName);
+                            $minTime = $this->slotTimeLT($minTime, $slotNameData[1]);
+                            $maxTime = $this->slotTimeGT($maxTime, $slotNameData[1]);
+                            $record = array(
+                                'id' => $slotData['id'],
+                                'name' => $slotData['name'],
+                                'product_c' => $slotData['product_c'],
+                                'date_field_c' => $this->toUserTimeInDBFormat($slotData['date_field_c']),
+                                'disposition_c' => $slotData['disposition_c'],
+                                'assigned_user_name' => $slotData['assigned_user_name']?$slotData['assigned_user_name']:'',
+                                'users_rrapt_calendar_3_name' => $slotData['users_rrapt_calendar_3_name']?$slotData['users_rrapt_calendar_3_name']:'',
+                            );
+                            $ret['records'][] = $record;
+                        }
                     }
                 }
             }

@@ -5,7 +5,7 @@
         var model = options.context?options.context.get('model'):null;
         if (model) {
             if (!model.get('date_field_c')) {
-                this.context.parent.set('_dontInit', true);
+                options.context.parent.set('_dontInit', true);
                 this.openCalendar(model);
             }
         }
@@ -29,6 +29,7 @@
         app.drawer.open({
                 layout: 'records-with-close',
                 context: {
+                    inDrawer: true,
                     oldModel: model,
                     module: 'RRAPT_Calendar',
                 },

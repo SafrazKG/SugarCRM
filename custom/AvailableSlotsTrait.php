@@ -15,7 +15,7 @@ trait AvailableSlotsTrait {
                 $started = $nomore = false;
                 foreach ($this->times as $time) {
                     if ($time==$startTime) $started = true;
-                    if ($started && !$nomore) {
+                    if ($started && !$nomore && isset($res['date_field_c'])) {
                         $slots['transfer_'.strtolower($time)] = $this->isSlotAvailable($res['date_field_c'], $time, $res['transfer_'.strtolower($time).'_c'], 'Transfer', $fullresultset);
                         $slots['mortgage_'.strtolower($time)] = $this->isSlotAvailable($res['date_field_c'], $time, $res['mortgage_'.strtolower($time).'_c'], 'Mortgage', $fullresultset);
                     }

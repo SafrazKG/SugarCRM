@@ -50,13 +50,15 @@
     _minRowHeight: 0,
     _settingMinMax: false,
     _resizeTO: false,
+    _inDrawer: false,
     
-    initialize: function() {
+    initialize: function(options) {
         this.calendarOptions.viewRender = _.bind(this.viewRender, this);
         this.calendarOptions.eventRender = _.bind(this.eventRender, this);
         this.calendarOptions.eventAfterAllRender = _.bind(function() {
             setTimeout(_.bind(this.eventAfterAllRender, this), 200);
         }, this);
+        if (options && options.context && options.context.get('inDrawer')) this._inDrawer = true;
         this._super('initialize', arguments);
         $(window).on('resize', _.bind(this.onWindowResize, this));
     },
@@ -258,7 +260,7 @@
     },
     
     _isAgendaView: function() {
-        if (!this.calendar) return false;
+        if (!this.calendar || this.disposed) return false;
         var cal = this.calendar.fullCalendar('getView');
         if (!cal || !cal.name) return false;
         if (cal.name.indexOf('agenda')==-1) return false;
@@ -281,9 +283,17 @@
                     }
                 },
                 _.bind(function() {
-                    this.reloadCalendar();
+                    this.onCreated();
                 }, this)
             );
+        }
+    },
+    
+    onCreated: function() {
+        if (this._inDrawer) {
+            app.drawer.close();
+        } else {
+            this.reloadCalendar();
         }
     },
     
