@@ -1,0 +1,30 @@
+<?php
+// WARNING: The contents of this file are auto-generated.
+$mod_strings['LBL_CURRENCY'] = 'LBL_CURRENCY';
+$mod_strings['LBL_AMOUNT'] = 'Amount';
+$mod_strings['LBL_CHARGE_SOURCE'] = 'Charge Source';
+$mod_strings['LBL_SALE_DATE'] = 'Sale Date';
+$mod_strings['LBL_DUE_DATE'] = 'Due Date';
+$mod_strings['LBL_PROCESS_DATE'] = 'Process Date';
+$mod_strings['LBL_FUNDING_DATE'] = 'Funding Date';
+$mod_strings['LBL_PAYOUT_DATE'] = 'Pay-Out Date';
+$mod_strings['LBL_PAYMENT_TYPE'] = 'Payment Type';
+$mod_strings['LBL_NOTE'] = 'Note';
+$mod_strings['LBL_STATUS'] = 'Status';
+$mod_strings['LBL_CARD_TYPE'] = 'Card Type';
+$mod_strings['LBL_CURRENCY_0'] = 'LBL_CURRENCY';
+$mod_strings['LBL_MERCHANT_FEE'] = 'Merchant Fee';
+$mod_strings['LBL_MERCHANT'] = 'Merchant';
+$mod_strings['LBL_CURRENCY_1'] = 'LBL_CURRENCY';
+$mod_strings['LBL_USCA_FEE'] = 'USCA Fee';
+$mod_strings['LBL_CURRENCY_2'] = 'LBL_CURRENCY';
+$mod_strings['LBL_ARMG'] = 'ARMG';
+$mod_strings['LBL_CURRENCY_3'] = 'LBL_CURRENCY';
+$mod_strings['LBL_RNR'] = 'RNR';
+$mod_strings['LBL_RECON_DATE'] = 'Recon Date';
+$mod_strings['LBL_CURRENCY_4'] = 'LBL_CURRENCY';
+$mod_strings['LBL_INVOICE'] = 'Invoice';
+$mod_strings['LBL_CURRENCY_5'] = 'LBL_CURRENCY';
+$mod_strings['LBL_AFFILIATE_PAY'] = 'Affiliate Pay';
+$mod_strings['LBL_CURRENCY_6'] = 'LBL_CURRENCY';
+$mod_strings['LBL_UNPAID'] = 'Unpaid';
