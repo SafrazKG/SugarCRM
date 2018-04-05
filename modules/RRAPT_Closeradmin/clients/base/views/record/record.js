@@ -1,5 +1,5 @@
 ({
-    extendsFrom: 'RecordlistView',
+    extendsFrom: 'RecordView',
     
     initialize: function() {
         if (app.user.get('type')!='admin') {
@@ -13,8 +13,5 @@
             return;
         }
         this._super('initialize', arguments);
-        this.on('render', function() { $('.search-filter').hide(); });
-        this.collection.fetch({});
-    },
-    
+    }
 })
