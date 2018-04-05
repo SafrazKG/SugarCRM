@@ -206,7 +206,10 @@ array (
               array (
                 'name' => 'type_b_c',
                 'label' => 'LBL_TYPE_B',
-                'span' => 12,
+              ),
+              7 => 
+              array (
+                'name' => 'asd_payments_abc_maintenance_fees_1_name',
               ),
             ),
           ),

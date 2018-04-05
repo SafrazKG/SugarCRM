@@ -385,7 +385,10 @@ array (
               35 => 
               array (
                 'name' => 'abc_mortgages_abc_properties_1_name',
-                'span' => 12,
+              ),
+              36 => 
+              array (
+                'name' => 'rrpay_payment_plans_abc_mortgages_1_name',
               ),
             ),
           ),
