@@ -94,8 +94,8 @@ trait AvailableSlotsTrait {
             }
             $res[] = $row;
         }
-        if ($fullresultset) {
-            while (count($res)<$maxSlots) {
+        while (count($res)<$maxSlots) {
+            if ($fullresultset) {
                 $res[] = array(
                     'id' => 'free_'.md5($product.$dbtime.count($res)),
                     'old_id' => 'free_'.md5($product.$dbtime.count($res)),
@@ -105,6 +105,10 @@ trait AvailableSlotsTrait {
                     'disposition_c' => 'free',
                     'assigned_user_name' => '',
                     'users_rrapt_calendar_3_name' => '',
+                );
+            } else {
+                $res[] = array(
+                    'id' => 'free',
                 );
             }
         }

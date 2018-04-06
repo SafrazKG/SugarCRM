@@ -59,10 +59,17 @@
             delete app.SlotAvailability.availability[string];
         },
         hasId: function(slot, id) {
-            for (var i in slot) {
-                if (id==slot[i].id) return true;
+            if (id) {
+                for (var i in slot) {
+                    if (id==slot[i].id) return true;
+                }
+                return false;
+            } else {
+                for (var i in slot) {
+                    if (slot[i].id=='free') return true;
+                }
+                return false;
             }
-            return false;
         },
     }
 })(SUGAR.App);
