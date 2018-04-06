@@ -49,27 +49,42 @@ class CalendarFilterApi extends FilterApi {
     public function extendedFilterList($api, $args) {
         // we need to add available slots if user is fronter
         if (!isset($args['filter'])) return array('next_offset' => -1, 'records' => []);
-        $admin = BeanFactory::newBean('RRAPT_Admin');
-        if ($admin->hasRole('fronter')) {
-            $args['module'] = 'RRAPT_Admin';
-            $args['fields'] = 'start_time_c,end_time_c,active_c';
-            foreach (['transfer', 'mortgage'] as $product) {
-                foreach ($this->times as $time) {
-                    $args['fields'] .= ','.$product.'_'.strtolower($time).'_c';
+        foreach ($args['filter'] as $k => $filter) {
+            if (isset($filter['date_field_c'])) {
+                if (isset($filter['date_field_c']['$gte'])) {
+                    $start = $filter['date_field_c']['$gte'];
+                    $startDate = explode("T", $start)[0];
+                    $args['filter'][$k]['date_field_c']['$gte'] = $startDate."T00:00:00";
+                } else if (isset($filter['date_field_c']['$lte'])) {
+                    $end = $filter['date_field_c']['$lte'];
+                    $endDate = explode("T", $end)[0];
+                    $args['filter'][$k]['date_field_c']['$lte'] = $endDate."T00:00:00";
                 }
             }
-            list($args, $q, $options, $seed) = $this->filterListSetup($api, $args, 'list');
-            $result = $q->execute();            
-            $list = $this->getAvailableSlotsFromQuery($result, true);
-            $ret = array('next_offset' => -1, 'records' => array());
-            $minTime = $maxTime = false;
-            foreach ($list as $entry) {
-                if (isset($entry['slots']) && is_array($entry['slots'])) {
-                    foreach ($entry['slots'] as $slotName => $slot) {
-                        foreach ($slot as $slotData) {
-                            $slotNameData = explode('_', $slotName);
-                            $minTime = $this->slotTimeLT($minTime, $slotNameData[1]);
-                            $maxTime = $this->slotTimeGT($maxTime, $slotNameData[1]);
+        }
+        if (!$start || !$end) return array('next_offset' => -1, 'records' => []);
+        $admin = BeanFactory::newBean('RRAPT_Admin');
+        $isFronter = $admin->hasRole('fronter');
+        $args['module'] = 'RRAPT_Admin';
+        $args['fields'] = 'start_time_c,end_time_c,active_c';
+        foreach (['transfer', 'mortgage'] as $product) {
+            foreach ($this->times as $time) {
+                $args['fields'] .= ','.$product.'_'.strtolower($time).'_c';
+            }
+        }
+        list($args, $q, $options, $seed) = $this->filterListSetup($api, $args, 'list');
+        $result = $q->execute();
+        $list = $this->getAvailableSlotsFromQuery($result, true, $start, $end);
+        $ret = array('next_offset' => -1, 'records' => array());
+        $minTime = $maxTime = false;
+        foreach ($list as $entry) {
+            if (isset($entry['slots']) && is_array($entry['slots'])) {
+                foreach ($entry['slots'] as $slotName => $slot) {
+                    foreach ($slot as $slotData) {
+                        $slotNameData = explode('_', $slotName);
+                        $minTime = $this->slotTimeLT($minTime, $slotNameData[1]);
+                        $maxTime = $this->slotTimeGT($maxTime, $slotNameData[1]);
+                        if ($isFronter || strpos($slotData['id'], 'free_')===false) {
                             $record = array(
                                 'id' => $slotData['id'],
                                 'name' => $slotData['name'],
@@ -84,12 +99,10 @@ class CalendarFilterApi extends FilterApi {
                     }
                 }
             }
-            if (!empty($ret['records'])) {
-                $ret['records'][0]['minTime'] = $this->timeToDbTime($minTime);
-                $ret['records'][0]['maxTime'] = $this->timeToDbTime($this->nextTime($maxTime));
-            }
-        } else {
-            $ret = $this->filterList($api, $args);
+        }
+        if (!empty($ret['records'])) {
+            $ret['records'][0]['minTime'] = $this->timeToDbTime($minTime);
+            $ret['records'][0]['maxTime'] = $this->timeToDbTime($this->nextTime($maxTime));
         }
         return $ret;
     }

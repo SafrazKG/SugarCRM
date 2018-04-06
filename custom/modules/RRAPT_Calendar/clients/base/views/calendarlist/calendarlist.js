@@ -11,6 +11,7 @@
         'Closer not available': '#F94A4A',
         'Customer not available': '#FCA1A1',
         'free': '#D6D6D6',
+        'notConfirmedCritical': '#FF6363',
     },
     
     dispositionColors: {
@@ -20,6 +21,7 @@
         'Closer not available': '#000000',
         'Customer not available': '#000000',
         'free': 'transparent',
+        'notConfirmedCritical': '#000000',
     },
     
     defaultMinTime: '08:00:00',
@@ -51,6 +53,8 @@
     _settingMinMax: false,
     _resizeTO: false,
     _inDrawer: false,
+    _interval: 0,
+    _getting5mindata: false,
     
     initialize: function(options) {
         this.calendarOptions.viewRender = _.bind(this.viewRender, this);
@@ -60,7 +64,15 @@
         }, this);
         if (options && options.context && options.context.get('inDrawer')) this._inDrawer = true;
         this._super('initialize', arguments);
-        $(window).on('resize', _.bind(this.onWindowResize, this));
+        $(window).on('resize.'+this.cid, _.bind(this.onWindowResize, this));
+        var now = app.date();
+        now.seconds(0);
+        while (now.minute()%5) {
+            now.add(1, 'minutes');
+        }
+        app.ScheduleRun(now, function() {
+            this._interval = setInterval(_.bind(this.checkData, this), 60000);
+        }, this);
     },
 
     setBeanDataOnCreate: function(calEvent) {
@@ -83,7 +95,7 @@
         _.each(this.collection.models, function(model) {
             if (this._isAgendaView()) {
                 if (model.get('minTime')) this.minTimeForCalendar = this.slotTimeLT(this.minTimeForCalendar, model.get('minTime'));
-                if (model.get('maxTime')) this.maxTimeForCalendar = this.slotTimeGT(this.model.maxTimeForCalendar, model.get('maxTime'));
+                if (model.get('maxTime')) this.maxTimeForCalendar = this.slotTimeGT(this.maxTimeForCalendar, model.get('maxTime'));
             }
             var title = model.get('name');
             if (title) {
@@ -94,14 +106,14 @@
                 title += "\n -";
             }
             events.push({
-                        resourceId: model.get('product_c'),
-                        id: model.id,
-                        title: title,
-                        allDay: false,
-                        start: model.get('date_field_c'),
-                        backgroundColor: this.dispositionBackgroundColors[model.get('disposition_c')],
-                        textColor: this.dispositionColors[model.get('disposition_c')],
-                    });
+                resourceId: model.get('product_c'),
+                id: model.id,
+                title: title,
+                allDay: false,
+                start: model.get('date_field_c'),
+                backgroundColor: this.dispositionBackgroundColors[model.get('disposition_c')],
+                textColor: this.dispositionColors[model.get('disposition_c')],
+            });
         }, this);
         if (minOrig!=this.minTimeForCalendar || maxOrig!=this.maxTimeForCalendar) {
             if (this._isAgendaView()) {
@@ -313,7 +325,7 @@
     },
     
     onWindowResize: function(ev, args) {
-        if (!this._rendered || !this.calendar) return;
+        if (!this._rendered || !this.calendar || this.disposed) return;
         $('.fc-slats tr td').css('height', '');
         $('.fc-slats tr td').removeAttr('data-height', '');
         $('.fc-event').css('position', 'relative');
@@ -332,5 +344,65 @@
             }, this), 200);
       }
     },
+    
+    checkData: function() {
+        if (this.disposed || !this.calendar || !this._rendered || this._getting5mindata) return;
+        this._getting5mindata = true;
+        var next = app.date().utc();
+        next.seconds(0);
+        while (next.minute()%5) {
+            next.subtract(1, 'minutes');
+        }
+        var start = next.formatServer().split('+')[0];
+        next.add(90, 'minutes');
+        var end = next.formatServer().split('+')[0];
+        app.api.call('read', app.api.buildURL('RRAPT_Calendar/?order_by=date_field_c%3Aasc&fields=&max_num=20&filter%5B0%5D%5Bdate_field_c%5D%5B%24gte%5D='+encodeURIComponent(start)+'&filter%5B1%5D%5Bdate_field_c%5D%5B%24lte%5D='+encodeURIComponent(end)), {}, {
+            success: _.bind(function(data) {
+                var changed = false;
+                for (var i in data.records) {
+                    var id = data.records[i].id;
+                    var model = this.collection.findWhere({id: data.records[i].old_id});
+                    if (!model) model = this.collection.findWhere({id: data.records[i].id});
+                    if (model) {
+                        for (var k in data.records[i]) {
+                            if (model.has(k)) {
+                                if (model.get(k)!=data.records[i][k]) {
+                                    changed = true;
+                                    model.set(k, data.records[i][k]);
+                                }
+                            }
+                        }
+                    } else {
+                        var index = 0;
+                        var foundSameOrBefore = '';
+                        var date_field_c = app.date(data.records[i].date_field_c);
+                        for (var j in this.collection.models) {
+                            index = j;
+                            var existing = app.date(this.collection.models[j].get('date_field_c'));
+                            if (foundSameOrBefore && this.collection.models[j].get('date_field_c')!=foundSameOrBefore) break;
+                            if (!foundSameOrBefore && existing.isSameOrBefore(date_field_c)) {
+                                foundSameOrBefore = this.collection.models[j].get('date_field_c');
+                            }
+                        }
+                        var newModel = app.data.createBean('RRAPT_Calendar');
+                        for (var j in data.records[i]) {
+                            newModel.set(j, data.records[i][j]);
+                        }
+                        this.collection.add(newModel, { at: index });
+                    }
+                }
+                if (changed) {
+                    this.updateCalendarData();
+                }
+                this._getting5mindata = false;
+            }, this),
+        });
+    },
+
+    _dispose: function() {
+        clearInterval(this._interval);
+        $(window).off('resize.'+this.cid);
+        this._super('_dispose', arguments);
+    }
     
 })
