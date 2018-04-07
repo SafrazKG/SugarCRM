@@ -2,7 +2,8 @@
     extendsFrom: 'RecordlistView',
     
     initialize: function() {
-        if (app.user.get('type')!='admin') {
+        var roles = app.user.get('roles');
+        if (!_.contains(roles, 'Calendar Admin') && app.user.get('type')!='admin') {
             app.alert.show('noacess', {
                 level: 'error',
                 title: 'LBL_NO_ACCESS',

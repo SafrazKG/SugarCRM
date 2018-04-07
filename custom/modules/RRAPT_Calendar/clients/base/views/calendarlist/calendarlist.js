@@ -1,9 +1,10 @@
 ({
     extendsFrom: 'CustomCalendarlist',
-    startField: 'date_field_c',
-    endField: 'date_field_c',
-    minTimeForCalendar: false,
-    maxTimeForCalendar: false,
+    
+    serverPingTime: 5, // minutes
+    defaultMinTime: '08:00:00',
+    defaultMaxTime: '23:00:00',
+    
     dispositionBackgroundColors: {
         'Set': '#13A0ED',
         'Confirmed': '#59BA74',
@@ -24,9 +25,6 @@
         'notConfirmedCritical': '#000000',
     },
     
-    defaultMinTime: '08:00:00',
-    defaultMaxTime: '23:00:00',
-    
     calendarOptions: {
         defaultView: 'agendaDay',
         groupByDateAndResource: true,
@@ -45,6 +43,11 @@
         slotLabelFormat: '',
     },
     
+    startField: 'date_field_c',
+    endField: 'date_field_c',
+    minTimeForCalendar: false,
+    maxTimeForCalendar: false,
+
     _configured: false,
     _waitForClick: false,
     _minRowHeight: 0,
@@ -72,7 +75,7 @@
             now.add(1, 'minutes');
         }
         app.ScheduleRun(now, function() {
-            this._interval = setInterval(_.bind(this.checkData, this), 300000);
+            this._interval = setInterval(_.bind(this.checkData, this), this.serverPingTime*60000);
         }, this);
     },
 
@@ -350,6 +353,7 @@
                             newModel.set(j, data.records[i][j]);
                         }
                         this.collection.add(newModel, { at: index });
+                        changed = true;
                     }
                 }
                 if (changed) {

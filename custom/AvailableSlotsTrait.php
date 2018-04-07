@@ -52,13 +52,19 @@ trait AvailableSlotsTrait {
         $compare = SugarDateTime::createFromFormat("Y-m-d H:i:s", $date." ".$this->timeToDbTime($max), new DateTimeZone("UTC"));
         if ($startOrEnd=='start') {
             if ($dt->getTimestamp()-$compare->getTimestamp()>0) {
-                return $dt->format('gA');
+                $ret = $this->times[0];
+                $tmp = $dt->format('gA');
+                if (in_array($tmp, $this->times)) return $tmp;
+                return $ret;
             } else {
                 return $max;
             }
         } else {
             if ($compare->getTimestamp()-$dt->getTimestamp()>0) {
-                return $dt->format('gA');
+                $ret = $this->times[count($this->times)-1];
+                $tmp = $dt->format('gA');
+                if (in_array($tmp, $this->times)) return $tmp;
+                return $ret;
             } else {
                 return $max;
             }
@@ -73,7 +79,7 @@ trait AvailableSlotsTrait {
         if ($fullresultset) {
             $fields = "Calendar.id, Calendar.name, Calendar_cstm.product_c, Calendar_cstm.date_field_c, Calendar_cstm.disposition_c, CONCAT(users1.first_name,' ',users1.last_name) AS assigned_user_name, CONCAT(users3.first_name,' ',users3.last_name) AS users_rrapt_calendar_3_name";
             $joins = "LEFT JOIN users users1 ON (users1.deleted=0 AND users1.id=Calendar.assigned_user_id) ";
-            $joins .= "LEFT JOIN users_rrapt_calendar_3_c ON (users_rrapt_calendar_3_c.deleted=0 AND users_rrapt_calendar_3_c.users_rrapt_calendar_3rrapt_calendar_idb=Calendar.id) LEFT JOIN users users3 ON (users3.deleted=0 AND users1.id=users_rrapt_calendar_3_c.users_rrapt_calendar_3users_ida) ";
+            $joins .= "LEFT JOIN users_rrapt_calendar_3_c ON (users_rrapt_calendar_3_c.deleted=0 AND users_rrapt_calendar_3_c.users_rrapt_calendar_3rrapt_calendar_idb=Calendar.id) LEFT JOIN users users3 ON (users3.deleted=0 AND users3.id=users_rrapt_calendar_3_c.users_rrapt_calendar_3users_ida) ";
         }
         $res = array();
         $q = $db->query("SELECT ".$fields." FROM rrapt_calendar Calendar INNER JOIN rrapt_calendar_cstm Calendar_cstm ON (Calendar_cstm.id_c=Calendar.id) ".$joins." WHERE Calendar.deleted=0 AND Calendar_cstm.date_field_c='".$db->quote($date." ".$this->timeToDbTime($time, $date))."' AND Calendar_cstm.product_c='".$product."'");
