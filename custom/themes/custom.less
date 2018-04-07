@@ -13,14 +13,16 @@
 }
 
 .calendar_list {
-    div.fc-event-container {
-        a.fc-time-grid-event {
-            width: 100% !important;
-            position: relative;
-            left: 0 !important;
-            div.fc-time {
-                display: none !important;
-            }
+    a.fc-time-grid-event {
+        width: 99% !important;
+        position: relative;
+        left: 0 !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        right: 0 !important;
+        margin: 0 !important;
+        div.fc-time {
+            display: none !important;
         }
     }
     .fc-title {
@@ -29,5 +31,27 @@
     .fc-title::first-line {
         font-weight: bold;
     }
+    .fc-resource-div {
+        float: left !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden;
+        min-height: 18px;
+    }
+    .fc-view {
+        visibility: hidden;
+        transition: opacity .3s ease-out;
+        -moz-transition: opacity .3s ease-out;
+        -webkit-transition: opacity .3s ease-out;
+        -o-transition: opacity .3s ease-out;
+    }
+    td.fc-widget-content {
+        overflow-x: hidden;
+    }
+    .content-holder {
+        overflow: hidden;
+        width: 101%;
+    }
 }
+
 
