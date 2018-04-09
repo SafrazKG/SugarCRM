@@ -81,10 +81,10 @@ trait AvailableSlotsTrait {
     private function isSlotAvailable($date, $time, $maxSlots, $product, $fullresultset = false) {
         global $current_user;
         $db = DBManagerFactory::getInstance();
-        $fields = 'Calendar.id, Calendar.assigned_user_id';
+        $fields = 'Calendar.id';
         $joins = '';
         if ($fullresultset) {
-            $fields = "Calendar.id, Calendar.assigned_user_id, Calendar.name, Calendar_cstm.product_c, Calendar_cstm.date_field_c, Calendar_cstm.disposition_c, CONCAT(users1.first_name,' ',users1.last_name) AS assigned_user_name, CONCAT(users3.first_name,' ',users3.last_name) AS users_rrapt_calendar_3_name";
+            $fields = "Calendar.id, Calendar.assigned_user_id, Calendar.name, Calendar_cstm.product_c, Calendar_cstm.date_field_c, Calendar_cstm.disposition_c, CONCAT(users1.first_name,' ',users1.last_name) AS assigned_user_name, CONCAT(users3.first_name,' ',users3.last_name) AS users_rrapt_calendar_3_name, users3.id AS closer_id";
             $joins = "LEFT JOIN users users1 ON (users1.deleted=0 AND users1.id=Calendar.assigned_user_id) ";
             $joins .= "LEFT JOIN users_rrapt_calendar_3_c ON (users_rrapt_calendar_3_c.deleted=0 AND users_rrapt_calendar_3_c.users_rrapt_calendar_3rrapt_calendar_idb=Calendar.id) LEFT JOIN users users3 ON (users3.deleted=0 AND users3.id=users_rrapt_calendar_3_c.users_rrapt_calendar_3users_ida) ";
         }
@@ -106,7 +106,7 @@ trait AvailableSlotsTrait {
                 }
             }
             if ($fullresultset && !$isAdmin) {
-                if ($row['assigned_user_id']!=$current_user->id) {
+                if ($row['assigned_user_id']!=$current_user->id && $row['closer_id']!=$current_user->id) {
                     $row['disposition_c'] = 'unavailable';
                     $row['name'] = '';
                     $row['id'] = 'unavaliable_'.$row['id'];
