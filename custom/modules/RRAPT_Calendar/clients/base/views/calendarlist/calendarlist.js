@@ -1,7 +1,7 @@
 ({
     extendsFrom: 'CustomCalendarlist',
     
-    serverPingTime: 1, // minutes
+    serverPingTime: 5, // minutes
     defaultMinTime: '08:00:00',
     defaultMaxTime: '23:00:00',
     
@@ -319,11 +319,12 @@
         this._getting5mindata = true;
         var next = app.date().utc();
         next.seconds(0);
+        next.subtract(60, 'minutes');
         while (next.minute()%5) {
             next.subtract(1, 'minutes');
         }
         var start = next.formatServer().split('+')[0];
-        next.add(90, 'minutes');
+        next.add(180, 'minutes');
         var end = next.formatServer().split('+')[0];
         app.api.call('read', app.api.buildURL('RRAPT_Calendar/?order_by=date_field_c%3Aasc&fields=&max_num=20&filter%5B0%5D%5Bdate_field_c%5D%5B%24gte%5D='+encodeURIComponent(start)+'&filter%5B1%5D%5Bdate_field_c%5D%5B%24lte%5D='+encodeURIComponent(end)), {}, {
             success: _.bind(function(data) {
