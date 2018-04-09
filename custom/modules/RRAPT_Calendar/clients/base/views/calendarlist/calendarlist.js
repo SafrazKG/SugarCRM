@@ -13,6 +13,7 @@
         'Customer not available': '#FCA1A1',
         'free': '#D6D6D6',
         'notConfirmedCritical': '#FF6363',
+        'unavailable': '#919191',
     },
     
     dispositionColors: {
@@ -23,6 +24,7 @@
         'Customer not available': '#000000',
         'free': 'transparent',
         'notConfirmedCritical': '#000000',
+        'unavailable': 'transparent',
     },
     
     calendarOptions: {
@@ -249,6 +251,7 @@
      * @override
      */
     eventClick: function(calEvent) {
+        if (calEvent.id.indexOf('unavaliable_')!=-1) return;
         if (calEvent.id && calEvent.id.indexOf('free_')==-1) {
             app.router.navigate("#" + this.module + "/" + calEvent.id, {trigger: true});
         } else {
