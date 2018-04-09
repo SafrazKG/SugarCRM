@@ -5,7 +5,11 @@
         var model = options.context?options.context.get('model'):null;
         if (model) {
             if (!model.get('date_field_c')) {
-                options.context.parent.set('_dontInit', true);
+                if (options.context.parent) {
+                    options.context.parent.set('_dontInit', true);
+                } else {
+                    options.context.set('_dontInit', true);
+                }
                 this.openCalendar(model);
             }
         }
@@ -13,18 +17,11 @@
     },
     
     openCalendar: function(model) {
-        if (app.drawer.isClosing()) {
-            setTimeout(_.bind(function() {
-                this.openCalendar(model);
-            }, this), 200);
-            return;
-        }
         if (app.drawer.isOpening()) {
-            setTimeout(_.bind(function() {
-                this.openCalendar(model);
-            }, this), 200);
-            app.drawer.close();
-            return;
+            try {
+                app.drawer.closeImmediately();
+            } catch(e) {
+            }
         }
         app.drawer.open({
                 layout: 'records-with-close',
