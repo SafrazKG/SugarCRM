@@ -230,11 +230,13 @@
     },
     
     _getTimeForEvent: function(time) {
+        time = this._removeTZ(time);
         var moment = app.date(time);
         return moment.format('h:mm A');
     },
     
     _getTimeForSlot: function(time) {
+        time = this._removeTZ(time);
         var moment = app.date(time);
         return moment.format('HH:mm') + ':00';
     },
@@ -323,9 +325,9 @@
         while (next.minute()%5) {
             next.subtract(1, 'minutes');
         }
-        var start = next.formatServer().split('+')[0];
+        var start = this._removeTZ(next.formatServer());
         next.add(180, 'minutes');
-        var end = next.formatServer().split('+')[0];
+        var end = this._removeTZ(next.formatServer());
         app.api.call('read', app.api.buildURL('RRAPT_Calendar/?order_by=date_field_c%3Aasc&fields=&max_num=20&filter%5B0%5D%5Bdate_field_c%5D%5B%24gte%5D='+encodeURIComponent(start)+'&filter%5B1%5D%5Bdate_field_c%5D%5B%24lte%5D='+encodeURIComponent(end)), {}, {
             success: _.bind(function(data) {
                 var changed = false;
@@ -368,6 +370,13 @@
                 this._getting5mindata = false;
             }, this),
         });
+    },
+    
+    _removeTZ: function(timeString) {
+        var t = timeString.split('T');
+        var date = t[0];
+        var time = t[1].split('+')[0].split('-')[0];
+        return date + 'T' + time;
     },
     
     _dispose: function() {
