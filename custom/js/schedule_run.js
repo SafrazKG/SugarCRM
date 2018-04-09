@@ -3,6 +3,7 @@
         if (!moment._isAMomentObject) throw('Not a moment object.');
         if (_.isUndefined(context)) context = window;
         var timeout = moment.unix() - app.date().unix();
-        return setTimeout(_.bind(callback, context), timeout);
+        if (timeout<0) timeout = 0;
+        return setTimeout(_.bind(callback, context), timeout*1000);
     };
 })(SUGAR.App);

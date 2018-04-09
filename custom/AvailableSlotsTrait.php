@@ -105,7 +105,7 @@ trait AvailableSlotsTrait {
                     $row['disposition_c'] = 'notConfirmedCritical';
                 }
             }
-            if ($fullresultset && !$isAdmin) {
+            if ($fullresultset && !$this->isAdmin) {
                 if ($row['assigned_user_id']!=$current_user->id && $row['closer_id']!=$current_user->id) {
                     $row['disposition_c'] = 'unavailable';
                     $row['name'] = '';

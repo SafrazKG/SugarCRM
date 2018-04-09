@@ -1,6 +1,6 @@
 <?php
 
-class CustomUserFIlterApi extends FilterApi {
+class CustomUserFilterApi extends FilterApi {
     
     protected $roleId = null;
 
