@@ -1,7 +1,7 @@
 ({
     extendsFrom: 'CustomCalendarlist',
     
-    serverPingTime: 5, // minutes
+    serverPingTime: 1, // minutes
     defaultMinTime: '08:00:00',
     defaultMaxTime: '23:00:00',
     
@@ -314,6 +314,8 @@
     
     checkData: function() {
         if (this.disposed || !this.calendar || !this._rendered || this._getting5mindata) return;
+        var current = this.calendar.fullCalendar('getDate');
+        if (this.calendar.fullCalendar('getView').name=='agendaDay' && current.format('Y-M-D')!=app.date().format('Y-M-D')) return;
         this._getting5mindata = true;
         var next = app.date().utc();
         next.seconds(0);
