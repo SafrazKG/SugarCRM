@@ -105,8 +105,8 @@
         }
         filterDefs = newFilterDefs;
         if (this.start && this.end) {
-            var startS = this.start.formatServer();
-            var endS = this.end.formatServer();
+            var startS = this.start.formatServerNoTZ();
+            var endS = this.end.formatServerNoTZ();
             var startObj = {};
             startObj[this.startField] = { '$gte': startS };
             var endObj = {};
@@ -164,7 +164,7 @@
         } else {
             if (this._gettingDayRecord[calEvent._id]) return;
             this._gettingDayRecord[calEvent._id] = true;
-            app.api.call('read', app.api.buildURL(this.module, '?filter[0][date_field_c]='+calEvent.start.formatServer()), {}, {
+            app.api.call('read', app.api.buildURL(this.module, '?filter[0][date_field_c]='+calEvent.start.formatServerNoTZ()), {}, {
                 success: _.bind(function(data) {
                     delete this._gettingDayRecord[calEvent._id];
                     if (data && data.records && data.records.length) {

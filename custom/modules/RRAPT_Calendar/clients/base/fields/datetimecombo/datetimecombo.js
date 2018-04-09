@@ -96,7 +96,7 @@
             setTime2.hour(momentStart.hour());
             setTime2.minute(momentStart.minute());
             var attributes = {};
-            attributes[this.name] = setTime2.formatServer();
+            attributes[this.name] = setTime2.formatServerNoTZ();
             setTimeout(_.bind(function() {
                 this._internalChange = true;
                 this.model.set(attributes);
@@ -107,7 +107,7 @@
             setTime2.hour(momentEnd.hour());
             setTime2.minute(momentEnd.minute());
             var attributes = {};
-            attributes[this.name] = setTime2.formatServer();
+            attributes[this.name] = setTime2.formatServerNoTZ();
             setTimeout(_.bind(function() {
                 this._internalChange = true;
                 this.model.set(attributes);

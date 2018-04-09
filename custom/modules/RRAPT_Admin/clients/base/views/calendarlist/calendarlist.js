@@ -7,7 +7,7 @@
 
     setBeanDataOnCreate: function(calEvent) {
         var bean = this._super('setBeanDataOnCreate', arguments);
-        bean.set('date_field_c', calEvent.start.formatServer());
+        bean.set('date_field_c', calEvent.start.formatServerNoTZ());
         return bean;
     },
     
@@ -25,7 +25,7 @@
                 events.push({
                                 title: 'Inactive',
                                 allDay: true,
-                                start: start.formatServer(),
+                                start: start.formatServerNoTZ(),
                                 backgroundColor: '#D6D6D6',
                                 textColor: '#ffffff',
                             });
@@ -38,7 +38,7 @@
     
     getDateEventFromCollection: function(date, collection) {
         var event = null;
-        var dateS = date.formatServer();
+        var dateS = date.formatServerNoTZ();
         for (var i in collection.models) {
             if (collection.models[i].get('date_field_c')==dateS) {
                 var title = collection.models[i].get('active_c');
