@@ -276,14 +276,7 @@ array (
               ),
               22 => 
               array (
-                'name' => 'rrpay_payment_plans_abc_properties_1_name',
-              ),
-              23 => 
-              array (
-              ),
-              24 => 
-              array (
-                'name' => 'rrpay_payment_plans_abc_properties_2_name',
+                'name' => 'rrcom_commissions_abc_properties_1_name',
               ),
             ),
           ),

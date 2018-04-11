@@ -1,7 +1,9 @@
 <?php
- // created: 2018-04-03 07:40:50
+ // created: 2018-04-10 11:52:48
 
 $app_list_strings['status_list']=array (
   '' => '',
-  'PAID' => 'PAID',
+  'OPEN' => 'OPEN',
+  'ISSUED' => 'ISSUED',
+  'CANCELLED' => 'CANCELLED',
 );

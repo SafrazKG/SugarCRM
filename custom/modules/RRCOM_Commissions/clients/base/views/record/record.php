@@ -164,19 +164,177 @@ array (
             'columns' => 2,
             'labelsOnTop' => true,
             'placeholders' => true,
+            'newTab' => false,
+            'panelDefault' => 'expanded',
             'fields' => 
             array (
-              0 => 'assigned_user_name',
-              1 => 'team_name',
+              0 => 
+              array (
+                'name' => 'id_rr_c',
+                'label' => 'LBL_ID_RR',
+              ),
+              1 => 
+              array (
+                'name' => 'rrcom_commissions_abc_properties_1_name',
+              ),
               2 => 
               array (
-                'name' => 'tag',
-                'span' => 6,
+                'name' => 'property_id_c',
+                'label' => 'LBL_PROPERTY_ID',
               ),
               3 => 
               array (
-                'name' => 'rrpay_payment_plans_rrcom_commissions_1_name',
-                'span' => 6,
+                'name' => 'rrcom_commissions_accounts_1_name',
+              ),
+              4 => 
+              array (
+                'name' => 'rrcom_commissions_abc_transfers_1_name',
+              ),
+              5 => 
+              array (
+                'name' => 'rrcom_commissions_abc_mortgages_1_name',
+              ),
+              6 => 
+              array (
+                'name' => 'resort_c',
+                'label' => 'LBL_RESORT',
+              ),
+              7 => 
+              array (
+                'name' => 'payment_status_c',
+                'label' => 'LBL_PAYMENT_STATUS',
+              ),
+              8 => 
+              array (
+                'name' => 'assigned_to_fronter_c',
+                'studio' => 'visible',
+                'label' => 'LBL_ASSIGNED_TO_FRONTER',
+              ),
+              9 => 
+              array (
+                'name' => 'second_fronter_c',
+                'studio' => 'visible',
+                'label' => 'LBL_SECOND_FRONTER',
+              ),
+              10 => 
+              array (
+                'name' => 'assigned_to_closer_c',
+                'studio' => 'visible',
+                'label' => 'LBL_ASSIGNED_TO_CLOSER',
+                'span' => 12,
+              ),
+              11 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'fronter_commission_c',
+                'label' => 'LBL_FRONTER_COMMISSION',
+              ),
+              12 => 
+              array (
+                'name' => 'commission_r_c',
+                'label' => 'LBL_COMMISSION_R',
+              ),
+              13 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'second_fronter_commission_c',
+                'label' => 'LBL_SECOND_FRONTER_COMMISSION',
+              ),
+              14 => 
+              array (
+                'name' => 'commission_rr_c',
+                'label' => 'LBL_COMMISSION_RR',
+              ),
+              15 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'assigned_to_closer_commissio_c',
+                'label' => 'LBL_ASSIGNED_TO_CLOSER_COMMISSIO',
+              ),
+              16 => 
+              array (
+                'name' => 'commission_c',
+                'label' => 'LBL_COMMISSION',
+              ),
+              17 => 
+              array (
+                'name' => 'sale_date_c',
+                'label' => 'LBL_SALE_DATE',
+              ),
+              18 => 
+              array (
+                'name' => 'payment_date_c',
+                'label' => 'LBL_PAYMENT_DATE',
+              ),
+              19 => 
+              array (
+                'name' => 'note_c',
+                'studio' => 'visible',
+                'label' => 'LBL_NOTE',
+              ),
+              20 => 
+              array (
+                'name' => 'pay_type_c',
+                'label' => 'LBL_PAY_TYPE',
+              ),
+              21 => 
+              array (
+                'name' => 'deal_type_c',
+                'label' => 'LBL_DEAL_TYPE',
+              ),
+              22 => 
+              array (
+                'name' => 'holding_c',
+                'label' => 'LBL_HOLDING',
+              ),
+              23 => 
+              array (
+              ),
+              24 => 
+              array (
+              ),
+              25 => 
+              array (
+                'name' => 'holding_rr_c',
+                'label' => 'LBL_HOLDING_RR',
+              ),
+              26 => 
+              array (
+                'name' => 'bonus_month_c',
+                'label' => 'LBL_BONUS_MONTH',
+              ),
+              27 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'bonus_c',
+                'label' => 'LBL_BONUS',
+              ),
+              28 => 
+              array (
+                'name' => 'invoice_c',
+                'label' => 'LBL_INVOICE',
+              ),
+              29 => 
+              array (
+                'name' => 'rec_status_c',
+                'label' => 'LBL_REC_STATUS',
+                'span' => 12,
               ),
             ),
           ),
@@ -188,6 +346,8 @@ array (
             'columns' => 2,
             'labelsOnTop' => true,
             'placeholders' => true,
+            'newTab' => false,
+            'panelDefault' => 'expanded',
             'fields' => 
             array (
               0 => 
@@ -195,7 +355,9 @@ array (
                 'name' => 'description',
                 'span' => 12,
               ),
-              1 => 
+              1 => 'assigned_user_name',
+              2 => 'team_name',
+              3 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,
@@ -219,7 +381,7 @@ array (
                   ),
                 ),
               ),
-              2 => 
+              4 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
@@ -245,6 +407,10 @@ array (
               ),
             ),
           ),
+        ),
+        'templateMeta' => 
+        array (
+          'useTabs' => false,
         ),
       ),
     ),

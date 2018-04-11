@@ -310,7 +310,7 @@ array (
               ),
               20 => 
               array (
-                'name' => 'rrpay_payment_plans_asd_payments_1_name',
+                'span' => 12,
               ),
             ),
           ),

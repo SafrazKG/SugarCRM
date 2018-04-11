@@ -283,6 +283,10 @@ array (
                 'label' => 'LBL_CLIENT_NAME_AS_APPEARS',
                 'span' => 6,
               ),
+              6 => 
+              array (
+                'name' => 'rrcom_commissions_accounts_1_name',
+              ),
             ),
           ),
           2 => 

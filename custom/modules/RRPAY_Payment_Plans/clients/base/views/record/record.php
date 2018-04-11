@@ -164,51 +164,69 @@ array (
             'columns' => 2,
             'labelsOnTop' => true,
             'placeholders' => true,
+            'newTab' => false,
+            'panelDefault' => 'expanded',
             'fields' => 
             array (
-              0 => 'assigned_user_name',
-              1 => 'team_name',
+              0 => 
+              array (
+                'name' => 'abc_mortgages_rrpay_payment_plans_1_name',
+              ),
+              1 => 
+              array (
+                'name' => 'accounts_rrpay_payment_plans_1_name',
+              ),
               2 => 
               array (
-                'name' => 'tag',
-                'span' => 6,
+                'name' => 'rrpay_payment_plans_abc_transfers_1_name',
+                'label' => 'LBL_RRPAY_PAYMENT_PLANS_ABC_TRANSFERS_1_FROM_ABC_TRANSFERS_TITLE',
               ),
               3 => 
               array (
-                'name' => 'rrpay_payment_plans_abc_mortgages_1_name',
-                'span' => 6,
+                'name' => 'paid_in_full_date_c',
+                'label' => 'LBL_PAID_IN_FULL_DATE',
               ),
               4 => 
               array (
-                'name' => 'rrpay_payment_plans_abc_transfers_1_name',
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'amount_c',
+                'label' => 'LBL_AMOUNT',
               ),
               5 => 
               array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'net_c',
+                'label' => 'LBL_NET',
               ),
               6 => 
               array (
-                'name' => 'rrpay_payment_plans_abc_properties_1_name',
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'amount_paid_c',
+                'label' => 'LBL_AMOUNT_PAID',
+                'span' => 12,
               ),
               7 => 
               array (
-              ),
-              8 => 
-              array (
-                'name' => 'rrpay_payment_plans_abc_properties_2_name',
-              ),
-              9 => 
-              array (
-              ),
-              10 => 
-              array (
-                'name' => 'abc_deedbacks_rrpay_payment_plans_1_name',
-              ),
-              11 => 
-              array (
-              ),
-              12 => 
-              array (
-                'name' => 'abc_transfers_rrpay_payment_plans_1_name',
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'unpaid_amount_c',
+                'label' => 'LBL_UNPAID_AMOUNT',
+                'span' => 12,
               ),
             ),
           ),
@@ -220,6 +238,8 @@ array (
             'columns' => 2,
             'labelsOnTop' => true,
             'placeholders' => true,
+            'newTab' => false,
+            'panelDefault' => 'expanded',
             'fields' => 
             array (
               0 => 
@@ -227,7 +247,9 @@ array (
                 'name' => 'description',
                 'span' => 12,
               ),
-              1 => 
+              1 => 'assigned_user_name',
+              2 => 'team_name',
+              3 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,
@@ -251,7 +273,7 @@ array (
                   ),
                 ),
               ),
-              2 => 
+              4 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
@@ -277,6 +299,10 @@ array (
               ),
             ),
           ),
+        ),
+        'templateMeta' => 
+        array (
+          'useTabs' => false,
         ),
       ),
     ),
