@@ -61,12 +61,15 @@
     _toMove: [],
     _foTO: 0,
     _fiTO: 0,
+    _renderTO: 0,
+    _firstRender: true,
     
     initialize: function(options) {
         this.calendarOptions.viewRender = _.bind(this.viewRender, this);
         this.calendarOptions.eventRender = _.bind(this.eventRender, this);
         this.calendarOptions.eventAfterAllRender = _.bind(function() {
-            setTimeout(_.bind(this.eventAfterAllRender, this), 200);
+            if (this._renderTO) clearTimeout(this._renderTO);
+            this._renderTO = setTimeout(_.bind(this.eventAfterAllRender, this), 200);
         }, this);
         if (options && options.context && options.context.get('inDrawer')) this._inDrawer = true;
         this._super('initialize', arguments);
@@ -185,7 +188,7 @@
                     tdDiv = $('<div class="content-holder"></div>');
                     td.append(tdDiv);
                 }
-                tmpResourceDiv = $('<div data-resource-id="'+i+'" class="fc-resource-div" style="width: '+resources[i]+'px"></div>');
+                tmpResourceDiv = $('<div data-resource-id="'+i+'" class="fc-resource-div"></div>');
                 tdDiv.append(tmpResourceDiv);
             }
         }
@@ -195,6 +198,7 @@
     },
     
     eventAfterAllRender: function() {
+        this._renderTO = 0;
         if (this.disposed) return;
         if (this._waitForClick || this._settingMinMax) {
             setTimeout(_.bind(function() {
@@ -210,6 +214,17 @@
             this._toMove[i].el.appendTo(this._toMove[i].resourceDiv);
         }
         this._toMove = [];
+        var calendar = this.calendar;
+        this.calendar.find('.fc-resource-div').each(function() {
+            var resourceDiv = $(this);
+            var resourceId = resourceDiv.attr('data-resource-id').split('###');
+            calendar.find('th.fc-resource-cell').each(function() {
+                var _resourceId = $(this).attr('data-resource-id');
+                var _date = $(this).attr('data-date');
+                if (!_date) _date = resourceId[1];
+                if (_resourceId==resourceId[0] && _date==resourceId[1]) resourceDiv.css('width', $(this).outerWidth()+'px');
+            });
+        });
         this.fadeIn();
     },
     
