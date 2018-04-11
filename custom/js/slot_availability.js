@@ -15,7 +15,14 @@
                             success(data);
                         }
                     },
-                    error: function() {
+                    error: function(error) {
+                        if (error.status == 412 && !error.request.metadataRetry) {
+                            app.once('app:sync:complete', function() {
+                                error.request.metadataRetry = true;
+                                error.request.execute(null, app.api.getMetadataHash());
+                            });
+                            return;
+                        }
                         fail();
                     },
                 });
