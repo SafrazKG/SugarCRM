@@ -3,23 +3,31 @@
 trait AvailableSlotsTrait {
 
     private $times = [ '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM', '9PM', '10PM' ];
+    
+    private $isFronter = false;
+    private $isAdmin = false;
 
-    public function getAvailableSlotsFromQuery($result, $fullresultset = false) {
+    public function getAvailableSlotsFromQuery($result, $fullresultset = false, $start = null, $end = null) {
         $ret = array();
+        $admin = BeanFactory::newBean('RRAPT_Admin');
+        $this->isFronter = $admin->hasRole('fronter');
+        $this->isAdmin = $admin->hasRole('calendar_admin');
         foreach ($result as $res) {
             if ($res['active_c']=='Active') {
                 if (!isset($res['date_field_c']) && isset($res['rrapt_admin_cstm__date_field_c'])) $res['date_field_c'] = $res['rrapt_admin_cstm__date_field_c'];
-                $startTime = $res['start_time_c'];
-                $endTime = $res['end_time_c'];
+                $startTime = $returnStartTime = $res['start_time_c'];
+                $endTime = $returnEndTime = $res['end_time_c'];
+                if ($start) $returnStartTime = $this->timeToStandard($start, $startTime, 'start');
+                if ($end) $returnEndTime = $this->timeToStandard($end, $endTime, 'end');
                 $slots = array();
                 $started = $nomore = false;
                 foreach ($this->times as $time) {
-                    if ($time==$startTime) $started = true;
-                    if ($started && !$nomore) {
+                    if ($time==$returnStartTime) $started = true;
+                    if ($started && !$nomore && isset($res['date_field_c'])) {
                         $slots['transfer_'.strtolower($time)] = $this->isSlotAvailable($res['date_field_c'], $time, $res['transfer_'.strtolower($time).'_c'], 'Transfer', $fullresultset);
                         $slots['mortgage_'.strtolower($time)] = $this->isSlotAvailable($res['date_field_c'], $time, $res['mortgage_'.strtolower($time).'_c'], 'Mortgage', $fullresultset);
                     }
-                    if ($time==$endTime) $nomore = true;
+                    if ($time==$returnEndTime) $nomore = true;
                 }
                 $ret[] = array(
                                 'date_field_c' => $res['date_field_c'],
@@ -38,31 +46,89 @@ trait AvailableSlotsTrait {
         return $ret;
     }
     
+    private function timeToStandard($datetime, $max, $startOrEnd) {
+        $datetime = explode('+', $datetime)[0];
+        $tmp = explode('T', $datetime);
+        $date = $tmp[0];
+        $time = explode(':', $tmp[1]);
+        $hours = $time[0]+0;
+        if ($startOrEnd=='end') $hours++;
+        if ($hours>24) $hours = 24-$hours;
+        $dt = SugarDateTime::createFromFormat("Y-m-d G:i:s", $date." ".$hours.":00:00", new DateTimeZone("UTC"));
+        $compare = SugarDateTime::createFromFormat("Y-m-d H:i:s", $date." ".$this->timeToDbTime($max), new DateTimeZone("UTC"));
+        if ($startOrEnd=='start') {
+            if ($dt->getTimestamp()-$compare->getTimestamp()>0) {
+                $ret = $this->times[0];
+                $tmp = $dt->format('gA');
+                if (in_array($tmp, $this->times)) return $tmp;
+                return $ret;
+            } else {
+                return $max;
+            }
+        } else {
+            if ($compare->getTimestamp()-$dt->getTimestamp()>0) {
+                $ret = $this->times[count($this->times)-1];
+                $tmp = $dt->format('gA');
+                if (in_array($tmp, $this->times)) return $tmp;
+                return $ret;
+            } else {
+                return $max;
+            }
+        }
+        return $dt->format('gA');
+    }
+    
     private function isSlotAvailable($date, $time, $maxSlots, $product, $fullresultset = false) {
+        global $current_user;
         $db = DBManagerFactory::getInstance();
         $fields = 'Calendar.id';
         $joins = '';
         if ($fullresultset) {
-            $fields = "Calendar.id, Calendar.name, Calendar_cstm.product_c, Calendar_cstm.date_field_c, Calendar_cstm.disposition_c, CONCAT(users1.first_name,' ',users1.last_name) AS assigned_user_name, CONCAT(users3.first_name,' ',users3.last_name) AS users_rrapt_calendar_3_name";
+            $fields = "Calendar.id, Calendar.assigned_user_id, Calendar.name, Calendar_cstm.product_c, Calendar_cstm.date_field_c, Calendar_cstm.disposition_c, CONCAT(users1.first_name,' ',users1.last_name) AS assigned_user_name, CONCAT(users3.first_name,' ',users3.last_name) AS users_rrapt_calendar_3_name, users3.id AS closer_id";
             $joins = "LEFT JOIN users users1 ON (users1.deleted=0 AND users1.id=Calendar.assigned_user_id) ";
-            $joins .= "LEFT JOIN users_rrapt_calendar_3_c ON (users_rrapt_calendar_3_c.deleted=0 AND users_rrapt_calendar_3_c.users_rrapt_calendar_3rrapt_calendar_idb=Calendar.id) LEFT JOIN users users3 ON (users3.deleted=0 AND users1.id=users_rrapt_calendar_3_c.users_rrapt_calendar_3users_ida) ";
+            $joins .= "LEFT JOIN users_rrapt_calendar_3_c ON (users_rrapt_calendar_3_c.deleted=0 AND users_rrapt_calendar_3_c.users_rrapt_calendar_3rrapt_calendar_idb=Calendar.id) LEFT JOIN users users3 ON (users3.deleted=0 AND users3.id=users_rrapt_calendar_3_c.users_rrapt_calendar_3users_ida) ";
         }
         $res = array();
         $q = $db->query("SELECT ".$fields." FROM rrapt_calendar Calendar INNER JOIN rrapt_calendar_cstm Calendar_cstm ON (Calendar_cstm.id_c=Calendar.id) ".$joins." WHERE Calendar.deleted=0 AND Calendar_cstm.date_field_c='".$db->quote($date." ".$this->timeToDbTime($time, $date))."' AND Calendar_cstm.product_c='".$product."'");
+        $dt = SugarDateTime::createFromFormat('Y-m-d gA', $date." ".$time, new DateTimeZone($GLOBALS['current_user']->getPreference('timezone')));
+        $dbtime = $dt->asDb();
+        $now = SugarDateTime::createFromFormat("Y-m-d H:i:s", date("Y-m-d H:i:s"));
+        $now->setTimezone(new DateTimeZone("UTC"));
+        $tsNow = $now->getTimestamp();
         while ($row = $db->fetchByAssoc($q)) {
+            $row['old_id'] = 'free_'.md5($product.$dbtime.count($res));
+            if ($fullresultset && $row['disposition_c']!='Confirmed') {
+                $date = SugarDateTime::createFromFormat("Y-m-d H:i:s", $row['date_field_c'], new DateTimeZone("UTC"));
+                $ts = $date->getTimestamp();
+                $diff = $ts - $tsNow;
+                if ($diff<=600) { // ten minutes
+                    $row['disposition_c'] = 'notConfirmedCritical';
+                }
+            }
+            if ($fullresultset && !$this->isAdmin) {
+                if ($row['assigned_user_id']!=$current_user->id && $row['closer_id']!=$current_user->id) {
+                    $row['disposition_c'] = 'unavailable';
+                    $row['name'] = '';
+                    $row['id'] = 'unavaliable_'.$row['id'];
+                }
+            }
             $res[] = $row;
         }
-        if ($fullresultset) {
-            while (count($res)<$maxSlots) {
-                $dt = SugarDateTime::createFromFormat('Y-m-d gA', $date." ".$time, new DateTimeZone($GLOBALS['current_user']->getPreference('timezone')));
+        while (count($res)<$maxSlots) {
+            if ($fullresultset) {
                 $res[] = array(
-                    'id' => 'free_'.md5(rand()),
+                    'id' => 'free_'.md5($product.$dbtime.count($res)),
+                    'old_id' => 'free_'.md5($product.$dbtime.count($res)),
                     'name' => '',
                     'product_c' => $product,
-                    'date_field_c' => $dt->asDb(),
+                    'date_field_c' => $dbtime,
                     'disposition_c' => 'free',
                     'assigned_user_name' => '',
                     'users_rrapt_calendar_3_name' => '',
+                );
+            } else {
+                $res[] = array(
+                    'id' => 'free',
                 );
             }
         }
@@ -86,6 +152,7 @@ trait AvailableSlotsTrait {
                         '8PM' => '20',
                         '9PM' => '21',
                         '10PM' => '22',
+                        '11PM' => '23',
                     );
         if (!$date) return $mapping[strtoupper($time)].":00:00";
         $dt = SugarDateTime::createFromFormat("Y-m-d H:i:s", $date . ' ' . $mapping[strtoupper($time)].":00:00", new DateTimeZone($GLOBALS['current_user']->getPreference('timezone')));
@@ -101,7 +168,7 @@ trait AvailableSlotsTrait {
             if ($found) return $t;
             if ($t==$time) $found = true;
         }
-        return $time;
+        return '11PM';
     }
     
     private function toUserTimeInDBFormat($date) {

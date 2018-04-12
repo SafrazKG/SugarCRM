@@ -10,7 +10,14 @@
                 'params' => array(
                     'target' => 'assigned_user_name',
                     'value' => 'true' 
-                )
+                ),
+            ),
+            array(
+                'name' => 'ReadOnly',
+                'params' => array(
+                    'target' => 'date_field_c',
+                    'value' => 'true' 
+                ),
             ),
         ),
     );

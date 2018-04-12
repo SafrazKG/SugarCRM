@@ -248,7 +248,10 @@ array (
               array (
                 'name' => 'address_country_c',
                 'label' => 'LBL_ADDRESS_COUNTRY',
-                'span' => 12,
+              ),
+              16 => 
+              array (
+                'name' => 'abc_deedbacks_rrpay_payment_plans_1_name',
               ),
             ),
           ),

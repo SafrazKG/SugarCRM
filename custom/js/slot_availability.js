@@ -15,7 +15,14 @@
                             success(data);
                         }
                     },
-                    error: function() {
+                    error: function(error) {
+                        if (error.status == 412 && !error.request.metadataRetry) {
+                            app.once('app:sync:complete', function() {
+                                error.request.metadataRetry = true;
+                                error.request.execute(null, app.api.getMetadataHash());
+                            });
+                            return;
+                        }
                         fail();
                     },
                 });
@@ -59,10 +66,17 @@
             delete app.SlotAvailability.availability[string];
         },
         hasId: function(slot, id) {
-            for (var i in slot) {
-                if (id==slot[i].id) return true;
+            if (id) {
+                for (var i in slot) {
+                    if (id==slot[i].id) return true;
+                }
+                return false;
+            } else {
+                for (var i in slot) {
+                    if (slot[i].id=='free') return true;
+                }
+                return false;
             }
-            return false;
         },
     }
 })(SUGAR.App);

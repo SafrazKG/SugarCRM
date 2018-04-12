@@ -14,6 +14,7 @@
     endField: 'date_field_c',
     _rendered: false,
     _settingMinMax: false,
+    _gotoDate: null,
     
     initialize: function() {
         this._super('initialize', arguments);
@@ -57,11 +58,15 @@
             return;
         }
         this.collection.on('data:sync:complete', _.bind(this.updateCalendarData, this));
-        this.calendar = $('#calendar').fullCalendar(_.extend({
+        var options = _.extend({
             events: _.bind(this.getEvents, this),
             eventClick: _.bind(this.eventClick, this),
             schedulerLicenseKey: '0930770738-fcs-1522167218',
-        }, this.calendarOptions));
+        }, this.calendarOptions);
+        if (this.context.get('date')) {
+            options.defaultDate = app.date(this.context.get('date'));
+        }
+        this.calendar = $('#calendar').fullCalendar(options);
     },
     
     getEvents: function(start, end, timezone, callback) {
@@ -100,8 +105,8 @@
         }
         filterDefs = newFilterDefs;
         if (this.start && this.end) {
-            var startS = this.start.formatServer();
-            var endS = this.end.formatServer();
+            var startS = this.start.formatServerNoTZ();
+            var endS = this.end.formatServerNoTZ();
             var startObj = {};
             startObj[this.startField] = { '$gte': startS };
             var endObj = {};
@@ -159,7 +164,7 @@
         } else {
             if (this._gettingDayRecord[calEvent._id]) return;
             this._gettingDayRecord[calEvent._id] = true;
-            app.api.call('read', app.api.buildURL(this.module, '?filter[0][date_field_c]='+calEvent.start.formatServer()), {}, {
+            app.api.call('read', app.api.buildURL(this.module, '?filter[0][date_field_c]='+calEvent.start.formatServerNoTZ()), {}, {
                 success: _.bind(function(data) {
                     delete this._gettingDayRecord[calEvent._id];
                     if (data && data.records && data.records.length) {

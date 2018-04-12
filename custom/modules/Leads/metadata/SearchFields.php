@@ -214,4 +214,24 @@ $searchFields['Leads'] = array (
   array (
     'query_type' => 'default',
   ),
+  'alt_address_street' => 
+  array (
+    'query_type' => 'default',
+  ),
+  'alt_address_city' => 
+  array (
+    'query_type' => 'default',
+  ),
+  'alt_address_state' => 
+  array (
+    'query_type' => 'default',
+  ),
+  'alt_address_postalcode' => 
+  array (
+    'query_type' => 'default',
+  ),
+  'alt_address_country' => 
+  array (
+    'query_type' => 'default',
+  ),
 );

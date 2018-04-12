@@ -7,9 +7,8 @@
     _editRendered: false,
 
     initialize: function(options) {
-        window.test = this;
         this._super('initialize', [options]);
-        if (this.name=='date_field_c') {
+        if (this.model && this.name=='date_field_c' && ((this.context && !this.context.get('_dontInit')) || (this.context.parent && !this.context.parent.get('_dontInit')))) {
             this._changedField = true;
             this.def.time = this.def.time||{};
             this.def.time.step = 60;
@@ -97,7 +96,7 @@
             setTime2.hour(momentStart.hour());
             setTime2.minute(momentStart.minute());
             var attributes = {};
-            attributes[this.name] = setTime2.formatServer();
+            attributes[this.name] = setTime2.formatServerNoTZ();
             setTimeout(_.bind(function() {
                 this._internalChange = true;
                 this.model.set(attributes);
@@ -108,7 +107,7 @@
             setTime2.hour(momentEnd.hour());
             setTime2.minute(momentEnd.minute());
             var attributes = {};
-            attributes[this.name] = setTime2.formatServer();
+            attributes[this.name] = setTime2.formatServerNoTZ();
             setTimeout(_.bind(function() {
                 this._internalChange = true;
                 this.model.set(attributes);
