@@ -1,5 +1,5 @@
 <?php
- // created: 2017-11-27 14:38:21
+ // created: 2018-04-10 15:24:37
 $layout_defs["INTWG_WorkStreamGenerators"]["subpanel_setup"]['intwg_workstreamgenerators_intws_workstreams_1'] = array (
   'order' => 100,
   'module' => 'INTWS_WorkStreams',

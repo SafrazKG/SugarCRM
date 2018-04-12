@@ -20,8 +20,10 @@ class WorkStreamProcessor
         $this->deleteFromOppRelation($db);
     }
 
+
     /**
      * @return INTWG_WorkStreamGenerators[]
+     * @throws SugarQueryException
      */
     protected function getGenerators()
     {
