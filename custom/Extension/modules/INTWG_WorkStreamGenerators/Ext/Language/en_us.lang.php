@@ -17,4 +17,4 @@ $mod_strings['LBL_HOMEPAGE_TITLE'] = 'My Work Stream Generators';
 $mod_strings['LBL_BASE_MODULE'] = 'Base Module';
 $mod_strings['LBL_WORK_STREAM_DESC_TEMPLATE'] = 'Desktop Description Template';
 $mod_strings['LBL_STATUS'] = 'Status';
-$mod_strings['LBL_MOB_WS_DESC_TEMPLATE_C'] = 'Mobile Description Template';
+$mod_strings['LBL_MOB_WS_DESC_TEMPLATE'] = 'Mobile Description Template';
