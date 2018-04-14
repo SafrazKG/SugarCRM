@@ -115,6 +115,7 @@
             filterDefs.push(endObj);
         }
         this.collection.setOption('filter', filterDefs);
+        this.collection.setOption('view', 'calendarlist');
     },
     
     updateCalendarData: function() {
