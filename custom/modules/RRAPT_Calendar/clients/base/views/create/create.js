@@ -23,6 +23,9 @@
             } catch(e) {
             }
         }
+        setTimeout(_.bind(function() {
+            this.hideInactiveDrawer();
+        }, this), 200);
         app.drawer.open({
                 layout: 'records-with-close',
                 context: {
@@ -32,5 +35,15 @@
                 },
             }
         );
-    }
+    },
+    
+    hideInactiveDrawer: function() {
+        if (app.drawer.isOpening()) {
+            setTimeout(_.bind(function() {
+                this.hideInactiveDrawer();
+            }, this), 100);
+            return;
+        }
+        $('#drawers .inactive').css('display', 'none');
+    },
 })
