@@ -242,41 +242,7 @@ array (
               14 => 
               array (
                 'name' => 'tag',
-                'span' => 6,
-              ),
-              15 => 
-              array (
-                'name' => 'abc_mortgages_abc_properties_1_name',
-                'span' => 6,
-              ),
-              16 => 
-              array (
-                'name' => 'leads_abc_properties_1_name',
                 'span' => 12,
-              ),
-              17 => 
-              array (
-                'name' => 'accounts_abc_properties_1_name',
-                'span' => 12,
-              ),
-              18 => 
-              array (
-                'name' => 'abc_transfers_abc_properties_1_name',
-              ),
-              19 => 
-              array (
-                'name' => 'abc_deedbacks_abc_properties_1_name',
-              ),
-              20 => 
-              array (
-                'name' => 'abc_inventories_abc_properties_1_name',
-              ),
-              21 => 
-              array (
-              ),
-              22 => 
-              array (
-                'name' => 'rrcom_commissions_abc_properties_1_name',
               ),
             ),
           ),

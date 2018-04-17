@@ -230,41 +230,37 @@ array (
               ),
               12 => 
               array (
-                'name' => 'abc_transfers_abc_properties_1_name',
-                'label' => 'LBL_ABC_TRANSFERS_ABC_PROPERTIES_1_FROM_ABC_PROPERTIES_TITLE',
-              ),
-              13 => 
-              array (
                 'name' => 'poperty_id_c',
                 'label' => 'LBL_POPERTY_ID',
+                'span' => 12,
               ),
-              14 => 
+              13 => 
               array (
                 'name' => 'member_of_exchange_company_c',
                 'label' => 'LBL_MEMBER_OF_EXCHANGE_COMPANY',
               ),
-              15 => 
+              14 => 
               array (
                 'name' => 'week_fixed_c',
                 'label' => 'LBL_WEEK_FIXED',
               ),
-              16 => 
+              15 => 
               array (
                 'name' => 'week_fixed_week_c',
                 'label' => 'LBL_WEEK_FIXED_WEEK',
               ),
-              17 => 
+              16 => 
               array (
                 'name' => 'inventory_autobooked_c',
                 'label' => 'LBL_INVENTORY_AUTOBOOKED',
               ),
-              18 => 
+              17 => 
               array (
                 'name' => 'number_of_timeshares_c',
                 'label' => 'LBL_NUMBER_OF_TIMESHARES',
                 'span' => 12,
               ),
-              19 => 
+              18 => 
               array (
                 'related_fields' => 
                 array (
@@ -274,43 +270,43 @@ array (
                 'name' => 'club_dues_amount_c',
                 'label' => 'LBL_CLUB_DUES_AMOUNT',
               ),
-              20 => 
+              19 => 
               array (
                 'name' => 'club_dues_date_c',
                 'label' => 'LBL_CLUB_DUES_DATE',
               ),
-              21 => 
+              20 => 
               array (
                 'name' => 'club_dues_paid_c',
                 'label' => 'LBL_CLUB_DUES_PAID',
               ),
-              22 => 
+              21 => 
               array (
                 'name' => 'week_will_use_a_c',
                 'label' => 'LBL_WEEK_WILL_USE_A',
               ),
-              23 => 
+              22 => 
               array (
                 'name' => 'week_will_use_b_c',
                 'label' => 'LBL_WEEK_WILL_USE_B',
               ),
-              24 => 
+              23 => 
               array (
                 'name' => 'week_will_use_c',
                 'label' => 'LBL_WEEK_WILL_USE_C',
               ),
-              25 => 
+              24 => 
               array (
                 'name' => 'reservation_dates_c',
                 'studio' => 'visible',
                 'label' => 'LBL_RESERVATION_DATES',
               ),
-              26 => 
+              25 => 
               array (
                 'name' => 'names_on_deed_c',
                 'label' => 'LBL_NAMES_ON_DEED',
               ),
-              27 => 
+              26 => 
               array (
                 'related_fields' => 
                 array (
@@ -320,41 +316,44 @@ array (
                 'name' => 'mortgage_balance_c',
                 'label' => 'LBL_MORTGAGE_BALANCE',
               ),
-              28 => 
+              27 => 
               array (
                 'name' => 'length_of_ownership_c',
                 'label' => 'LBL_LENGTH_OF_OWNERSHIP',
               ),
-              29 => 
+              28 => 
               array (
                 'name' => 'actively_using_c',
                 'label' => 'LBL_ACTIVELY_USING',
               ),
-              30 => 
+              29 => 
               array (
                 'name' => 'trust_name_c',
                 'label' => 'LBL_TRUST_NAME',
               ),
-              31 => 
+              30 => 
               array (
                 'name' => 'names_of_deceased_c',
                 'label' => 'LBL_NAMES_OF_DECEASED',
               ),
-              32 => 
+              31 => 
               array (
                 'name' => 'divorced_c',
                 'label' => 'LBL_DIVORCED',
               ),
-              33 => 
+              32 => 
               array (
                 'name' => 'rrpay_payment_plans_abc_transfers_1_name',
               ),
+              33 => 
+              array (
+              ),
               34 => 
               array (
+                'name' => 'rrcom_commissions_abc_transfers_1_name',
               ),
               35 => 
               array (
-                'name' => 'rrcom_commissions_abc_transfers_1_name',
               ),
             ),
           ),

@@ -384,15 +384,15 @@ array (
               ),
               35 => 
               array (
-                'name' => 'abc_mortgages_abc_properties_1_name',
+                'name' => 'rrpay_payment_plans_abc_mortgages_1_name',
+                'span' => 12,
               ),
               36 => 
               array (
-                'name' => 'rrpay_payment_plans_abc_mortgages_1_name',
+                'name' => 'rrcom_commissions_abc_mortgages_1_name',
               ),
               37 => 
               array (
-                'name' => 'rrcom_commissions_abc_mortgages_1_name',
               ),
             ),
           ),

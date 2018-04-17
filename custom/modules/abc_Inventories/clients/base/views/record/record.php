@@ -172,28 +172,25 @@ array (
               array (
                 'name' => 'accounts_abc_inventories_1_name',
                 'label' => 'LBL_ACCOUNTS_ABC_INVENTORIES_1_FROM_ACCOUNTS_TITLE',
+                'span' => 12,
               ),
               1 => 
               array (
-                'name' => 'abc_inventories_abc_properties_1_name',
-              ),
-              2 => 
-              array (
                 'name' => 'abc_transfers_abc_inventories_1_name',
               ),
-              3 => 
+              2 => 
               array (
                 'name' => 'status_c',
                 'label' => 'LBL_STATUS',
               ),
-              4 => 
+              3 => 
               array (
                 'name' => 'description',
                 'span' => 12,
               ),
-              5 => 'assigned_user_name',
-              6 => 'team_name',
-              7 => 
+              4 => 'assigned_user_name',
+              5 => 'team_name',
+              6 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,
@@ -217,7 +214,7 @@ array (
                   ),
                 ),
               ),
-              8 => 
+              7 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,

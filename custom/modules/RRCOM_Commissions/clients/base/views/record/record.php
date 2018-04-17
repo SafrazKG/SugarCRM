@@ -172,58 +172,55 @@ array (
               array (
                 'name' => 'id_rr_c',
                 'label' => 'LBL_ID_RR',
+                'span' => 12,
               ),
               1 => 
-              array (
-                'name' => 'rrcom_commissions_abc_properties_1_name',
-              ),
-              2 => 
               array (
                 'name' => 'property_id_c',
                 'label' => 'LBL_PROPERTY_ID',
               ),
-              3 => 
+              2 => 
               array (
                 'name' => 'rrcom_commissions_accounts_1_name',
               ),
-              4 => 
+              3 => 
               array (
                 'name' => 'rrcom_commissions_abc_transfers_1_name',
               ),
-              5 => 
+              4 => 
               array (
                 'name' => 'rrcom_commissions_abc_mortgages_1_name',
               ),
-              6 => 
+              5 => 
               array (
                 'name' => 'resort_c',
                 'label' => 'LBL_RESORT',
               ),
-              7 => 
+              6 => 
               array (
                 'name' => 'payment_status_c',
                 'label' => 'LBL_PAYMENT_STATUS',
               ),
-              8 => 
+              7 => 
               array (
                 'name' => 'assigned_to_fronter_c',
                 'studio' => 'visible',
                 'label' => 'LBL_ASSIGNED_TO_FRONTER',
               ),
-              9 => 
+              8 => 
               array (
                 'name' => 'second_fronter_c',
                 'studio' => 'visible',
                 'label' => 'LBL_SECOND_FRONTER',
               ),
-              10 => 
+              9 => 
               array (
                 'name' => 'assigned_to_closer_c',
                 'studio' => 'visible',
                 'label' => 'LBL_ASSIGNED_TO_CLOSER',
                 'span' => 12,
               ),
-              11 => 
+              10 => 
               array (
                 'related_fields' => 
                 array (
@@ -233,12 +230,12 @@ array (
                 'name' => 'fronter_commission_c',
                 'label' => 'LBL_FRONTER_COMMISSION',
               ),
-              12 => 
+              11 => 
               array (
                 'name' => 'commission_r_c',
                 'label' => 'LBL_COMMISSION_R',
               ),
-              13 => 
+              12 => 
               array (
                 'related_fields' => 
                 array (
@@ -248,12 +245,12 @@ array (
                 'name' => 'second_fronter_commission_c',
                 'label' => 'LBL_SECOND_FRONTER_COMMISSION',
               ),
-              14 => 
+              13 => 
               array (
                 'name' => 'commission_rr_c',
                 'label' => 'LBL_COMMISSION_RR',
               ),
-              15 => 
+              14 => 
               array (
                 'related_fields' => 
                 array (
@@ -263,59 +260,53 @@ array (
                 'name' => 'assigned_to_closer_commissio_c',
                 'label' => 'LBL_ASSIGNED_TO_CLOSER_COMMISSIO',
               ),
-              16 => 
+              15 => 
               array (
                 'name' => 'commission_c',
                 'label' => 'LBL_COMMISSION',
               ),
-              17 => 
+              16 => 
               array (
                 'name' => 'sale_date_c',
                 'label' => 'LBL_SALE_DATE',
               ),
-              18 => 
+              17 => 
               array (
                 'name' => 'payment_date_c',
                 'label' => 'LBL_PAYMENT_DATE',
               ),
-              19 => 
+              18 => 
               array (
                 'name' => 'note_c',
                 'studio' => 'visible',
                 'label' => 'LBL_NOTE',
               ),
-              20 => 
+              19 => 
               array (
                 'name' => 'pay_type_c',
                 'label' => 'LBL_PAY_TYPE',
               ),
-              21 => 
+              20 => 
               array (
                 'name' => 'deal_type_c',
                 'label' => 'LBL_DEAL_TYPE',
               ),
-              22 => 
+              21 => 
               array (
                 'name' => 'holding_c',
                 'label' => 'LBL_HOLDING',
               ),
-              23 => 
-              array (
-              ),
-              24 => 
-              array (
-              ),
-              25 => 
+              22 => 
               array (
                 'name' => 'holding_rr_c',
                 'label' => 'LBL_HOLDING_RR',
               ),
-              26 => 
+              23 => 
               array (
                 'name' => 'bonus_month_c',
                 'label' => 'LBL_BONUS_MONTH',
               ),
-              27 => 
+              24 => 
               array (
                 'related_fields' => 
                 array (
@@ -325,12 +316,12 @@ array (
                 'name' => 'bonus_c',
                 'label' => 'LBL_BONUS',
               ),
-              28 => 
+              25 => 
               array (
                 'name' => 'invoice_c',
                 'label' => 'LBL_INVOICE',
               ),
-              29 => 
+              26 => 
               array (
                 'name' => 'rec_status_c',
                 'label' => 'LBL_REC_STATUS',

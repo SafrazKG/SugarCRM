@@ -179,77 +179,73 @@ array (
               ),
               2 => 
               array (
-                'name' => 'abc_deedbacks_abc_properties_1_name',
-                'label' => 'LBL_ABC_DEEDBACKS_ABC_PROPERTIES_1_FROM_ABC_PROPERTIES_TITLE',
-              ),
-              3 => 
-              array (
                 'name' => 'property_id_c',
                 'label' => 'LBL_PROPERTY_ID',
+                'span' => 12,
               ),
-              4 => 
+              3 => 
               array (
                 'name' => 'payment_status_c',
                 'label' => 'LBL_PAYMENT_STATUS',
               ),
-              5 => 
+              4 => 
               array (
                 'name' => 'resort_family_c',
                 'label' => 'LBL_RESORT_FAMILY',
               ),
-              6 => 
+              5 => 
               array (
                 'name' => 'phone_c',
                 'label' => 'LBL_PHONE',
               ),
-              7 => 
+              6 => 
               array (
                 'name' => 'email_c',
                 'label' => 'LBL_EMAIL',
               ),
-              8 => 
+              7 => 
               array (
                 'name' => 'address_street_c',
                 'studio' => 'visible',
                 'label' => 'LBL_ADDRESS_STREET',
               ),
-              9 => 
+              8 => 
               array (
                 'name' => 'type_a_c',
                 'label' => 'LBL_TYPE_A',
               ),
-              10 => 
+              9 => 
               array (
                 'name' => 'address_city_c',
                 'label' => 'LBL_ADDRESS_CITY',
               ),
-              11 => 
+              10 => 
               array (
                 'name' => 'status_c',
                 'label' => 'LBL_STATUS',
               ),
-              12 => 
+              11 => 
               array (
                 'name' => 'address_state_c',
                 'label' => 'LBL_ADDRESS_STATE',
               ),
-              13 => 
+              12 => 
               array (
                 'name' => 'abc_deedbacks_abc_estoppels_1_name',
                 'label' => 'LBL_ABC_DEEDBACKS_ABC_ESTOPPELS_1_FROM_ABC_ESTOPPELS_TITLE',
               ),
-              14 => 
+              13 => 
               array (
                 'name' => 'address_postalcode_c',
                 'label' => 'LBL_ADDRESS_POSTALCODE',
                 'span' => 12,
               ),
-              15 => 
+              14 => 
               array (
                 'name' => 'address_country_c',
                 'label' => 'LBL_ADDRESS_COUNTRY',
               ),
-              16 => 
+              15 => 
               array (
                 'name' => 'abc_deedbacks_rrpay_payment_plans_1_name',
               ),
