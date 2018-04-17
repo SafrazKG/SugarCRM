@@ -23,6 +23,9 @@
             } catch(e) {
             }
         }
+        setTimeout(_.bind(function() {
+            this.hideInactiveDrawer();
+        }, this), 200);
         app.drawer.open({
                 layout: 'records-with-close',
                 context: {
@@ -32,5 +35,27 @@
                 },
             }
         );
+    },
+    
+    hideInactiveDrawer: function() {
+        if (app.drawer.isOpening()) {
+            setTimeout(_.bind(function() {
+                this.hideInactiveDrawer();
+            }, this), 100);
+            return;
+        }
+        $('#drawers .inactive').css('display', 'none');
+    },
+    
+    hasUnsavedChanges: function() {
+        var ret = this._super('hasUnsavedChanges');
+        if (ret) {
+            var changed = this.model.changedAttributes();
+            if (!_.isUndefined(changed.name)) delete changed.name;
+            for (var i in changed) {
+                return true;
+            }
+        }
+        return false;
     }
 })

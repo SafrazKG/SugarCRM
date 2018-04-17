@@ -378,6 +378,101 @@ array (
               ),
               9 => 'assigned_user_name',
               10 => 'team_name',
+              11 => 
+              array (
+                'name' => 'dri_workflow_sort_order',
+              ),
+              12 => 
+              array (
+              ),
+              13 => 
+              array (
+                'name' => 'customer_journey_points',
+              ),
+              14 => 
+              array (
+              ),
+              15 => 
+              array (
+                'name' => 'dri_workflow_sort_order',
+              ),
+              16 => 
+              array (
+              ),
+              17 => 
+              array (
+                'name' => 'customer_journey_points',
+              ),
+              18 => 
+              array (
+              ),
+              19 => 
+              array (
+                'name' => 'dri_workflow_sort_order',
+              ),
+              20 => 
+              array (
+              ),
+              21 => 
+              array (
+                'name' => 'customer_journey_points',
+              ),
+              22 => 
+              array (
+              ),
+              23 => 
+              array (
+                'name' => 'dri_workflow_sort_order',
+              ),
+              24 => 
+              array (
+              ),
+              25 => 
+              array (
+                'name' => 'customer_journey_points',
+              ),
+              26 => 
+              array (
+              ),
+              27 => 
+              array (
+                'name' => 'dri_workflow_sort_order',
+              ),
+              28 => 
+              array (
+              ),
+              29 => 
+              array (
+                'name' => 'customer_journey_points',
+              ),
+              30 => 
+              array (
+              ),
+              31 => 
+              array (
+                'name' => 'dri_workflow_sort_order',
+              ),
+              32 => 
+              array (
+              ),
+              33 => 
+              array (
+                'name' => 'customer_journey_points',
+              ),
+              34 => 
+              array (
+              ),
+              35 => 
+              array (
+                'name' => 'dri_workflow_sort_order',
+              ),
+              36 => 
+              array (
+              ),
+              37 => 
+              array (
+                'name' => 'customer_journey_points',
+              ),
             ),
           ),
           2 => 

@@ -179,42 +179,39 @@ array (
               2 => 
               array (
                 'name' => 'abc_mortgages_rrrc_requested_checks_1_name',
+                'span' => 12,
               ),
               3 => 
               array (
-                'name' => 'abc_properties_rrrc_requested_checks_1_name',
-              ),
-              4 => 
-              array (
                 'name' => 'rrrc_requested_checks_abc_maintenance_fees_1_name',
               ),
-              5 => 
+              4 => 
               array (
                 'name' => 'request_date_c',
                 'label' => 'LBL_REQUEST_DATE',
               ),
-              6 => 
+              5 => 
               array (
                 'name' => 'status_c',
                 'label' => 'LBL_STATUS',
               ),
-              7 => 
+              6 => 
               array (
                 'name' => 'check_requester_c',
                 'studio' => 'visible',
                 'label' => 'LBL_CHECK_REQUESTER',
               ),
-              8 => 
+              7 => 
               array (
                 'name' => 'purpose_c',
                 'label' => 'LBL_PURPOSE',
               ),
-              9 => 
+              8 => 
               array (
                 'name' => 'paid_to_c',
                 'label' => 'LBL_PAID_TO',
               ),
-              10 => 
+              9 => 
               array (
                 'related_fields' => 
                 array (
@@ -224,22 +221,22 @@ array (
                 'name' => 'amount_c',
                 'label' => 'LBL_AMOUNT',
               ),
-              11 => 
+              10 => 
               array (
                 'name' => 'account_number_c',
                 'label' => 'LBL_ACCOUNT_NUMBER',
               ),
-              12 => 
+              11 => 
               array (
                 'name' => 'account_name_c',
                 'label' => 'LBL_ACCOUNT_NAME',
               ),
-              13 => 
+              12 => 
               array (
                 'name' => 'check_rr_c',
                 'label' => 'LBL_CHECK_RR',
               ),
-              14 => 
+              13 => 
               array (
                 'name' => 'notes_c',
                 'studio' => 'visible',
