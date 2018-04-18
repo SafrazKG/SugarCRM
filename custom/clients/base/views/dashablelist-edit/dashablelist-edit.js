@@ -12,7 +12,6 @@
         'Editable',
         'MergeDuplicates',
         'Pagination',
-        'MassCollection',
         'Dashlet'
     ],
 
