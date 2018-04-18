@@ -178,15 +178,11 @@ array (
               ),
               2 => 
               array (
-                'name' => 'rrpay_payment_plans_abc_transfers_1_name',
-                'label' => 'LBL_RRPAY_PAYMENT_PLANS_ABC_TRANSFERS_1_FROM_ABC_TRANSFERS_TITLE',
-              ),
-              3 => 
-              array (
                 'name' => 'paid_in_full_date_c',
                 'label' => 'LBL_PAID_IN_FULL_DATE',
+                'span' => 12,
               ),
-              4 => 
+              3 => 
               array (
                 'related_fields' => 
                 array (
@@ -196,7 +192,7 @@ array (
                 'name' => 'amount_c',
                 'label' => 'LBL_AMOUNT',
               ),
-              5 => 
+              4 => 
               array (
                 'related_fields' => 
                 array (
@@ -206,7 +202,7 @@ array (
                 'name' => 'net_c',
                 'label' => 'LBL_NET',
               ),
-              6 => 
+              5 => 
               array (
                 'related_fields' => 
                 array (
@@ -217,7 +213,7 @@ array (
                 'label' => 'LBL_AMOUNT_PAID',
                 'span' => 12,
               ),
-              7 => 
+              6 => 
               array (
                 'related_fields' => 
                 array (
