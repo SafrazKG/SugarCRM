@@ -48,6 +48,7 @@ class CalendarFilterApi extends FilterApi {
     
     public function extendedFilterList($api, $args) {
         // we need to add available slots if user is fronter
+        if (!isset($args['view']) || $args['view']!='calendarlist') return $this->filterList($api, $args);
         if (!isset($args['filter'])) return array('next_offset' => -1, 'records' => []);
         foreach ($args['filter'] as $k => $filter) {
             if (isset($filter['date_field_c'])) {

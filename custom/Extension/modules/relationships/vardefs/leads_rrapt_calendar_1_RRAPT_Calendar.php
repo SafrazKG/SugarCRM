@@ -48,3 +48,16 @@ $dictionary["RRAPT_Calendar"]["fields"]["leads_rrapt_calendar_1leads_ida"] = arr
   'hideacl' => true,
   'required' => true,
 );
+$dictionary["RRAPT_Calendar"]["fields"]["leads_rrapt_calendar_1_phone"] = array (
+  'name' => 'leads_rrapt_calendar_1_phone',
+  'type' => 'relate',
+  'source' => 'non-db',
+  'vname' => 'Leads phone',
+  'save' => true,
+  'id_name' => 'leads_rrapt_calendar_1leads_ida',
+  'link' => 'leads_rrapt_calendar_1',
+  'table' => 'leads',
+  'module' => 'Leads',
+  'rname' => 'phone_home',
+  'required' => false,
+);
