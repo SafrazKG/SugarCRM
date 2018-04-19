@@ -1,3 +1,3 @@
 <?php
 
-$deletedFields[] = 'Leadslead_status_c';
+$deleteFields[] = 'Leadslead_status_c';
