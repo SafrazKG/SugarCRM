@@ -1,0 +1,30 @@
+<div class="record">
+    <div class="config_container">
+        <div class="page-header">
+            {{str 'LBL_CONFIG_DESCRIPTION' module}}
+        </div>
+        <div class="config_values">
+            {{#each meta.fields}}
+                <h4>{{str label ../module}}</h4>
+                {{field ../this model=../configModel template="edit"}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<style>
+    .config_container .config_values input {
+        width: 60%;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .page-header {
+        margin-bottom: 20px;
+    }
+    .page-message {
+        margin-bottom: 20px;
+    }
+    .config_values {
+        margin: 10px;
+    }
+</style>
