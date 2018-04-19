@@ -1,7 +1,7 @@
 <?php
-// created: 2018-04-04 05:08:19
+// created: 2018-04-18 14:37:23
 $dictionary["rrpay_payment_plans_abc_mortgages_1"] = array (
-  'true_relationship_type' => 'one-to-one',
+  'true_relationship_type' => 'one-to-many',
   'from_studio' => true,
   'relationships' => 
   array (
@@ -78,6 +78,15 @@ $dictionary["rrpay_payment_plans_abc_mortgages_1"] = array (
       array (
         0 => 'rrpay_payment_plans_abc_mortgages_1abc_mortgages_idb',
         1 => 'deleted',
+      ),
+    ),
+    3 => 
+    array (
+      'name' => 'rrpay_payment_plans_abc_mortgages_1_alt',
+      'type' => 'alternate_key',
+      'fields' => 
+      array (
+        0 => 'rrpay_payment_plans_abc_mortgages_1abc_mortgages_idb',
       ),
     ),
   ),

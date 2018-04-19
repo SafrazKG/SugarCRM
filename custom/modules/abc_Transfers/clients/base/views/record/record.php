@@ -164,8 +164,357 @@ array (
             'columns' => 2,
             'labelsOnTop' => true,
             'placeholders' => true,
+            'newTab' => true,
+            'panelDefault' => 'expanded',
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'leads_abc_transfers_1_name',
+                'label' => 'LBL_LEADS_ABC_TRANSFERS_1_FROM_LEADS_TITLE',
+              ),
+              1 => 
+              array (
+                'name' => 'resort_c',
+                'label' => 'LBL_RESORT',
+              ),
+              2 => 
+              array (
+                'name' => 'management_company_c',
+                'label' => 'LBL_MANAGEMENT_COMPANY',
+              ),
+              3 => 
+              array (
+                'name' => 'deeded_or_rtu_c',
+                'label' => 'LBL_DEEDED_OR_RTU',
+              ),
+              4 => 
+              array (
+                'name' => 'resort_location_c',
+                'label' => 'LBL_RESORT_LOCATION',
+              ),
+              5 => 
+              array (
+                'name' => 'resort_account_number_c',
+                'label' => 'LBL_RESORT_ACCOUNT_NUMBER',
+              ),
+              6 => 
+              array (
+                'name' => 'size_of_unit_c',
+                'label' => 'LBL_SIZE_OF_UNIT',
+              ),
+              7 => 
+              array (
+                'name' => 'member_of_exchange_company_c',
+                'label' => 'LBL_MEMBER_OF_EXCHANGE_COMPANY',
+              ),
+              8 => 
+              array (
+                'name' => 'week_fixed_c',
+                'label' => 'LBL_WEEK_FIXED',
+              ),
+              9 => 
+              array (
+                'name' => 'week_fixed_week_c',
+                'label' => 'LBL_WEEK_FIXED_WEEK',
+              ),
+              10 => 
+              array (
+                'name' => 'inventory_autobooked_c',
+                'label' => 'LBL_INVENTORY_AUTOBOOKED',
+              ),
+              11 => 
+              array (
+              ),
+              12 => 
+              array (
+                'name' => 'usage_a_c',
+                'label' => 'LBL_USAGE_A',
+              ),
+              13 => 
+              array (
+                'name' => 'number_of_timeshares_p_c',
+                'label' => 'LBL_NUMBER_OF_TIMESHARES_P',
+              ),
+              14 => 
+              array (
+                'name' => 'rrpay_payment_plans_abc_transfers_1_name',
+              ),
+              15 => 
+              array (
+              ),
+            ),
+          ),
+          2 => 
+          array (
             'newTab' => false,
             'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL4',
+            'label' => 'LBL_RECORDVIEW_PANEL4',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'agent_holding_fee_c',
+                'label' => 'LBL_AGENT_HOLDING_FEE',
+              ),
+              1 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'title_fee_c',
+                'label' => 'LBL_TITLE_FEE',
+              ),
+              2 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'maintenance_pad_c',
+                'label' => 'LBL_MAINTENANCE_PAD',
+              ),
+              3 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'transfer_fee_c',
+                'label' => 'LBL_TRANSFER_FEE',
+              ),
+              4 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'holding_fee_c',
+                'label' => 'LBL_HOLDING_FEE',
+              ),
+              5 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'total_investment_c',
+                'label' => 'LBL_TOTAL_INVESTMENT',
+              ),
+            ),
+          ),
+          3 => 
+          array (
+            'name' => 'panel_hidden',
+            'label' => 'LBL_SHOW_MORE',
+            'hide' => true,
+            'columns' => 2,
+            'labelsOnTop' => true,
+            'placeholders' => true,
+            'newTab' => false,
+            'panelDefault' => 'collapsed',
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'resort_address_street_c',
+                'studio' => 'visible',
+                'label' => 'LBL_RESORT_ADDRESS_STREET',
+              ),
+              1 => 
+              array (
+              ),
+              2 => 
+              array (
+                'name' => 'resort_address_city_c',
+                'label' => 'LBL_RESORT_ADDRESS_CITY',
+              ),
+              3 => 
+              array (
+              ),
+              4 => 
+              array (
+                'name' => 'resort_address_state_c',
+                'label' => 'LBL_RESORT_ADDRESS_STATE',
+              ),
+              5 => 
+              array (
+              ),
+              6 => 
+              array (
+                'name' => 'resort_address_postalcode_c',
+                'label' => 'LBL_RESORT_ADDRESS_POSTALCODE',
+              ),
+              7 => 
+              array (
+              ),
+              8 => 
+              array (
+                'name' => 'resort_address_country_c',
+                'label' => 'LBL_RESORT_ADDRESS_COUNTRY',
+              ),
+              9 => 
+              array (
+              ),
+            ),
+          ),
+          4 => 
+          array (
+            'newTab' => false,
+            'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL3',
+            'label' => 'LBL_RECORDVIEW_PANEL3',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'maintenance_fees_c',
+                'label' => 'LBL_MAINTENANCE_FEES',
+              ),
+              1 => 
+              array (
+                'name' => 'maintenance_paid_c',
+                'label' => 'LBL_MAINTENANCE_PAID',
+              ),
+              2 => 
+              array (
+                'name' => 'maintenance_fees_current_c',
+                'label' => 'LBL_MAINTENANCE_FEES_CURRENT',
+              ),
+              3 => 
+              array (
+                'name' => 'maintenance_fees_due_date_c',
+                'label' => 'LBL_MAINTENANCE_FEES_DUE_DATE',
+              ),
+              4 => 
+              array (
+              ),
+              5 => 
+              array (
+                'name' => 'maintenance_fees_paid_throug_c',
+                'label' => 'LBL_MAINTENANCE_FEES_PAID_THROUG',
+              ),
+              6 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'club_dues_amount_c',
+                'label' => 'LBL_CLUB_DUES_AMOUNT',
+              ),
+              7 => 
+              array (
+                'name' => 'club_dues_date_c',
+                'label' => 'LBL_CLUB_DUES_DATE',
+              ),
+              8 => 
+              array (
+              ),
+              9 => 
+              array (
+                'name' => 'club_dues_paid_c',
+                'label' => 'LBL_CLUB_DUES_PAID',
+              ),
+              10 => 
+              array (
+                'name' => 'week_will_use_a_c',
+                'label' => 'LBL_WEEK_WILL_USE_A',
+              ),
+              11 => 
+              array (
+                'name' => 'week_will_use_b_c',
+                'label' => 'LBL_WEEK_WILL_USE_B',
+              ),
+              12 => 
+              array (
+                'name' => 'week_will_use_c',
+                'label' => 'LBL_WEEK_WILL_USE_C',
+              ),
+              13 => 
+              array (
+              ),
+              14 => 
+              array (
+                'name' => 'reservation_dates_c',
+                'studio' => 'visible',
+                'label' => 'LBL_RESERVATION_DATES',
+              ),
+              15 => 
+              array (
+                'name' => 'names_on_deed_c',
+                'label' => 'LBL_NAMES_ON_DEED',
+              ),
+              16 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'mortgage_balance_c',
+                'label' => 'LBL_MORTGAGE_BALANCE',
+              ),
+              17 => 
+              array (
+                'name' => 'length_of_ownership_c',
+                'label' => 'LBL_LENGTH_OF_OWNERSHIP',
+              ),
+              18 => 
+              array (
+                'name' => 'actively_using_c',
+                'label' => 'LBL_ACTIVELY_USING',
+              ),
+              19 => 
+              array (
+                'name' => 'trust_name_c',
+                'label' => 'LBL_TRUST_NAME',
+              ),
+              20 => 
+              array (
+                'name' => 'names_of_deceased_c',
+                'label' => 'LBL_NAMES_OF_DECEASED',
+              ),
+              21 => 
+              array (
+                'name' => 'divorced_c',
+                'label' => 'LBL_DIVORCED',
+              ),
+            ),
+          ),
+          5 => 
+          array (
+            'newTab' => true,
+            'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL2',
+            'label' => 'LBL_RECORDVIEW_PANEL2',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
             'fields' => 
             array (
               0 => 
@@ -210,163 +559,35 @@ array (
               ),
               8 => 
               array (
-                'name' => 'lead_source_c',
-                'label' => 'LBL_LEAD_SOURCE',
+                'name' => 'doc_date_c',
+                'label' => 'LBL_DOC_DATE',
               ),
               9 => 
               array (
-                'name' => 'management_company_c',
-                'label' => 'LBL_MANAGEMENT_COMPANY',
+                'name' => 'est_date_c',
+                'label' => 'LBL_EST_DATE',
               ),
               10 => 
               array (
-                'name' => 'usage_a_c',
-                'label' => 'LBL_USAGE_A',
+                'name' => 'trf_date_c',
+                'label' => 'LBL_TRF_DATE',
               ),
               11 => 
               array (
-                'name' => 'size_of_unit_c',
-                'label' => 'LBL_SIZE_OF_UNIT',
-              ),
-              12 => 
-              array (
-                'name' => 'poperty_id_c',
-                'label' => 'LBL_POPERTY_ID',
-                'span' => 12,
-              ),
-              13 => 
-              array (
-                'name' => 'member_of_exchange_company_c',
-                'label' => 'LBL_MEMBER_OF_EXCHANGE_COMPANY',
-              ),
-              14 => 
-              array (
-                'name' => 'week_fixed_c',
-                'label' => 'LBL_WEEK_FIXED',
-              ),
-              15 => 
-              array (
-                'name' => 'week_fixed_week_c',
-                'label' => 'LBL_WEEK_FIXED_WEEK',
-              ),
-              16 => 
-              array (
-                'name' => 'inventory_autobooked_c',
-                'label' => 'LBL_INVENTORY_AUTOBOOKED',
-              ),
-              17 => 
-              array (
-                'name' => 'number_of_timeshares_c',
-                'label' => 'LBL_NUMBER_OF_TIMESHARES',
-                'span' => 12,
-              ),
-              18 => 
-              array (
-                'related_fields' => 
-                array (
-                  0 => 'currency_id',
-                  1 => 'base_rate',
-                ),
-                'name' => 'club_dues_amount_c',
-                'label' => 'LBL_CLUB_DUES_AMOUNT',
-              ),
-              19 => 
-              array (
-                'name' => 'club_dues_date_c',
-                'label' => 'LBL_CLUB_DUES_DATE',
-              ),
-              20 => 
-              array (
-                'name' => 'club_dues_paid_c',
-                'label' => 'LBL_CLUB_DUES_PAID',
-              ),
-              21 => 
-              array (
-                'name' => 'week_will_use_a_c',
-                'label' => 'LBL_WEEK_WILL_USE_A',
-              ),
-              22 => 
-              array (
-                'name' => 'week_will_use_b_c',
-                'label' => 'LBL_WEEK_WILL_USE_B',
-              ),
-              23 => 
-              array (
-                'name' => 'week_will_use_c',
-                'label' => 'LBL_WEEK_WILL_USE_C',
-              ),
-              24 => 
-              array (
-                'name' => 'reservation_dates_c',
-                'studio' => 'visible',
-                'label' => 'LBL_RESERVATION_DATES',
-              ),
-              25 => 
-              array (
-                'name' => 'names_on_deed_c',
-                'label' => 'LBL_NAMES_ON_DEED',
-              ),
-              26 => 
-              array (
-                'related_fields' => 
-                array (
-                  0 => 'currency_id',
-                  1 => 'base_rate',
-                ),
-                'name' => 'mortgage_balance_c',
-                'label' => 'LBL_MORTGAGE_BALANCE',
-              ),
-              27 => 
-              array (
-                'name' => 'length_of_ownership_c',
-                'label' => 'LBL_LENGTH_OF_OWNERSHIP',
-              ),
-              28 => 
-              array (
-                'name' => 'actively_using_c',
-                'label' => 'LBL_ACTIVELY_USING',
-              ),
-              29 => 
-              array (
-                'name' => 'trust_name_c',
-                'label' => 'LBL_TRUST_NAME',
-              ),
-              30 => 
-              array (
-                'name' => 'names_of_deceased_c',
-                'label' => 'LBL_NAMES_OF_DECEASED',
-              ),
-              31 => 
-              array (
-                'name' => 'divorced_c',
-                'label' => 'LBL_DIVORCED',
-              ),
-              32 => 
-              array (
-                'name' => 'rrpay_payment_plans_abc_transfers_1_name',
-              ),
-              33 => 
-              array (
-              ),
-              34 => 
-              array (
-                'name' => 'rrcom_commissions_abc_transfers_1_name',
-              ),
-              35 => 
-              array (
+                'name' => 'closed_date_c',
+                'label' => 'LBL_CLOSED_DATE',
               ),
             ),
           ),
-          2 => 
+          6 => 
           array (
-            'name' => 'panel_hidden',
-            'label' => 'LBL_SHOW_MORE',
-            'hide' => true,
-            'columns' => 2,
-            'labelsOnTop' => true,
-            'placeholders' => true,
             'newTab' => false,
             'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL1',
+            'label' => 'LBL_RECORDVIEW_PANEL1',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
             'fields' => 
             array (
               0 => 
@@ -374,33 +595,7 @@ array (
                 'name' => 'description',
                 'span' => 12,
               ),
-              1 => 'assigned_user_name',
-              2 => 'team_name',
-              3 => 
-              array (
-                'name' => 'date_modified_by',
-                'readonly' => true,
-                'inline' => true,
-                'type' => 'fieldset',
-                'label' => 'LBL_DATE_MODIFIED',
-                'fields' => 
-                array (
-                  0 => 
-                  array (
-                    'name' => 'date_modified',
-                  ),
-                  1 => 
-                  array (
-                    'type' => 'label',
-                    'default_value' => 'LBL_BY',
-                  ),
-                  2 => 
-                  array (
-                    'name' => 'modified_by_name',
-                  ),
-                ),
-              ),
-              4 => 
+              1 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
@@ -424,12 +619,38 @@ array (
                   ),
                 ),
               ),
+              2 => 
+              array (
+                'name' => 'date_modified_by',
+                'readonly' => true,
+                'inline' => true,
+                'type' => 'fieldset',
+                'label' => 'LBL_DATE_MODIFIED',
+                'fields' => 
+                array (
+                  0 => 
+                  array (
+                    'name' => 'date_modified',
+                  ),
+                  1 => 
+                  array (
+                    'type' => 'label',
+                    'default_value' => 'LBL_BY',
+                  ),
+                  2 => 
+                  array (
+                    'name' => 'modified_by_name',
+                  ),
+                ),
+              ),
+              3 => 'assigned_user_name',
+              4 => 'team_name',
             ),
           ),
         ),
         'templateMeta' => 
         array (
-          'useTabs' => false,
+          'useTabs' => true,
         ),
       ),
     ),

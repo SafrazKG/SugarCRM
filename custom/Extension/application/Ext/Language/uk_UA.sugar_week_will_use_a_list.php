@@ -1,8 +1,12 @@
 <?php
- // created: 2018-03-22 09:13:26
+ // created: 2018-04-17 14:20:01
 
 $app_list_strings['week_will_use_a_list']=array (
   '' => '',
-  'Ex1' => 'Ex 1',
-  'Ex2' => 'Ex 2',
+  'Usage Passed' => 'Usage Passed',
+  'Client will use at Resort' => 'Client will use at Resort',
+  'Client will NOT use' => 'Client will NOT use',
+  'Client will use with Exchange Company' => 'Client will use with Exchange Company',
+  'Unavailable Year' => 'Unavailable Year',
+  'Banked with Resort' => 'Banked with Resort',
 );
