@@ -170,19 +170,20 @@ array (
             array (
               0 => 
               array (
-                'name' => 'abc_mortgages_rrpay_payment_plans_1_name',
+                'name' => 'accounts_rrpay_payment_plans_1_name',
               ),
               1 => 
               array (
-                'name' => 'accounts_rrpay_payment_plans_1_name',
               ),
               2 => 
               array (
                 'name' => 'paid_in_full_date_c',
                 'label' => 'LBL_PAID_IN_FULL_DATE',
-                'span' => 12,
               ),
               3 => 
+              array (
+              ),
+              4 => 
               array (
                 'related_fields' => 
                 array (
@@ -192,7 +193,7 @@ array (
                 'name' => 'amount_c',
                 'label' => 'LBL_AMOUNT',
               ),
-              4 => 
+              5 => 
               array (
                 'related_fields' => 
                 array (
@@ -202,7 +203,7 @@ array (
                 'name' => 'net_c',
                 'label' => 'LBL_NET',
               ),
-              5 => 
+              6 => 
               array (
                 'related_fields' => 
                 array (
@@ -211,9 +212,8 @@ array (
                 ),
                 'name' => 'amount_paid_c',
                 'label' => 'LBL_AMOUNT_PAID',
-                'span' => 12,
               ),
-              6 => 
+              7 => 
               array (
                 'related_fields' => 
                 array (
@@ -222,7 +222,6 @@ array (
                 ),
                 'name' => 'unpaid_amount_c',
                 'label' => 'LBL_UNPAID_AMOUNT',
-                'span' => 12,
               ),
             ),
           ),

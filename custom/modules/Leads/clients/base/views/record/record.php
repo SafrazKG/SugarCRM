@@ -232,50 +232,48 @@ array (
               ),
               1 => 
               array (
+                'name' => 'resort_name_c',
+                'label' => 'LBL_RESORT_NAME',
               ),
               2 => 
+              array (
+                'name' => 'disposition_type_c',
+                'label' => 'LBL_DISPOSITION_TYPE',
+              ),
+              3 => 
               array (
                 'name' => 'phone_home',
                 'comment' => 'Home phone number of the contact',
                 'label' => 'LBL_HOME_PHONE',
               ),
-              3 => 
+              4 => 
+              array (
+                'name' => 'disposition_c',
+                'label' => 'LBL_DISPOSITION',
+              ),
+              5 => 
               array (
                 'name' => 'phone_other',
                 'comment' => 'Other phone number for the contact',
                 'label' => 'LBL_OTHER_PHONE',
               ),
-              4 => 
-              array (
-                'name' => 'email',
-              ),
-              5 => 
-              array (
-                'name' => 'lead_status_c',
-                'label' => 'LBL_LEAD_STATUS',
-              ),
               6 => 
-              array (
-                'name' => 'disposition_c',
-                'label' => 'LBL_DISPOSITION',
-              ),
-              7 => 
-              array (
-                'name' => 'disposition_type_c',
-                'label' => 'LBL_DISPOSITION_TYPE',
-              ),
-              8 => 
               array (
                 'name' => 'sub_disposition_c',
                 'label' => 'LBL_SUB_DISPOSITION',
               ),
-              9 => 
+              7 => 
+              array (
+                'name' => 'email',
+              ),
+              8 => 
               array (
                 'name' => 'other_please_specify_c',
                 'label' => 'LBL_OTHER_PLEASE_SPECIFY',
               ),
-              10 => 'lead_source',
-              11 => 'lead_source_description',
+              9 => 
+              array (
+              ),
             ),
           ),
           2 => 
@@ -331,34 +329,34 @@ array (
                   ),
                 ),
               ),
-              1 => 
-              array (
-              ),
+              1 => 'team_name',
               2 => 
               array (
                 'name' => 'description',
                 'span' => 12,
               ),
-              3 => 'assigned_user_name',
-              4 => 
+              3 => 'lead_source',
+              4 => 'lead_source_description',
+              5 => 'assigned_user_name',
+              6 => 
               array (
                 'name' => 'assigned_to_closer_c',
                 'studio' => 'visible',
                 'label' => 'LBL_ASSIGNED_TO_CLOSER',
               ),
-              5 => 
+              7 => 
               array (
                 'name' => 'secondary_fronter_c',
                 'studio' => 'visible',
                 'label' => 'LBL_SECONDARY_FRONTER',
               ),
-              6 => 
+              8 => 
               array (
                 'name' => 'verification_officer_c',
                 'studio' => 'visible',
                 'label' => 'LBL_VERIFICATION_OFFICER',
               ),
-              7 => 
+              9 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
@@ -382,7 +380,7 @@ array (
                   ),
                 ),
               ),
-              8 => 
+              10 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,

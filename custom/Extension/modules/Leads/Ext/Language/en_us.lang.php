@@ -96,3 +96,5 @@ $mod_strings['LBL_RECORDVIEW_PANEL9'] = 'New Panel 9';
 $mod_strings['LBL_RECORDVIEW_PANEL10'] = 'New Panel 10';
 $mod_strings['LBL_VERIFICATION_OFFICER_USER_ID'] = 'Verification Officer (related User ID)';
 $mod_strings['LBL_VERIFICATION_OFFICER'] = 'Verification Officer';
+$mod_strings['LBL_ASSIGNED_TO'] = 'Assigned to Fronter';
+$mod_strings['LBL_RESORT_NAME'] = 'Resort Name';

@@ -175,8 +175,8 @@ array (
               ),
               1 => 
               array (
-                'name' => 'poperty_id_c',
-                'label' => 'LBL_POPERTY_ID',
+                'name' => 'resort_c',
+                'label' => 'LBL_RESORT',
               ),
               2 => 
               array (
@@ -190,8 +190,8 @@ array (
               ),
               4 => 
               array (
-                'name' => 'resort_c',
-                'label' => 'LBL_RESORT',
+                'name' => 'resort_location_c',
+                'label' => 'LBL_RESORT_LOCATION',
               ),
               5 => 
               array (
@@ -215,22 +215,110 @@ array (
               ),
               9 => 
               array (
+                'name' => 'week_fixed_week_c',
+                'label' => 'LBL_WEEK_FIXED_WEEK',
+              ),
+              10 => 
+              array (
                 'name' => 'inventory_autobooked_c',
                 'label' => 'LBL_INVENTORY_AUTOBOOKED',
               ),
-              10 => 
+              11 => 
+              array (
+              ),
+              12 => 
               array (
                 'name' => 'usage_a_c',
                 'label' => 'LBL_USAGE_A',
               ),
-              11 => 
+              13 => 
               array (
                 'name' => 'number_of_timeshares_p_c',
                 'label' => 'LBL_NUMBER_OF_TIMESHARES_P',
               ),
+              14 => 
+              array (
+                'name' => 'rrpay_payment_plans_abc_transfers_1_name',
+              ),
+              15 => 
+              array (
+              ),
             ),
           ),
           2 => 
+          array (
+            'newTab' => false,
+            'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL4',
+            'label' => 'LBL_RECORDVIEW_PANEL4',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'agent_holding_fee_c',
+                'label' => 'LBL_AGENT_HOLDING_FEE',
+              ),
+              1 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'title_fee_c',
+                'label' => 'LBL_TITLE_FEE',
+              ),
+              2 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'maintenance_pad_c',
+                'label' => 'LBL_MAINTENANCE_PAD',
+              ),
+              3 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'transfer_fee_c',
+                'label' => 'LBL_TRANSFER_FEE',
+              ),
+              4 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'holding_fee_c',
+                'label' => 'LBL_HOLDING_FEE',
+              ),
+              5 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'total_investment_c',
+                'label' => 'LBL_TOTAL_INVESTMENT',
+              ),
+            ),
+          ),
+          3 => 
           array (
             'name' => 'panel_hidden',
             'label' => 'LBL_SHOW_MORE',
@@ -285,7 +373,7 @@ array (
               ),
             ),
           ),
-          3 => 
+          4 => 
           array (
             'newTab' => false,
             'panelDefault' => 'expanded',
@@ -303,52 +391,85 @@ array (
                   0 => 'currency_id',
                   1 => 'base_rate',
                 ),
+                'name' => 'maintenance_fees_c',
+                'label' => 'LBL_MAINTENANCE_FEES',
+              ),
+              1 => 
+              array (
+                'name' => 'maintenance_paid_c',
+                'label' => 'LBL_MAINTENANCE_PAID',
+              ),
+              2 => 
+              array (
+                'name' => 'maintenance_fees_current_c',
+                'label' => 'LBL_MAINTENANCE_FEES_CURRENT',
+              ),
+              3 => 
+              array (
+                'name' => 'maintenance_fees_due_date_c',
+                'label' => 'LBL_MAINTENANCE_FEES_DUE_DATE',
+              ),
+              4 => 
+              array (
+              ),
+              5 => 
+              array (
+                'name' => 'maintenance_fees_paid_throug_c',
+                'label' => 'LBL_MAINTENANCE_FEES_PAID_THROUG',
+              ),
+              6 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
                 'name' => 'club_dues_amount_c',
                 'label' => 'LBL_CLUB_DUES_AMOUNT',
               ),
-              1 => 
+              7 => 
               array (
                 'name' => 'club_dues_date_c',
                 'label' => 'LBL_CLUB_DUES_DATE',
               ),
-              2 => 
+              8 => 
               array (
               ),
-              3 => 
+              9 => 
               array (
                 'name' => 'club_dues_paid_c',
                 'label' => 'LBL_CLUB_DUES_PAID',
               ),
-              4 => 
+              10 => 
               array (
                 'name' => 'week_will_use_a_c',
                 'label' => 'LBL_WEEK_WILL_USE_A',
               ),
-              5 => 
+              11 => 
               array (
                 'name' => 'week_will_use_b_c',
                 'label' => 'LBL_WEEK_WILL_USE_B',
               ),
-              6 => 
+              12 => 
               array (
                 'name' => 'week_will_use_c',
                 'label' => 'LBL_WEEK_WILL_USE_C',
               ),
-              7 => 
+              13 => 
               array (
               ),
-              8 => 
+              14 => 
               array (
                 'name' => 'reservation_dates_c',
                 'studio' => 'visible',
                 'label' => 'LBL_RESERVATION_DATES',
               ),
-              9 => 
+              15 => 
               array (
                 'name' => 'names_on_deed_c',
                 'label' => 'LBL_NAMES_ON_DEED',
               ),
-              10 => 
+              16 => 
               array (
                 'related_fields' => 
                 array (
@@ -358,34 +479,34 @@ array (
                 'name' => 'mortgage_balance_c',
                 'label' => 'LBL_MORTGAGE_BALANCE',
               ),
-              11 => 
+              17 => 
               array (
                 'name' => 'length_of_ownership_c',
                 'label' => 'LBL_LENGTH_OF_OWNERSHIP',
               ),
-              12 => 
+              18 => 
               array (
                 'name' => 'actively_using_c',
                 'label' => 'LBL_ACTIVELY_USING',
               ),
-              13 => 
+              19 => 
               array (
                 'name' => 'trust_name_c',
                 'label' => 'LBL_TRUST_NAME',
               ),
-              14 => 
+              20 => 
               array (
                 'name' => 'names_of_deceased_c',
                 'label' => 'LBL_NAMES_OF_DECEASED',
               ),
-              15 => 
+              21 => 
               array (
                 'name' => 'divorced_c',
                 'label' => 'LBL_DIVORCED',
               ),
             ),
           ),
-          4 => 
+          5 => 
           array (
             'newTab' => true,
             'panelDefault' => 'expanded',
@@ -458,7 +579,7 @@ array (
               ),
             ),
           ),
-          5 => 
+          6 => 
           array (
             'newTab' => false,
             'panelDefault' => 'expanded',
