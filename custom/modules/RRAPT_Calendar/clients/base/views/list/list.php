@@ -49,12 +49,21 @@ array (
               ),
               4 => 
               array (
+                'name' => 'leads_rrapt_calendar_1_phone',
+                'label' => 'Leads phone',
+                'enabled' => true,
+                'link' => false,
+                'sortable' => false,
+                'default' => true,
+              ),
+              5 => 
+              array (
                 'name' => 'disposition_c',
                 'label' => 'LBL_DISPOSITION',
                 'enabled' => true,
                 'default' => true,
               ),
-              5 => 
+              6 => 
               array (
                 'name' => 'assigned_user_name',
                 'label' => 'LBL_ASSIGNED_TO_NAME',
@@ -62,7 +71,7 @@ array (
                 'enabled' => true,
                 'link' => true,
               ),
-              6 => 
+              7 => 
               array (
                 'name' => 'users_rrapt_calendar_3_name',
                 'label' => 'LBL_USERS_RRAPT_CALENDAR_3_FROM_USERS_TITLE',
@@ -72,7 +81,7 @@ array (
                 'sortable' => false,
                 'default' => true,
               ),
-              7 => 
+              8 => 
               array (
                 'name' => 'users_rrapt_calendar_1_name',
                 'label' => 'LBL_USERS_RRAPT_CALENDAR_1_FROM_USERS_TITLE',
@@ -82,12 +91,12 @@ array (
                 'sortable' => false,
                 'default' => true,
               ),
-              8 => 
+              9 => 
               array (
                 'name' => 'team_name',
                 'label' => 'LBL_TEAM',
                 'default' => false,
-                'enabled' => true,
+                'enabled' => false,
               ),
             ),
           ),
