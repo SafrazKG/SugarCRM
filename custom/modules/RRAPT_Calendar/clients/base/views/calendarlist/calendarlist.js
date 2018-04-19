@@ -1,6 +1,8 @@
 ({
     extendsFrom: 'CustomCalendarlist',
     
+    setCalendarView: 'calendarlist',
+
     serverPingTime: 5, // minutes
     defaultMinTime: '08:00:00',
     defaultMaxTime: '23:00:00',

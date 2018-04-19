@@ -3,6 +3,7 @@
      * @property calenarOptions - extra options for fullCalendar init (if needed)
      */
     calendarOptions: {},
+    setCalendarView: null,
     
     calendar: null,
     start: null,
@@ -115,7 +116,7 @@
             filterDefs.push(endObj);
         }
         this.collection.setOption('filter', filterDefs);
-        this.collection.setOption('view', 'calendarlist');
+        if (this.setCalendarView) this.collection.setOption('view', this.setCalendarView);
     },
     
     updateCalendarData: function() {
