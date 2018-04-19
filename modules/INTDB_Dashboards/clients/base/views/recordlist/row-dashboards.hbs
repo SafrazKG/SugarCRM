@@ -1,0 +1,31 @@
+<div class="flex-list-view-content">
+    <div class='divTableHead'>{{str 'LBL_USERS_DASHBOARDS' 'INTDB_Dashboards'}}</div>
+    <div class="divTable">
+        <div class='divTableBody'>
+            <div class="divTableRow flex-list-row-header">
+            </div>
+            <div class="divTableRow flex-list-row-header">
+                {{#each select}}
+                <div class='divTableCell'>
+                    {{field ../view template="list-header"}}
+                </div>
+                {{/each}}
+                <div class='divTableCell'>{{str 'LBL_DASHBOARD_NAME' 'INTDB_Dashboards'}}</div>
+                <div class='divTableCell'>{{str 'LBL_DASHBOARD_MODULE' 'INTDB_Dashboards'}}</div>
+                <div class='divTableCell'>{{str 'LBL_DASHBOARD_MODIFIED' 'INTDB_Dashboards'}}</div>
+            </div>
+            {{#each this.dashboards}}
+                <div class="divTableRow single intdb_dashboard_row" data-id="{{id}}">
+                    {{#each ../select}}
+                    <div class='divTableCell'>
+                        {{field ../../view template='list'}}
+                    </div>
+                    {{/each}}
+                    <div class='divTableCell'>{{str name}}</div>
+                    <div class='divTableCell'>{{str dashboard_module}}</div>
+                    <div class='divTableCell'>{{formatDate date_modified}}</div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

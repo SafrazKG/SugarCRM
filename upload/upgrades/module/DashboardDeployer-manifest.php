@@ -23,19 +23,19 @@ $manifest = array (
         'regex_matches' => array('7\\..*$'),
     ),
     'author' => 'Intelestream Inc.',
-    'name' => 'Intelestream Deploy Helper',
-    'readme'=>"",
-    'description' => 'Intelestream Deploy Helper',
-    'published_date' => 'August 29th, 2017',
+    'name' => 'Intelestream Dashboards Plugin',
+    'readme'=>"Thank you for installing Dashboards plugin developed by Intelestream Inc.. Send questions to support@intelestream.net.",
+    'description' => '',
+    'published_date' => 'September 28th, 2017',
     'is_uninstallable' => true,
     'type' => 'module',
-    'version' => '1.5.0',
-    'key'=>'INTCR',
+    'version' => '1.1.1',
+    'key'=>'INTDB',
 );
 
 
 $installdefs = array (
-  'id' => 'INT_DeployHelper',
+  'id' => 'INT_Dashboards',
   'layoutdefs' => 
   array (
   ),
@@ -44,37 +44,36 @@ $installdefs = array (
   ),
     'administration' => array(
         array(
-           'from' => '<basepath>/custom/Extension/modules/Administration/Ext/Administration/INT_DeployHelperAdmin.php'
-        )
-    ),
-    'extensions' => array(
-        array(
-            'from' => '<basepath>/custom/Extension/application/Ext/Extension/INT_DeployHelper.php'
+           'from' => '<basepath>/custom/Extension/modules/Administration/Ext/Administration/intdashboards.php'
         )
     ),
   'copy' => 
   array (
     array (
-        'from' => '<basepath>/custom/themes/default/images/int.png',
-        'to' => 'custom/themes/default/images/int.png',
+        'from' => '<basepath>/INTDB_Dashboards',
+        'to' => 'modules/INTDB_Dashboards',
     ),
     array (
-        'from' => '<basepath>/INT_DeployHelper',
-        'to' => 'modules/INT_DeployHelper',
+         'from' => '<basepath>/custom/clients',
+         'to' => 'custom/clients',
     ),
     array (
-         'from' => '<basepath>/custom/Extension/application/Ext/JSGroupings/INT_DeployHelperJS.php',
-         'to' => 'custom/Extension/application/Ext/JSGroupings/INT_DeployHelperJS.php',
+         'from' => '<basepath>/custom/Extension/application/Ext/Include/INTDB_Dashboard.php',
+         'to' => 'custom/Extension/application/Ext/Include/INTDB_Dashboard.php',
     ),
     array (
-         'from' => '<basepath>/custom/Extension/application/Ext/Include/INT_DeployHelper.php',
-         'to' => 'custom/Extension/application/Ext/Include/INT_DeployHelper.php',
+        'from' => '<basepath>/custom/themes/default/images/intdbd.png',
+        'to' => 'custom/themes/default/images/intdbd.png',
     ),
+    array (
+        'from' => '<basepath>/custom/Extension/modules/Administration/Ext/Language/en_us.INT_Dashboards.php',
+        'to' => 'custom/Extension/modules/Administration/Ext/Language/en_us.INT_Dashboards.php',
+     ),
   ),
   'language' => 
   array (
     array (
-        'from' => '<basepath>/custom/Extension/application/Ext/Language/en_us.INT_DeployHelper.php',
+        'from' => '<basepath>/custom/Extension/application/Ext/Language/en_us.INT_Dashboards.php',
         'to_module' => 'application',
         'language' => 'en_us',
     ),
