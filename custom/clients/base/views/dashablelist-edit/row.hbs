@@ -12,7 +12,7 @@
 --}}
 {{#if rowModel}}
     {{#with rowModel}}
-        <tr name="{{module}}_{{attributes.id}}" class="single">
+        <tr name="{{module}}_{{attributes.id}}" class="single editlist">
             {{#each ../leftColumns}}
                 <td>
                     {{field ../../this model=../this template=../../viewName}}
@@ -31,7 +31,7 @@
         </tr>
     {{/with}}
 {{else}}
-    <tr name="{{module}}_{{model.id}}" class="single">
+    <tr name="{{module}}_{{model.id}}" class="single editlist">
         {{#each view.leftColumns}}
             <td>
                 {{field ../view model=../model template=../view.viewName}}

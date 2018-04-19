@@ -10,7 +10,6 @@
         'ListColumnEllipsis',
         'ErrorDecoration',
         'Editable',
-        'MergeDuplicates',
         'Pagination',
         'Dashlet'
     ],
@@ -100,6 +99,14 @@
             }
         });
         this.checkIntelligence();
+        if (options.meta.rowactions) {
+            var rowactions = [];
+            for (var i in options.meta.rowactions.actions) {
+                if (options.meta.rowactions.actions[i].event!='list:preview:fire') rowactions.push(options.meta.rowactions.actions[i]);
+                else rowactions.push({});
+            }
+            options.meta.rowactions.actions = rowactions;
+        }
         this._super('initialize', [options]);
         this._noAccessTemplate = app.template.get(this.name + '.noaccess');
     },
@@ -733,5 +740,25 @@
      * In fact, closing preview causes problem when previewing this list dashlet
      * from dashlet-select
      */
-    sort: $.noop
+    sort: $.noop,
+
+    addActions:function () {
+        this._super('addActions', arguments);
+        var firstLeft = this.leftColumns[0];
+        var fields = [];
+        for (var i in firstLeft.fields) {
+            if (firstLeft.fields[i].type!='actionmenu') fields.push(firstLeft.fields[i]);
+        }
+        firstLeft.fields = fields;
+        this.leftColumns = [firstLeft];
+    },
+    
+    editClicked: function(model, field) {
+        if (!model.get) {
+            this.layout.editDashlet(model);
+        } else {
+            this._super('editClicked', arguments);
+        }
+    },
+    
 })
