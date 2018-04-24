@@ -174,16 +174,10 @@ array (
               ),
               1 => 
               array (
-              ),
-              2 => 
-              array (
                 'name' => 'paid_in_full_date_c',
                 'label' => 'LBL_PAID_IN_FULL_DATE',
               ),
-              3 => 
-              array (
-              ),
-              4 => 
+              2 => 
               array (
                 'related_fields' => 
                 array (
@@ -193,17 +187,7 @@ array (
                 'name' => 'amount_c',
                 'label' => 'LBL_AMOUNT',
               ),
-              5 => 
-              array (
-                'related_fields' => 
-                array (
-                  0 => 'currency_id',
-                  1 => 'base_rate',
-                ),
-                'name' => 'net_c',
-                'label' => 'LBL_NET',
-              ),
-              6 => 
+              3 => 
               array (
                 'related_fields' => 
                 array (
@@ -213,7 +197,7 @@ array (
                 'name' => 'amount_paid_c',
                 'label' => 'LBL_AMOUNT_PAID',
               ),
-              7 => 
+              4 => 
               array (
                 'related_fields' => 
                 array (
@@ -222,6 +206,9 @@ array (
                 ),
                 'name' => 'unpaid_amount_c',
                 'label' => 'LBL_UNPAID_AMOUNT',
+              ),
+              5 => 
+              array (
               ),
             ),
           ),
@@ -234,7 +221,7 @@ array (
             'labelsOnTop' => true,
             'placeholders' => true,
             'newTab' => false,
-            'panelDefault' => 'expanded',
+            'panelDefault' => 'collapsed',
             'fields' => 
             array (
               0 => 
@@ -243,7 +230,9 @@ array (
                 'span' => 12,
               ),
               1 => 'assigned_user_name',
-              2 => 'team_name',
+              2 => 
+              array (
+              ),
               3 => 
               array (
                 'name' => 'date_modified_by',

@@ -204,6 +204,7 @@ array (
               8 => 
               array (
                 'name' => 'dri_workflow_sort_order',
+                'label' => 'LBL_DRI_WORKFLOW_SORT_ORDER',
               ),
               9 => 
               array (
@@ -211,6 +212,7 @@ array (
               10 => 
               array (
                 'name' => 'customer_journey_type',
+                'label' => 'LBL_CUSTOMER_JOURNEY_TYPE',
               ),
               11 => 
               array (
@@ -218,132 +220,7 @@ array (
               12 => 
               array (
                 'name' => 'customer_journey_points',
-              ),
-              13 => 
-              array (
-              ),
-              14 => 
-              array (
-                'name' => 'dri_workflow_sort_order',
-              ),
-              15 => 
-              array (
-              ),
-              16 => 
-              array (
-                'name' => 'customer_journey_type',
-              ),
-              17 => 
-              array (
-              ),
-              18 => 
-              array (
-                'name' => 'customer_journey_points',
-              ),
-              19 => 
-              array (
-              ),
-              20 => 
-              array (
-                'name' => 'dri_workflow_sort_order',
-              ),
-              21 => 
-              array (
-              ),
-              22 => 
-              array (
-                'name' => 'customer_journey_type',
-              ),
-              23 => 
-              array (
-              ),
-              24 => 
-              array (
-                'name' => 'customer_journey_points',
-              ),
-              25 => 
-              array (
-              ),
-              26 => 
-              array (
-                'name' => 'dri_workflow_sort_order',
-              ),
-              27 => 
-              array (
-              ),
-              28 => 
-              array (
-                'name' => 'customer_journey_type',
-              ),
-              29 => 
-              array (
-              ),
-              30 => 
-              array (
-                'name' => 'customer_journey_points',
-              ),
-              31 => 
-              array (
-              ),
-              32 => 
-              array (
-                'name' => 'dri_workflow_sort_order',
-              ),
-              33 => 
-              array (
-              ),
-              34 => 
-              array (
-                'name' => 'customer_journey_type',
-              ),
-              35 => 
-              array (
-              ),
-              36 => 
-              array (
-                'name' => 'customer_journey_points',
-              ),
-              37 => 
-              array (
-              ),
-              38 => 
-              array (
-                'name' => 'dri_workflow_sort_order',
-              ),
-              39 => 
-              array (
-              ),
-              40 => 
-              array (
-                'name' => 'customer_journey_type',
-              ),
-              41 => 
-              array (
-              ),
-              42 => 
-              array (
-                'name' => 'customer_journey_points',
-              ),
-              43 => 
-              array (
-              ),
-              44 => 
-              array (
-                'name' => 'dri_workflow_sort_order',
-              ),
-              45 => 
-              array (
-              ),
-              46 => 
-              array (
-                'name' => 'customer_journey_type',
-              ),
-              47 => 
-              array (
-              ),
-              48 => 
-              array (
-                'name' => 'customer_journey_points',
+                'label' => 'LBL_CUSTOMER_JOURNEY_POINTS',
               ),
             ),
           ),

@@ -378,25 +378,11 @@ array (
               ),
               36 => 
               array (
-                'name' => 'week_will_use_a_c',
-                'label' => 'LBL_WEEK_WILL_USE_A',
-              ),
-              37 => 
-              array (
-                'name' => 'week_will_use_b_c',
-                'label' => 'LBL_WEEK_WILL_USE_B',
-              ),
-              38 => 
-              array (
-                'name' => 'week_will_use_c',
-                'label' => 'LBL_WEEK_WILL_USE_C',
-              ),
-              39 => 
-              array (
                 'name' => 'vacation_booked_for_c',
                 'label' => 'LBL_VACATION_BOOKED_FOR',
+                'span' => 12,
               ),
-              40 => 
+              37 => 
               array (
                 'name' => 'name_as_it_appears_c',
                 'label' => 'LBL_NAME_AS_IT_APPEARS',

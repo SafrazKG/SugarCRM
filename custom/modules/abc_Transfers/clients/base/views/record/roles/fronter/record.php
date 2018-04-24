@@ -321,34 +321,16 @@ array (
               ),
               4 => 
               array (
-                'name' => 'week_will_use_a_c',
-                'label' => 'LBL_WEEK_WILL_USE_A',
-              ),
-              5 => 
-              array (
-                'name' => 'week_will_use_b_c',
-                'label' => 'LBL_WEEK_WILL_USE_B',
-              ),
-              6 => 
-              array (
-                'name' => 'week_will_use_c',
-                'label' => 'LBL_WEEK_WILL_USE_C',
-              ),
-              7 => 
-              array (
-              ),
-              8 => 
-              array (
                 'name' => 'reservation_dates_c',
                 'studio' => 'visible',
                 'label' => 'LBL_RESERVATION_DATES',
               ),
-              9 => 
+              5 => 
               array (
                 'name' => 'names_on_deed_c',
                 'label' => 'LBL_NAMES_ON_DEED',
               ),
-              10 => 
+              6 => 
               array (
                 'related_fields' => 
                 array (
@@ -358,36 +340,36 @@ array (
                 'name' => 'mortgage_balance_c',
                 'label' => 'LBL_MORTGAGE_BALANCE',
               ),
-              11 => 
+              7 => 
               array (
                 'name' => 'length_of_ownership_c',
                 'label' => 'LBL_LENGTH_OF_OWNERSHIP',
               ),
-              12 => 
+              8 => 
               array (
                 'name' => 'actively_using_c',
                 'label' => 'LBL_ACTIVELY_USING',
               ),
-              13 => 
+              9 => 
               array (
                 'name' => 'trust_name_c',
                 'label' => 'LBL_TRUST_NAME',
               ),
-              14 => 
+              10 => 
               array (
                 'name' => 'names_of_deceased_c',
                 'label' => 'LBL_NAMES_OF_DECEASED',
               ),
-              15 => 
+              11 => 
               array (
                 'name' => 'divorced_c',
                 'label' => 'LBL_DIVORCED',
               ),
-              16 => 
+              12 => 
               array (
                 'name' => 'rrpay_payment_plans_abc_transfers_1_name',
               ),
-              17 => 
+              13 => 
               array (
               ),
             ),

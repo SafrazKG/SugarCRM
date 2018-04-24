@@ -41,3 +41,5 @@ $mod_strings['LBL_ACCOUNTS_ABC_INVENTORIES_1_FROM_ACCOUNTS_TITLE'] = 'Account';
 $mod_strings['LBL_ABC_INVENTORIES_ABC_PROPERTIES_1_FROM_ABC_PROPERTIES_TITLE'] = 'Property';
 $mod_strings['LBL_SHOW_MORE'] = 'Buyer&#039;s Data';
 $mod_strings['LBL_RECORDVIEW_PANEL1'] = 'Sale Data';
+$mod_strings['LBL_DATE_OF_LAST_STATUS_CHANGE'] = 'Date of Last Status Change';
+$mod_strings['LBL_DAYS_SINCE_STATUS_CHANGE'] = 'Days Since Status Change';

@@ -1,7 +1,7 @@
 <?php
- // created: 2018-04-11 13:11:05
+ // created: 2018-04-20 09:31:23
 
 $app_list_strings['status_c_list']=array (
-  'Pending' => 'Pending',
-  'Paid' => 'Paid',
+  'Active' => 'Active',
+  'Inactive' => 'Inactive',
 );

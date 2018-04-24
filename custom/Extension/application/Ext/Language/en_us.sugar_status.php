@@ -1,14 +1,30 @@
 <?php
- // created: 2018-03-20 09:07:43
+ // created: 2018-04-20 08:53:42
 
 $app_list_strings['status']=array (
   '' => '',
+  'Hold' => 'Hold',
+  'Waiting on Deed' => 'Waiting on Deed',
+  'Estoppel Issues' => 'Estoppel Issues',
+  'Unsold' => 'Unsold',
+  'Need Incentive Listed' => 'Need Incentive Listed',
+  'Ready to Relist' => 'Ready to Relist',
+  'Estoppel Received' => 'Estoppel Received',
+  'Scheduled' => 'Scheduled',
+  'Active' => 'Active',
+  'Awaiting Buyer Info' => 'Awaiting Buyer Info',
+  'PA Sent to Buyer' => 'PA Sent to Buyer',
   'PA Received' => 'PA Received',
-  'Inventory' => 'Inventory',
-  'ROFR' => 'ROFR',
-  'Doc Prep' => 'Doc Prep',
-  'Execution' => 'Execution',
+  'Trash' => 'Trash',
   'Deed Prep' => 'Deed Prep',
+  'Doc Prep' => 'Doc Prep',
+  'ROFR' => 'ROFR',
+  'Execution Buyer' => 'Execution Buyer',
+  'Execution Seller' => 'Execution Seller',
+  'Execution Both' => 'Execution Both',
+  'Execution Received' => 'Execution Received',
   'Titling Agency Assigned' => 'Titling Agency Assigned',
   'Recording' => 'Recording',
+  'Finalization' => 'Finalization',
+  'Closed' => 'Closed',
 );

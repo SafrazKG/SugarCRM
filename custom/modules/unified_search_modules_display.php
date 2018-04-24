@@ -1,95 +1,95 @@
 <?php
-// created: 2018-03-06 10:59:01
+// created: 2018-04-20 05:58:11
 $unified_search_modules_display = array (
-  'Accounts' =>
+  'Accounts' => 
   array (
     'visible' => true,
   ),
-  'Bugs' =>
+  'Bugs' => 
   array (
     'visible' => true,
   ),
-  'Calls' =>
+  'Calls' => 
   array (
     'visible' => true,
   ),
-  'Campaigns' =>
+  'Campaigns' => 
   array (
     'visible' => false,
   ),
-  'Cases' =>
+  'Cases' => 
   array (
     'visible' => true,
   ),
-  'Contacts' =>
+  'Contacts' => 
   array (
     'visible' => true,
   ),
-  'Contracts' =>
+  'Contracts' => 
   array (
     'visible' => false,
   ),
-  'Documents' =>
+  'Documents' => 
   array (
     'visible' => true,
   ),
-  'KBContents' =>
+  'KBContents' => 
   array (
     'visible' => true,
   ),
-  'Leads' =>
+  'Leads' => 
   array (
     'visible' => true,
   ),
-  'Manufacturers' =>
+  'Manufacturers' => 
   array (
     'visible' => true,
   ),
-  'Meetings' =>
+  'Meetings' => 
   array (
     'visible' => true,
   ),
-  'Notes' =>
+  'Notes' => 
   array (
     'visible' => true,
   ),
-  'Opportunities' =>
+  'Opportunities' => 
   array (
     'visible' => true,
   ),
-  'ProductCategories' =>
+  'ProductCategories' => 
   array (
     'visible' => true,
   ),
-  'Products' =>
+  'Products' => 
   array (
     'visible' => true,
   ),
-  'Project' =>
+  'Project' => 
   array (
     'visible' => false,
   ),
-  'ProjectTask' =>
+  'ProjectTask' => 
   array (
     'visible' => false,
   ),
-  'ProspectLists' =>
+  'ProspectLists' => 
   array (
     'visible' => false,
   ),
-  'Prospects' =>
+  'Prospects' => 
   array (
     'visible' => false,
   ),
-  'Quotes' =>
+  'Quotes' => 
   array (
     'visible' => false,
   ),
-  'RevenueLineItems' =>
+  'RevenueLineItems' => 
   array (
     'visible' => true,
   ),
-  'Tasks' =>
+  'Tasks' => 
   array (
     'visible' => false,
   ),

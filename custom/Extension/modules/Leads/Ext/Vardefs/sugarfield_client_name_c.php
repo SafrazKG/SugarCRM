@@ -1,5 +1,5 @@
 <?php
- // created: 2018-04-10 12:29:49
+ // created: 2018-04-19 08:32:38
 $dictionary['Lead']['fields']['client_name_c']['labelValue']='Client Name';
 $dictionary['Lead']['fields']['client_name_c']['full_text_search']=array (
   'enabled' => '0',

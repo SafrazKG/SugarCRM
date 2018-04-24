@@ -415,95 +415,13 @@ array (
               13 => 
               array (
                 'name' => 'dri_workflow_sort_order',
+                'label' => 'LBL_DRI_WORKFLOW_SORT_ORDER',
                 'span' => 6,
               ),
               14 => 
               array (
                 'name' => 'customer_journey_points',
-              ),
-              15 => 
-              array (
-              ),
-              16 => 
-              array (
-                'name' => 'dri_workflow_sort_order',
-              ),
-              17 => 
-              array (
-              ),
-              18 => 
-              array (
-                'name' => 'customer_journey_points',
-              ),
-              19 => 
-              array (
-              ),
-              20 => 
-              array (
-                'name' => 'dri_workflow_sort_order',
-              ),
-              21 => 
-              array (
-              ),
-              22 => 
-              array (
-                'name' => 'customer_journey_points',
-              ),
-              23 => 
-              array (
-              ),
-              24 => 
-              array (
-                'name' => 'dri_workflow_sort_order',
-              ),
-              25 => 
-              array (
-              ),
-              26 => 
-              array (
-                'name' => 'customer_journey_points',
-              ),
-              27 => 
-              array (
-              ),
-              28 => 
-              array (
-                'name' => 'dri_workflow_sort_order',
-              ),
-              29 => 
-              array (
-              ),
-              30 => 
-              array (
-                'name' => 'customer_journey_points',
-              ),
-              31 => 
-              array (
-              ),
-              32 => 
-              array (
-                'name' => 'dri_workflow_sort_order',
-              ),
-              33 => 
-              array (
-              ),
-              34 => 
-              array (
-                'name' => 'customer_journey_points',
-              ),
-              35 => 
-              array (
-              ),
-              36 => 
-              array (
-                'name' => 'dri_workflow_sort_order',
-              ),
-              37 => 
-              array (
-              ),
-              38 => 
-              array (
-                'name' => 'customer_journey_points',
+                'label' => 'LBL_CUSTOMER_JOURNEY_POINTS',
               ),
             ),
           ),

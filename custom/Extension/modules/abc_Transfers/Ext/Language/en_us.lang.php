@@ -2,7 +2,7 @@
 // WARNING: The contents of this file are auto-generated.
 $mod_strings['LBL_ABC_TRANSFERS_ABC_PROPERTIES_1_FROM_ABC_PROPERTIES_TITLE'] = 'Property Name ';
 $mod_strings['LBL_MANAGEMENT_COMPANY'] = 'Management Company';
-$mod_strings['LBL_POPERTY_ID'] = 'Poperty ID';
+$mod_strings['LBL_POPERTY_ID'] = 'Property ID';
 $mod_strings['LBL_SIZE_OF_UNIT'] = 'Size of Unit/Points Value';
 $mod_strings['LBL_WEEK_FIXED'] = 'Week/Fixed Week #';
 $mod_strings['LBL_WEEK_FIXED_WEEK'] = 'Week/Fixed Week #:';
@@ -75,3 +75,16 @@ $mod_strings['LBL_MAINTENANCE_FEES_CURRENT'] = 'Maintenance Fees Current';
 $mod_strings['LBL_MAINTENANCE_FEES_DUE_DATE'] = 'Maintenance Fees Due Date';
 $mod_strings['LBL_MAINTENANCE_FEES_PAID_THROUG'] = 'Maintenance Fees Paid Through Date';
 $mod_strings['LBL_MAINTENANCE_PAID'] = 'Maintenance Paid';
+$mod_strings['LBL_CURRENCY_8'] = 'LBL_CURRENCY';
+$mod_strings['LBL_EMERGENCY_NOTES_C'] = 'CRM Priority Notes';
+$mod_strings['LBL_STATUS_HIDDEN'] = 'Status Hidden';
+$mod_strings['LBL_ADMIN_NOTES_C'] = 'Full Text with all Admin Notes on File';
+$mod_strings['LBL_RESORT_FAMILY_C'] = 'Resort Family';
+$mod_strings['LBL_REFERRALDATE'] = 'Referral Date';
+$mod_strings['LBL_CONSYS_CRM_ID_C'] = 'Consys CRM ID';
+$mod_strings['LBL_TRANSFER_STATUS'] = 'Transfer Status';
+$mod_strings['LBL_DATE_OF_LAST_STATUS_CHANGE'] = 'Date of Last Status Change';
+$mod_strings['LBL_DAYS_SINCE_STATUS_CHANGE'] = 'Days Since Status Change';
+$mod_strings['LBL_WEEK_WILL_USE_2017'] = '2017 Week Will Use';
+$mod_strings['LBL_WEEK_WILL_USE_2018'] = '2018 Week Will Use';
+$mod_strings['LBL_WEEK_WILL_USE_2019'] = '2019 Week Will Use';

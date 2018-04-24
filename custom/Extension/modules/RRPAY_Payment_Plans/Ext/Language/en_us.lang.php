@@ -16,3 +16,5 @@ $mod_strings['LBL_RRPAY_PAYMENT_PLANS_ABC_TRANSFERS_1_FROM_ABC_TRANSFERS_TITLE']
 $mod_strings['LBL_CURRENCY_4'] = 'LBL_CURRENCY';
 $mod_strings['LBL_CURRENCY_5'] = 'LBL_CURRENCY';
 $mod_strings['LBL_CURRENCY_6'] = 'LBL_CURRENCY';
+$mod_strings['LBL_PAID_IN_FULL'] = 'Paid in Full';
+$mod_strings['LBL_CURRENCY_7'] = 'LBL_CURRENCY';

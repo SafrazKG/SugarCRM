@@ -242,9 +242,8 @@ array (
               ),
               3 => 
               array (
-                'name' => 'phone_home',
-                'comment' => 'Home phone number of the contact',
-                'label' => 'LBL_HOME_PHONE',
+                'name' => 'status',
+                'type' => 'status',
               ),
               4 => 
               array (
@@ -253,9 +252,9 @@ array (
               ),
               5 => 
               array (
-                'name' => 'phone_other',
-                'comment' => 'Other phone number for the contact',
-                'label' => 'LBL_OTHER_PHONE',
+                'name' => 'phone_home',
+                'comment' => 'Home phone number of the contact',
+                'label' => 'LBL_HOME_PHONE',
               ),
               6 => 
               array (
@@ -264,7 +263,9 @@ array (
               ),
               7 => 
               array (
-                'name' => 'email',
+                'name' => 'phone_other',
+                'comment' => 'Other phone number for the contact',
+                'label' => 'LBL_OTHER_PHONE',
               ),
               8 => 
               array (
@@ -273,6 +274,7 @@ array (
               ),
               9 => 
               array (
+                'name' => 'email',
               ),
             ),
           ),

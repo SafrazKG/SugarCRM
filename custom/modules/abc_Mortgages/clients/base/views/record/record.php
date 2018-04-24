@@ -180,15 +180,23 @@ array (
               ),
               2 => 
               array (
+              ),
+              3 => 
+              array (
+                'name' => 'mortgage_status_c',
+                'label' => 'LBL_MORTGAGE_STATUS',
+              ),
+              4 => 
+              array (
                 'name' => 'resort_location_c',
                 'label' => 'LBL_RESORT_LOCATION',
               ),
-              3 => 
+              5 => 
               array (
                 'name' => 'year_purchased_c',
                 'label' => 'LBL_YEAR_PURCHASED',
               ),
-              4 => 
+              6 => 
               array (
                 'related_fields' => 
                 array (
@@ -198,7 +206,7 @@ array (
                 'name' => 'retainer_c',
                 'label' => 'LBL_RETAINER',
               ),
-              5 => 
+              7 => 
               array (
                 'related_fields' => 
                 array (
@@ -208,7 +216,7 @@ array (
                 'name' => 'legal_costs_c',
                 'label' => 'LBL_LEGAL_COSTS',
               ),
-              6 => 
+              8 => 
               array (
                 'related_fields' => 
                 array (
@@ -218,18 +226,18 @@ array (
                 'name' => 'agent_holding_fee_c',
                 'label' => 'LBL_AGENT_HOLDING_FEE',
               ),
-              7 => 
-              array (
-              ),
-              8 => 
-              array (
-                'name' => 'location_of_presentation_c',
-                'label' => 'LBL_LOCATION_OF_PRESENTATION',
-              ),
               9 => 
               array (
               ),
               10 => 
+              array (
+                'name' => 'location_of_presentation_c',
+                'label' => 'LBL_LOCATION_OF_PRESENTATION',
+              ),
+              11 => 
+              array (
+              ),
+              12 => 
               array (
                 'related_fields' => 
                 array (
@@ -239,7 +247,7 @@ array (
                 'name' => 'original_sales_price_c',
                 'label' => 'LBL_ORIGINAL_SALES_PRICE',
               ),
-              11 => 
+              13 => 
               array (
                 'related_fields' => 
                 array (
@@ -249,7 +257,7 @@ array (
                 'name' => 'down_payment_c',
                 'label' => 'LBL_DOWN_PAYMENT',
               ),
-              12 => 
+              14 => 
               array (
                 'related_fields' => 
                 array (
@@ -259,10 +267,10 @@ array (
                 'name' => 'original_amount_financed_c',
                 'label' => 'LBL_ORIGINAL_AMOUNT_FINANCED',
               ),
-              13 => 
+              15 => 
               array (
               ),
-              14 => 
+              16 => 
               array (
                 'related_fields' => 
                 array (
@@ -272,12 +280,12 @@ array (
                 'name' => 'current_balance_owed_c',
                 'label' => 'LBL_CURRENT_BALANCE_OWED',
               ),
-              15 => 
+              17 => 
               array (
                 'name' => 'payment_made_to_c',
                 'label' => 'LBL_PAYMENT_MADE_TO',
               ),
-              16 => 
+              18 => 
               array (
                 'related_fields' => 
                 array (
@@ -287,30 +295,30 @@ array (
                 'name' => 'payment_amount_c',
                 'label' => 'LBL_PAYMENT_AMOUNT',
               ),
-              17 => 
+              19 => 
               array (
                 'name' => 'payments_auto_debited_c',
                 'label' => 'LBL_PAYMENTS_AUTO_DEBITED',
               ),
-              18 => 
+              20 => 
               array (
                 'name' => 'last_mortgage_pay_date_c',
                 'label' => 'LBL_LAST_MORTGAGE_PAY_DATE',
               ),
-              19 => 
+              21 => 
               array (
               ),
-              20 => 
+              22 => 
               array (
                 'name' => 'length_of_loan_c',
                 'label' => 'LBL_LENGTH_OF_LOAN',
               ),
-              21 => 
+              23 => 
               array (
                 'name' => 'current_c',
                 'label' => 'LBL_CURRENT_C',
               ),
-              22 => 
+              24 => 
               array (
                 'related_fields' => 
                 array (
@@ -320,58 +328,58 @@ array (
                 'name' => 'past_due_amount_c',
                 'label' => 'LBL_PAST_DUE_AMOUNT',
               ),
-              23 => 
+              25 => 
               array (
                 'name' => 'number_of_upgrades_c',
                 'label' => 'LBL_NUMBER_OF_UPGRADES',
               ),
-              24 => 
+              26 => 
               array (
                 'name' => 'last_upgrade_date_c',
                 'label' => 'LBL_LAST_UPGRADE_DATE',
               ),
-              25 => 
+              27 => 
               array (
                 'name' => 'upgrade_date_c',
                 'label' => 'LBL_UPGRADE_DATE',
               ),
-              26 => 
+              28 => 
               array (
                 'name' => 'account_number_c',
                 'label' => 'LBL_ACCOUNT_NUMBER',
               ),
-              27 => 
+              29 => 
               array (
                 'name' => 'number_of_contracts_c',
                 'label' => 'LBL_NUMBER_OF_CONTRACTS',
               ),
-              28 => 
+              30 => 
               array (
                 'name' => 'size_of_unit_c',
                 'label' => 'LBL_SIZE_OF_UNIT',
               ),
-              29 => 
+              31 => 
               array (
               ),
-              30 => 
+              32 => 
               array (
                 'name' => 'type_of_ownership_c',
                 'label' => 'LBL_TYPE_OF_OWNERSHIP',
               ),
-              31 => 
+              33 => 
               array (
                 'name' => 'week_points_c',
                 'label' => 'LBL_WEEK_POINTS',
               ),
-              32 => 
+              34 => 
               array (
                 'name' => 'usage_d_c',
                 'label' => 'LBL_USAGE_D',
               ),
-              33 => 
+              35 => 
               array (
               ),
-              34 => 
+              36 => 
               array (
                 'related_fields' => 
                 array (
@@ -381,25 +389,25 @@ array (
                 'name' => 'm_fees_c',
                 'label' => 'LBL_M_FEES',
               ),
-              35 => 
+              37 => 
               array (
                 'name' => 'maintenance_fees_current_c',
                 'label' => 'LBL_MAINTENANCE_FEES_CURRENT',
               ),
-              36 => 
+              38 => 
               array (
                 'name' => 'mfees_paid_c',
                 'label' => 'LBL_MFEES_PAID',
               ),
-              37 => 
+              39 => 
               array (
               ),
-              38 => 
+              40 => 
               array (
                 'name' => 'due_date_c',
                 'label' => 'LBL_DUE_DATE',
               ),
-              39 => 
+              41 => 
               array (
                 'related_fields' => 
                 array (
@@ -409,27 +417,27 @@ array (
                 'name' => 'past_due_c',
                 'label' => 'LBL_PAST_DUE',
               ),
-              40 => 
-              array (
-                'name' => 'week_will_use_a_c',
-                'label' => 'LBL_WEEK_WILL_USE_A',
-              ),
-              41 => 
-              array (
-                'name' => 'week_will_use_b_c',
-                'label' => 'LBL_WEEK_WILL_USE_B',
-              ),
               42 => 
               array (
-                'name' => 'week_will_use_c',
-                'label' => 'LBL_WEEK_WILL_USE_C',
+                'name' => 'week_will_use_2017_c',
+                'label' => 'LBL_WEEK_WILL_USE_2017',
               ),
               43 => 
+              array (
+                'name' => 'week_will_use_2018_c',
+                'label' => 'LBL_WEEK_WILL_USE_2018',
+              ),
+              44 => 
+              array (
+                'name' => 'week_will_use_2019_c',
+                'label' => 'LBL_WEEK_WILL_USE_2019',
+              ),
+              45 => 
               array (
                 'name' => 'vacation_booked_for_c',
                 'label' => 'LBL_VACATION_BOOKED_FOR',
               ),
-              44 => 
+              46 => 
               array (
                 'name' => 'name_as_it_appears_c',
                 'label' => 'LBL_NAME_AS_IT_APPEARS',

@@ -170,6 +170,21 @@ array (
             array (
               0 => 
               array (
+                'name' => 'charge_source_c',
+                'label' => 'LBL_CHARGE_SOURCE',
+              ),
+              1 => 
+              array (
+                'name' => 'process_date_c',
+                'label' => 'LBL_PROCESS_DATE',
+              ),
+              2 => 
+              array (
+                'name' => 'payment_type_c',
+                'label' => 'LBL_PAYMENT_TYPE',
+              ),
+              3 => 
+              array (
                 'related_fields' => 
                 array (
                   0 => 'currency_id',
@@ -178,10 +193,28 @@ array (
                 'name' => 'amount_c',
                 'label' => 'LBL_AMOUNT',
               ),
+            ),
+          ),
+          2 => 
+          array (
+            'newTab' => false,
+            'panelDefault' => 'collapsed',
+            'name' => 'LBL_RECORDVIEW_PANEL1',
+            'label' => 'LBL_RECORDVIEW_PANEL1',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'status_c',
+                'label' => 'LBL_STATUS',
+              ),
               1 => 
               array (
-                'name' => 'charge_source_c',
-                'label' => 'LBL_CHARGE_SOURCE',
+                'name' => 'rrpay_payment_plans_asd_payments_1_name',
+                'label' => 'LBL_RRPAY_PAYMENT_PLANS_ASD_PAYMENTS_1_FROM_RRPAY_PAYMENT_PLANS_TITLE',
               ),
               2 => 
               array (
@@ -195,40 +228,20 @@ array (
               ),
               4 => 
               array (
-                'name' => 'process_date_c',
-                'label' => 'LBL_PROCESS_DATE',
-              ),
-              5 => 
-              array (
                 'name' => 'funding_date_c',
                 'label' => 'LBL_FUNDING_DATE',
               ),
-              6 => 
+              5 => 
               array (
                 'name' => 'payout_date_c',
                 'label' => 'LBL_PAYOUT_DATE',
               ),
-              7 => 
-              array (
-                'name' => 'payment_type_c',
-                'label' => 'LBL_PAYMENT_TYPE',
-              ),
-              8 => 
-              array (
-                'name' => 'note_c',
-                'label' => 'LBL_NOTE',
-              ),
-              9 => 
-              array (
-                'name' => 'status_c',
-                'label' => 'LBL_STATUS',
-              ),
-              10 => 
+              6 => 
               array (
                 'name' => 'card_type_c',
                 'label' => 'LBL_CARD_TYPE',
               ),
-              11 => 
+              7 => 
               array (
                 'related_fields' => 
                 array (
@@ -238,12 +251,12 @@ array (
                 'name' => 'merchant_fee_c',
                 'label' => 'LBL_MERCHANT_FEE',
               ),
-              12 => 
+              8 => 
               array (
                 'name' => 'merchant_c',
                 'label' => 'LBL_MERCHANT',
               ),
-              13 => 
+              9 => 
               array (
                 'related_fields' => 
                 array (
@@ -253,7 +266,7 @@ array (
                 'name' => 'usca_fee_c',
                 'label' => 'LBL_USCA_FEE',
               ),
-              14 => 
+              10 => 
               array (
                 'related_fields' => 
                 array (
@@ -263,7 +276,7 @@ array (
                 'name' => 'armg_c',
                 'label' => 'LBL_ARMG',
               ),
-              15 => 
+              11 => 
               array (
                 'related_fields' => 
                 array (
@@ -273,22 +286,7 @@ array (
                 'name' => 'rnr_c',
                 'label' => 'LBL_RNR',
               ),
-              16 => 
-              array (
-                'name' => 'recon_date_c',
-                'label' => 'LBL_RECON_DATE',
-              ),
-              17 => 
-              array (
-                'related_fields' => 
-                array (
-                  0 => 'currency_id',
-                  1 => 'base_rate',
-                ),
-                'name' => 'invoice_c',
-                'label' => 'LBL_INVOICE',
-              ),
-              18 => 
+              12 => 
               array (
                 'related_fields' => 
                 array (
@@ -298,7 +296,7 @@ array (
                 'name' => 'affiliate_pay_c',
                 'label' => 'LBL_AFFILIATE_PAY',
               ),
-              19 => 
+              13 => 
               array (
                 'related_fields' => 
                 array (
@@ -308,13 +306,30 @@ array (
                 'name' => 'unpaid_c',
                 'label' => 'LBL_UNPAID',
               ),
-              20 => 
+              14 => 
               array (
-                'span' => 12,
+                'name' => 'recon_date_c',
+                'label' => 'LBL_RECON_DATE',
+              ),
+              15 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'invoice_c',
+                'label' => 'LBL_INVOICE',
+              ),
+              16 => 
+              array (
+              ),
+              17 => 
+              array (
               ),
             ),
           ),
-          2 => 
+          3 => 
           array (
             'name' => 'panel_hidden',
             'label' => 'LBL_SHOW_MORE',
@@ -323,17 +338,12 @@ array (
             'labelsOnTop' => true,
             'placeholders' => true,
             'newTab' => false,
-            'panelDefault' => 'expanded',
+            'panelDefault' => 'collapsed',
             'fields' => 
             array (
-              0 => 
-              array (
-                'name' => 'description',
-                'span' => 12,
-              ),
-              1 => 'assigned_user_name',
-              2 => 'team_name',
-              3 => 
+              0 => 'assigned_user_name',
+              1 => 'team_name',
+              2 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,
@@ -357,7 +367,7 @@ array (
                   ),
                 ),
               ),
-              4 => 
+              3 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,

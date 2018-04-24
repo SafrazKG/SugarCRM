@@ -47,3 +47,5 @@ $mod_strings['LBL_RECORDVIEW_PANEL1'] = 'Maintenance and Transfer Fees';
 $mod_strings['LBL_RECORDVIEW_PANEL2'] = 'Show More';
 $mod_strings['LBL_RECORDVIEW_PANEL3'] = 'ESTOPPEL Data';
 $mod_strings['LBL_RECORDVIEW_PANEL4'] = 'Additional Data ';
+$mod_strings['LBL_DATE_OF_LAST_STATUS_CHANGE'] = 'Date of Last Status Change';
+$mod_strings['LBL_DAYS_SINCE_STATUS_CHANGE'] = 'Days Since Status Change';

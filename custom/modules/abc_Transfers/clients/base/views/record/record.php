@@ -180,67 +180,75 @@ array (
               ),
               2 => 
               array (
+              ),
+              3 => 
+              array (
+                'name' => 'transfer_status_c',
+                'label' => 'LBL_TRANSFER_STATUS',
+              ),
+              4 => 
+              array (
                 'name' => 'management_company_c',
                 'label' => 'LBL_MANAGEMENT_COMPANY',
               ),
-              3 => 
+              5 => 
               array (
                 'name' => 'deeded_or_rtu_c',
                 'label' => 'LBL_DEEDED_OR_RTU',
               ),
-              4 => 
+              6 => 
               array (
                 'name' => 'resort_location_c',
                 'label' => 'LBL_RESORT_LOCATION',
               ),
-              5 => 
+              7 => 
               array (
                 'name' => 'resort_account_number_c',
                 'label' => 'LBL_RESORT_ACCOUNT_NUMBER',
               ),
-              6 => 
+              8 => 
               array (
                 'name' => 'size_of_unit_c',
                 'label' => 'LBL_SIZE_OF_UNIT',
               ),
-              7 => 
+              9 => 
               array (
                 'name' => 'member_of_exchange_company_c',
                 'label' => 'LBL_MEMBER_OF_EXCHANGE_COMPANY',
               ),
-              8 => 
+              10 => 
               array (
                 'name' => 'week_fixed_c',
                 'label' => 'LBL_WEEK_FIXED',
               ),
-              9 => 
+              11 => 
               array (
                 'name' => 'week_fixed_week_c',
                 'label' => 'LBL_WEEK_FIXED_WEEK',
               ),
-              10 => 
+              12 => 
               array (
                 'name' => 'inventory_autobooked_c',
                 'label' => 'LBL_INVENTORY_AUTOBOOKED',
               ),
-              11 => 
+              13 => 
               array (
               ),
-              12 => 
+              14 => 
               array (
                 'name' => 'usage_a_c',
                 'label' => 'LBL_USAGE_A',
               ),
-              13 => 
+              15 => 
               array (
                 'name' => 'number_of_timeshares_p_c',
                 'label' => 'LBL_NUMBER_OF_TIMESHARES_P',
               ),
-              14 => 
+              16 => 
               array (
                 'name' => 'rrpay_payment_plans_abc_transfers_1_name',
               ),
-              15 => 
+              17 => 
               array (
               ),
             ),
@@ -442,18 +450,18 @@ array (
               ),
               10 => 
               array (
-                'name' => 'week_will_use_a_c',
-                'label' => 'LBL_WEEK_WILL_USE_A',
+                'name' => 'week_will_use_2017_c',
+                'label' => 'LBL_WEEK_WILL_USE_2017',
               ),
               11 => 
               array (
-                'name' => 'week_will_use_b_c',
-                'label' => 'LBL_WEEK_WILL_USE_B',
+                'name' => 'week_will_use_2018_c',
+                'label' => 'LBL_WEEK_WILL_USE_2018',
               ),
               12 => 
               array (
-                'name' => 'week_will_use_c',
-                'label' => 'LBL_WEEK_WILL_USE_C',
+                'name' => 'week_will_use_2019_c',
+                'label' => 'LBL_WEEK_WILL_USE_2019',
               ),
               13 => 
               array (

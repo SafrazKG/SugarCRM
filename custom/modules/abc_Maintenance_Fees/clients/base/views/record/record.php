@@ -170,6 +170,13 @@ array (
             array (
               0 => 
               array (
+                'name' => 'abc_transfers_abc_maintenance_fees_1_name',
+              ),
+              1 => 
+              array (
+              ),
+              2 => 
+              array (
                 'related_fields' => 
                 array (
                   0 => 'currency_id',
@@ -178,46 +185,66 @@ array (
                 'name' => 'amount_c',
                 'label' => 'LBL_AMOUNT',
               ),
-              1 => 
-              array (
-                'name' => 'maintenance_paid_c',
-                'label' => 'LBL_MAINTENANCE_PAID',
-              ),
-              2 => 
-              array (
-                'name' => 'maintenance_fees_current_c',
-                'label' => 'LBL_MAINTENANCE_FEES_CURRENT',
-              ),
               3 => 
               array (
-                'name' => 'maintenance_fees_due_date_c',
-                'label' => 'LBL_MAINTENANCE_FEES_DUE_DATE',
+                'name' => 'maintenance_fee_type_c',
+                'label' => 'LBL_MAINTENANCE_FEE_TYPE',
               ),
               4 => 
               array (
-                'name' => 'maintenance_fees_paid_throug_c',
-                'label' => 'LBL_MAINTENANCE_FEES_PAID_THROUG',
+                'name' => 'asd_payments_abc_maintenance_fees_1_name',
               ),
               5 => 
               array (
-                'name' => 'abc_transfers_abc_maintenance_fees_1_name',
               ),
               6 => 
               array (
-                'name' => 'type_b_c',
-                'label' => 'LBL_TYPE_B',
-              ),
-              7 => 
-              array (
-                'name' => 'asd_payments_abc_maintenance_fees_1_name',
-              ),
-              8 => 
-              array (
-                'name' => 'rrrc_requested_checks_abc_maintenance_fees_1_name',
+                'span' => 12,
               ),
             ),
           ),
           2 => 
+          array (
+            'newTab' => false,
+            'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL1',
+            'label' => 'LBL_RECORDVIEW_PANEL1',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'payable_c',
+                'label' => 'LBL_PAYABLE',
+              ),
+              1 => 
+              array (
+              ),
+              2 => 
+              array (
+                'name' => 'maintenance_paid_c',
+                'label' => 'LBL_MAINTENANCE_PAID',
+              ),
+              3 => 
+              array (
+                'name' => 'maintenance_fees_current_c',
+                'label' => 'LBL_MAINTENANCE_FEES_CURRENT',
+              ),
+              4 => 
+              array (
+                'name' => 'maintenance_fees_due_date_c',
+                'label' => 'LBL_MAINTENANCE_FEES_DUE_DATE',
+              ),
+              5 => 
+              array (
+                'name' => 'maintenance_fees_paid_throug_c',
+                'label' => 'LBL_MAINTENANCE_FEES_PAID_THROUG',
+              ),
+            ),
+          ),
+          3 => 
           array (
             'name' => 'panel_hidden',
             'label' => 'LBL_SHOW_MORE',

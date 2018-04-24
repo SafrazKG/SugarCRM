@@ -1,5 +1,5 @@
 <?php
- // created: 2018-03-22 09:19:14
+ // created: 2018-04-19 08:59:35
 $dictionary['abc_Transfers']['fields']['mortgage_balance_c']['labelValue']='Mortgage Balance';
 $dictionary['abc_Transfers']['fields']['mortgage_balance_c']['enforced']='';
 $dictionary['abc_Transfers']['fields']['mortgage_balance_c']['dependency']='';
