@@ -7,8 +7,43 @@ class IssabelApiClient
 {
 
     /**
+     * Handle API reponse
+     * @param type $response
+     * @return type
+     * @throws \RuntimeException
+     */
+    protected static function handleResponse($response)
+    {
+        if ($response['status'] == 'ERROR') {
+            throw new \RuntimeException($response['message']);
+        }
+
+        return $response;
+    }
+
+
+    /**
+     * Get the credentials for Issabel auth
+     * @global array $sugar_config
+     * @return array
+     */
+    protected static function getIssabelCredentials()
+    {
+        global $sugar_config;
+
+        $user = isset($sugar_config['issabel_user']) ? $sugar_config['issabel_user'] : 'admin';
+        $pass = isset($sugar_config['issabel_pass']) ? $sugar_config['issabel_pass'] : 'admin';
+
+        return [
+            'user' => $user,
+            'pass' => $pass
+        ];
+    }
+
+
+    /**
      * Factory method
-     * @global string $sugar_config
+     * @global array $sugar_config
      * @return Client
      */
     protected static function getClient()
@@ -23,28 +58,26 @@ class IssabelApiClient
 
             //workaround for cURL SSL certificate validation errors on OSX
             $client->setSslVerification(false, false, false);
-        }
-        catch (\Exception $ex) {
-            
+        } catch (\Exception $ex) {
+            throw new \RuntimeException($ex->getMessage());
         }
 
         return $client;
-
     }
 
 
     /**
-     * Retrieve a list of campaigns 
+     * Retrieve a list of campaigns
      * @return string
      */
     public static function getCampaignsList()
     {
         $client    = static::getClient();
         $request   = $client->get('CampaignList', ['content-type' => 'application/json']);
-        $request->setAuth('admin', 'admin');
+        $creds     = static::getIssabelCredentials();
+        $request->setAuth($creds['user'], $creds['pass']);
         $campaigns = $request->send()->json();
-        return $campaigns;
-
+        return static::handleResponse($campaigns);
     }
 
 
@@ -57,10 +90,10 @@ class IssabelApiClient
     {
         $client  = static::getClient();
         $request = $client->get(sprintf('CampaignActivate/%d', intval($campaignId)));
-        $request->setAuth('admin', 'admin');
+        $creds   = static::getIssabelCredentials();
+        $request->setAuth($creds['user'], $creds['pass']);
         $result  = $request->send()->json();
-        return $result;
-
+        return static::handleResponse($result);
     }
 
 
@@ -73,15 +106,15 @@ class IssabelApiClient
     {
         $client  = static::getClient();
         $request = $client->get(sprintf('CampaignDeactivate/%d', intval($campaignId)));
-        $request->setAuth('admin', 'admin');
+        $creds   = static::getIssabelCredentials();
+        $request->setAuth($creds['user'], $creds['pass']);
         $result  = $request->send()->json();
-        return $result;
-
+        return static::handleResponse($result);
     }
 
 
     /**
-     * Get the given campaigns current call list 
+     * Get the given campaigns current call list
      * @param int $campaignId
      * @return string
      */
@@ -89,10 +122,10 @@ class IssabelApiClient
     {
         $client  = static::getClient();
         $request = $client->get(sprintf('CallList/%d', intval($campaignId)));
-        $request->setAuth('admin', 'admin');
+        $creds   = static::getIssabelCredentials();
+        $request->setAuth($creds['user'], $creds['pass']);
         $result  = $request->send()->json();
-        return $result;
-
+        return static::handleResponse($result);
     }
 
 
@@ -106,10 +139,10 @@ class IssabelApiClient
     {
         $client  = static::getClient();
         $request = $client->post(sprintf('CallListAddNumber/%d', intval($campaignId)), ['content-type' => 'application/json'], json_encode(['phone' => $number . '']));
-        $request->setAuth('admin', 'admin');
+        $creds   = static::getIssabelCredentials();
+        $request->setAuth($creds['user'], $creds['pass']);
         $result  = $request->send()->json();
-        return $result;
-
+        return static::handleResponse($result);
     }
 
 
@@ -123,10 +156,10 @@ class IssabelApiClient
     {
         $client  = static::getClient();
         $request = $client->post(sprintf('CallListDelNumber/%d', intval($campaignId)), ['content-type' => 'application/json'], json_encode(['phone' => $number . '']));
-        $request->setAuth('admin', 'admin');
+        $creds   = static::getIssabelCredentials();
+        $request->setAuth($creds['user'], $creds['pass']);
         $result  = $request->send()->json();
-        return $result;
-
+        return static::handleResponse($result);
     }
 
 
@@ -140,11 +173,9 @@ class IssabelApiClient
     {
         $client  = static::getClient();
         $request = $client->post(sprintf('CallListSetNumbers/%d', intval($campaignId)), ['content-type' => 'application/json'], json_encode(['phones' => $numbers]));
-        $request->setAuth('admin', 'admin');
+        $creds   = static::getIssabelCredentials();
+        $request->setAuth($creds['user'], $creds['pass']);
         $result  = $request->send()->json();
-        return $result;
-
+        return static::handleResponse($result);
     }
-
-
 }
