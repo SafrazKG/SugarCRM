@@ -45,7 +45,24 @@
                     return value;
                 }
         
-                value = this.unformatMoment(app.date(value, app.date.convertFormat(this.getUserDateTimeFormat()), true));
+                value = app.date(value, app.date.convertFormat(this.getUserDateTimeFormat()), true);
+                
+                var h = value.hour(),
+                    m = value.minute(),
+                    s = value.second(),
+                    d = value.date(),
+                    mo = value.month(),
+                    y = value.year();
+                
+                value.utcOffset(this._userTZOffset);
+                
+                value.hour(h);
+                value.minute(m);
+                value.second(s);
+                value.date(d);
+                value.month(mo);
+                value.year(y);
+                
         
                 if (!value.isValid()) {
                     return;
@@ -94,26 +111,23 @@
                 return displayString;
             },
             
-            unformatMoment: function(value) {
-                if (!value.isValid()) {
-                    return value;
-                }
+            momentToLocal: function(moment) {
+                var h = moment.hour(),
+                    m = moment.minute(),
+                    s = moment.second(),
+                    d = moment.date(),
+                    mo = moment.month(),
+                    y = moment.year();
                 
-                var h = value.hour(),
-                    m = value.minute(),
-                    s = value.second(),
-                    d = value.date(),
-                    mo = value.month(),
-                    y = value.year();
+                var value = app.date();
                 
-                value.utcOffset(this._userTZOffset);
-
                 value.hour(h);
                 value.minute(m);
                 value.second(s);
                 value.date(d);
                 value.month(mo);
                 value.year(y);
+                
                 return value;
             },
         });
