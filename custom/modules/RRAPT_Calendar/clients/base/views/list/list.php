@@ -73,6 +73,13 @@ array (
               ),
               7 => 
               array (
+                'name' => 'user_active_c',
+                'label' => 'Fronter Active?',
+                'default' => true,
+                'enabled' => true,
+              ),
+              8 => 
+              array (
                 'name' => 'users_rrapt_calendar_3_name',
                 'label' => 'LBL_USERS_RRAPT_CALENDAR_3_FROM_USERS_TITLE',
                 'enabled' => true,
@@ -81,7 +88,7 @@ array (
                 'sortable' => false,
                 'default' => true,
               ),
-              8 => 
+              9 => 
               array (
                 'name' => 'users_rrapt_calendar_1_name',
                 'label' => 'LBL_USERS_RRAPT_CALENDAR_1_FROM_USERS_TITLE',
@@ -91,7 +98,7 @@ array (
                 'sortable' => false,
                 'default' => true,
               ),
-              9 => 
+              10 => 
               array (
                 'name' => 'team_name',
                 'label' => 'LBL_TEAM',

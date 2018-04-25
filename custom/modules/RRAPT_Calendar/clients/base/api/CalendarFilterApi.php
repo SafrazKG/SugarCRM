@@ -48,7 +48,7 @@ class CalendarFilterApi extends FilterApi {
     
     public function extendedFilterList($api, $args) {
         // we need to add available slots if user is fronter
-        if (!isset($args['view']) || $args['view']!='calendarlist') return $this->filterList($api, $args);
+        if (!isset($args['view']) || $args['view']!='calendarlist') return $this->listForListView($api, $args);
         if (!isset($args['filter'])) return array('next_offset' => -1, 'records' => []);
         foreach ($args['filter'] as $k => $filter) {
             if (isset($filter['date_field_c'])) {
@@ -138,6 +138,30 @@ class CalendarFilterApi extends FilterApi {
             if ($foundWith && !$foundOriginal) return $original;
         }
         return $original;
+    }
+    
+    private function listForListView($api, $args) {
+        // if we have filters on related fields we need to add group by
+        if (!empty($args['q'])) {
+            if (!empty($args['filter']) || !empty($args['filter_id']) || !empty($args['deleted'])) {
+                throw new SugarApiExceptionInvalidParameter();
+            }
+            require_once('clients/base/api/UnifiedSearchApi.php');
+            $search = new UnifiedSearchApi();
+            $args['module_list'] = $args['module'];
+            return $search->globalSearch($api, $args);
+        }
+        $api->action = 'list';
+        list($args, $q, $options, $seed) = $this->filterListSetup($api, $args, 'list');
+        $linkAlias = $q->getJoinTableAlias('users_cstm');
+        $q->joinTable('users_cstm', array(
+                                    'joinType' => 'LEFT',
+                                    'alias' => $linkAlias
+                                ))
+            ->on()
+            ->equalsField($linkAlias.'.id_c', 'rrapt_calendar.assigned_user_id');
+        $q->select->fieldRaw($linkAlias.'.last_activity_c+300>=UNIX_TIMESTAMP()', 'user_active_c');
+        return $this->runQuery($api, $args, $q, $options, $seed);
     }
 
 }
