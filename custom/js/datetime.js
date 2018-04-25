@@ -111,24 +111,14 @@
                 return displayString;
             },
             
-            momentToLocal: function(moment) {
-                var h = moment.hour(),
-                    m = moment.minute(),
-                    s = moment.second(),
-                    d = moment.date(),
-                    mo = moment.month(),
-                    y = moment.year();
+            localMoment: function() {
                 
-                var value = app.date();
+                var v = this.unformat(this.value).split('T');
+                var v2 = v[1].split('-');
+                v2 = v2[0].split('+');
+                var moment = app.date(v[0]+'T'+v2[0]);
                 
-                value.hour(h);
-                value.minute(m);
-                value.second(s);
-                value.date(d);
-                value.month(mo);
-                value.year(y);
-                
-                return value;
+                return moment;
             },
         });
     });

@@ -128,7 +128,7 @@
     },
     
     _checkStartDate: function(fields, errors, callback) {
-        var moment = this.momentToLocal(app.date(this.model.get(this.name)));
+        var moment = this.localMoment();
         if (!moment) return;
         app.SlotAvailability.isSlotAvailable(moment, this.model.get('product_c'), this.model.id, _.bind(function(available) {
             if (!available) {
