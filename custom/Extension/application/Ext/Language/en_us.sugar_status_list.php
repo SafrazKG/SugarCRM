@@ -1,5 +1,5 @@
 <?php
- // created: 2018-04-17 09:07:29
+ // created: 2018-04-24 10:04:02
 
 $app_list_strings['status_list']=array (
   '' => '',
@@ -13,7 +13,7 @@ $app_list_strings['status_list']=array (
   'Negotiation Sent' => 'Negotiation Sent',
   'Negotiation Received' => 'Negotiation Received',
   'Settlement Docs Execution' => 'Settlement Docs Execution',
-  'Settlement Docs Receivedm Pending Foreclosure' => 'Settlement Docs Receivedm Pending Foreclosure',
+  'Settlement Docs Receivedm Pending Foreclosure' => 'Settlement Docs Received Pending Foreclosure',
   'Foreclosure' => 'Foreclosure',
   'Litigation' => 'Litigation',
   'Report Finalization' => 'Report Finalization',

@@ -52,6 +52,34 @@ array (
               ),
               5 => 
               array (
+                'name' => 'start_date_c',
+                'label' => 'LBL_START_DATE',
+                'enabled' => true,
+                'default' => true,
+              ),
+              6 => 
+              array (
+                'name' => 'est_date_c',
+                'label' => 'LBL_EST_DATE',
+                'enabled' => true,
+                'default' => true,
+              ),
+              7 => 
+              array (
+                'name' => 'trf_date_c',
+                'label' => 'LBL_TRF_DATE',
+                'enabled' => true,
+                'default' => true,
+              ),
+              8 => 
+              array (
+                'name' => 'doc_date_c',
+                'label' => 'LBL_DOC_DATE',
+                'enabled' => true,
+                'default' => true,
+              ),
+              9 => 
+              array (
                 'name' => 'team_name',
                 'label' => 'LBL_TEAM',
                 'default' => false,

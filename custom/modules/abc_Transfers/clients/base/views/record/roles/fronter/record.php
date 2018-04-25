@@ -172,58 +172,54 @@ array (
               array (
                 'name' => 'leads_abc_transfers_1_name',
                 'label' => 'LBL_LEADS_ABC_TRANSFERS_1_FROM_LEADS_TITLE',
+                'span' => 12,
               ),
               1 => 
-              array (
-                'name' => 'poperty_id_c',
-                'label' => 'LBL_POPERTY_ID',
-              ),
-              2 => 
               array (
                 'name' => 'management_company_c',
                 'label' => 'LBL_MANAGEMENT_COMPANY',
               ),
-              3 => 
+              2 => 
               array (
                 'name' => 'deeded_or_rtu_c',
                 'label' => 'LBL_DEEDED_OR_RTU',
               ),
-              4 => 
+              3 => 
               array (
                 'name' => 'resort_c',
                 'label' => 'LBL_RESORT',
               ),
-              5 => 
+              4 => 
               array (
                 'name' => 'resort_account_number_c',
                 'label' => 'LBL_RESORT_ACCOUNT_NUMBER',
               ),
-              6 => 
+              5 => 
               array (
                 'name' => 'size_of_unit_c',
                 'label' => 'LBL_SIZE_OF_UNIT',
               ),
-              7 => 
+              6 => 
               array (
                 'name' => 'member_of_exchange_company_c',
                 'label' => 'LBL_MEMBER_OF_EXCHANGE_COMPANY',
               ),
-              8 => 
+              7 => 
               array (
                 'name' => 'week_fixed_c',
                 'label' => 'LBL_WEEK_FIXED',
               ),
-              9 => 
+              8 => 
               array (
                 'name' => 'inventory_autobooked_c',
                 'label' => 'LBL_INVENTORY_AUTOBOOKED',
               ),
-              10 => 
+              9 => 
               array (
                 'name' => 'usage_a_c',
                 'label' => 'LBL_USAGE_A',
               ),
-              11 => 
+              10 => 
               array (
                 'name' => 'number_of_timeshares_p_c',
                 'label' => 'LBL_NUMBER_OF_TIMESHARES_P',

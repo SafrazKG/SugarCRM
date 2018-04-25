@@ -88,3 +88,4 @@ $mod_strings['LBL_DAYS_SINCE_STATUS_CHANGE'] = 'Days Since Status Change';
 $mod_strings['LBL_WEEK_WILL_USE_2017'] = '2017 Week Will Use';
 $mod_strings['LBL_WEEK_WILL_USE_2018'] = '2018 Week Will Use';
 $mod_strings['LBL_WEEK_WILL_USE_2019'] = '2019 Week Will Use';
+$mod_strings['LBL_PROPERTY_ID'] = 'Property ID';

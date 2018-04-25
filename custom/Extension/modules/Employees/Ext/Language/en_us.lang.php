@@ -11,3 +11,4 @@ $mod_strings['LBL_SALESFUSION'] = 'Salesfusion';
 $mod_strings['LBL_ASTERISK'] = 'Asterisk';
 $mod_strings['LBL_NIVEL'] = 'Nivel';
 $mod_strings['LBL_PAYROLL_NAME'] = 'Payroll Name';
+$mod_strings['LBL_RESORT_RELEASE_ID'] = 'Resort Release ID';
