@@ -22,11 +22,15 @@
 # Logs files can safely be ignored.
 *.log
 # Ignore the new upload directories.
-#/upload/
-#!/upload/index.html
-#!/upload/upgrades/*
+/upload/*
+!/upload/index.html
+!/upload/upgrades
+
 /upload_backup/
 /custom/blowfish
+
+#/upload/*
+#!/upload/*/upgrades/module
 
 # Created during rebuild
 /portal2/config.js
