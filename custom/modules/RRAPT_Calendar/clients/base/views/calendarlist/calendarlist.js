@@ -88,7 +88,7 @@
 
     setBeanDataOnCreate: function(calEvent) {
         var bean = this._super('setBeanDataOnCreate', arguments);
-        bean.set('date_field_c', calEvent.start.formatServerNoTZ());
+        bean.set('date_field_c', calEvent.start.formatServer());
         bean.set('product_c', calEvent.resourceId);
         return bean;
     },
