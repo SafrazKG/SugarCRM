@@ -8,7 +8,7 @@ $customRoles['closer'] = array(
             'access' => 'enabled', // enabled/disabled
             'admin' => 'normal', // normal/admin/developer/admin_developer
             'delete' => 'none', // all/owner/none
-            'edit' => 'none', // all/owner/none
+            'edit' => 'all', // all/owner/none
             'export' => 'none', // all/owner/none
             'import' => 'none', // all/owner/none
             'list' => 'all', // all/owner/none
@@ -18,6 +18,9 @@ $customRoles['closer'] = array(
                 'assigned_user_name' => 'readonly',
                 'users_rrapt_calendar_1_name' => 'readonly',
                 'users_rrapt_calendar_3_name' => 'readonly',
+                'leads_rrapt_calendar_1_name' => 'readonly',
+                'product_c' => 'readonly',
+                'date_field_c' => 'readonly',
             ),
         ),
         'RRAPT_Admin' => array(
