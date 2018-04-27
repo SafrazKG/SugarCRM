@@ -22,3 +22,4 @@ $mod_strings['LBL_CONTACT_TYPE'] = 'Contact Type';
 $mod_strings['LBL_POSITION'] = 'Position';
 $mod_strings['LBL_SSN'] = 'SSN';
 $mod_strings['LBL_PAYPAL_EMAIL'] = 'Paypal Email';
+$mod_strings['LBL_CONSYS_CRM_ID_C'] = 'consys crm id c';

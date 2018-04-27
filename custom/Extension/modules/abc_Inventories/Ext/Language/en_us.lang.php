@@ -52,3 +52,4 @@ $mod_strings['LBL_BUYER_INFO_TEXT_ARRAY'] = 'Buyer Info Text Array';
 $mod_strings['LBL_CRM_ALL_NOTES_FROM_INVENTORY'] = 'CRM All Notes from Inventory';
 $mod_strings['LBL_START_INCENTIVE_AMOUNT_C'] = 'Start Incentive Amount ';
 $mod_strings['LBL_FINISH_INCENTIVE_AMOUNT_C'] = 'Finish Incentive Amount ';
+$mod_strings['LBL_CONSYS_CRM_ID_C'] = 'consys crm id c';

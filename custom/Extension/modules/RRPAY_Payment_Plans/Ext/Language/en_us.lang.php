@@ -18,3 +18,4 @@ $mod_strings['LBL_CURRENCY_5'] = 'LBL_CURRENCY';
 $mod_strings['LBL_CURRENCY_6'] = 'LBL_CURRENCY';
 $mod_strings['LBL_PAID_IN_FULL'] = 'Paid in Full';
 $mod_strings['LBL_CURRENCY_7'] = 'LBL_CURRENCY';
+$mod_strings['LBL_CONSYS_CRM_ID_C'] = 'consys crm id c';

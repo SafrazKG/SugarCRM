@@ -10,3 +10,4 @@ $mod_strings['LBL_TYPE_B'] = 'Type';
 $mod_strings['LBL_MAINTENANCE_FEE_TYPE'] = 'Maintenance Fee Type';
 $mod_strings['LBL_PAYABLE'] = 'Payable';
 $mod_strings['LBL_RECORDVIEW_PANEL1'] = 'New Panel 1';
+$mod_strings['LBL_CONSYS_CRM_ID_C'] = 'consys crm id c';

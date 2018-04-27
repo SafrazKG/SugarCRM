@@ -29,3 +29,4 @@ $mod_strings['LBL_AFFILIATE_PAY'] = 'Affiliate Pay';
 $mod_strings['LBL_CURRENCY_6'] = 'LBL_CURRENCY';
 $mod_strings['LBL_UNPAID'] = 'Unpaid';
 $mod_strings['LBL_RECORDVIEW_PANEL1'] = 'Finance';
+$mod_strings['LBL_CONSYS_CRM_ID_C'] = 'consys crm id c';

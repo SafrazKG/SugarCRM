@@ -18,3 +18,4 @@ $mod_strings['LBL_ABC_TRANSFERS_ABC_DEEDBACKS_1_FROM_ABC_TRANSFERS_TITLE'] = 'Tr
 $mod_strings['LBL_ABC_DEEDBACKS_ABC_PROPERTIES_1_FROM_ABC_PROPERTIES_TITLE'] = 'Property';
 $mod_strings['LBL_DATE_OF_LAST_STATUS_CHANGE'] = 'Date of Last Status Change';
 $mod_strings['LBL_DAYS_SINCE_STATUS_CHANGE'] = 'Days Since Status Change';
+$mod_strings['LBL_CONSYS_CRM_ID_C'] = 'consys crm id c';

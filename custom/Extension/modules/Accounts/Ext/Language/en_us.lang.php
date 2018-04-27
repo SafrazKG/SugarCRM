@@ -12,3 +12,4 @@ $mod_strings['LBL_CLIENT_NAME_AS_APPEARS'] = 'Client Name as appears on the Deed
 $mod_strings['LBL_BILLING_ADDRESS'] = 'Home Address';
 $mod_strings['LBL_RECORDVIEW_PANEL1'] = 'Business Card';
 $mod_strings['LBL_RECORDVIEW_PANEL2'] = 'Show More';
+$mod_strings['LBL_CONSYS_CRM_ID_C'] = 'consys crm id c';
