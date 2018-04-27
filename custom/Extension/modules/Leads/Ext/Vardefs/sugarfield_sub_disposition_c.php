@@ -1,5 +1,5 @@
 <?php
- // created: 2018-04-18 14:08:07
+ // created: 2018-04-25 08:44:57
 $dictionary['Lead']['fields']['sub_disposition_c']['labelValue']='Sub Disposition';
 $dictionary['Lead']['fields']['sub_disposition_c']['dependency']='';
 $dictionary['Lead']['fields']['sub_disposition_c']['visibility_grid']=array (
@@ -20,9 +20,9 @@ $dictionary['Lead']['fields']['sub_disposition_c']['visibility_grid']=array (
     ),
     'Outbound Call Failed' => 
     array (
-      0 => 'ALLBUSYAll Circuits Are Busy',
-      1 => 'NOTWKNUMB',
-      2 => 'WRONG',
+      0 => 'ALLBUSY_All Circuits Are Busy',
+      1 => 'NOTWKNUMB_Not Working Number',
+      2 => 'WRONG_Wrong Number',
     ),
     'NIT Not Interested' => 
     array (
@@ -37,33 +37,34 @@ $dictionary['Lead']['fields']['sub_disposition_c']['visibility_grid']=array (
     ),
     'International Translator Required' => 
     array (
-      0 => 'SpanishS',
+      0 => 'Spanish',
     ),
     'Outbound Call Made' => 
     array (
-      0 => 'ALLBUSYAll Circuits Are Busy',
-      1 => 'LMS',
-      2 => 'CBK',
-      3 => '30days',
-      4 => '60 days',
-      5 => '90days',
-      6 => 'MBF',
-      7 => 'NAS',
-      8 => 'WRONGF',
+      0 => 'ALLBUSY_All Circuits Are Busy',
+      1 => 'LMS_Left Message',
+      2 => 'CBK_Call Back',
+      3 => '30 Days CBK',
+      4 => '60 Days CBK',
+      5 => '90 Days CBK',
+      6 => 'MBF_Mail Box Full',
+      7 => 'NAS_No Answer',
+      8 => 'WRONG_Failed to Connect',
     ),
     'Appointments' => 
     array (
-      0 => 'APSET',
-      1 => 'APCONFIRMED',
-      2 => 'APRSCHLD',
-      3 => 'CLSRNOAP',
-      4 => 'CUSTNOAP',
+      0 => 'APSET_Appointment Set',
+      1 => 'APCONFIRMED_Appointment Confirmed',
+      2 => 'APRSCHLD_Appointment Rescheduled',
+      3 => 'CLSRNOAP_Closer Not available for appointment',
+      4 => 'CUSTNOAP_Customer Not available for appointment',
     ),
     'FILEUPDATE Only Updating Data in File' => 
     array (
     ),
     'Send an Email' => 
     array (
+      0 => 'PROVIDE A EMAIL SUBJECT HERE',
     ),
     'NOSALE No Call Back' => 
     array (
@@ -97,29 +98,30 @@ $dictionary['Lead']['fields']['sub_disposition_c']['visibility_grid']=array (
     ),
     'Undo' => 
     array (
-      0 => 'UNDOHOLDSALE',
-      1 => 'UNDOCANCEL',
+      0 => 'UNDOHOLDSALE_UNDO Sale on Hold',
+      1 => 'UNDOCANCEL_UNDO Sale Cancelled',
     ),
     'Close' => 
     array (
-      0 => 'SALE',
-      1 => 'ADMINCLOSE',
-      2 => 'NOSALE',
-      3 => 'TASKDONE',
+      0 => 'SALE_Sales Completed Final',
+      1 => 'ADMINCLOSE_Admin Close _ Sales Completed No Count',
+      2 => 'NOSALE_Sale Cancelled',
+      3 => 'TASKDONE_Task Completed',
     ),
     'Change' => 
     array (
-      0 => 'RSHSALE',
-      1 => '2NDFR2nd',
-      2 => 'FRCHG',
-      3 => 'CLOSER',
-      4 => 'HOLDSALE',
-      5 => 'FIXERROR',
+      0 => 'RSHSALE_Reschedule Sale',
+      1 => '2NDFR_2nd Fronter Assigned',
+      2 => 'FRCHG_FRONTER Changed',
+      3 => 'CLOSER_Closer Call Back',
+      4 => 'HOLDSALE_Sale on Hold',
+      5 => 'FIXERROR_Fixed errors on Form or Deal Data',
+      6 => 'FILEUPDATE_Only Updating Data in File',
     ),
     'Back to Leads Cloud' => 
     array (
       0 => 'Disposition Error',
-      1 => 'Other  Management',
+      1 => 'Other _ Management',
     ),
     'VOBLOWOUT VO Blow Out with Reason' => 
     array (
@@ -288,7 +290,7 @@ $dictionary['Lead']['fields']['sub_disposition_c']['visibility_grid']=array (
     ),
     'DNADo Not Accept' => 
     array (
-      0 => 'Holiday Inn',
+      0 => 'Holiday Inn _Mortgage ONLY_',
       1 => 'Other Resorts',
     ),
     'DNCDo Not Call' => 
@@ -296,10 +298,10 @@ $dictionary['Lead']['fields']['sub_disposition_c']['visibility_grid']=array (
     ),
     'NITNot Interested' => 
     array (
-      0 => 'OWSONLY',
-      1 => 'AWC',
-      2 => 'GOTRID',
-      3 => 'NOTENOUGH',
+      0 => 'OWS_ONLY wants to sell',
+      1 => 'AWC_Already working with another company',
+      2 => 'GOTRID_Already got rid of timeshare',
+      3 => 'NOTENOUGH_Not Enough Pain',
     ),
     'DUPEDuplicate Lead' => 
     array (

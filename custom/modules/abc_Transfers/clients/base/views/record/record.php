@@ -394,6 +394,14 @@ array (
             array (
               0 => 
               array (
+                'name' => 'poperty_id_c',
+                'label' => 'LBL_POPERTY_ID',
+              ),
+              1 => 
+              array (
+              ),
+              2 => 
+              array (
                 'related_fields' => 
                 array (
                   0 => 'currency_id',
@@ -402,30 +410,30 @@ array (
                 'name' => 'maintenance_fees_c',
                 'label' => 'LBL_MAINTENANCE_FEES',
               ),
-              1 => 
+              3 => 
               array (
                 'name' => 'maintenance_paid_c',
                 'label' => 'LBL_MAINTENANCE_PAID',
               ),
-              2 => 
+              4 => 
               array (
                 'name' => 'maintenance_fees_current_c',
                 'label' => 'LBL_MAINTENANCE_FEES_CURRENT',
               ),
-              3 => 
+              5 => 
               array (
                 'name' => 'maintenance_fees_due_date_c',
                 'label' => 'LBL_MAINTENANCE_FEES_DUE_DATE',
               ),
-              4 => 
+              6 => 
               array (
               ),
-              5 => 
+              7 => 
               array (
                 'name' => 'maintenance_fees_paid_throug_c',
                 'label' => 'LBL_MAINTENANCE_FEES_PAID_THROUG',
               ),
-              6 => 
+              8 => 
               array (
                 'related_fields' => 
                 array (
@@ -435,49 +443,49 @@ array (
                 'name' => 'club_dues_amount_c',
                 'label' => 'LBL_CLUB_DUES_AMOUNT',
               ),
-              7 => 
+              9 => 
               array (
                 'name' => 'club_dues_date_c',
                 'label' => 'LBL_CLUB_DUES_DATE',
               ),
-              8 => 
+              10 => 
               array (
               ),
-              9 => 
+              11 => 
               array (
                 'name' => 'club_dues_paid_c',
                 'label' => 'LBL_CLUB_DUES_PAID',
               ),
-              10 => 
+              12 => 
               array (
                 'name' => 'week_will_use_2017_c',
                 'label' => 'LBL_WEEK_WILL_USE_2017',
               ),
-              11 => 
+              13 => 
               array (
                 'name' => 'week_will_use_2018_c',
                 'label' => 'LBL_WEEK_WILL_USE_2018',
               ),
-              12 => 
+              14 => 
               array (
                 'name' => 'week_will_use_2019_c',
                 'label' => 'LBL_WEEK_WILL_USE_2019',
               ),
-              13 => 
+              15 => 
               array (
               ),
-              14 => 
+              16 => 
               array (
                 'name' => 'reservation_dates_c',
                 'studio' => 'visible',
                 'label' => 'LBL_RESERVATION_DATES',
               ),
-              15 => 
+              17 => 
               array (
                 'name' => 'names_on_deed_c',
                 'label' => 'LBL_NAMES_ON_DEED',
               ),
-              16 => 
+              18 => 
               array (
                 'related_fields' => 
                 array (
@@ -487,27 +495,27 @@ array (
                 'name' => 'mortgage_balance_c',
                 'label' => 'LBL_MORTGAGE_BALANCE',
               ),
-              17 => 
+              19 => 
               array (
                 'name' => 'length_of_ownership_c',
                 'label' => 'LBL_LENGTH_OF_OWNERSHIP',
               ),
-              18 => 
+              20 => 
               array (
                 'name' => 'actively_using_c',
                 'label' => 'LBL_ACTIVELY_USING',
               ),
-              19 => 
+              21 => 
               array (
                 'name' => 'trust_name_c',
                 'label' => 'LBL_TRUST_NAME',
               ),
-              20 => 
+              22 => 
               array (
                 'name' => 'names_of_deceased_c',
                 'label' => 'LBL_NAMES_OF_DECEASED',
               ),
-              21 => 
+              23 => 
               array (
                 'name' => 'divorced_c',
                 'label' => 'LBL_DIVORCED',
@@ -600,10 +608,18 @@ array (
             array (
               0 => 
               array (
+                'name' => 'deed_or_rtu_c',
+                'label' => 'LBL_DEED_OR_RTU',
+              ),
+              1 => 
+              array (
+              ),
+              2 => 
+              array (
                 'name' => 'description',
                 'span' => 12,
               ),
-              1 => 
+              3 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
@@ -627,7 +643,7 @@ array (
                   ),
                 ),
               ),
-              2 => 
+              4 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,
@@ -651,8 +667,8 @@ array (
                   ),
                 ),
               ),
-              3 => 'assigned_user_name',
-              4 => 'team_name',
+              5 => 'assigned_user_name',
+              6 => 'team_name',
             ),
           ),
         ),

@@ -170,81 +170,31 @@ array (
             array (
               0 => 
               array (
-                'name' => 'accounts_abc_deedbacks_1_name',
-              ),
-              1 => 
-              array (
                 'name' => 'abc_transfers_abc_deedbacks_1_name',
                 'label' => 'LBL_ABC_TRANSFERS_ABC_DEEDBACKS_1_FROM_ABC_TRANSFERS_TITLE',
               ),
-              2 => 
+              1 => 
               array (
                 'name' => 'property_id_c',
                 'label' => 'LBL_PROPERTY_ID',
-                'span' => 12,
               ),
-              3 => 
-              array (
-                'name' => 'payment_status_c',
-                'label' => 'LBL_PAYMENT_STATUS',
-              ),
-              4 => 
+              2 => 
               array (
                 'name' => 'resort_family_c',
                 'label' => 'LBL_RESORT_FAMILY',
               ),
-              5 => 
+              3 => 
               array (
-                'name' => 'phone_c',
-                'label' => 'LBL_PHONE',
               ),
-              6 => 
-              array (
-                'name' => 'email_c',
-                'label' => 'LBL_EMAIL',
-              ),
-              7 => 
-              array (
-                'name' => 'address_street_c',
-                'studio' => 'visible',
-                'label' => 'LBL_ADDRESS_STREET',
-              ),
-              8 => 
+              4 => 
               array (
                 'name' => 'type_a_c',
                 'label' => 'LBL_TYPE_A',
               ),
-              9 => 
-              array (
-                'name' => 'address_city_c',
-                'label' => 'LBL_ADDRESS_CITY',
-              ),
-              10 => 
+              5 => 
               array (
                 'name' => 'status_c',
                 'label' => 'LBL_STATUS',
-              ),
-              11 => 
-              array (
-                'name' => 'address_state_c',
-                'label' => 'LBL_ADDRESS_STATE',
-              ),
-              12 => 
-              array (
-                'name' => 'abc_deedbacks_abc_estoppels_1_name',
-                'label' => 'LBL_ABC_DEEDBACKS_ABC_ESTOPPELS_1_FROM_ABC_ESTOPPELS_TITLE',
-              ),
-              13 => 
-              array (
-                'name' => 'address_postalcode_c',
-                'label' => 'LBL_ADDRESS_POSTALCODE',
-                'span' => 12,
-              ),
-              14 => 
-              array (
-                'name' => 'address_country_c',
-                'label' => 'LBL_ADDRESS_COUNTRY',
-                'span' => 12,
               ),
             ),
           ),
@@ -257,7 +207,7 @@ array (
             'labelsOnTop' => true,
             'placeholders' => true,
             'newTab' => false,
-            'panelDefault' => 'expanded',
+            'panelDefault' => 'collapsed',
             'fields' => 
             array (
               0 => 

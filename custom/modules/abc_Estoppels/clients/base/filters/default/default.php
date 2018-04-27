@@ -1,5 +1,5 @@
 <?php
-// created: 2018-04-24 08:53:30
+// created: 2018-04-25 14:38:18
 $viewdefs['abc_Estoppels']['base']['filter']['default'] = array (
   'default_filter' => 'all_records',
   'fields' => 
@@ -26,9 +26,6 @@ $viewdefs['abc_Estoppels']['base']['filter']['default'] = array (
     array (
     ),
     'days_since_status_change_c' => 
-    array (
-    ),
-    'usage_period_c' => 
     array (
     ),
     'date_of_last_status_change_c' => 

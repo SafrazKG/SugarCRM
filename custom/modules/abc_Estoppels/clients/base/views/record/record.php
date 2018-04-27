@@ -170,86 +170,142 @@ array (
             array (
               0 => 
               array (
-                'name' => 'property_information_c',
-                'label' => 'LBL_PROPERTY_INFORMATION',
-              ),
-              1 => 
-              array (
                 'name' => 'status_c',
                 'label' => 'LBL_STATUS',
               ),
+              1 => 
+              array (
+                'name' => 'abc_transfers_abc_estoppels_1_name',
+                'label' => 'LBL_ABC_TRANSFERS_ABC_ESTOPPELS_1_FROM_ABC_TRANSFERS_TITLE',
+              ),
               2 => 
+              array (
+                'name' => 'resort_family_c',
+                'label' => 'LBL_RESORT_FAMILY',
+              ),
+              3 => 
+              array (
+                'name' => 'resort_name_c',
+                'label' => 'LBL_RESORT_NAME',
+              ),
+              4 => 
+              array (
+                'name' => 'resort_address_street_c',
+                'label' => 'LBL_RESORT_ADDRESS_STREET',
+              ),
+              5 => 
+              array (
+              ),
+              6 => 
+              array (
+                'name' => 'resort_address_city_c',
+                'label' => 'LBL_RESORT_ADDRESS_CITY',
+              ),
+              7 => 
+              array (
+              ),
+              8 => 
+              array (
+                'name' => 'resort_address_state_c',
+                'label' => 'LBL_RESORT_ADDRESS_STATE',
+              ),
+              9 => 
+              array (
+              ),
+              10 => 
+              array (
+                'name' => 'resort_address_postalcode_c',
+                'label' => 'LBL_RESORT_ADDRESS_POSTALCODE',
+              ),
+              11 => 
+              array (
+              ),
+              12 => 
+              array (
+                'name' => 'resort_address_country_c',
+                'label' => 'LBL_RESORT_ADDRESS_COUNTRY',
+              ),
+              13 => 
+              array (
+              ),
+              14 => 
               array (
                 'name' => 'name_on_deed_ownership_c',
                 'label' => 'LBL_NAME_ON_DEED_OWNERSHIP',
               ),
-              3 => 
+              15 => 
+              array (
+              ),
+              16 => 
               array (
                 'name' => 'deed_or_rtu_c',
                 'label' => 'LBL_DEED_OR_RTU',
               ),
-              4 => 
+              17 => 
               array (
                 'name' => 'rtu_expiration_c',
                 'label' => 'LBL_RTU_EXPIRATION',
               ),
-              5 => 
+              18 => 
               array (
                 'name' => 'usage_type_c',
                 'label' => 'LBL_USAGE_TYPE',
               ),
-              6 => 
+              19 => 
+              array (
+                'name' => 'usage_interval_c',
+                'label' => 'LBL_USAGE_INTERVAL',
+              ),
+              20 => 
               array (
                 'name' => 'first_year_available_c',
                 'label' => 'LBL_FIRST_YEAR_AVAILABLE',
+                'span' => 12,
               ),
-              7 => 
-              array (
-                'name' => 'usage_period_c',
-                'label' => 'LBL_USAGE_PERIOD',
-              ),
-              8 => 
+              21 => 
               array (
                 'name' => 'black_out_periods_c',
                 'label' => 'LBL_BLACK_OUT_PERIODS',
               ),
-              9 => 
+              22 => 
               array (
                 'name' => 'check_in_days_c',
                 'label' => 'LBL_CHECK_IN_DAYS',
               ),
-              10 => 
+              23 => 
               array (
                 'name' => 'fixed_week_c',
                 'label' => 'LBL_FIXED_WEEK',
               ),
-              11 => 
+              24 => 
               array (
                 'name' => 'floating_weeks_c',
                 'label' => 'LBL_FLOATING_WEEKS',
               ),
-              12 => 
+              25 => 
               array (
                 'name' => 'season_c',
                 'label' => 'LBL_SEASON',
               ),
-              13 => 
+              26 => 
               array (
                 'name' => 'deeded_week_c',
                 'label' => 'LBL_DEEDED_WEEK',
               ),
-              14 => 
+              27 => 
               array (
                 'name' => 'number_of_points_c',
                 'label' => 'LBL_NUMBER_OF_POINTS',
-                'span' => 12,
+              ),
+              28 => 
+              array (
               ),
             ),
           ),
           2 => 
           array (
             'newTab' => false,
-            'panelDefault' => 'expanded',
+            'panelDefault' => 'collapsed',
             'name' => 'LBL_RECORDVIEW_PANEL2',
             'label' => 'LBL_RECORDVIEW_PANEL2',
             'columns' => 2,
@@ -378,6 +434,14 @@ array (
               ),
               10 => 
               array (
+                'name' => 'view_a_c',
+                'label' => 'LBL_VIEW_A',
+              ),
+              11 => 
+              array (
+              ),
+              12 => 
+              array (
                 'name' => 'estoppel_requirements_notes_c',
                 'studio' => 'visible',
                 'label' => 'LBL_ESTOPPEL_REQUIREMENTS_NOTES',
@@ -398,10 +462,25 @@ array (
             array (
               0 => 
               array (
-                'name' => 'maintenance_fees_information_c',
-                'label' => 'LBL_MAINTENANCE_FEES_INFORMATION',
+                'name' => 'maintenance_fees_last_paid_c',
+                'label' => 'LBL_MAINTENANCE_FEES_LAST_PAID',
               ),
               1 => 
+              array (
+                'name' => 'maintenance_assessed_c',
+                'label' => 'LBL_MAINTENANCE_ASSESSED',
+              ),
+              2 => 
+              array (
+                'name' => 'maintenance_fees_due_date_c',
+                'label' => 'LBL_MAINTENANCE_FEES_DUE_DATE',
+              ),
+              3 => 
+              array (
+                'name' => 'maintenance_fee_amount_c',
+                'label' => 'LBL_MAINTENANCE_FEE_AMOUNT',
+              ),
+              4 => 
               array (
                 'related_fields' => 
                 array (
@@ -411,17 +490,17 @@ array (
                 'name' => 'special_assessments_amount_c',
                 'label' => 'LBL_SPECIAL_ASSESSMENTS_AMOUNT',
               ),
-              2 => 
+              5 => 
               array (
                 'name' => 'special_assessments_due_date_c',
                 'label' => 'LBL_SPECIAL_ASSESSMENTS_DUE_DATE',
               ),
-              3 => 
+              6 => 
               array (
                 'name' => 'of_years_for_special_asses_c',
                 'label' => 'LBL_OF_YEARS_FOR_SPECIAL_ASSES',
               ),
-              4 => 
+              7 => 
               array (
                 'related_fields' => 
                 array (
@@ -430,7 +509,6 @@ array (
                 ),
                 'name' => 'transfer_fee_amount_c',
                 'label' => 'LBL_TRANSFER_FEE_AMOUNT',
-                'span' => 12,
               ),
             ),
           ),
@@ -469,7 +547,9 @@ array (
               array (
                 'name' => 'id_number_c',
                 'label' => 'LBL_ID_NUMBER',
-                'span' => 12,
+              ),
+              5 => 
+              array (
               ),
             ),
           ),
@@ -498,7 +578,9 @@ array (
               array (
                 'name' => 'deceased_seller_involved_c',
                 'label' => 'LBL_DECEASED_SELLER_INVOLVED',
-                'span' => 12,
+              ),
+              3 => 
+              array (
               ),
             ),
           ),

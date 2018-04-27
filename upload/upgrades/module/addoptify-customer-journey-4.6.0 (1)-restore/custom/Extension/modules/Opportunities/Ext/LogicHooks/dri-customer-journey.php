@@ -1,0 +1,5 @@
+<?php
+
+if (SugarAutoLoader::fileExists('custom/include/SugarObjects/implements/customer_journey_parent/Ext/LogicHooks/addoptify-customer-journey.php')) {
+    require 'custom/include/SugarObjects/implements/customer_journey_parent/Ext/LogicHooks/addoptify-customer-journey.php';
+}

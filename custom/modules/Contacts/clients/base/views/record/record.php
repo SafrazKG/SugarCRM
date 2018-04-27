@@ -202,8 +202,15 @@ array (
             'panelDefault' => 'expanded',
             'fields' => 
             array (
-              0 => 'title',
-              1 => 'email',
+              0 => 
+              array (
+                'name' => 'account_name',
+              ),
+              1 => 
+              array (
+                'name' => 'contact_type_c',
+                'label' => 'LBL_CONTACT_TYPE',
+              ),
               2 => 'phone_work',
               3 => 
               array (
@@ -211,20 +218,27 @@ array (
                 'comment' => 'Other phone number for the contact',
                 'label' => 'LBL_OTHER_PHONE',
               ),
-              4 => 'phone_fax',
-              5 => 'phone_mobile',
+              4 => 'phone_mobile',
+              5 => 'email',
               6 => 
-              array (
-                'name' => 'account_name',
-                'span' => 12,
-              ),
-              7 => 'lead_source',
-              8 => 
               array (
                 'name' => 'role_ps_c',
                 'label' => 'LBL_ROLE_PS',
               ),
+              7 => 
+              array (
+              ),
+              8 => 
+              array (
+                'name' => 'relationship_d_c',
+                'label' => 'LBL_RELATIONSHIP_D',
+              ),
               9 => 
+              array (
+                'name' => 'relationship_status_c',
+                'label' => 'LBL_RELATIONSHIP_STATUS',
+              ),
+              10 => 
               array (
                 'name' => 'primary_address',
                 'type' => 'fieldset',
@@ -264,78 +278,8 @@ array (
                   ),
                 ),
               ),
-              10 => 
-              array (
-                'name' => 'alt_address',
-                'type' => 'fieldset',
-                'css_class' => 'address',
-                'label' => 'LBL_ALT_ADDRESS',
-                'fields' => 
-                array (
-                  0 => 
-                  array (
-                    'name' => 'alt_address_street',
-                    'css_class' => 'address_street',
-                    'placeholder' => 'LBL_ALT_ADDRESS_STREET',
-                  ),
-                  1 => 
-                  array (
-                    'name' => 'alt_address_city',
-                    'css_class' => 'address_city',
-                    'placeholder' => 'LBL_ALT_ADDRESS_CITY',
-                  ),
-                  2 => 
-                  array (
-                    'name' => 'alt_address_state',
-                    'css_class' => 'address_state',
-                    'placeholder' => 'LBL_ALT_ADDRESS_STATE',
-                  ),
-                  3 => 
-                  array (
-                    'name' => 'alt_address_postalcode',
-                    'css_class' => 'address_zip',
-                    'placeholder' => 'LBL_ALT_ADDRESS_POSTALCODE',
-                  ),
-                  4 => 
-                  array (
-                    'name' => 'alt_address_country',
-                    'css_class' => 'address_country',
-                    'placeholder' => 'LBL_ALT_ADDRESS_COUNTRY',
-                  ),
-                  5 => 
-                  array (
-                    'name' => 'copy',
-                    'label' => 'NTC_COPY_PRIMARY_ADDRESS',
-                    'type' => 'copy',
-                    'mapping' => 
-                    array (
-                      'primary_address_street' => 'alt_address_street',
-                      'primary_address_city' => 'alt_address_city',
-                      'primary_address_state' => 'alt_address_state',
-                      'primary_address_postalcode' => 'alt_address_postalcode',
-                      'primary_address_country' => 'alt_address_country',
-                    ),
-                  ),
-                ),
-              ),
               11 => 
               array (
-                'name' => 'description',
-                'span' => 12,
-              ),
-              12 => 
-              array (
-                'name' => 'relationship_d_c',
-                'label' => 'LBL_RELATIONSHIP_D',
-              ),
-              13 => 
-              array (
-                'name' => 'relationship_status_c',
-                'label' => 'LBL_RELATIONSHIP_STATUS',
-              ),
-              14 => 
-              array (
-                'name' => 'abc_inventories_contacts_1_name',
               ),
             ),
           ),
@@ -348,17 +292,22 @@ array (
             'labelsOnTop' => true,
             'placeholders' => true,
             'newTab' => false,
-            'panelDefault' => 'expanded',
+            'panelDefault' => 'collapsed',
             'fields' => 
             array (
               0 => 
+              array (
+                'name' => 'description',
+                'span' => 12,
+              ),
+              1 => 
               array (
                 'name' => 'assigned_c',
                 'studio' => 'visible',
                 'label' => 'LBL_ASSIGNED',
               ),
-              1 => 'team_name',
-              2 => 
+              2 => 'team_name',
+              3 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
@@ -382,7 +331,7 @@ array (
                   ),
                 ),
               ),
-              3 => 
+              4 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,

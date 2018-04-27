@@ -1,6 +1,7 @@
 <?php
- // created: 2018-03-19 11:41:25
+ // created: 2018-04-25 11:32:23
 $dictionary['Contact']['fields']['relationship_status_c']['labelValue']='Relationship Status';
+$dictionary['Contact']['fields']['relationship_status_c']['dependency']='';
 $dictionary['Contact']['fields']['relationship_status_c']['visibility_grid']=array (
   'trigger' => 'relationship_d_c',
   'values' => 
@@ -11,8 +12,9 @@ $dictionary['Contact']['fields']['relationship_status_c']['visibility_grid']=arr
     'Spouse' => 
     array (
       0 => '',
-      1 => 'Deceased',
-      2 => 'Divorced',
+      1 => 'Active',
+      2 => 'Deceased',
+      3 => 'Divorced',
     ),
     'Child' => 
     array (

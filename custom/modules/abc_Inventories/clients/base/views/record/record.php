@@ -170,73 +170,22 @@ array (
             array (
               0 => 
               array (
-                'name' => 'accounts_abc_inventories_1_name',
-                'label' => 'LBL_ACCOUNTS_ABC_INVENTORIES_1_FROM_ACCOUNTS_TITLE',
-                'span' => 12,
-              ),
-              1 => 
-              array (
                 'name' => 'abc_transfers_abc_inventories_1_name',
               ),
-              2 => 
+              1 => 
               array (
                 'name' => 'status_c',
                 'label' => 'LBL_STATUS',
               ),
+              2 => 
+              array (
+                'name' => 'property_id_c',
+                'label' => 'LBL_PROPERTY_ID',
+              ),
               3 => 
               array (
-                'name' => 'description',
-                'span' => 12,
-              ),
-              4 => 'assigned_user_name',
-              5 => 'team_name',
-              6 => 
-              array (
-                'name' => 'date_modified_by',
-                'readonly' => true,
-                'inline' => true,
-                'type' => 'fieldset',
-                'label' => 'LBL_DATE_MODIFIED',
-                'fields' => 
-                array (
-                  0 => 
-                  array (
-                    'name' => 'date_modified',
-                  ),
-                  1 => 
-                  array (
-                    'type' => 'label',
-                    'default_value' => 'LBL_BY',
-                  ),
-                  2 => 
-                  array (
-                    'name' => 'modified_by_name',
-                  ),
-                ),
-              ),
-              7 => 
-              array (
-                'name' => 'date_entered_by',
-                'readonly' => true,
-                'inline' => true,
-                'type' => 'fieldset',
-                'label' => 'LBL_DATE_ENTERED',
-                'fields' => 
-                array (
-                  0 => 
-                  array (
-                    'name' => 'date_entered',
-                  ),
-                  1 => 
-                  array (
-                    'type' => 'label',
-                    'default_value' => 'LBL_BY',
-                  ),
-                  2 => 
-                  array (
-                    'name' => 'created_by_name',
-                  ),
-                ),
+                'name' => 'resort_c',
+                'label' => 'LBL_RESORT',
               ),
             ),
           ),
@@ -248,25 +197,24 @@ array (
             'columns' => 2,
             'labelsOnTop' => true,
             'placeholders' => true,
-            'newTab' => true,
+            'newTab' => false,
             'panelDefault' => 'expanded',
             'fields' => 
             array (
               0 => 
               array (
-                'name' => 'full_name_c',
-                'label' => 'LBL_FULL_NAME',
+                'name' => 'abc_inventories_contacts_1_name',
+                'label' => 'LBL_ABC_INVENTORIES_CONTACTS_1_FROM_CONTACTS_TITLE',
               ),
               1 => 
               array (
-                'name' => 'position_c',
-                'label' => 'LBL_POSITION',
+                'name' => 'full_name_c',
+                'label' => 'LBL_FULL_NAME',
               ),
               2 => 
               array (
-                'name' => 'address_street_c',
-                'studio' => 'visible',
-                'label' => 'LBL_ADDRESS_STREET',
+                'name' => 'position_c',
+                'label' => 'LBL_POSITION',
               ),
               3 => 
               array (
@@ -275,18 +223,18 @@ array (
               ),
               4 => 
               array (
-                'name' => 'address_city_c',
-                'label' => 'LBL_ADDRESS_CITY',
+                'name' => 'email_c',
+                'label' => 'LBL_EMAIL',
               ),
               5 => 
               array (
-                'name' => 'phone_1_c',
-                'label' => 'LBL_PHONE_1',
+                'name' => 'paypal_email_c',
+                'label' => 'LBL_PAYPAL_EMAIL',
               ),
               6 => 
               array (
-                'name' => 'address_state_c',
-                'label' => 'LBL_ADDRESS_STATE',
+                'name' => 'phone_1_c',
+                'label' => 'LBL_PHONE_1',
               ),
               7 => 
               array (
@@ -295,39 +243,68 @@ array (
               ),
               8 => 
               array (
-                'name' => 'address_postalcode_c',
-                'label' => 'LBL_ADDRESS_POSTALCODE',
+                'name' => 'ownership_type_c',
+                'label' => 'LBL_OWNERSHIP_TYPE',
               ),
               9 => 
               array (
-                'name' => 'email_c',
-                'label' => 'LBL_EMAIL',
+                'name' => 'actions_c',
+                'label' => 'LBL_ACTIONS',
               ),
               10 => 
+              array (
+                'name' => 'timeshare_inventory_buyer_id_c',
+                'label' => 'LBL_TIMESHARE_INVENTORY_BUYER_ID',
+              ),
+              11 => 
+              array (
+              ),
+              12 => 
+              array (
+                'name' => 'address_street_c',
+                'studio' => 'visible',
+                'label' => 'LBL_ADDRESS_STREET',
+              ),
+              13 => 
+              array (
+              ),
+              14 => 
+              array (
+                'name' => 'address_city_c',
+                'label' => 'LBL_ADDRESS_CITY',
+              ),
+              15 => 
+              array (
+              ),
+              16 => 
+              array (
+                'name' => 'address_state_c',
+                'label' => 'LBL_ADDRESS_STATE',
+              ),
+              17 => 
+              array (
+              ),
+              18 => 
+              array (
+                'name' => 'address_postalcode_c',
+                'label' => 'LBL_ADDRESS_POSTALCODE',
+              ),
+              19 => 
+              array (
+              ),
+              20 => 
               array (
                 'name' => 'address_country_c',
                 'label' => 'LBL_ADDRESS_COUNTRY',
               ),
-              11 => 
+              21 => 
               array (
-                'name' => 'paypal_email_c',
-                'label' => 'LBL_PAYPAL_EMAIL',
-              ),
-              12 => 
-              array (
-                'name' => 'ownership_type_c',
-                'label' => 'LBL_OWNERSHIP_TYPE',
-              ),
-              13 => 
-              array (
-                'name' => 'actions_c',
-                'label' => 'LBL_ACTIONS',
               ),
             ),
           ),
           3 => 
           array (
-            'newTab' => true,
+            'newTab' => false,
             'panelDefault' => 'expanded',
             'name' => 'LBL_RECORDVIEW_PANEL1',
             'label' => 'LBL_RECORDVIEW_PANEL1',
@@ -353,6 +330,9 @@ array (
               ),
               3 => 
               array (
+              ),
+              4 => 
+              array (
                 'related_fields' => 
                 array (
                   0 => 'currency_id',
@@ -361,37 +341,30 @@ array (
                 'name' => 'sale_price_c',
                 'label' => 'LBL_SALE_PRICE',
               ),
-              4 => 
+              5 => 
               array (
                 'name' => 'paid_c',
                 'label' => 'LBL_PAID',
               ),
-              5 => 
+              6 => 
               array (
                 'name' => 'number_of_times_relisted_c',
                 'label' => 'LBL_NUMBER_OF_TIMES_RELISTED',
               ),
-              6 => 
-              array (
-                'related_fields' => 
-                array (
-                  0 => 'currency_id',
-                  1 => 'base_rate',
-                ),
-                'name' => 'start_incentive_amount_c',
-                'label' => 'LBL_START_INCENTIVE_AMOUNT',
-              ),
               7 => 
               array (
-                'related_fields' => 
-                array (
-                  0 => 'currency_id',
-                  1 => 'base_rate',
-                ),
-                'name' => 'finish_incentive_amount_c',
-                'label' => 'LBL_FINISH_INCENTIVE_AMOUNT',
               ),
               8 => 
+              array (
+                'name' => 'start_incentive_amount_c',
+                'label' => 'LBL_START_INCENTIVE_AMOUNT_C',
+              ),
+              9 => 
+              array (
+                'name' => 'finish_incentive_amount_c',
+                'label' => 'LBL_FINISH_INCENTIVE_AMOUNT_C',
+              ),
+              10 => 
               array (
                 'related_fields' => 
                 array (
@@ -401,7 +374,7 @@ array (
                 'name' => 'ebay_fees_c',
                 'label' => 'LBL_EBAY_FEES',
               ),
-              9 => 
+              11 => 
               array (
                 'related_fields' => 
                 array (
@@ -411,35 +384,103 @@ array (
                 'name' => 'total_cost_c',
                 'label' => 'LBL_TOTAL_COST',
               ),
-              10 => 
+              12 => 
               array (
                 'name' => 'suggested_incentive_c',
                 'label' => 'LBL_SUGGESTED_INCENTIVE',
               ),
-              11 => 
+              13 => 
               array (
                 'name' => 'company_c',
                 'label' => 'LBL_COMPANY',
               ),
-              12 => 
+              14 => 
               array (
                 'name' => 'sales_origin_c',
                 'label' => 'LBL_SALES_ORIGIN',
-              ),
-              13 => 
-              array (
-                'name' => 'ebay_item_number_c',
-                'label' => 'LBL_EBAY_ITEM_NUMBER',
-              ),
-              14 => 
-              array (
-                'name' => 'ebay_link_c',
-                'label' => 'LBL_EBAY_LINK',
               ),
               15 => 
               array (
                 'name' => 'joint_listed_with_pid_c',
                 'label' => 'LBL_JOINT_LISTED_WITH_PID',
+              ),
+              16 => 
+              array (
+                'name' => 'ebay_item_number_c',
+                'label' => 'LBL_EBAY_ITEM_NUMBER',
+              ),
+              17 => 
+              array (
+                'name' => 'ebay_link_c',
+                'label' => 'LBL_EBAY_LINK',
+              ),
+            ),
+          ),
+          4 => 
+          array (
+            'newTab' => false,
+            'panelDefault' => 'collapsed',
+            'name' => 'LBL_RECORDVIEW_PANEL2',
+            'label' => 'LBL_RECORDVIEW_PANEL2',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'description',
+                'span' => 12,
+              ),
+              1 => 'assigned_user_name',
+              2 => 'team_name',
+              3 => 
+              array (
+                'name' => 'date_modified_by',
+                'readonly' => true,
+                'inline' => true,
+                'type' => 'fieldset',
+                'label' => 'LBL_DATE_MODIFIED',
+                'fields' => 
+                array (
+                  0 => 
+                  array (
+                    'name' => 'date_modified',
+                  ),
+                  1 => 
+                  array (
+                    'type' => 'label',
+                    'default_value' => 'LBL_BY',
+                  ),
+                  2 => 
+                  array (
+                    'name' => 'modified_by_name',
+                  ),
+                ),
+              ),
+              4 => 
+              array (
+                'name' => 'date_entered_by',
+                'readonly' => true,
+                'inline' => true,
+                'type' => 'fieldset',
+                'label' => 'LBL_DATE_ENTERED',
+                'fields' => 
+                array (
+                  0 => 
+                  array (
+                    'name' => 'date_entered',
+                  ),
+                  1 => 
+                  array (
+                    'type' => 'label',
+                    'default_value' => 'LBL_BY',
+                  ),
+                  2 => 
+                  array (
+                    'name' => 'created_by_name',
+                  ),
+                ),
               ),
             ),
           ),

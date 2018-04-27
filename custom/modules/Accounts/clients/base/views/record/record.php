@@ -177,7 +177,11 @@ array (
             'fields' => 
             array (
               0 => 'phone_office',
-              1 => 'phone_fax',
+              1 => 
+              array (
+                'name' => 'phone_alternate',
+                'label' => 'LBL_PHONE_ALT',
+              ),
               2 => 
               array (
                 'name' => 'billing_address',
@@ -220,72 +224,13 @@ array (
               ),
               3 => 
               array (
-                'name' => 'shipping_address',
-                'type' => 'fieldset',
-                'css_class' => 'address',
-                'label' => 'LBL_SHIPPING_ADDRESS',
-                'fields' => 
-                array (
-                  0 => 
-                  array (
-                    'name' => 'shipping_address_street',
-                    'css_class' => 'address_street',
-                    'placeholder' => 'LBL_SHIPPING_ADDRESS_STREET',
-                  ),
-                  1 => 
-                  array (
-                    'name' => 'shipping_address_city',
-                    'css_class' => 'address_city',
-                    'placeholder' => 'LBL_SHIPPING_ADDRESS_CITY',
-                  ),
-                  2 => 
-                  array (
-                    'name' => 'shipping_address_state',
-                    'css_class' => 'address_state',
-                    'placeholder' => 'LBL_SHIPPING_ADDRESS_STATE',
-                  ),
-                  3 => 
-                  array (
-                    'name' => 'shipping_address_postalcode',
-                    'css_class' => 'address_zip',
-                    'placeholder' => 'LBL_SHIPPING_ADDRESS_POSTALCODE',
-                  ),
-                  4 => 
-                  array (
-                    'name' => 'shipping_address_country',
-                    'css_class' => 'address_country',
-                    'placeholder' => 'LBL_SHIPPING_ADDRESS_COUNTRY',
-                  ),
-                  5 => 
-                  array (
-                    'name' => 'copy',
-                    'label' => 'NTC_COPY_BILLING_ADDRESS',
-                    'type' => 'copy',
-                    'mapping' => 
-                    array (
-                      'billing_address_street' => 'shipping_address_street',
-                      'billing_address_city' => 'shipping_address_city',
-                      'billing_address_state' => 'shipping_address_state',
-                      'billing_address_postalcode' => 'shipping_address_postalcode',
-                      'billing_address_country' => 'shipping_address_country',
-                    ),
-                  ),
-                ),
+                'name' => 'client_name_as_appears_c',
+                'label' => 'LBL_CLIENT_NAME_AS_APPEARS',
               ),
               4 => 
               array (
                 'name' => 'description',
-                'span' => 6,
-              ),
-              5 => 
-              array (
-                'name' => 'client_name_as_appears_c',
-                'label' => 'LBL_CLIENT_NAME_AS_APPEARS',
-                'span' => 6,
-              ),
-              6 => 
-              array (
-                'name' => 'rrcom_commissions_accounts_1_name',
+                'span' => 12,
               ),
             ),
           ),
@@ -298,7 +243,7 @@ array (
             'labelsOnTop' => true,
             'placeholders' => true,
             'newTab' => false,
-            'panelDefault' => 'expanded',
+            'panelDefault' => 'collapsed',
             'fields' => 
             array (
               0 => 

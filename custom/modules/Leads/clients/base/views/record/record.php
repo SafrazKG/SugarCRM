@@ -237,42 +237,50 @@ array (
               ),
               2 => 
               array (
+                'name' => 'lead_time_zone_c',
+                'label' => 'LBL_LEAD_TIME_ZONE',
+              ),
+              3 => 
+              array (
+              ),
+              4 => 
+              array (
                 'name' => 'disposition_type_c',
                 'label' => 'LBL_DISPOSITION_TYPE',
               ),
-              3 => 
+              5 => 
               array (
                 'name' => 'status',
                 'type' => 'status',
               ),
-              4 => 
+              6 => 
               array (
                 'name' => 'disposition_c',
                 'label' => 'LBL_DISPOSITION',
               ),
-              5 => 
+              7 => 
               array (
                 'name' => 'phone_home',
                 'comment' => 'Home phone number of the contact',
                 'label' => 'LBL_HOME_PHONE',
               ),
-              6 => 
+              8 => 
               array (
                 'name' => 'sub_disposition_c',
                 'label' => 'LBL_SUB_DISPOSITION',
               ),
-              7 => 
+              9 => 
               array (
                 'name' => 'phone_other',
                 'comment' => 'Other phone number for the contact',
                 'label' => 'LBL_OTHER_PHONE',
               ),
-              8 => 
+              10 => 
               array (
                 'name' => 'other_please_specify_c',
                 'label' => 'LBL_OTHER_PLEASE_SPECIFY',
               ),
-              9 => 
+              11 => 
               array (
                 'name' => 'email',
               ),

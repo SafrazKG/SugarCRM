@@ -18,3 +18,7 @@ $mod_strings['LBL_RELATIONSHIP_D'] = 'Relationship ';
 $mod_strings['LBL_RELATIONSHIP_STATUS'] = 'Relationship Status';
 $mod_strings['LBL_PRIMARY_ADDRESS'] = 'Home Address';
 $mod_strings['LBL_ALT_ADDRESS'] = 'Secondary Address';
+$mod_strings['LBL_CONTACT_TYPE'] = 'Contact Type';
+$mod_strings['LBL_POSITION'] = 'Position';
+$mod_strings['LBL_SSN'] = 'SSN';
+$mod_strings['LBL_PAYPAL_EMAIL'] = 'Paypal Email';
