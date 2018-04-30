@@ -89,7 +89,7 @@ trait AvailableSlotsTrait {
             $joins .= "LEFT JOIN users_rrapt_calendar_3_c ON (users_rrapt_calendar_3_c.deleted=0 AND users_rrapt_calendar_3_c.users_rrapt_calendar_3rrapt_calendar_idb=Calendar.id) LEFT JOIN users users3 ON (users3.deleted=0 AND users3.id=users_rrapt_calendar_3_c.users_rrapt_calendar_3users_ida) ";
         }
         $res = array();
-        $q = $db->query("SELECT ".$fields." FROM rrapt_calendar Calendar INNER JOIN rrapt_calendar_cstm Calendar_cstm ON (Calendar_cstm.id_c=Calendar.id) ".$joins." WHERE Calendar.deleted=0 AND Calendar_cstm.date_field_c='".$db->quote($date." ".$this->timeToDbTime($time, $date))."' AND Calendar_cstm.product_c='".$product."'");
+        $q = $db->query("SELECT ".$fields." FROM rrapt_calendar Calendar INNER JOIN rrapt_calendar_cstm Calendar_cstm ON (Calendar_cstm.id_c=Calendar.id) ".$joins." WHERE Calendar.deleted=0 AND Calendar_cstm.disposition_c IN ('Set', 'Confirmed') AND Calendar_cstm.date_field_c='".$db->quote($date." ".$this->timeToDbTime($time, $date))."' AND Calendar_cstm.product_c='".$product."'");
         $dt = SugarDateTime::createFromFormat('Y-m-d gA', $date." ".$time, new DateTimeZone($GLOBALS['current_user']->getPreference('timezone')));
         $dbtime = $dt->asDb();
         $now = SugarDateTime::createFromFormat("Y-m-d H:i:s", date("Y-m-d H:i:s"));

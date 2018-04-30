@@ -142,6 +142,9 @@ class CalendarFilterApi extends FilterApi {
     
     private function listForListView($api, $args) {
         // if we have filters on related fields we need to add group by
+        if (!isset($args['view']) || $args['view']!='subpanel') {
+            $args['filter'][] = array('disposition_c' => array('$in' => array('Set', 'Confirmed')));
+        }
         if (!empty($args['q'])) {
             if (!empty($args['filter']) || !empty($args['filter_id']) || !empty($args['deleted'])) {
                 throw new SugarApiExceptionInvalidParameter();
