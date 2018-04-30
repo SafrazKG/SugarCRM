@@ -12,10 +12,10 @@
                             var dateonly = date.format('Y-MM-DD');
                             switch (notification.type) {
                                 case 1:
-                                    messages.push("Primary fronter is inactive. You have 10 minutes left to assign secondary fronter on appointment: <a href='#RRAPT_Calendar/date/"+dateonly+"'>"+notification.name+"</a>");
+                                    messages.push("Warning, the appointment with <a href='#RRAPT_Calendar/date/"+dateonly+"'>"+notification.name+"</a> is scheduled to take place in 20 minutes time and the assigned fronter is currently inactive.");
                                     break;
                                 case 2:
-                                    messages.push("You have 5 minutes left to confirm appointment: <a href='#RRAPT_Calendar/date/"+dateonly+"'>"+notification.name+"</a>");
+                                    messages.push("Warning, the appointment with <a href='#RRAPT_Calendar/date/"+dateonly+"'>"+notification.name+"</a> is scheduled to take place in 10 minutes time and has not yet been confirmed.");
                                     break;
                             }
                         }

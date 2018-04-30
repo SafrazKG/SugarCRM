@@ -40,7 +40,7 @@ class ActivityApi extends SugarApi {
             $forDb10 = $now->asDb();
             $now->add(new DateInterval('PT10M'));
             $forDb20 = $now->asDb();
-            $q = $db->query("SELECT Calendar.name, Calendar.assigned_user_id, Calendar_cstm.date_field_c FROM rrapt_calendar Calendar INNER JOIN rrapt_calendar_cstm Calendar_cstm ON (Calendar_cstm.id_c=Calendar.id) LEFT JOIN users ON (users.deleted=0 AND users.id=Calendar.assigned_user_id) LEFT JOIN users_cstm ON (users_cstm.id_c=users.id) WHERE Calendar.deleted=0 AND (date_field_c='".$db->quote($forDb10)."' OR date_field_c='".$db->quote($forDb20)."')");
+            $q = $db->query("SELECT Calendar.name, Calendar.assigned_user_id, Calendar_cstm.date_field_c FROM rrapt_calendar Calendar INNER JOIN rrapt_calendar_cstm Calendar_cstm ON (Calendar_cstm.id_c=Calendar.id) LEFT JOIN users ON (users.deleted=0 AND users.id=Calendar.assigned_user_id) LEFT JOIN users_cstm ON (users_cstm.id_c=users.id) WHERE Calendar.deleted=0 AND Calendar_cstm.disposition_c IN ('Set', 'Confirmed') AND (date_field_c='".$db->quote($forDb10)."' OR date_field_c='".$db->quote($forDb20)."')");
             while ($row = $db->fetchByAssoc($q)) {
                 if ($row['date_field_c']==$forDb20) {
                     if (!isUserActive($row)) {
