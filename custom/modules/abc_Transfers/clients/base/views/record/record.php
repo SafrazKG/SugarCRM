@@ -251,6 +251,22 @@ array (
               17 => 
               array (
               ),
+              18 => 
+              array (
+                'name' => 'disposition_type_c',
+                'label' => 'LBL_DISPOSITION_TYPE',
+              ),
+              19 => 
+              array (
+                'name' => 'disposition_c',
+                'label' => 'LBL_DISPOSITION',
+              ),
+              20 => 
+              array (
+                'name' => 'disposition_note_c',
+                'label' => 'LBL_DISPOSITION_NOTE',
+                'span' => 12,
+              ),
             ),
           ),
           2 => 
@@ -520,85 +536,20 @@ array (
                 'name' => 'divorced_c',
                 'label' => 'LBL_DIVORCED',
               ),
+              24 => 
+              array (
+                'name' => 'deed_or_rtu_c',
+                'label' => 'LBL_DEED_OR_RTU',
+              ),
+              25 => 
+              array (
+              ),
             ),
           ),
           5 => 
           array (
-            'newTab' => true,
-            'panelDefault' => 'expanded',
-            'name' => 'LBL_RECORDVIEW_PANEL2',
-            'label' => 'LBL_RECORDVIEW_PANEL2',
-            'columns' => 2,
-            'labelsOnTop' => 1,
-            'placeholders' => 1,
-            'fields' => 
-            array (
-              0 => 
-              array (
-                'name' => 'status_c',
-                'label' => 'LBL_STATUS',
-              ),
-              1 => 
-              array (
-                'name' => 'accounts_abc_transfers_1_name',
-                'label' => 'LBL_ACCOUNTS_ABC_TRANSFERS_1_FROM_ACCOUNTS_TITLE',
-              ),
-              2 => 
-              array (
-                'name' => 'abc_transfers_abc_estoppels_1_name',
-                'label' => 'LBL_ABC_TRANSFERS_ABC_ESTOPPELS_1_FROM_ABC_ESTOPPELS_TITLE',
-              ),
-              3 => 
-              array (
-                'name' => 'estoppel_status1_c',
-                'label' => 'LBL_ESTOPPEL_STATUS1',
-              ),
-              4 => 
-              array (
-                'name' => 'abc_transfers_abc_inventories_1_name',
-                'label' => 'LBL_ABC_TRANSFERS_ABC_INVENTORIES_1_FROM_ABC_INVENTORIES_TITLE',
-              ),
-              5 => 
-              array (
-                'name' => 'inventory_status1_c',
-                'label' => 'LBL_INVENTORY_STATUS1',
-              ),
-              6 => 
-              array (
-                'name' => 'abc_transfers_abc_deedbacks_1_name',
-                'label' => 'LBL_ABC_TRANSFERS_ABC_DEEDBACKS_1_FROM_ABC_DEEDBACKS_TITLE',
-              ),
-              7 => 
-              array (
-                'name' => 'deedback_status1_c',
-                'label' => 'LBL_DEEDBACK_STATUS1',
-              ),
-              8 => 
-              array (
-                'name' => 'doc_date_c',
-                'label' => 'LBL_DOC_DATE',
-              ),
-              9 => 
-              array (
-                'name' => 'est_date_c',
-                'label' => 'LBL_EST_DATE',
-              ),
-              10 => 
-              array (
-                'name' => 'trf_date_c',
-                'label' => 'LBL_TRF_DATE',
-              ),
-              11 => 
-              array (
-                'name' => 'closed_date_c',
-                'label' => 'LBL_CLOSED_DATE',
-              ),
-            ),
-          ),
-          6 => 
-          array (
             'newTab' => false,
-            'panelDefault' => 'expanded',
+            'panelDefault' => 'collapsed',
             'name' => 'LBL_RECORDVIEW_PANEL1',
             'label' => 'LBL_RECORDVIEW_PANEL1',
             'columns' => 2,
@@ -608,18 +559,10 @@ array (
             array (
               0 => 
               array (
-                'name' => 'deed_or_rtu_c',
-                'label' => 'LBL_DEED_OR_RTU',
-              ),
-              1 => 
-              array (
-              ),
-              2 => 
-              array (
                 'name' => 'description',
                 'span' => 12,
               ),
-              3 => 
+              1 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
@@ -643,7 +586,7 @@ array (
                   ),
                 ),
               ),
-              4 => 
+              2 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,
@@ -667,8 +610,69 @@ array (
                   ),
                 ),
               ),
-              5 => 'assigned_user_name',
-              6 => 'team_name',
+              3 => 'assigned_user_name',
+              4 => 'team_name',
+            ),
+          ),
+          6 => 
+          array (
+            'newTab' => true,
+            'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL2',
+            'label' => 'LBL_RECORDVIEW_PANEL2',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'status_c',
+                'label' => 'LBL_STATUS',
+              ),
+              1 => 
+              array (
+                'name' => 'accounts_abc_transfers_1_name',
+                'label' => 'LBL_ACCOUNTS_ABC_TRANSFERS_1_FROM_ACCOUNTS_TITLE',
+              ),
+              2 => 
+              array (
+                'name' => 'estoppel_status1_c',
+                'label' => 'LBL_ESTOPPEL_STATUS1',
+                'span' => 12,
+              ),
+              3 => 
+              array (
+                'name' => 'inventory_status1_c',
+                'label' => 'LBL_INVENTORY_STATUS1',
+                'span' => 12,
+              ),
+              4 => 
+              array (
+                'name' => 'deedback_status1_c',
+                'label' => 'LBL_DEEDBACK_STATUS1',
+                'span' => 12,
+              ),
+              5 => 
+              array (
+                'name' => 'doc_date_c',
+                'label' => 'LBL_DOC_DATE',
+              ),
+              6 => 
+              array (
+                'name' => 'est_date_c',
+                'label' => 'LBL_EST_DATE',
+              ),
+              7 => 
+              array (
+                'name' => 'trf_date_c',
+                'label' => 'LBL_TRF_DATE',
+              ),
+              8 => 
+              array (
+                'name' => 'closed_date_c',
+                'label' => 'LBL_CLOSED_DATE',
+              ),
             ),
           ),
         ),

@@ -23,3 +23,6 @@ $mod_strings['LBL_POSITION'] = 'Position';
 $mod_strings['LBL_SSN'] = 'SSN';
 $mod_strings['LBL_PAYPAL_EMAIL'] = 'Paypal Email';
 $mod_strings['LBL_CONSYS_CRM_ID_C'] = 'consys crm id c';
+$mod_strings['LBL_TIMESHARE_INVENTORY_BUYER_ID'] = 'Timeshare Inventory Buyer ID';
+$mod_strings['LBL_BUYER_POSITION'] = 'Buyer Position';
+$mod_strings['LBL_OWNERSHIP_TYPE'] = 'Ownership Type';

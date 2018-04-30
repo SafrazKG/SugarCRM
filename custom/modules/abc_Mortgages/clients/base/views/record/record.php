@@ -443,6 +443,22 @@ array (
                 'label' => 'LBL_NAME_AS_IT_APPEARS',
                 'span' => 12,
               ),
+              47 => 
+              array (
+                'name' => 'disposition_type_c',
+                'label' => 'LBL_DISPOSITION_TYPE',
+              ),
+              48 => 
+              array (
+                'name' => 'disposition_c',
+                'label' => 'LBL_DISPOSITION',
+              ),
+              49 => 
+              array (
+                'name' => 'disposition_note_c',
+                'label' => 'LBL_DISPOSITION_NOTE',
+                'span' => 12,
+              ),
             ),
           ),
           2 => 

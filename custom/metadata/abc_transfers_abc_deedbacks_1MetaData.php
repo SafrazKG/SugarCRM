@@ -1,7 +1,7 @@
 <?php
-// created: 2018-03-16 13:32:39
+// created: 2018-04-27 09:22:44
 $dictionary["abc_transfers_abc_deedbacks_1"] = array (
-  'true_relationship_type' => 'one-to-one',
+  'true_relationship_type' => 'one-to-many',
   'from_studio' => true,
   'relationships' => 
   array (
@@ -78,6 +78,15 @@ $dictionary["abc_transfers_abc_deedbacks_1"] = array (
       array (
         0 => 'abc_transfers_abc_deedbacks_1abc_deedbacks_idb',
         1 => 'deleted',
+      ),
+    ),
+    3 => 
+    array (
+      'name' => 'abc_transfers_abc_deedbacks_1_alt',
+      'type' => 'alternate_key',
+      'fields' => 
+      array (
+        0 => 'abc_transfers_abc_deedbacks_1abc_deedbacks_idb',
       ),
     ),
   ),

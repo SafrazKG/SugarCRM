@@ -281,6 +281,10 @@ array (
               11 => 
               array (
               ),
+              12 => 
+              array (
+                'name' => 'abc_inventories_contacts_1_name',
+              ),
             ),
           ),
           2 => 

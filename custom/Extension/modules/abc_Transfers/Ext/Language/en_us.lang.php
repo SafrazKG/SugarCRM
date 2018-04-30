@@ -97,3 +97,6 @@ $mod_strings['LBL_TRANSFER_EDOC'] = 'Transfer EDOC';
 $mod_strings['LBL_ESTOPPEL_COMPLETION'] = 'Estoppel  Completion';
 $mod_strings['LBL_INVENTORY_COMPLETION'] = 'Inventory Completion';
 $mod_strings['LBL_TRANSFER_COMPLETION'] = 'Transfer Completion';
+$mod_strings['LBL_DISPOSITION_TYPE'] = 'Disposition Type';
+$mod_strings['LBL_DISPOSITION'] = 'Disposition';
+$mod_strings['LBL_DISPOSITION_NOTE'] = 'Disposition Note';

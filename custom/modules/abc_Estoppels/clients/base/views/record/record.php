@@ -172,133 +172,133 @@ array (
               array (
                 'name' => 'status_c',
                 'label' => 'LBL_STATUS',
+                'span' => 12,
               ),
               1 => 
-              array (
-                'name' => 'abc_transfers_abc_estoppels_1_name',
-                'label' => 'LBL_ABC_TRANSFERS_ABC_ESTOPPELS_1_FROM_ABC_TRANSFERS_TITLE',
-              ),
-              2 => 
               array (
                 'name' => 'resort_family_c',
                 'label' => 'LBL_RESORT_FAMILY',
               ),
-              3 => 
+              2 => 
               array (
                 'name' => 'resort_name_c',
                 'label' => 'LBL_RESORT_NAME',
               ),
-              4 => 
+              3 => 
               array (
                 'name' => 'resort_address_street_c',
                 'label' => 'LBL_RESORT_ADDRESS_STREET',
               ),
-              5 => 
+              4 => 
               array (
               ),
-              6 => 
+              5 => 
               array (
                 'name' => 'resort_address_city_c',
                 'label' => 'LBL_RESORT_ADDRESS_CITY',
               ),
-              7 => 
+              6 => 
               array (
               ),
-              8 => 
+              7 => 
               array (
                 'name' => 'resort_address_state_c',
                 'label' => 'LBL_RESORT_ADDRESS_STATE',
               ),
-              9 => 
+              8 => 
               array (
               ),
-              10 => 
+              9 => 
               array (
                 'name' => 'resort_address_postalcode_c',
                 'label' => 'LBL_RESORT_ADDRESS_POSTALCODE',
               ),
-              11 => 
+              10 => 
               array (
               ),
-              12 => 
+              11 => 
               array (
                 'name' => 'resort_address_country_c',
                 'label' => 'LBL_RESORT_ADDRESS_COUNTRY',
               ),
-              13 => 
+              12 => 
               array (
               ),
-              14 => 
+              13 => 
               array (
                 'name' => 'name_on_deed_ownership_c',
                 'label' => 'LBL_NAME_ON_DEED_OWNERSHIP',
               ),
-              15 => 
+              14 => 
               array (
               ),
-              16 => 
+              15 => 
               array (
                 'name' => 'deed_or_rtu_c',
                 'label' => 'LBL_DEED_OR_RTU',
               ),
-              17 => 
+              16 => 
               array (
                 'name' => 'rtu_expiration_c',
                 'label' => 'LBL_RTU_EXPIRATION',
               ),
-              18 => 
+              17 => 
               array (
                 'name' => 'usage_type_c',
                 'label' => 'LBL_USAGE_TYPE',
               ),
-              19 => 
+              18 => 
               array (
                 'name' => 'usage_interval_c',
                 'label' => 'LBL_USAGE_INTERVAL',
               ),
-              20 => 
+              19 => 
               array (
                 'name' => 'first_year_available_c',
                 'label' => 'LBL_FIRST_YEAR_AVAILABLE',
                 'span' => 12,
               ),
-              21 => 
+              20 => 
               array (
                 'name' => 'black_out_periods_c',
                 'label' => 'LBL_BLACK_OUT_PERIODS',
               ),
-              22 => 
+              21 => 
               array (
                 'name' => 'check_in_days_c',
                 'label' => 'LBL_CHECK_IN_DAYS',
               ),
-              23 => 
+              22 => 
               array (
                 'name' => 'fixed_week_c',
                 'label' => 'LBL_FIXED_WEEK',
               ),
-              24 => 
+              23 => 
               array (
                 'name' => 'floating_weeks_c',
                 'label' => 'LBL_FLOATING_WEEKS',
               ),
-              25 => 
+              24 => 
               array (
                 'name' => 'season_c',
                 'label' => 'LBL_SEASON',
               ),
-              26 => 
+              25 => 
               array (
                 'name' => 'deeded_week_c',
                 'label' => 'LBL_DEEDED_WEEK',
               ),
-              27 => 
+              26 => 
               array (
                 'name' => 'number_of_points_c',
                 'label' => 'LBL_NUMBER_OF_POINTS',
               ),
+              27 => 
+              array (
+              ),
               28 => 
               array (
+                'name' => 'abc_transfers_abc_estoppels_1_name',
               ),
             ),
           ),

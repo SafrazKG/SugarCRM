@@ -109,3 +109,6 @@ $mod_strings['LBL_SIX_MONTHS_MARK'] = '6 Months Mark';
 $mod_strings['LBL_TWELVE_MONTHS_MARK'] = '12 Months Mark';
 $mod_strings['LBL_ACTUAL_TFDB_DATE'] = 'Actual TFDB date';
 $mod_strings['LBL_TFDB_EDOC'] = 'TFDB EDOC';
+$mod_strings['LBL_DISPOSITION_TYPE'] = 'Disposition Type';
+$mod_strings['LBL_DISPOSITION'] = 'Disposition';
+$mod_strings['LBL_DISPOSITION_NOTE'] = 'Disposition Note';

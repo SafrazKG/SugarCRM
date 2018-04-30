@@ -201,16 +201,24 @@ array (
               array (
                 'name' => 'time_est_c',
                 'label' => 'LBL_TIME_EST',
+                'span' => 12,
               ),
               7 => 
               array (
-                'name' => 'status_c',
-                'label' => 'LBL_STATUS',
+                'name' => 'description',
+                'span' => 6,
               ),
               8 => 
               array (
-                'name' => 'description',
-                'span' => 12,
+                'name' => 'abc_transfers_rrdis_dispositions_1_name',
+                'span' => 6,
+              ),
+              9 => 
+              array (
+                'name' => 'abc_mortgages_rrdis_dispositions_1_name',
+              ),
+              10 => 
+              array (
               ),
             ),
           ),

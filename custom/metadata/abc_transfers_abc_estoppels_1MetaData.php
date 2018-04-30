@@ -1,7 +1,7 @@
 <?php
-// created: 2018-03-16 13:33:01
+// created: 2018-04-27 09:22:26
 $dictionary["abc_transfers_abc_estoppels_1"] = array (
-  'true_relationship_type' => 'one-to-one',
+  'true_relationship_type' => 'one-to-many',
   'from_studio' => true,
   'relationships' => 
   array (
@@ -78,6 +78,15 @@ $dictionary["abc_transfers_abc_estoppels_1"] = array (
       array (
         0 => 'abc_transfers_abc_estoppels_1abc_estoppels_idb',
         1 => 'deleted',
+      ),
+    ),
+    3 => 
+    array (
+      'name' => 'abc_transfers_abc_estoppels_1_alt',
+      'type' => 'alternate_key',
+      'fields' => 
+      array (
+        0 => 'abc_transfers_abc_estoppels_1abc_estoppels_idb',
       ),
     ),
   ),

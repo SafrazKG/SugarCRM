@@ -170,139 +170,30 @@ array (
             array (
               0 => 
               array (
-                'name' => 'abc_transfers_abc_inventories_1_name',
-              ),
-              1 => 
-              array (
                 'name' => 'status_c',
                 'label' => 'LBL_STATUS',
+                'span' => 12,
               ),
-              2 => 
+              1 => 
               array (
                 'name' => 'property_id_c',
                 'label' => 'LBL_PROPERTY_ID',
               ),
-              3 => 
+              2 => 
               array (
                 'name' => 'resort_c',
                 'label' => 'LBL_RESORT',
               ),
-            ),
-          ),
-          2 => 
-          array (
-            'name' => 'panel_hidden',
-            'label' => 'LBL_SHOW_MORE',
-            'hide' => true,
-            'columns' => 2,
-            'labelsOnTop' => true,
-            'placeholders' => true,
-            'newTab' => false,
-            'panelDefault' => 'expanded',
-            'fields' => 
-            array (
-              0 => 
-              array (
-                'name' => 'abc_inventories_contacts_1_name',
-                'label' => 'LBL_ABC_INVENTORIES_CONTACTS_1_FROM_CONTACTS_TITLE',
-              ),
-              1 => 
-              array (
-                'name' => 'full_name_c',
-                'label' => 'LBL_FULL_NAME',
-              ),
-              2 => 
-              array (
-                'name' => 'position_c',
-                'label' => 'LBL_POSITION',
-              ),
               3 => 
               array (
-                'name' => 'ssn_c',
-                'label' => 'LBL_SSN',
+                'name' => 'abc_transfers_abc_inventories_1_name',
               ),
               4 => 
               array (
-                'name' => 'email_c',
-                'label' => 'LBL_EMAIL',
-              ),
-              5 => 
-              array (
-                'name' => 'paypal_email_c',
-                'label' => 'LBL_PAYPAL_EMAIL',
-              ),
-              6 => 
-              array (
-                'name' => 'phone_1_c',
-                'label' => 'LBL_PHONE_1',
-              ),
-              7 => 
-              array (
-                'name' => 'phone_2_c',
-                'label' => 'LBL_PHONE_2',
-              ),
-              8 => 
-              array (
-                'name' => 'ownership_type_c',
-                'label' => 'LBL_OWNERSHIP_TYPE',
-              ),
-              9 => 
-              array (
-                'name' => 'actions_c',
-                'label' => 'LBL_ACTIONS',
-              ),
-              10 => 
-              array (
-                'name' => 'timeshare_inventory_buyer_id_c',
-                'label' => 'LBL_TIMESHARE_INVENTORY_BUYER_ID',
-              ),
-              11 => 
-              array (
-              ),
-              12 => 
-              array (
-                'name' => 'address_street_c',
-                'studio' => 'visible',
-                'label' => 'LBL_ADDRESS_STREET',
-              ),
-              13 => 
-              array (
-              ),
-              14 => 
-              array (
-                'name' => 'address_city_c',
-                'label' => 'LBL_ADDRESS_CITY',
-              ),
-              15 => 
-              array (
-              ),
-              16 => 
-              array (
-                'name' => 'address_state_c',
-                'label' => 'LBL_ADDRESS_STATE',
-              ),
-              17 => 
-              array (
-              ),
-              18 => 
-              array (
-                'name' => 'address_postalcode_c',
-                'label' => 'LBL_ADDRESS_POSTALCODE',
-              ),
-              19 => 
-              array (
-              ),
-              20 => 
-              array (
-                'name' => 'address_country_c',
-                'label' => 'LBL_ADDRESS_COUNTRY',
-              ),
-              21 => 
-              array (
               ),
             ),
           ),
-          3 => 
+          2 => 
           array (
             'newTab' => false,
             'panelDefault' => 'expanded',
@@ -416,7 +307,7 @@ array (
               ),
             ),
           ),
-          4 => 
+          3 => 
           array (
             'newTab' => false,
             'panelDefault' => 'collapsed',

@@ -170,31 +170,31 @@ array (
             array (
               0 => 
               array (
-                'name' => 'abc_transfers_abc_deedbacks_1_name',
-                'label' => 'LBL_ABC_TRANSFERS_ABC_DEEDBACKS_1_FROM_ABC_TRANSFERS_TITLE',
-              ),
-              1 => 
-              array (
                 'name' => 'property_id_c',
                 'label' => 'LBL_PROPERTY_ID',
+                'span' => 12,
               ),
-              2 => 
+              1 => 
               array (
                 'name' => 'resort_family_c',
                 'label' => 'LBL_RESORT_FAMILY',
               ),
-              3 => 
+              2 => 
               array (
               ),
-              4 => 
+              3 => 
               array (
                 'name' => 'type_a_c',
                 'label' => 'LBL_TYPE_A',
               ),
-              5 => 
+              4 => 
               array (
                 'name' => 'status_c',
                 'label' => 'LBL_STATUS',
+              ),
+              5 => 
+              array (
+                'name' => 'abc_transfers_abc_deedbacks_1_name',
               ),
             ),
           ),

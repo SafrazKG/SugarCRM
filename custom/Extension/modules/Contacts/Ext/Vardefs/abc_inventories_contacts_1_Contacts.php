@@ -1,5 +1,5 @@
 <?php
-// created: 2018-03-27 04:59:05
+// created: 2018-04-27 09:23:44
 $dictionary["Contact"]["fields"]["abc_inventories_contacts_1"] = array (
   'name' => 'abc_inventories_contacts_1',
   'type' => 'link',
@@ -7,8 +7,10 @@ $dictionary["Contact"]["fields"]["abc_inventories_contacts_1"] = array (
   'source' => 'non-db',
   'module' => 'abc_Inventories',
   'bean_name' => 'abc_Inventories',
-  'vname' => 'LBL_ABC_INVENTORIES_CONTACTS_1_FROM_ABC_INVENTORIES_TITLE',
+  'side' => 'right',
+  'vname' => 'LBL_ABC_INVENTORIES_CONTACTS_1_FROM_CONTACTS_TITLE',
   'id_name' => 'abc_inventories_contacts_1abc_inventories_ida',
+  'link-type' => 'one',
 );
 $dictionary["Contact"]["fields"]["abc_inventories_contacts_1_name"] = array (
   'name' => 'abc_inventories_contacts_1_name',
@@ -26,14 +28,14 @@ $dictionary["Contact"]["fields"]["abc_inventories_contacts_1abc_inventories_ida"
   'name' => 'abc_inventories_contacts_1abc_inventories_ida',
   'type' => 'id',
   'source' => 'non-db',
-  'vname' => 'LBL_ABC_INVENTORIES_CONTACTS_1_FROM_ABC_INVENTORIES_TITLE_ID',
+  'vname' => 'LBL_ABC_INVENTORIES_CONTACTS_1_FROM_CONTACTS_TITLE_ID',
   'id_name' => 'abc_inventories_contacts_1abc_inventories_ida',
   'link' => 'abc_inventories_contacts_1',
   'table' => 'abc_inventories',
   'module' => 'abc_Inventories',
   'rname' => 'id',
   'reportable' => false,
-  'side' => 'left',
+  'side' => 'right',
   'massupdate' => false,
   'duplicate_merge' => 'disabled',
   'hideacl' => true,

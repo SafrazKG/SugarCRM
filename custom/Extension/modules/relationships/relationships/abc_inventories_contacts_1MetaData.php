@@ -1,7 +1,7 @@
 <?php
-// created: 2018-03-27 04:59:05
+// created: 2018-04-27 09:23:44
 $dictionary["abc_inventories_contacts_1"] = array (
-  'true_relationship_type' => 'one-to-one',
+  'true_relationship_type' => 'one-to-many',
   'from_studio' => true,
   'relationships' => 
   array (
@@ -78,6 +78,15 @@ $dictionary["abc_inventories_contacts_1"] = array (
       array (
         0 => 'abc_inventories_contacts_1contacts_idb',
         1 => 'deleted',
+      ),
+    ),
+    3 => 
+    array (
+      'name' => 'abc_inventories_contacts_1_alt',
+      'type' => 'alternate_key',
+      'fields' => 
+      array (
+        0 => 'abc_inventories_contacts_1contacts_idb',
       ),
     ),
   ),

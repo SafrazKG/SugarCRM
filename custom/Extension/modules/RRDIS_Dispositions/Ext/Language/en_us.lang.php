@@ -11,3 +11,7 @@ $mod_strings['LBL_MODIFIED_BY_USER'] = 'Modified By User';
 $mod_strings['LBL_DISPOSITION_TYPE'] = 'Disposition Type';
 $mod_strings['LBL_SUB_DISPOSITION'] = 'Sub Disposition';
 $mod_strings['LBL_CONSYS_CRM_ID_C'] = 'consys crm id c';
+$mod_strings['LBL_SALES_OR_ADMIN_DISPOSITION'] = 'Sales or Admin Disposition';
+$mod_strings['LBL_DISPOSITION_NOTE'] = 'Disposition Note';
+$mod_strings['LBL_ADMIN_DISPOSITION_TYPE'] = 'Admin Disposition Type';
+$mod_strings['LBL_ADMIN_DISPOSITION'] = 'Admin Disposition';

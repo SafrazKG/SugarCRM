@@ -99,3 +99,4 @@ $mod_strings['LBL_VERIFICATION_OFFICER'] = 'Verification Officer';
 $mod_strings['LBL_ASSIGNED_TO'] = 'Assigned to Fronter';
 $mod_strings['LBL_RESORT_NAME'] = 'Resort Name';
 $mod_strings['LBL_CONSYS_CRM_ID_C'] = 'Consys CRM ID';
+$mod_strings['LBL_DISPOSITION_NOTE'] = 'Disposition Note';

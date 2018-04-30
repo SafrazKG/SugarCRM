@@ -1,5 +1,5 @@
 <?php
-// created: 2018-03-16 13:32:39
+// created: 2018-04-27 09:22:44
 $dictionary["abc_Deedbacks"]["fields"]["abc_transfers_abc_deedbacks_1"] = array (
   'name' => 'abc_transfers_abc_deedbacks_1',
   'type' => 'link',
@@ -7,8 +7,10 @@ $dictionary["abc_Deedbacks"]["fields"]["abc_transfers_abc_deedbacks_1"] = array 
   'source' => 'non-db',
   'module' => 'abc_Transfers',
   'bean_name' => 'abc_Transfers',
-  'vname' => 'LBL_ABC_TRANSFERS_ABC_DEEDBACKS_1_FROM_ABC_TRANSFERS_TITLE',
+  'side' => 'right',
+  'vname' => 'LBL_ABC_TRANSFERS_ABC_DEEDBACKS_1_FROM_ABC_DEEDBACKS_TITLE',
   'id_name' => 'abc_transfers_abc_deedbacks_1abc_transfers_ida',
+  'link-type' => 'one',
 );
 $dictionary["abc_Deedbacks"]["fields"]["abc_transfers_abc_deedbacks_1_name"] = array (
   'name' => 'abc_transfers_abc_deedbacks_1_name',
@@ -26,14 +28,14 @@ $dictionary["abc_Deedbacks"]["fields"]["abc_transfers_abc_deedbacks_1abc_transfe
   'name' => 'abc_transfers_abc_deedbacks_1abc_transfers_ida',
   'type' => 'id',
   'source' => 'non-db',
-  'vname' => 'LBL_ABC_TRANSFERS_ABC_DEEDBACKS_1_FROM_ABC_TRANSFERS_TITLE_ID',
+  'vname' => 'LBL_ABC_TRANSFERS_ABC_DEEDBACKS_1_FROM_ABC_DEEDBACKS_TITLE_ID',
   'id_name' => 'abc_transfers_abc_deedbacks_1abc_transfers_ida',
   'link' => 'abc_transfers_abc_deedbacks_1',
   'table' => 'abc_transfers',
   'module' => 'abc_Transfers',
   'rname' => 'id',
   'reportable' => false,
-  'side' => 'left',
+  'side' => 'right',
   'massupdate' => false,
   'duplicate_merge' => 'disabled',
   'hideacl' => true,
