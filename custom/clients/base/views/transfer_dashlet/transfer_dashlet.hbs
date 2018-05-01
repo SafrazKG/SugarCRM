@@ -1,0 +1,65 @@
+<div style="padding: 10px">
+    <table class="transfer-dashlet">
+        <tr>
+            <td>
+                <div class="transfer-dashlet-container" style="height: auto">
+                    <p>Docs received date</p>
+                    <p class="transfer-dashlet-date-red">{{ docsReceivedDate }}</p>
+                </div>
+                <div style="padding-left: 10px; margin-top: 5px;">
+                    <p><span class="transfer-dashlet-font-big">{{ daysCount }}</span> days</p>
+                    <p>since docs received</p>
+                </div>
+            </td>
+            <td>
+                <div class="transfer-dashlet-container">
+                    <p>Estoppel EDOC</p>
+                    <p class="transfer-dashlet-date-red">{{ estoppelEdocDate }}</p>
+                    <p>Actual completion</p>
+                    <p>{{ actualDates.estoppelCompletion }}</p>
+                </div>
+            </td>
+            <td>
+                <div class="transfer-dashlet-container">
+                    <p>Estoppel EDOC</p>
+                    <p class="transfer-dashlet-date-red">{{ invetoryDate }}</p>
+                    <p>Actual completion</p>
+                    <p>{{ actualDates.invertoryCompletion }}</p>
+                </div>
+            </td>
+            <td>
+                <div class="transfer-dashlet-container">
+                    <p>Invetory EDOC</p>
+                    <p class="transfer-dashlet-date-red">{{ transferEdocDate }}</p>
+                    <p>Actual completion</p>
+                    <p>{{ actualDates.transferCompletion }}</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="transfer-dashlet-heading">Current stage:</span>
+            </td>
+            <td colspan="3">
+                <span class="transfer-dashlet-font-big">{{ status }}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="transfer-dashlet-heading">Account:</span>
+            </td>
+            <td colspan="3">
+                <span class="transfer-dashlet-font-blue">{{ account }}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="transfer-dashlet-heading">Property:</span>
+            </td>
+            <td colspan="3">
+                <span class="transfer-dashlet-font-blue">{{ property }}</span>
+            </td>
+        </tr>
+    </table>
+</div>
+
