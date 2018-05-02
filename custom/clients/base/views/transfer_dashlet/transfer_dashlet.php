@@ -12,8 +12,7 @@ $viewdefs['base']['view']['transfer_dashlet'] = array(
                     'abc_Transfers'
                 ),
                 'view'   => array(
-                    'record',
-                    'roles/fronter/record'
+                    'record'
                 )
             )
         )

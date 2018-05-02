@@ -13,39 +13,37 @@
             return;
         }
 
-        var self = this;
-
         app.api.call(
             'read',
-            app.api.buildURL('abc_Transfers', 'read', {id : self.model.id}),
+            app.api.buildURL('abc_Transfers', 'read', {id : this.model.id}),
             {},
             {
-                success: function(data) {
-                    self.account          = self.getModelValue(data, 'accounts_abc_transfers_1_name');
-                    self.property         = self.getModelValue(data, 'resort_c');
-                    self.transfer         = self.getModelValue(data, 'name');
-                    self.docsReceivedDate = self.getModelValue(data, 'docs_received_date_c');
-                    self.estoppelEdocDate = self.getModelValue(data, 'estoppel_edoc_c');
-                    self.invetoryDate     = self.getModelValue(data, 'invetory_edoc_c');
-                    self.transferEdocDate = self.getModelValue(data, 'transfer_edoc_c');
-                    self.status           = self.getModelValue(data, 'status_hidden_c');
-                    self.actualDates      = {
-                        estoppelCompletion  : self.getModelValue(data, 'estoppel_completion_c'),
-                        invertoryCompletion : self.getModelValue(data, 'invertory_completion_c'),
-                        transferCompletion  : self.getModelValue(data, 'transfer_completion_c')
+                success: _.bind(function(data) {
+                    this.account          = this.getModelValue(data, 'accounts_abc_transfers_1_name');
+                    this.property         = this.getModelValue(data, 'resort_c');
+                    this.transfer         = this.getModelValue(data, 'name');
+                    this.docsReceivedDate = this.getModelValue(data, 'docs_received_date_c');
+                    this.estoppelEdocDate = this.getModelValue(data, 'estoppel_edoc_c');
+                    this.invetoryDate     = this.getModelValue(data, 'invetory_edoc_c');
+                    this.transferEdocDate = this.getModelValue(data, 'transfer_edoc_c');
+                    this.status           = this.getModelValue(data, 'status_hidden_c');
+                    this.actualDates      = {
+                        estoppelCompletion  : this.getModelValue(data, 'estoppel_completion_c'),
+                        invertoryCompletion : this.getModelValue(data, 'invertory_completion_c'),
+                        transferCompletion  : this.getModelValue(data, 'transfer_completion_c')
                     };
 
                     var date         = new Date();
-                    var receivedDate = new Date(self.docsReceivedDate);
+                    var receivedDate = new Date(this.docsReceivedDate);
                     var msPerDay     = 24 * 3600 * 1000;
-                    self.daysCount   = Math.floor((date - receivedDate) / msPerDay);
+                    this.daysCount   = Math.floor((date - receivedDate) / msPerDay);
 
                     if (isNaN(this.daysCount)) {
-                        self.daysCount = 0;
+                        this.daysCount = 0;
                     }
 
-                    self.render();
-                },
+                    this.render();
+                }, this),
                 error: function() {}
             }
         );
