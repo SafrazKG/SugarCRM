@@ -1,15 +1,15 @@
 <?php
-$viewdefs['base']['view']['transfer_dashlet'] = array(
+$viewdefs['base']['view']['mortgage-dashlet'] = array(
     'dashlets' => array(
         array(
-            'label'       => 'Transfer info',
-            'description' => 'Transfer info Dashlet. Shows current Transfer state and related dates.',
+            'label'       => 'Mortgage info',
+            'description' => 'Mortgage info Dashlet. Shows current Mortgage state and related data.',
             'config'      => array(),
             'preview'     => array(
             ),
             'filter'      => array(
                 'module' => array(
-                    'abc_Transfers'
+                    'abc_Mortgages'
                 ),
                 'view'   => array(
                     'record'

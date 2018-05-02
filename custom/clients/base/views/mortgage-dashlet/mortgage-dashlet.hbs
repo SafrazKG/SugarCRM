@@ -1,0 +1,60 @@
+<div style="padding: 10px">
+    <table class="yellow-dashlet">
+        <tr>
+            <td>
+                <div class="yellow-dashlet-container" style="height: auto">
+                    <p>Welcome Packet Received</p>
+                    <p class="yellow-dashlet-date-red">{{ welcPackRcvDate }}</p>
+                </div>
+                <div style="padding-left: 10px; margin-top: 5px;">
+                    <p><span class="yellow-dashlet-font-big">{{ daysCount }}</span> days</p>
+                    <p>since docs received</p>
+                </div>
+            </td>
+            <td>
+                <div class="yellow-dashlet-container">
+                    <p>6 Months Mark</p>
+                    <p class="yellow-dashlet-date-red">{{ sixMonthsMark }}</p>
+                </div>
+            </td>
+            <td>
+                <div class="yellow-dashlet-container">
+                    <p>12 Months Mark</p>
+                    <p class="yellow-dashlet-date-red">{{ twlMonthsMark }}</p>
+                </div>
+            </td>
+            <td>
+                <div class="yellow-dashlet-container">
+                    <p>TFDB EDOC</p>
+                    <p class="yellow-dashlet-date-red">{{ tfdbEdoc }}</p>
+                    <p>Actual completion</p>
+                    <p>{{ actualTfdbDate }}</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="yellow-dashlet-heading">Current stage:</span>
+            </td>
+            <td colspan="3">
+                <span class="yellow-dashlet-font-big">{{ status }}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="yellow-dashlet-heading">Account:</span>
+            </td>
+            <td colspan="3">
+                <span class="yellow-dashlet-font-blue">{{ account }}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="yellow-dashlet-heading">Property:</span>
+            </td>
+            <td colspan="3">
+                <span class="yellow-dashlet-font-blue">{{ property }}</span>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,36 +1,36 @@
 <div style="padding: 10px">
-    <table class="transfer-dashlet">
+    <table class="yellow-dashlet">
         <tr>
             <td>
-                <div class="transfer-dashlet-container" style="height: auto">
+                <div class="yellow-dashlet-container" style="height: auto">
                     <p>Docs received date</p>
-                    <p class="transfer-dashlet-date-red">{{ docsReceivedDate }}</p>
+                    <p class="yellow-dashlet-date-red">{{ docsReceivedDate }}</p>
                 </div>
                 <div style="padding-left: 10px; margin-top: 5px;">
-                    <p><span class="transfer-dashlet-font-big">{{ daysCount }}</span> days</p>
+                    <p><span class="yellow-dashlet-font-big">{{ daysCount }}</span> days</p>
                     <p>since docs received</p>
                 </div>
             </td>
             <td>
-                <div class="transfer-dashlet-container">
+                <div class="yellow-dashlet-container">
                     <p>Estoppel EDOC</p>
-                    <p class="transfer-dashlet-date-red">{{ estoppelEdocDate }}</p>
+                    <p class="yellow-dashlet-date-red">{{ estoppelEdocDate }}</p>
                     <p>Actual completion</p>
                     <p>{{ actualDates.estoppelCompletion }}</p>
                 </div>
             </td>
             <td>
-                <div class="transfer-dashlet-container">
+                <div class="yellow-dashlet-container">
                     <p>Estoppel EDOC</p>
-                    <p class="transfer-dashlet-date-red">{{ invetoryDate }}</p>
+                    <p class="yellow-dashlet-date-red">{{ invetoryDate }}</p>
                     <p>Actual completion</p>
                     <p>{{ actualDates.invertoryCompletion }}</p>
                 </div>
             </td>
             <td>
-                <div class="transfer-dashlet-container">
+                <div class="yellow-dashlet-container">
                     <p>Invetory EDOC</p>
-                    <p class="transfer-dashlet-date-red">{{ transferEdocDate }}</p>
+                    <p class="yellow-dashlet-date-red">{{ transferEdocDate }}</p>
                     <p>Actual completion</p>
                     <p>{{ actualDates.transferCompletion }}</p>
                 </div>
@@ -38,28 +38,27 @@
         </tr>
         <tr>
             <td>
-                <span class="transfer-dashlet-heading">Current stage:</span>
+                <span class="yellow-dashlet-heading">Current stage:</span>
             </td>
             <td colspan="3">
-                <span class="transfer-dashlet-font-big">{{ status }}</span>
+                <span class="yellow-dashlet-font-big">{{ status }}</span>
             </td>
         </tr>
         <tr>
             <td>
-                <span class="transfer-dashlet-heading">Account:</span>
+                <span class="yellow-dashlet-heading">Account:</span>
             </td>
             <td colspan="3">
-                <span class="transfer-dashlet-font-blue">{{ account }}</span>
+                <span class="yellow-dashlet-font-blue">{{ account }}</span>
             </td>
         </tr>
         <tr>
             <td>
-                <span class="transfer-dashlet-heading">Property:</span>
+                <span class="yellow-dashlet-heading">Property:</span>
             </td>
             <td colspan="3">
-                <span class="transfer-dashlet-font-blue">{{ property }}</span>
+                <span class="yellow-dashlet-font-blue">{{ property }}</span>
             </td>
         </tr>
     </table>
 </div>
-
