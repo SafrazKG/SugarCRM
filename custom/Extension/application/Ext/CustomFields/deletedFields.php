@@ -11,3 +11,7 @@ $deleteFields[] = 'abc_Transfersweek_will_use_a_c';
 $deleteFields[] = 'abc_Transfersweek_will_use_b_c';
 $deleteFields[] = 'abc_Transfersweek_will_use_c';
 $deleteFields[] = 'RRDIS_Dispositionsstatus_c';
+$deleteFields[] = 'Leadsdisposition_type_c';
+$deleteFields[] = 'RRDIS_Dispositionsadmin_disposition_c';
+$deleteFields[] = 'RRDIS_Dispositionsadmin_disposition_type_c';
+$deleteFields[] = 'RRDIS_Dispositionssales_or_admin_disposition_c';
