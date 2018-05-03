@@ -101,3 +101,4 @@ $mod_strings['LBL_RESORT_NAME'] = 'Resort Name';
 $mod_strings['LBL_CONSYS_CRM_ID_C'] = 'Consys CRM ID';
 $mod_strings['LBL_DISPOSITION_NOTE'] = 'Disposition Note';
 $mod_strings['LBL_DISPOSITION_TYPE_LEADS'] = 'Disposition Type';
+$mod_strings['LBL_LEADS_RRDIS_DISPOSITIONS_1_FROM_RRDIS_DISPOSITIONS_TITLE'] = 'Sales Dispositions';

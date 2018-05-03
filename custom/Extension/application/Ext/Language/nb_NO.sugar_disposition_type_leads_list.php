@@ -1,5 +1,5 @@
 <?php
- // created: 2018-04-30 07:46:36
+ // created: 2018-05-03 10:41:09
 
 $app_list_strings['disposition_type_leads_list']=array (
   '' => '',
@@ -10,5 +10,4 @@ $app_list_strings['disposition_type_leads_list']=array (
   'Terminal' => 'Terminal',
   'Admin' => 'Admin',
   'Update' => 'Update',
-  'Fronters' => 'Fronters',
 );

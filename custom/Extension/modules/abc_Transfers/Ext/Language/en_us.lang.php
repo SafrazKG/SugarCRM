@@ -172,3 +172,4 @@ $mod_strings['LBL_RECORDVIEW_PANEL8'] = 'New Panel ';
 $mod_strings['LBL_RECORDVIEW_PANEL9'] = 'Inventory Sale Data';
 $mod_strings['LBL_RECORDVIEW_PANEL10'] = 'Deedback';
 $mod_strings['LBL_RECORDVIEW_PANEL11'] = 'Finance';
+$mod_strings['LBL_ABC_TRANSFERS_RRDIS_DISPOSITIONS_1_FROM_RRDIS_DISPOSITIONS_TITLE'] = 'Sales Dispositions';

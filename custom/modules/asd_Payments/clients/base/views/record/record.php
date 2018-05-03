@@ -195,7 +195,28 @@ array (
               ),
               4 => 
               array (
+                'name' => 'accounts_asd_payments_1_name',
+              ),
+              5 => 
+              array (
+              ),
+              6 => 
+              array (
                 'name' => 'abc_transfers_asd_payments_1_name',
+              ),
+              7 => 
+              array (
+                'name' => 'abc_mortgages_asd_payments_1_name',
+              ),
+              8 => 
+              array (
+                'name' => 'payment_source_c',
+                'label' => 'LBL_PAYMENT_SOURCE',
+              ),
+              9 => 
+              array (
+                'name' => 'payment_product_type_c',
+                'label' => 'LBL_PAYMENT_PRODUCT_TYPE',
               ),
             ),
           ),

@@ -30,3 +30,6 @@ $mod_strings['LBL_CURRENCY_6'] = 'LBL_CURRENCY';
 $mod_strings['LBL_UNPAID'] = 'Unpaid';
 $mod_strings['LBL_RECORDVIEW_PANEL1'] = 'Finance';
 $mod_strings['LBL_CONSYS_CRM_ID_C'] = 'consys crm id c';
+$mod_strings['LBL_PAYMENT_DEAL_TYPE'] = 'Product Type';
+$mod_strings['LBL_PAYMENT_PRODUCT_TYPE'] = 'Product Type';
+$mod_strings['LBL_PAYMENT_SOURCE'] = 'Payment Source';
