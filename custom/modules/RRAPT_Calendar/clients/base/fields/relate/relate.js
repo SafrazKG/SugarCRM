@@ -25,6 +25,10 @@
         ret.push({
             'role_id': this._userRole,
         });
+        var context = this.context.parent||this.context;
+        if (this._userRole=='closer' && context.get('model')) ret.push({
+                                                                            appointment_id: context.get('model').id
+                                                                        });
         return ret;
     },
 
@@ -33,8 +37,13 @@
      */
     openSelectDrawer: function() {
         if (this.context) {
-            if (this.context.parent) this.context.parent.set('filter_by_role_id', this._userRole);
-            else this.context.set('filter_by_role_id', this._userRole);
+            var context = this.context.parent||this.context;
+            context.set('filter_by_role_id', this._userRole);
+            if (this._userRole=='closer' && context.get('model')) {
+                context.set('appointment_id', context.get('model').id);
+            } else {
+                context.set('appointment_id', null);
+            }
         }
         return this._super('openSelectDrawer', arguments);
     },

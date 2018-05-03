@@ -52,7 +52,7 @@
                 'name' => 'ReadOnly',
                 'params' => array(
                     'target' => 'users_rrapt_calendar_3_name',
-                    'value' => 'not(isInList($disposition_c, createList("Set", "Confirmed")))' 
+                    'value' => 'or(not(isInList($disposition_c, createList("Set", "Confirmed"))), equal($id,""))' 
                 ),
             ),
         ),
