@@ -1,6 +1,6 @@
 <?php
- // created: 2018-04-18 06:41:28
-$dictionary['RRPAY_Payment_Plans']['fields']['amount_c']['labelValue']='Amount';
+ // created: 2018-05-01 14:39:13
+$dictionary['RRPAY_Payment_Plans']['fields']['amount_c']['labelValue']='Invoice';
 $dictionary['RRPAY_Payment_Plans']['fields']['amount_c']['formula']='rollupSum($rrpay_payment_plans_asd_payments_1,"amount_c")';
 $dictionary['RRPAY_Payment_Plans']['fields']['amount_c']['enforced']='false';
 $dictionary['RRPAY_Payment_Plans']['fields']['amount_c']['dependency']='';

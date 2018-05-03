@@ -184,13 +184,6 @@ array (
                 'name' => 'resort_c',
                 'label' => 'LBL_RESORT',
               ),
-              3 => 
-              array (
-                'name' => 'abc_transfers_abc_inventories_1_name',
-              ),
-              4 => 
-              array (
-              ),
             ),
           ),
           2 => 

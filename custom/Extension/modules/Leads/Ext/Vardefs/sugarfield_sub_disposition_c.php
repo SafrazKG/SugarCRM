@@ -1,5 +1,5 @@
 <?php
- // created: 2018-04-25 08:44:57
+ // created: 2018-04-30 08:28:06
 $dictionary['Lead']['fields']['sub_disposition_c']['labelValue']='Sub Disposition';
 $dictionary['Lead']['fields']['sub_disposition_c']['dependency']='';
 $dictionary['Lead']['fields']['sub_disposition_c']['visibility_grid']=array (
@@ -347,6 +347,21 @@ $dictionary['Lead']['fields']['sub_disposition_c']['visibility_grid']=array (
     array (
     ),
     'FIXERRORFixed errors on Form or Deal Data' => 
+    array (
+    ),
+    '30 Days CBK' => 
+    array (
+    ),
+    '60 Days CBK' => 
+    array (
+    ),
+    '90 Days CBK' => 
+    array (
+    ),
+    'SPANISH' => 
+    array (
+    ),
+    'MOVE TO HOLIDAY' => 
     array (
     ),
   ),

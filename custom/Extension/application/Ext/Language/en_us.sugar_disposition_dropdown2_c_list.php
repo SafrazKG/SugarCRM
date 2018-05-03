@@ -1,7 +1,8 @@
 <?php
- // created: 2018-04-18 13:57:02
+ // created: 2018-04-30 08:25:10
 
 $app_list_strings['disposition_dropdown2_c_list']=array (
+  '' => '',
   'DNADo Not Accept' => 'DNA-Do Not Accept',
   'DNCDo Not Call' => 'DNC-Do Not Call',
   'Outbound Call Failed' => 'Outbound Call Failed',
@@ -24,4 +25,16 @@ $app_list_strings['disposition_dropdown2_c_list']=array (
   'VOBLOWOUTVO Blow Out with Reason' => 'VOBLOWOUT-VO Blow Out with Reason',
   'VOCBKReschedule Call Back with Reason' => 'VOCBK-Reschedule Call Back with Reason',
   'FIXERRORFixed errors on Form or Deal Data' => 'FIXERROR-Fixed errors on Form or Deal Data',
+  'UNRESERVE' => 'UNRESERVE-Release Lead to be Called Again',
+  'CBK' => 'CBK-Call Back',
+  '30 Days CBK' => '30 Days CBK-Call Back',
+  '60 Days CBK' => '60 Days CBK-Call Back',
+  '90 Days CBK' => '90 Days CBK-Call Back',
+  'SPANISH' => 'SPANISH-Move to Spanish Speaking Lead Mkt Group',
+  'MOVE TO HOLIDAY' => 'MOVE TO HOLIDAY INN BUCKET(Mortgage ONLY)',
+  'APSET' => 'APSET-Appointment Set',
+  'APRSCHLD' => 'APRSCHLD-Appointment Rescheduled',
+  'CLSRNOAP' => 'CLSRNOAP-Closer Not available for appointment',
+  'CUSTNOAP' => 'CUSTNOAP-Customer Not available for appointment',
+  'APCONFIRMED' => 'APCONFIRMED-Appointment Confirmed',
 );

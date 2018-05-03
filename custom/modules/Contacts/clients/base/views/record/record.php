@@ -283,7 +283,7 @@ array (
               ),
               12 => 
               array (
-                'name' => 'abc_inventories_contacts_1_name',
+                'name' => 'abc_transfers_contacts_1_name',
               ),
             ),
           ),

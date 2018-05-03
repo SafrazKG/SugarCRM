@@ -170,15 +170,6 @@ array (
             array (
               0 => 
               array (
-                'name' => 'accounts_rrpay_payment_plans_1_name',
-              ),
-              1 => 
-              array (
-                'name' => 'paid_in_full_date_c',
-                'label' => 'LBL_PAID_IN_FULL_DATE',
-              ),
-              2 => 
-              array (
                 'related_fields' => 
                 array (
                   0 => 'currency_id',
@@ -187,7 +178,7 @@ array (
                 'name' => 'amount_c',
                 'label' => 'LBL_AMOUNT',
               ),
-              3 => 
+              1 => 
               array (
                 'related_fields' => 
                 array (
@@ -197,7 +188,7 @@ array (
                 'name' => 'amount_paid_c',
                 'label' => 'LBL_AMOUNT_PAID',
               ),
-              4 => 
+              2 => 
               array (
                 'related_fields' => 
                 array (
@@ -206,6 +197,16 @@ array (
                 ),
                 'name' => 'unpaid_amount_c',
                 'label' => 'LBL_UNPAID_AMOUNT',
+              ),
+              3 => 
+              array (
+                'name' => 'paid_in_full_c',
+                'label' => 'LBL_PAID_IN_FULL',
+              ),
+              4 => 
+              array (
+                'name' => 'paid_in_full_date_c',
+                'label' => 'LBL_PAID_IN_FULL_DATE',
               ),
               5 => 
               array (

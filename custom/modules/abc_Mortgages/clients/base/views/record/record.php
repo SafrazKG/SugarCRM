@@ -570,17 +570,10 @@ array (
             array (
               0 => 
               array (
-                'name' => 'rrpay_payment_plans_abc_mortgages_1_name',
-              ),
-              1 => 
-              array (
-              ),
-              2 => 
-              array (
                 'name' => 'description',
                 'span' => 12,
               ),
-              3 => 
+              1 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,
@@ -604,7 +597,7 @@ array (
                   ),
                 ),
               ),
-              4 => 
+              2 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,
@@ -628,8 +621,8 @@ array (
                   ),
                 ),
               ),
-              5 => 'assigned_user_name',
-              6 => 'team_name',
+              3 => 'assigned_user_name',
+              4 => 'team_name',
             ),
           ),
           5 => 

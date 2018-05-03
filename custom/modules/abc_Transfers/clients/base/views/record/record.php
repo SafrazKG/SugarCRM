@@ -246,22 +246,15 @@ array (
               ),
               16 => 
               array (
-                'name' => 'rrpay_payment_plans_abc_transfers_1_name',
-              ),
-              17 => 
-              array (
-              ),
-              18 => 
-              array (
                 'name' => 'disposition_type_c',
                 'label' => 'LBL_DISPOSITION_TYPE',
               ),
-              19 => 
+              17 => 
               array (
                 'name' => 'disposition_c',
                 'label' => 'LBL_DISPOSITION',
               ),
-              20 => 
+              18 => 
               array (
                 'name' => 'disposition_note_c',
                 'label' => 'LBL_DISPOSITION_NOTE',
@@ -270,6 +263,454 @@ array (
             ),
           ),
           2 => 
+          array (
+            'newTab' => true,
+            'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL5',
+            'label' => 'LBL_RECORDVIEW_PANEL5',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'estoppel_status_c',
+                'label' => 'LBL_ESTOPPEL_STATUS',
+              ),
+              1 => 
+              array (
+                'name' => 'rtu_expiration_c',
+                'label' => 'LBL_RTU_EXPIRATION_C',
+              ),
+              2 => 
+              array (
+                'name' => 'usage_type_c',
+                'label' => 'LBL_USAGE_TYPE_C',
+              ),
+              3 => 
+              array (
+                'name' => 'usage_interval_c',
+                'label' => 'LBL_USAGE_INTERVAL_C',
+              ),
+              4 => 
+              array (
+                'name' => 'first_year_available_c',
+                'label' => 'LBL_FIRST_YEAR_AVAILABLE_C',
+              ),
+              5 => 
+              array (
+                'name' => 'usage_period_c',
+                'label' => 'LBL_USAGE_PERIOD_C',
+              ),
+              6 => 
+              array (
+                'name' => 'black_out_periods_c',
+                'label' => 'LBL_BLACK_OUT_PERIODS_C',
+              ),
+              7 => 
+              array (
+                'name' => 'check_in_days_c',
+                'label' => 'LBL_CHECK_IN_DAYS_C',
+              ),
+              8 => 
+              array (
+                'name' => 'fixed_week_c',
+                'label' => 'LBL_FIXED_WEEK_C',
+              ),
+              9 => 
+              array (
+                'name' => 'floating_weeks_c',
+                'label' => 'LBL_FLOATING_WEEKS_C',
+              ),
+              10 => 
+              array (
+                'name' => 'season_c',
+                'label' => 'LBL_SEASON_C',
+              ),
+              11 => 
+              array (
+                'name' => 'deeded_week_c',
+                'label' => 'LBL_DEEDED_WEEK_C',
+              ),
+              12 => 
+              array (
+                'name' => 'number_of_points_c',
+                'label' => 'LBL_NUMBER_OF_POINTS_C',
+                'span' => 12,
+              ),
+            ),
+          ),
+          3 => 
+          array (
+            'newTab' => false,
+            'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL6',
+            'label' => 'LBL_RECORDVIEW_PANEL6',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'building_c',
+                'label' => 'LBL_BUILDING_C',
+              ),
+              1 => 
+              array (
+                'name' => 'unit_c',
+                'label' => 'LBL_UNIT_C',
+              ),
+              2 => 
+              array (
+                'name' => 'unit_name_c',
+                'label' => 'LBL_UNIT_NAME_C',
+              ),
+              3 => 
+              array (
+                'name' => 'bedroom_c',
+                'label' => 'LBL_BEDROOM_C',
+              ),
+              4 => 
+              array (
+                'name' => 'sleeps_c',
+                'label' => 'LBL_SLEEPS_C',
+              ),
+              5 => 
+              array (
+                'name' => 'bathroom_c',
+                'label' => 'LBL_BATHROOM_C',
+              ),
+              6 => 
+              array (
+                'name' => 'jacuzzi_c',
+                'label' => 'LBL_JACUZZI_C',
+              ),
+              7 => 
+              array (
+                'name' => 'lock_off_c',
+                'label' => 'LBL_LOCK_OFF_C',
+              ),
+              8 => 
+              array (
+                'name' => 'kitchen_c',
+                'label' => 'LBL_KITCHEN_C',
+              ),
+              9 => 
+              array (
+                'name' => 'sqft_c',
+                'label' => 'LBL_SQFT_C',
+              ),
+              10 => 
+              array (
+                'name' => 'view_a_c',
+                'label' => 'LBL_VIEW_A_C',
+              ),
+              11 => 
+              array (
+                'name' => 'estoppel_requirements_notes__c',
+                'studio' => 'visible',
+                'label' => 'LBL_ESTOPPEL_REQUIREMENTS_NOTES_',
+              ),
+            ),
+          ),
+          4 => 
+          array (
+            'newTab' => false,
+            'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL7',
+            'label' => 'LBL_RECORDVIEW_PANEL7',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'special_assessments_amount_c',
+                'label' => 'LBL_SPECIAL_ASSESSMENTS_AMOUNT_C',
+              ),
+              1 => 
+              array (
+                'name' => 'special_assessments_due_date_c',
+                'label' => 'LBL_SPECIAL_ASSESSMENTS_DUE_DATE',
+              ),
+              2 => 
+              array (
+                'name' => 'of_years_for_special_asses_c',
+                'label' => 'LBL_OF_YEARS_FOR_SPECIAL_ASSES_C',
+              ),
+              3 => 
+              array (
+                'name' => 'estoppel_bed_baths_c',
+                'label' => 'LBL_ESTOPPEL_BED_BATHS_C',
+              ),
+              4 => 
+              array (
+                'name' => 'estoppel_weekor_points_value_c',
+                'label' => 'LBL_ESTOPPEL_WEEKOR_POINTS_VALUE',
+              ),
+              5 => 
+              array (
+                'name' => 'estoppel_unit_c',
+                'label' => 'LBL_ESTOPPEL_UNIT_C',
+              ),
+              6 => 
+              array (
+                'name' => 'estoppel_urgent_notes_c',
+                'label' => 'LBL_ESTOPPEL_URGENT_NOTES_C',
+              ),
+              7 => 
+              array (
+                'name' => 'id_number_c',
+                'label' => 'LBL_ID_NUMBER_C',
+              ),
+            ),
+          ),
+          5 => 
+          array (
+            'newTab' => false,
+            'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL8',
+            'label' => 'LBL_RECORDVIEW_PANEL8',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'crmid_c',
+                'label' => 'LBL_CRMID_C',
+              ),
+              1 => 
+              array (
+                'name' => 'sale_status_c',
+                'label' => 'LBL_SALE_STATUS_C',
+              ),
+              2 => 
+              array (
+                'name' => 'deceased_seller_involved_c',
+                'label' => 'LBL_DECEASED_SELLER_INVOLVED_C',
+                'span' => 12,
+              ),
+            ),
+          ),
+          6 => 
+          array (
+            'newTab' => true,
+            'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL9',
+            'label' => 'LBL_RECORDVIEW_PANEL9',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'status_transfer_c',
+                'label' => 'LBL_STATUS_TRANSFER',
+              ),
+              1 => 
+              array (
+                'name' => 'first_list_date_c',
+                'label' => 'LBL_FIRST_LIST_DATE_C',
+              ),
+              2 => 
+              array (
+                'name' => 'end_date_c',
+                'label' => 'LBL_END_DATE_C',
+              ),
+              3 => 
+              array (
+                'name' => 'scheduled_listing_date_c',
+                'label' => 'LBL_SCHEDULED_LISTING_DATE_C',
+              ),
+              4 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'sale_price_c',
+                'label' => 'LBL_SALE_PRICE_C',
+              ),
+              5 => 
+              array (
+                'name' => 'paid_c',
+                'label' => 'LBL_PAID_C',
+              ),
+              6 => 
+              array (
+                'name' => 'number_of_times_relisted_c',
+                'label' => 'LBL_NUMBER_OF_TIMES_RELISTED_C',
+              ),
+              7 => 
+              array (
+                'name' => 'start_incentive_amount_c',
+                'label' => 'LBL_START_INCENTIVE_AMOUNT_C',
+              ),
+              8 => 
+              array (
+                'name' => 'finish_incentive_amount_c',
+                'label' => 'LBL_FINISH_INCENTIVE_AMOUNT_C',
+              ),
+              9 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'ebay_fees_c',
+                'label' => 'LBL_EBAY_FEES_C',
+              ),
+              10 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'total_cost_c',
+                'label' => 'LBL_TOTAL_COST_C',
+              ),
+              11 => 
+              array (
+                'name' => 'suggested_incentive_c',
+                'label' => 'LBL_SUGGESTED_INCENTIVE_C',
+              ),
+              12 => 
+              array (
+                'name' => 'company_c',
+                'label' => 'LBL_COMPANY_C',
+              ),
+              13 => 
+              array (
+                'name' => 'sales_origin_c',
+                'label' => 'LBL_SALES_ORIGIN_C',
+              ),
+              14 => 
+              array (
+                'name' => 'ebay_item_number_c',
+                'label' => 'LBL_EBAY_ITEM_NUMBER_C',
+              ),
+              15 => 
+              array (
+                'name' => 'ebay_link_c',
+                'label' => 'LBL_EBAY_LINK_C',
+              ),
+              16 => 
+              array (
+                'name' => 'joint_listed_with_pid_c',
+                'label' => 'LBL_JOINT_LISTED_WITH_PID_C',
+              ),
+              17 => 
+              array (
+                'name' => 'sales_form_data_c',
+                'studio' => 'visible',
+                'label' => 'LBL_SALES_FORM_DATA',
+              ),
+              18 => 
+              array (
+                'name' => 'buyer_info_text_array_c',
+                'studio' => 'visible',
+                'label' => 'LBL_BUYER_INFO_TEXT_ARRAY',
+              ),
+              19 => 
+              array (
+                'name' => 'crm_all_notes_from_inventory_c',
+                'studio' => 'visible',
+                'label' => 'LBL_CRM_ALL_NOTES_FROM_INVENTORY',
+              ),
+            ),
+          ),
+          7 => 
+          array (
+            'newTab' => true,
+            'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL10',
+            'label' => 'LBL_RECORDVIEW_PANEL10',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'type_transfer_c',
+                'label' => 'LBL_TYPE_TRANSFER',
+              ),
+              1 => 
+              array (
+                'name' => 'status_ttransfer_c',
+                'label' => 'LBL_STATUS_TTRANSFER',
+              ),
+            ),
+          ),
+          8 => 
+          array (
+            'newTab' => false,
+            'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL11',
+            'label' => 'LBL_RECORDVIEW_PANEL11',
+            'columns' => 2,
+            'labelsOnTop' => 1,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'paid_in_full_date_c',
+                'label' => 'LBL_PAID_IN_FULL_DATE',
+              ),
+              1 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'invoice_c',
+                'label' => 'LBL_INVOICE',
+              ),
+              2 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'amount_paid_c',
+                'label' => 'LBL_AMOUNT_PAID',
+              ),
+              3 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'unpaid_amount_c',
+                'label' => 'LBL_UNPAID_AMOUNT',
+              ),
+              4 => 
+              array (
+                'name' => 'paid_in_full_c',
+                'label' => 'LBL_PAID_IN_FULL',
+                'span' => 12,
+              ),
+            ),
+          ),
+          9 => 
           array (
             'newTab' => false,
             'panelDefault' => 'expanded',
@@ -322,6 +763,12 @@ array (
               ),
               4 => 
               array (
+                'name' => 'maintenance_fees_last_paid_c',
+                'label' => 'LBL_MAINTENANCE_FEES_LAST_PAID_C',
+                'span' => 12,
+              ),
+              5 => 
+              array (
                 'related_fields' => 
                 array (
                   0 => 'currency_id',
@@ -330,7 +777,7 @@ array (
                 'name' => 'holding_fee_c',
                 'label' => 'LBL_HOLDING_FEE',
               ),
-              5 => 
+              6 => 
               array (
                 'related_fields' => 
                 array (
@@ -342,7 +789,7 @@ array (
               ),
             ),
           ),
-          3 => 
+          10 => 
           array (
             'name' => 'panel_hidden',
             'label' => 'LBL_SHOW_MORE',
@@ -397,7 +844,7 @@ array (
               ),
             ),
           ),
-          4 => 
+          11 => 
           array (
             'newTab' => false,
             'panelDefault' => 'expanded',
@@ -546,7 +993,7 @@ array (
               ),
             ),
           ),
-          5 => 
+          12 => 
           array (
             'newTab' => false,
             'panelDefault' => 'collapsed',
@@ -614,7 +1061,7 @@ array (
               4 => 'team_name',
             ),
           ),
-          6 => 
+          13 => 
           array (
             'newTab' => true,
             'panelDefault' => 'expanded',
@@ -627,48 +1074,56 @@ array (
             array (
               0 => 
               array (
+                'name' => 'status_hidden_c',
+                'label' => 'LBL_STATUS_HIDDEN',
+              ),
+              1 => 
+              array (
+              ),
+              2 => 
+              array (
                 'name' => 'status_c',
                 'label' => 'LBL_STATUS',
               ),
-              1 => 
+              3 => 
               array (
                 'name' => 'accounts_abc_transfers_1_name',
                 'label' => 'LBL_ACCOUNTS_ABC_TRANSFERS_1_FROM_ACCOUNTS_TITLE',
               ),
-              2 => 
+              4 => 
               array (
                 'name' => 'estoppel_status1_c',
                 'label' => 'LBL_ESTOPPEL_STATUS1',
                 'span' => 12,
               ),
-              3 => 
+              5 => 
               array (
                 'name' => 'inventory_status1_c',
                 'label' => 'LBL_INVENTORY_STATUS1',
                 'span' => 12,
               ),
-              4 => 
+              6 => 
               array (
                 'name' => 'deedback_status1_c',
                 'label' => 'LBL_DEEDBACK_STATUS1',
                 'span' => 12,
               ),
-              5 => 
+              7 => 
               array (
                 'name' => 'doc_date_c',
                 'label' => 'LBL_DOC_DATE',
               ),
-              6 => 
+              8 => 
               array (
                 'name' => 'est_date_c',
                 'label' => 'LBL_EST_DATE',
               ),
-              7 => 
+              9 => 
               array (
                 'name' => 'trf_date_c',
                 'label' => 'LBL_TRF_DATE',
               ),
-              8 => 
+              10 => 
               array (
                 'name' => 'closed_date_c',
                 'label' => 'LBL_CLOSED_DATE',

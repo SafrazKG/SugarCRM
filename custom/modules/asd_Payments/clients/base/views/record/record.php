@@ -193,6 +193,10 @@ array (
                 'name' => 'amount_c',
                 'label' => 'LBL_AMOUNT',
               ),
+              4 => 
+              array (
+                'name' => 'abc_transfers_asd_payments_1_name',
+              ),
             ),
           ),
           2 => 
@@ -210,38 +214,34 @@ array (
               array (
                 'name' => 'status_c',
                 'label' => 'LBL_STATUS',
+                'span' => 12,
               ),
               1 => 
-              array (
-                'name' => 'rrpay_payment_plans_asd_payments_1_name',
-                'label' => 'LBL_RRPAY_PAYMENT_PLANS_ASD_PAYMENTS_1_FROM_RRPAY_PAYMENT_PLANS_TITLE',
-              ),
-              2 => 
               array (
                 'name' => 'sale_date_c',
                 'label' => 'LBL_SALE_DATE',
               ),
-              3 => 
+              2 => 
               array (
                 'name' => 'due_date_c',
                 'label' => 'LBL_DUE_DATE',
               ),
-              4 => 
+              3 => 
               array (
                 'name' => 'funding_date_c',
                 'label' => 'LBL_FUNDING_DATE',
               ),
-              5 => 
+              4 => 
               array (
                 'name' => 'payout_date_c',
                 'label' => 'LBL_PAYOUT_DATE',
               ),
-              6 => 
+              5 => 
               array (
                 'name' => 'card_type_c',
                 'label' => 'LBL_CARD_TYPE',
               ),
-              7 => 
+              6 => 
               array (
                 'related_fields' => 
                 array (
@@ -251,42 +251,15 @@ array (
                 'name' => 'merchant_fee_c',
                 'label' => 'LBL_MERCHANT_FEE',
               ),
-              8 => 
+              7 => 
               array (
                 'name' => 'merchant_c',
                 'label' => 'LBL_MERCHANT',
               ),
+              8 => 
+              array (
+              ),
               9 => 
-              array (
-                'related_fields' => 
-                array (
-                  0 => 'currency_id',
-                  1 => 'base_rate',
-                ),
-                'name' => 'usca_fee_c',
-                'label' => 'LBL_USCA_FEE',
-              ),
-              10 => 
-              array (
-                'related_fields' => 
-                array (
-                  0 => 'currency_id',
-                  1 => 'base_rate',
-                ),
-                'name' => 'armg_c',
-                'label' => 'LBL_ARMG',
-              ),
-              11 => 
-              array (
-                'related_fields' => 
-                array (
-                  0 => 'currency_id',
-                  1 => 'base_rate',
-                ),
-                'name' => 'rnr_c',
-                'label' => 'LBL_RNR',
-              ),
-              12 => 
               array (
                 'related_fields' => 
                 array (
@@ -296,36 +269,10 @@ array (
                 'name' => 'affiliate_pay_c',
                 'label' => 'LBL_AFFILIATE_PAY',
               ),
-              13 => 
-              array (
-                'related_fields' => 
-                array (
-                  0 => 'currency_id',
-                  1 => 'base_rate',
-                ),
-                'name' => 'unpaid_c',
-                'label' => 'LBL_UNPAID',
-              ),
-              14 => 
+              10 => 
               array (
                 'name' => 'recon_date_c',
                 'label' => 'LBL_RECON_DATE',
-              ),
-              15 => 
-              array (
-                'related_fields' => 
-                array (
-                  0 => 'currency_id',
-                  1 => 'base_rate',
-                ),
-                'name' => 'invoice_c',
-                'label' => 'LBL_INVOICE',
-              ),
-              16 => 
-              array (
-              ),
-              17 => 
-              array (
               ),
             ),
           ),

@@ -192,10 +192,6 @@ array (
                 'name' => 'status_c',
                 'label' => 'LBL_STATUS',
               ),
-              5 => 
-              array (
-                'name' => 'abc_transfers_abc_deedbacks_1_name',
-              ),
             ),
           ),
           2 => 

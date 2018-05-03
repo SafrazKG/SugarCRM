@@ -245,13 +245,15 @@ array (
               ),
               4 => 
               array (
-                'name' => 'disposition_type_c',
-                'label' => 'LBL_DISPOSITION_TYPE',
+                'name' => 'status',
+                'type' => 'status',
+                'span' => 12,
               ),
               5 => 
               array (
-                'name' => 'status',
-                'type' => 'status',
+                'name' => 'disposition_type_leads_c',
+                'label' => 'LBL_DISPOSITION_TYPE_LEADS',
+                'span' => 12,
               ),
               6 => 
               array (
