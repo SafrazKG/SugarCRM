@@ -6,11 +6,13 @@ trait AvailableSlotsTrait {
     
     private $isFronter = false;
     private $isAdmin = false;
+    private $isCloser = false;
 
     public function getAvailableSlotsFromQuery($result, $fullresultset = false, $start = null, $end = null) {
         $ret = array();
         $admin = BeanFactory::newBean('RRAPT_Admin');
         $this->isFronter = $admin->hasRole('fronter');
+        $this->isCloser = $admin->hasRole('closer');
         $this->isAdmin = $admin->hasRole('calendar_admin');
         foreach ($result as $res) {
             if ($res['active_c']=='Active') {
@@ -112,6 +114,7 @@ trait AvailableSlotsTrait {
                     $row['id'] = 'unavaliable_'.$row['id'];
                 }
             }
+            if ($fullresultset && $this->isCloser && $current_user->id!=$row['closer_id']) continue;
             $res[] = $row;
         }
         while (count($res)<$maxSlots) {
