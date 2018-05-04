@@ -28,9 +28,8 @@ class LeadRelatedDispositionCreationHook {
 	 * @param $lead SugarBean Lead
 	 */
 	private function createRelatedDisposition($lead) {
-		if ($lead->saved != true) {
-			$disposition = BeanFactory::newBean('RRDIS_Dispositions');
-			foreach($this->dispositionToLeadFieldMap as $dispoField => $leadField) {
+		$disposition = BeanFactory::newBean('RRDIS_Dispositions');
+		foreach($this->dispositionToLeadFieldMap as $dispoField => $leadField) {
 				$disposition->{$dispoField} = $lead->{$leadField};
 			}
 			
@@ -43,7 +42,6 @@ class LeadRelatedDispositionCreationHook {
 			$disposition->save();
 			$disposition->load_relationship('leads_rrdis_dispositions_1');
 			$disposition->leads_rrdis_dispositions_1->add($lead->id);
-		}
 	}
 	
 	/**
@@ -52,7 +50,6 @@ class LeadRelatedDispositionCreationHook {
 	 */
 	private function clearFields($lead) {
 		$lead->disposition_type_leads_c = '';
-		$lead->saved = true;
 		$lead->save();
 	}
 }
