@@ -180,12 +180,10 @@ array (
               ),
               2 => 
               array (
-                'name' => 'sub_disposition_c',
-                'label' => 'LBL_SUB_DISPOSITION',
+                'name' => 'leads_rrdis_dispositions_1_name',
               ),
               3 => 
               array (
-                'name' => 'leads_rrdis_dispositions_1_name',
               ),
               4 => 
               array (

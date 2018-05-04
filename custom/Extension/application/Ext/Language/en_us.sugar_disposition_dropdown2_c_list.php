@@ -1,5 +1,5 @@
 <?php
- // created: 2018-04-30 08:25:10
+ // created: 2018-05-03 12:48:59
 
 $app_list_strings['disposition_dropdown2_c_list']=array (
   '' => '',
@@ -37,4 +37,32 @@ $app_list_strings['disposition_dropdown2_c_list']=array (
   'CLSRNOAP' => 'CLSRNOAP-Closer Not available for appointment',
   'CUSTNOAP' => 'CUSTNOAP-Customer Not available for appointment',
   'APCONFIRMED' => 'APCONFIRMED-Appointment Confirmed',
+  'EMAIL_Sent Email' => 'EMAIL-Sent Email',
+  'LMS_Left Message' => 'LMS-Left Message',
+  'NAS_No Answer' => 'NAS-No Answer',
+  'MBF_Mail Box Full' => 'MBF-Mail Box Full',
+  'ASM_Answer Machine' => 'ASM-Answer Machine',
+  'OTH_Other' => 'OTH-Other',
+  'VONURT_VO Nurture' => 'VONURT-VO Nurture',
+  'NOTENOUGH_Not Enough Pain' => 'NOTENOUGH-Not Enough Pain',
+  'ALLBUSY_All Circuits are Busy' => 'ALLBUSY-All Circuits are Busy',
+  'NOTWKNUMB_Not Working Number' => 'NOTWKNUMB-Not Working Number',
+  'WRONG_Wrong Number' => 'WRONG-Wrong Number',
+  'DUPE_Duplicate Lead' => 'DUPE-Duplicate Lead',
+  'DNC_Do Not Call' => 'DNC-Do Not Call',
+  'DNA_Do Not Accept' => 'DNA-Do Not Accept',
+  'NIT_Not Interested' => 'NIT-Not Interested',
+  'OWS_ONLY wants to sell' => 'OWS-ONLY wants to sell',
+  'AWC_Already working with another company' => 'AWC-Already working with another company',
+  'GOTRID_Already got rid of timeshare' => 'GOTRID-Already got rid of timeshare',
+  'Cant Get Current with Maint Fees' => 'Cant Get Current with Maint Fees',
+  'MOVE TO SHELL AND WYNDHAM WEEKS BUCKET' => 'MOVE TO SHELL AND WYNDHAM WEEKS BUCKET',
+  'MOVE TO MORTGAGE FL RESIDENTS BUCKET' => 'MOVE TO MORTGAGE FL RESIDENTS BUCKET',
+  'UNRESERVE_Release Lead to be Called Again' => 'UNRESERVE-Release Lead to be Called Again',
+  'CCBK_Closer Call Back' => 'CCBK-Closer Call Back',
+  'SENTVO_Sent to VO' => 'SENTVO-Sent to VO',
+  'NOSALE_No Sale _with Reason_' => 'NOSALE-No Sale (with Reason)',
+  'NOSALE_Sale Cancelled' => 'NOSALE-Sale Cancelled',
+  'NOSALECB_No Sale Call Back' => 'NOSALECB-No Sale Call Back',
+  'FILEUPDATE_Only Updating Data in File' => 'FILEUPDATE-Only Updating Data in File',
 );

@@ -6,3 +6,4 @@ $mod_strings['LBL_TRANSFER'] = 'Transfer';
 $mod_strings['LBL_TIME_ZONE'] = 'Time Zone';
 $mod_strings['LBL_TIME_EST'] = 'Time EST';
 $mod_strings['LBL_ADMIN_DISPOSTION_TYPE'] = 'Admin Dispostion Type';
+$mod_strings['LBL_ADMIN_DISPOSITION'] = 'Admin Disposition';

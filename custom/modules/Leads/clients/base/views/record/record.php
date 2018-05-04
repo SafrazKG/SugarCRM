@@ -253,7 +253,6 @@ array (
               array (
                 'name' => 'disposition_type_leads_c',
                 'label' => 'LBL_DISPOSITION_TYPE_LEADS',
-                'span' => 12,
               ),
               6 => 
               array (
@@ -262,14 +261,14 @@ array (
               ),
               7 => 
               array (
-                'name' => 'phone_home',
-                'comment' => 'Home phone number of the contact',
-                'label' => 'LBL_HOME_PHONE',
+                'name' => 'other_please_specify_c',
+                'label' => 'LBL_OTHER_PLEASE_SPECIFY',
               ),
               8 => 
               array (
-                'name' => 'sub_disposition_c',
-                'label' => 'LBL_SUB_DISPOSITION',
+                'name' => 'phone_home',
+                'comment' => 'Home phone number of the contact',
+                'label' => 'LBL_HOME_PHONE',
               ),
               9 => 
               array (
@@ -279,12 +278,13 @@ array (
               ),
               10 => 
               array (
-                'name' => 'other_please_specify_c',
-                'label' => 'LBL_OTHER_PLEASE_SPECIFY',
               ),
               11 => 
               array (
                 'name' => 'email',
+              ),
+              12 => 
+              array (
               ),
             ),
           ),
