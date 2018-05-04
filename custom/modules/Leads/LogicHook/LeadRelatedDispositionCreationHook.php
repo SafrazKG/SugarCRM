@@ -39,15 +39,15 @@ class LeadRelatedDispositionCreationHook {
 		
 			$disposition->name = 'Disposition-'.$datetime;
 			$disposition->time_and_date_c = $lead->date_modified;
-			$disposition->leads_rrdis_dispositions_1_name = $lead->name;
-			$disposition->leads_rrdis_dispositions_1leads_ida = $lead->id;
-			
+
 			$disposition->save();
+			$disposition->load_relationship('leads_rrdis_dispositions_1');
+			$disposition->leads_rrdis_dispositions_1->add($lead->id);
 		}
 	}
 	
 	/**
-	 * Clear Disposition fields directly form database
+	 * Clear Lead field
 	 * @param $lead SugarBean Lead
 	 */
 	private function clearFields($lead) {

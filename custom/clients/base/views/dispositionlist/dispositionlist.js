@@ -97,9 +97,6 @@
                             
                             this.render();
                 }, this),
-                error: _.bind(function(error){
-                            console.log(error);
-                }, this),
         });
     },
     
