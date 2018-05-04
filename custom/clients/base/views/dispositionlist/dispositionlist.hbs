@@ -1,0 +1,83 @@
+<div class="row-fluid">
+{{#if last}}
+    <table class="table table-striped dataTable">
+        <thead>
+            <tr>
+                {{#with last}}
+                    <th colspan="3">
+                        <p style="font-size:16px">Last Disposition</p>
+                    </th>
+                {{/with}}
+            </tr>
+            <tr>
+                {{#each displayedFields}}
+                    <th>
+                        <span>{{value}}</span>
+                    </th>
+                {{/each}}
+            </tr>
+        </thead>
+        <tbody>
+            {{#with last}}
+                <tr class="single"  style="font-size:15px">
+                    <td>
+                        <span>{{formatedDate}}</span>
+                    </td>
+                    <td>
+                        <span>{{disposition_type_c}}</span>
+                    </td>
+                    <td>
+                        <span>{{disposition_c}}</span>
+                    </td>
+                </tr>
+            {{/with}}
+        </tbody>
+    </table>
+{{/if}}
+{{#if records.length}}
+    <table class="table table-striped dataTable" style="margin-top:10px">
+        <thead>
+            <tr>
+                <th colspan="3" style="font-size:15px">Disposition History</th>
+            </tr>
+            <tr>
+                {{#each displayedFields}}
+                    <th class="sorting sorting_{{#eq orderBy.fieldName "{{orderField}}"}}{{orderBy.direction}}{{/eq}} orderBy{{orderField}}" data-orderby="{{orderField}}">
+                        <span>{{value}}</span>
+                    </th>
+                {{/each}}
+            </tr>
+        </thead>
+        <tbody>
+            {{#each records}}
+                <tr class="single">
+                    <td>
+                        <span>{{formatedDate}}</span>
+                    </td>
+                    <td>
+                        <span>{{disposition_type_c}}</span>
+                    </td>
+                    <td>
+                        <span>{{disposition_c}}</span>
+                    </td>
+                </tr>
+            {{/each}}
+                <tr>
+                    <td colspan="3">
+                        {{#notEq prev_offset "0"}}
+                            <a class="page" data-action="prev">Previous</a>
+                        {{/notEq}}
+                        {{#notEq next_offset "-1"}}
+                            <a class="page" data-action="next">Next</a>
+                        {{/notEq}}
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+{{/if}}
+</div>
+{{#unless last}}
+    <div class="block-footer">
+        {{str "LBL_NO_DATA_AVAILABLE"}}
+    </div>
+{{/unless}}
