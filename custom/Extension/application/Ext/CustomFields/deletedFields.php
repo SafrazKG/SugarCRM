@@ -15,3 +15,4 @@ $deleteFields[] = 'Leadsdisposition_type_c';
 $deleteFields[] = 'RRDIS_Dispositionsadmin_disposition_c';
 $deleteFields[] = 'RRDIS_Dispositionsadmin_disposition_type_c';
 $deleteFields[] = 'RRDIS_Dispositionssales_or_admin_disposition_c';
+$deleteFields[] = 'RRDIS_Dispositionstime_est_c';
