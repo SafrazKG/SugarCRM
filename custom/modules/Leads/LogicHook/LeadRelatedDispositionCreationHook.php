@@ -45,11 +45,14 @@ class LeadRelatedDispositionCreationHook {
 	}
 	
 	/**
-	 * Clear Lead field
+	 * Clear Lead fields
 	 * @param $lead SugarBean Lead
 	 */
 	private function clearFields($lead) {
 		$lead->disposition_type_leads_c = '';
+		$lead->disposition_c = '';
+		$lead->sub_disposition_c = '';
+		$lead->disposition_note_c = '';
 		$lead->save();
 	}
 }
