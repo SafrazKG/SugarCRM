@@ -48,7 +48,16 @@ class CalendarFilterApi extends FilterApi {
     
     public function extendedFilterList($api, $args) {
         // we need to add available slots if user is fronter
-        if (!isset($args['view']) || $args['view']!='calendarlist') return $this->listForListView($api, $args);
+        $admin = BeanFactory::newBean('RRAPT_Admin');
+        if (!isset($args['view']) || $args['view']!='calendarlist') {
+            $isCloser = $admin->hasRole('closer');
+            if ($isCloser) {
+                $args['filter'][] = array(
+                                            'users_rrapt_calendar_3users_ida' => array('$in' => array($GLOBALS['current_user']->id)),
+                                        );
+            }
+            return $this->listForListView($api, $args);
+        }
         if (!isset($args['filter'])) return array('next_offset' => -1, 'records' => []);
         foreach ($args['filter'] as $k => $filter) {
             if (isset($filter['date_field_c'])) {
@@ -64,7 +73,6 @@ class CalendarFilterApi extends FilterApi {
             }
         }
         if (!$start || !$end) return array('next_offset' => -1, 'records' => []);
-        $admin = BeanFactory::newBean('RRAPT_Admin');
         $isFronter = $admin->hasRole('fronter');
         $args['module'] = 'RRAPT_Admin';
         $args['fields'] = 'start_time_c,end_time_c,active_c';
@@ -109,7 +117,14 @@ class CalendarFilterApi extends FilterApi {
     }
     
     public function extendedGetFilterListCount($api, $args) {
-        return $this->getFilterListCount($ap, $args);
+        $admin = BeanFactory::newBean('RRAPT_Admin');
+        $isCloser = $admin->hasRole('closer');
+        if ($isCloser) {
+            $args['filter'][] = array(
+                                        'users_rrapt_calendar_3users_ida' => array('$in' => array($GLOBALS['current_user']->id)),
+                                    );
+        }
+        return $this->getFilterListCount($api, $args);
     }
     
     private function slotTimeLT($original, $compaareWith) {
