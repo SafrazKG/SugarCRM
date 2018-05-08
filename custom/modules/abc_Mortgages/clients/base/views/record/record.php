@@ -170,21 +170,23 @@ array (
             array (
               0 => 
               array (
-                'name' => 'leads_abc_mortgages_1_name',
-                'label' => 'LBL_LEADS_ABC_MORTGAGES_1_FROM_LEADS_TITLE',
+                'name' => 'consys_crm_id_c',
+                'label' => 'LBL_CONSYS_CRM_ID_C',
               ),
               1 => 
               array (
-                'name' => 'resort_c',
-                'label' => 'LBL_RESORT',
+                'name' => 'mortgage_status_c',
+                'label' => 'LBL_MORTGAGE_STATUS',
               ),
               2 => 
               array (
+                'name' => 'leads_abc_mortgages_1_name',
+                'label' => 'LBL_LEADS_ABC_MORTGAGES_1_FROM_LEADS_TITLE',
               ),
               3 => 
               array (
-                'name' => 'mortgage_status_c',
-                'label' => 'LBL_MORTGAGE_STATUS',
+                'name' => 'resort_c',
+                'label' => 'LBL_RESORT',
               ),
               4 => 
               array (
@@ -529,28 +531,66 @@ array (
             array (
               0 => 
               array (
-                'name' => 'status_c',
-                'label' => 'LBL_STATUS',
+                'name' => 'status_hidden_c',
+                'label' => 'LBL_STATUS_HIDDEN',
               ),
               1 => 
               array (
               ),
               2 => 
               array (
+                'name' => 'welcome_packet_received_date_c',
+                'label' => 'LBL_WELCOME_PACKET_RECEIVED_DATE',
+              ),
+              3 => 
+              array (
+                'name' => 'actual_tfdb_date_c',
+                'label' => 'LBL_ACTUAL_TFDB_DATE',
+              ),
+              4 => 
+              array (
+                'name' => 'six_months_mark_c',
+                'label' => 'LBL_SIX_MONTHS_MARK',
+              ),
+              5 => 
+              array (
+                'name' => 'twelve_months_mark_c',
+                'label' => 'LBL_TWELVE_MONTHS_MARK',
+              ),
+              6 => 
+              array (
+                'name' => 'tfdb_edoc_c',
+                'label' => 'LBL_TFDB_EDOC',
+              ),
+              7 => 
+              array (
+              ),
+              8 => 
+              array (
+                'name' => 'status_c',
+                'label' => 'LBL_STATUS',
+              ),
+              9 => 
+              array (
+                'name' => 'accounts_abc_mortgages_1_name',
+                'label' => 'LBL_ACCOUNTS_ABC_MORTGAGES_1_FROM_ACCOUNTS_TITLE',
+              ),
+              10 => 
+              array (
                 'name' => 'doc_date_c',
                 'label' => 'LBL_DOC_DATE',
               ),
-              3 => 
+              11 => 
               array (
                 'name' => 'est_date_c',
                 'label' => 'LBL_EST_DATE',
               ),
-              4 => 
+              12 => 
               array (
                 'name' => 'trf_date_c',
                 'label' => 'LBL_TRF_DATE',
               ),
-              5 => 
+              13 => 
               array (
                 'name' => 'closed_date_c',
                 'label' => 'LBL_CLOSED_DATE',

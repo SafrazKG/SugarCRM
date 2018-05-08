@@ -1,5 +1,5 @@
 <?php
- // created: 2018-05-03 12:51:50
+ // created: 2018-05-07 12:59:04
 $dictionary['Lead']['fields']['disposition_c']['labelValue']='Disposition';
 $dictionary['Lead']['fields']['disposition_c']['dependency']='';
 $dictionary['Lead']['fields']['disposition_c']['visibility_grid']=array (
@@ -11,20 +11,20 @@ $dictionary['Lead']['fields']['disposition_c']['visibility_grid']=array (
     ),
     'Fronter Working Leads' => 
     array (
-      0 => 'UNRESERVE',
-      1 => 'CBK',
-      2 => '30 Days CBK',
-      3 => '60 Days CBK',
-      4 => '90 Days CBK',
-      5 => 'SPANISH',
-      6 => 'MOVE TO HOLIDAY',
+      0 => 'UNRESERVE_Release Lead to be Called Again',
+      1 => 'CBK_Call Back',
+      2 => '30 Days CBK_Call Back',
+      3 => '60 Days CBK_Call Back',
+      4 => '90 Days CBK_Call Back',
+      5 => 'SPANISH_Move to Spanish Speaking Lead Mkt Group',
+      6 => 'MOVE TO HOLIDAY INN BUCKET_Mortgage ONLY_',
       7 => 'MOVE TO SHELL AND WYNDHAM WEEKS BUCKET',
       8 => 'MOVE TO MORTGAGE FL RESIDENTS BUCKET',
-      9 => 'APSET',
-      10 => 'APRSCHLD',
-      11 => 'CLSRNOAP',
-      12 => 'CUSTNOAP',
-      13 => 'APCONFIRMED',
+      9 => 'APSET_Appointment Set',
+      10 => 'APRSCHLD_Appointment Rescheduled',
+      11 => 'CLSRNOAP_Closer Not available for appointment',
+      12 => 'CUSTNOAP_Customer Not available for appointment',
+      13 => 'APCONFIRMED_Appointment Confirmed',
       14 => 'FILEUPDATEOnly Updating Data in File',
     ),
     'Fronters' => 
@@ -44,7 +44,7 @@ $dictionary['Lead']['fields']['disposition_c']['visibility_grid']=array (
     'Closer' => 
     array (
       0 => 'UNRESERVE_Release Lead to be Called Again',
-      1 => 'CCBKCloser Call Back',
+      1 => 'CCBK_Closer Call Back',
       2 => 'SENTVOSent to VO',
       3 => 'NOSALE_No Sale _with Reason_',
       4 => 'NOSALESale Cancelled',
@@ -62,10 +62,10 @@ $dictionary['Lead']['fields']['disposition_c']['visibility_grid']=array (
     ),
     'Verficiation' => 
     array (
-      0 => 'VOCBKReschedule Call Back with Reason',
+      0 => 'VOCBK_Reschedule Call Back with Reason',
       1 => 'VONURT_VO Nurture',
-      2 => 'VOBLOWOUTVO Blow Out with Reason',
-      3 => 'FIXERRORFixed errors on Form or Deal Data',
+      2 => 'VOBLOWOUT_VO Blow Out with Reason',
+      3 => 'FIXERROR_Fixed errors on Form or Deal Data',
     ),
     'Terminal' => 
     array (
@@ -80,7 +80,7 @@ $dictionary['Lead']['fields']['disposition_c']['visibility_grid']=array (
       8 => 'OWS_ONLY wants to sell',
       9 => 'AWC_Already working with another company',
       10 => 'GOTRID_Already got rid of timeshare',
-      11 => 'Cant Get Current with Maint Fees',
+      11 => 'CANT_Cant Get Current with Maint Fees',
     ),
     'Admin' => 
     array (

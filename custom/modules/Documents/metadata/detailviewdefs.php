@@ -26,6 +26,20 @@ array (
           'field' => '30',
         ),
       ),
+      'useTabs' => false,
+      'tabDefs' => 
+      array (
+        'LBL_DOCUMENT_INFORMATION' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+        'LBL_DETAILVIEW_PANEL1' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+      ),
     ),
     'panels' => 
     array (
@@ -42,45 +56,13 @@ array (
               'id' => 'document_revision_id',
             ),
           ),
-          1 => 'status_id',
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            'name' => 'document_name',
-            'label' => 'LBL_DOC_NAME',
-          ),
           1 => 
-          array (
-            'name' => 'revision',
-            'label' => 'LBL_DOC_VERSION',
-          ),
-        ),
-        2 => 
-        array (
-          0 => 
           array (
             'name' => 'template_type',
             'label' => 'LBL_DET_TEMPLATE_TYPE',
           ),
-          1 => 
-          array (
-            'name' => 'is_template',
-            'label' => 'LBL_DET_IS_TEMPLATE',
-          ),
         ),
-        3 => 
-        array (
-          0 => 'active_date',
-          1 => 'category_id',
-        ),
-        4 => 
-        array (
-          0 => 'exp_date',
-          1 => 'subcategory_id',
-        ),
-        5 => 
+        1 => 
         array (
           0 => 
           array (
@@ -88,12 +70,29 @@ array (
             'label' => 'LBL_DOC_DESCRIPTION',
           ),
         ),
-        6 => 
+        2 => 
         array (
-          0 => 'related_doc_name',
-          1 => 'related_doc_rev_number',
+          0 => 
+          array (
+            'name' => 'abc_mortgages_documents_1_name',
+          ),
+          1 => 
+          array (
+            'name' => 'abc_transfers_documents_1_name',
+          ),
         ),
-        7 => 
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'abc_maintenance_fees_documents_1_name',
+          ),
+          1 => '',
+        ),
+      ),
+      'lbl_detailview_panel1' => 
+      array (
+        0 => 
         array (
           0 => 
           array (
@@ -106,23 +105,29 @@ array (
             'label' => 'LBL_TEAM',
           ),
         ),
-        8 => 
+        1 => 
         array (
           0 => 
           array (
-            'name' => 'abc_maintenance_fees_documents_1_name',
+            'name' => 'date_entered',
+            'comment' => 'Date record created',
+            'studio' => 
+            array (
+              'portaleditview' => false,
+            ),
+            'readonly' => true,
+            'label' => 'LBL_DATE_ENTERED',
           ),
-        ),
-      ),
-      'LBL_REVISIONS_PANEL' => 
-      array (
-        0 => 
-        array (
-          0 => 'last_rev_created_name',
           1 => 
           array (
-            'name' => 'last_rev_create_date',
-            'type' => 'date',
+            'name' => 'date_modified',
+            'comment' => 'Date record last modified',
+            'studio' => 
+            array (
+              'portaleditview' => false,
+            ),
+            'readonly' => true,
+            'label' => 'LBL_DATE_MODIFIED',
           ),
         ),
       ),

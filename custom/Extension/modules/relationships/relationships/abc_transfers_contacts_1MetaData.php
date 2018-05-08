@@ -1,7 +1,7 @@
 <?php
-// created: 2018-05-02 10:48:38
+// created: 2018-05-04 06:16:51
 $dictionary["abc_transfers_contacts_1"] = array (
-  'true_relationship_type' => 'one-to-many',
+  'true_relationship_type' => 'many-to-many',
   'from_studio' => true,
   'relationships' => 
   array (
@@ -86,7 +86,8 @@ $dictionary["abc_transfers_contacts_1"] = array (
       'type' => 'alternate_key',
       'fields' => 
       array (
-        0 => 'abc_transfers_contacts_1contacts_idb',
+        0 => 'abc_transfers_contacts_1abc_transfers_ida',
+        1 => 'abc_transfers_contacts_1contacts_idb',
       ),
     ),
   ),

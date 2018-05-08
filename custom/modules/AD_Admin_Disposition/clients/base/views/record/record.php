@@ -164,19 +164,70 @@ array (
             'columns' => 2,
             'labelsOnTop' => true,
             'placeholders' => true,
+            'newTab' => false,
+            'panelDefault' => 'expanded',
             'fields' => 
             array (
-              0 => 'assigned_user_name',
-              1 => 'team_name',
+              0 => 
+              array (
+                'name' => 'consys_crm_id_c',
+                'label' => 'LBL_CONSYS_CRM_ID_C',
+              ),
+              1 => 
+              array (
+              ),
               2 => 
+              array (
+              ),
+              3 => 
+              array (
+                'name' => 'transfer_c',
+                'studio' => 'visible',
+                'label' => 'LBL_TRANSFER',
+              ),
+              4 => 
+              array (
+                'name' => 'admin_disposition_c',
+                'label' => 'LBL_ADMIN_DISPOSITION',
+              ),
+              5 => 
+              array (
+                'name' => 'admin_dispostion_type_c',
+                'label' => 'LBL_ADMIN_DISPOSTION_TYPE',
+              ),
+              6 => 
+              array (
+                'name' => 'time_and_date_c',
+                'label' => 'LBL_TIME_AND_DATE',
+              ),
+              7 => 
+              array (
+                'name' => 'time_zone_c',
+                'label' => 'LBL_TIME_ZONE',
+              ),
+              8 => 
+              array (
+                'name' => 'time_est_c',
+                'label' => 'LBL_TIME_EST',
+              ),
+              9 => 
+              array (
+              ),
+              10 => 'assigned_user_name',
+              11 => 'team_name',
+              12 => 
               array (
                 'name' => 'tag',
                 'span' => 6,
               ),
-              3 => 
+              13 => 
               array (
                 'name' => 'abc_mortgages_ad_admin_disposition_1_name',
                 'span' => 6,
+              ),
+              14 => 
+              array (
+                'name' => 'abc_transfers_ad_admin_disposition_1_name',
               ),
             ),
           ),
@@ -188,6 +239,8 @@ array (
             'columns' => 2,
             'labelsOnTop' => true,
             'placeholders' => true,
+            'newTab' => false,
+            'panelDefault' => 'expanded',
             'fields' => 
             array (
               0 => 
@@ -245,6 +298,10 @@ array (
               ),
             ),
           ),
+        ),
+        'templateMeta' => 
+        array (
+          'useTabs' => false,
         ),
       ),
     ),

@@ -150,16 +150,29 @@ array (
             array (
               0 => 
               array (
-                'name' => 'description',
-                'rows' => 5,
+                'name' => 'type_rr_c',
+                'label' => 'LBL_TYPE_RR',
               ),
               1 => 
               array (
-                'name' => 'assigned_user_name',
+                'name' => 'sub_type_c',
+                'label' => 'LBL_SUB_TYPE',
               ),
-              2 => 'contact_name',
-              3 => 'parent_name',
+              2 => 
+              array (
+                'name' => 'description',
+                'rows' => 5,
+                'span' => 12,
+              ),
+              3 => 
+              array (
+                'name' => 'abc_transfers_notes_1_name',
+              ),
               4 => 
+              array (
+                'name' => 'abc_mortgages_notes_1_name',
+              ),
+              5 => 
               array (
                 'name' => 'filename',
                 'related_fields' => 
@@ -167,10 +180,8 @@ array (
                   0 => 'file_mime_type',
                 ),
               ),
-              5 => 
+              6 => 
               array (
-                'name' => 'type_rr_c',
-                'label' => 'LBL_TYPE_RR',
               ),
             ),
           ),
@@ -236,8 +247,10 @@ array (
               ),
               2 => 
               array (
-                'name' => 'team_name',
-                'span' => 12,
+                'name' => 'assigned_user_name',
+              ),
+              3 => 
+              array (
               ),
             ),
           ),

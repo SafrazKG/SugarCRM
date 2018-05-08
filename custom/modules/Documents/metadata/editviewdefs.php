@@ -116,6 +116,17 @@ array (
           array (
             'name' => 'abc_maintenance_fees_documents_1_name',
           ),
+          1 => 
+          array (
+            'name' => 'abc_transfers_documents_1_name',
+          ),
+        ),
+        9 => 
+        array (
+          0 => 
+          array (
+            'name' => 'abc_mortgages_documents_1_name',
+          ),
         ),
       ),
       'LBL_PANEL_ASSIGNMENT' => 

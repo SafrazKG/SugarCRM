@@ -1,6 +1,7 @@
 <?php
- // created: 2018-05-03 13:18:49
+ // created: 2018-05-04 08:17:48
 $dictionary['AD_Admin_Disposition']['fields']['admin_disposition_c']['labelValue']='Admin Disposition';
+$dictionary['AD_Admin_Disposition']['fields']['admin_disposition_c']['dependency']='';
 $dictionary['AD_Admin_Disposition']['fields']['admin_disposition_c']['visibility_grid']=array (
   'trigger' => 'admin_dispostion_type_c',
   'values' => 

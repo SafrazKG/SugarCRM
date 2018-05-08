@@ -26,3 +26,6 @@ $mod_strings['LBL_LIST_FORM_TITLE'] = 'Sales Dispositions List';
 $mod_strings['LBL_SEARCH_FORM_TITLE'] = 'Search Sales Disposition';
 $mod_strings['LBL_RRDIS_DISPOSITIONS_SUBPANEL_TITLE'] = 'Sales Dispositions';
 $mod_strings['LBL_HOMEPAGE_TITLE'] = 'My Sales Dispositions';
+$mod_strings['LBL_DISPOSITION_DATE'] = 'Callback Date';
+$mod_strings['LBL_DATE_AND_TIME'] = 'Time and Date';
+$mod_strings['LBL_TIME_AND_DATE_C'] = 'time and date c';

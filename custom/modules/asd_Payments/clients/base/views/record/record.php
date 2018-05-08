@@ -170,20 +170,28 @@ array (
             array (
               0 => 
               array (
+                'name' => 'consys_crm_id_c',
+                'label' => 'LBL_CONSYS_CRM_ID_C',
+              ),
+              1 => 
+              array (
+              ),
+              2 => 
+              array (
                 'name' => 'charge_source_c',
                 'label' => 'LBL_CHARGE_SOURCE',
               ),
-              1 => 
+              3 => 
               array (
                 'name' => 'process_date_c',
                 'label' => 'LBL_PROCESS_DATE',
               ),
-              2 => 
+              4 => 
               array (
                 'name' => 'payment_type_c',
                 'label' => 'LBL_PAYMENT_TYPE',
               ),
-              3 => 
+              5 => 
               array (
                 'related_fields' => 
                 array (
@@ -193,20 +201,12 @@ array (
                 'name' => 'amount_c',
                 'label' => 'LBL_AMOUNT',
               ),
-              4 => 
+              6 => 
               array (
                 'name' => 'accounts_asd_payments_1_name',
               ),
-              5 => 
-              array (
-              ),
-              6 => 
-              array (
-                'name' => 'abc_transfers_asd_payments_1_name',
-              ),
               7 => 
               array (
-                'name' => 'abc_mortgages_asd_payments_1_name',
               ),
               8 => 
               array (
@@ -217,6 +217,18 @@ array (
               array (
                 'name' => 'payment_product_type_c',
                 'label' => 'LBL_PAYMENT_PRODUCT_TYPE',
+              ),
+              10 => 
+              array (
+                'name' => 'note_c',
+                'label' => 'LBL_NOTE',
+              ),
+              11 => 
+              array (
+              ),
+              12 => 
+              array (
+                'name' => 'rrpay_payment_plans_asd_payments_1_name',
               ),
             ),
           ),
@@ -295,6 +307,59 @@ array (
                 'name' => 'recon_date_c',
                 'label' => 'LBL_RECON_DATE',
               ),
+              11 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'armg_c',
+                'label' => 'LBL_ARMG',
+              ),
+              12 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'rnr_c',
+                'label' => 'LBL_RNR',
+              ),
+              13 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'usca_fee_c',
+                'label' => 'LBL_USCA_FEE',
+              ),
+              14 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'invoice_c',
+                'label' => 'LBL_INVOICE',
+              ),
+              15 => 
+              array (
+                'related_fields' => 
+                array (
+                  0 => 'currency_id',
+                  1 => 'base_rate',
+                ),
+                'name' => 'unpaid_c',
+                'label' => 'LBL_UNPAID',
+              ),
+              16 => 
+              array (
+              ),
             ),
           ),
           3 => 
@@ -309,9 +374,15 @@ array (
             'panelDefault' => 'collapsed',
             'fields' => 
             array (
-              0 => 'assigned_user_name',
-              1 => 'team_name',
-              2 => 
+              0 => 
+              array (
+              ),
+              1 => 
+              array (
+              ),
+              2 => 'assigned_user_name',
+              3 => 'team_name',
+              4 => 
               array (
                 'name' => 'date_modified_by',
                 'readonly' => true,
@@ -335,7 +406,7 @@ array (
                   ),
                 ),
               ),
-              3 => 
+              5 => 
               array (
                 'name' => 'date_entered_by',
                 'readonly' => true,

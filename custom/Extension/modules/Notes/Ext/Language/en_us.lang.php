@@ -5,3 +5,4 @@ $mod_strings['LBL_CONTACT_CONTACT_ID'] = 'Contact (related Contact ID)';
 $mod_strings['LBL_CONTACT'] = 'Contact';
 $mod_strings['LBL_RELATED_TO'] = 'Linked to';
 $mod_strings['LBL_TYPE_RR'] = 'Type';
+$mod_strings['LBL_SUB_TYPE'] = 'Sub-Type';

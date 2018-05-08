@@ -176,13 +176,21 @@ array (
             'placeholders' => 1,
             'fields' => 
             array (
-              0 => 'phone_office',
+              0 => 
+              array (
+                'name' => 'consys_crm_id_c',
+                'label' => 'LBL_CONSYS_CRM_ID_C',
+              ),
               1 => 
+              array (
+              ),
+              2 => 'phone_office',
+              3 => 
               array (
                 'name' => 'phone_alternate',
                 'label' => 'LBL_PHONE_ALT',
               ),
-              2 => 
+              4 => 
               array (
                 'name' => 'billing_address',
                 'type' => 'fieldset',
@@ -222,12 +230,12 @@ array (
                   ),
                 ),
               ),
-              3 => 
+              5 => 
               array (
                 'name' => 'client_name_as_appears_c',
                 'label' => 'LBL_CLIENT_NAME_AS_APPEARS',
               ),
-              4 => 
+              6 => 
               array (
                 'name' => 'description',
                 'span' => 12,

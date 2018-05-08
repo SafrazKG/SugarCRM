@@ -204,41 +204,49 @@ array (
             array (
               0 => 
               array (
-                'name' => 'account_name',
+                'name' => 'consys_crm_id_c',
+                'label' => 'LBL_CONSYS_CRM_ID_C',
               ),
               1 => 
+              array (
+              ),
+              2 => 
+              array (
+                'name' => 'account_name',
+              ),
+              3 => 
               array (
                 'name' => 'contact_type_c',
                 'label' => 'LBL_CONTACT_TYPE',
               ),
-              2 => 'phone_work',
-              3 => 
+              4 => 'phone_work',
+              5 => 
               array (
                 'name' => 'phone_other',
                 'comment' => 'Other phone number for the contact',
                 'label' => 'LBL_OTHER_PHONE',
               ),
-              4 => 'phone_mobile',
-              5 => 'email',
-              6 => 
+              6 => 'phone_mobile',
+              7 => 'email',
+              8 => 
               array (
                 'name' => 'role_ps_c',
                 'label' => 'LBL_ROLE_PS',
               ),
-              7 => 
+              9 => 
               array (
               ),
-              8 => 
+              10 => 
               array (
                 'name' => 'relationship_d_c',
                 'label' => 'LBL_RELATIONSHIP_D',
               ),
-              9 => 
+              11 => 
               array (
                 'name' => 'relationship_status_c',
                 'label' => 'LBL_RELATIONSHIP_STATUS',
               ),
-              10 => 
+              12 => 
               array (
                 'name' => 'primary_address',
                 'type' => 'fieldset',
@@ -278,12 +286,8 @@ array (
                   ),
                 ),
               ),
-              11 => 
+              13 => 
               array (
-              ),
-              12 => 
-              array (
-                'name' => 'abc_transfers_contacts_1_name',
               ),
             ),
           ),

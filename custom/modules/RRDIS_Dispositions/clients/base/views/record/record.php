@@ -170,53 +170,53 @@ array (
             array (
               0 => 
               array (
+                'name' => 'consys_crm_id_c',
+                'label' => 'LBL_CONSYS_CRM_ID_C',
+              ),
+              1 => 
+              array (
+              ),
+              2 => 
+              array (
                 'name' => 'disposition_type_c',
                 'label' => 'LBL_DISPOSITION_TYPE',
               ),
-              1 => 
+              3 => 
               array (
                 'name' => 'disposition_c',
                 'label' => 'LBL_DISPOSITION',
               ),
-              2 => 
+              4 => 
               array (
                 'name' => 'leads_rrdis_dispositions_1_name',
               ),
-              3 => 
+              5 => 
               array (
               ),
-              4 => 
+              6 => 
+              array (
+                'name' => 'sub_disposition_c',
+                'label' => 'LBL_SUB_DISPOSITION',
+              ),
+              7 => 
+              array (
+                'name' => 'disposition_note_c',
+                'label' => 'LBL_DISPOSITION_NOTE',
+              ),
+              8 => 
               array (
                 'name' => 'time_and_date_c',
-                'label' => 'LBL_TIME_AND_DATE',
+                'label' => 'LBL_TIME_AND_DATE_C',
               ),
-              5 => 
+              9 => 
               array (
                 'name' => 'timezone_c',
                 'label' => 'LBL_TIMEZONE',
               ),
-              6 => 
-              array (
-                'name' => 'time_est_c',
-                'label' => 'LBL_TIME_EST',
-                'span' => 12,
-              ),
-              7 => 
-              array (
-                'name' => 'description',
-                'span' => 6,
-              ),
-              8 => 
-              array (
-                'name' => 'abc_transfers_rrdis_dispositions_1_name',
-                'span' => 6,
-              ),
-              9 => 
-              array (
-                'name' => 'abc_mortgages_rrdis_dispositions_1_name',
-              ),
               10 => 
               array (
+                'name' => 'description',
+                'span' => 12,
               ),
             ),
           ),

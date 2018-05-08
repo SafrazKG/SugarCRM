@@ -7,3 +7,5 @@ $mod_strings['LBL_TIME_ZONE'] = 'Time Zone';
 $mod_strings['LBL_TIME_EST'] = 'Time EST';
 $mod_strings['LBL_ADMIN_DISPOSTION_TYPE'] = 'Admin Dispostion Type';
 $mod_strings['LBL_ADMIN_DISPOSITION'] = 'Admin Disposition';
+$mod_strings['LBL_CONSYS_CRM_ID_C'] = 'consys crm id c';
+$mod_strings['LBL_ADMIN_DISPOSITION_NOTE'] = 'Admin Disposition Note';

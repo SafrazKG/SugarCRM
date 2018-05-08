@@ -227,63 +227,71 @@ array (
             array (
               0 => 
               array (
+                'name' => 'consys_crm_id_c',
+                'label' => 'LBL_CONSYS_CRM_ID_C',
+              ),
+              1 => 
+              array (
+              ),
+              2 => 
+              array (
                 'name' => 'client_name_c',
                 'label' => 'LBL_CLIENT_NAME',
               ),
-              1 => 
+              3 => 
               array (
                 'name' => 'resort_name_c',
                 'label' => 'LBL_RESORT_NAME',
               ),
-              2 => 
+              4 => 
               array (
                 'name' => 'lead_time_zone_c',
                 'label' => 'LBL_LEAD_TIME_ZONE',
               ),
-              3 => 
+              5 => 
               array (
               ),
-              4 => 
+              6 => 
               array (
                 'name' => 'status',
                 'type' => 'status',
                 'span' => 12,
               ),
-              5 => 
+              7 => 
               array (
                 'name' => 'disposition_type_leads_c',
                 'label' => 'LBL_DISPOSITION_TYPE_LEADS',
               ),
-              6 => 
+              8 => 
               array (
                 'name' => 'disposition_c',
                 'label' => 'LBL_DISPOSITION',
               ),
-              7 => 
+              9 => 
               array (
                 'name' => 'other_please_specify_c',
                 'label' => 'LBL_OTHER_PLEASE_SPECIFY',
               ),
-              8 => 
+              10 => 
               array (
                 'name' => 'phone_home',
                 'comment' => 'Home phone number of the contact',
                 'label' => 'LBL_HOME_PHONE',
               ),
-              9 => 
+              11 => 
               array (
                 'name' => 'phone_other',
                 'comment' => 'Other phone number for the contact',
                 'label' => 'LBL_OTHER_PHONE',
               ),
-              10 => 
+              12 => 
               array (
               ),
-              11 => 
+              13 => 
               array (
                 'name' => 'email',
               ),
-              12 => 
+              14 => 
               array (
               ),
             ),

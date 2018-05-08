@@ -1,5 +1,5 @@
 <?php
- // created: 2018-05-02 10:48:38
+ // created: 2018-05-04 06:16:51
 $layout_defs["abc_Transfers"]["subpanel_setup"]['abc_transfers_contacts_1'] = array (
   'order' => 100,
   'module' => 'Contacts',
